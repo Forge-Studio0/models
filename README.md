@@ -2,6 +2,15 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
+## Clã Iburi — Shinobi World BR 18.11.65
+
+Três transformações em fumaça, com modelos editáveis, animações e integração à addon-base fornecida. Modos no slot da cabeça, com níveis 10, 15 e 25 preservados.
+
+- [Pacote completo Iburi.zip](Iburi/Iburi.zip)
+- [Addon Iburi.mcaddon](Iburi/Iburi.mcaddon)
+- [Arquivos para integrar à base](Iburi/Iburi_Integracao.zip)
+- [Modelos e instruções](Iburi/README.md)
+
 ## Asas 3D — versão 1.1.0
 
 Dois conjuntos com quatro asas, equipáveis no peitoral: **Chamas Azuis** e **Asas Espirituais Rosas**. A versão 1.1 refaz as silhuetas, as asas inferiores, o acabamento do volume e as texturas em 1024 × 1024.

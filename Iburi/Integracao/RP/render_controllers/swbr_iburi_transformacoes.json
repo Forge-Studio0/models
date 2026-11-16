@@ -1,0 +1,455 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.swbr.iburi1.p0": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p0_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.8 + 0.000000, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.8 + 0.000000, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi1.p1": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p1_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.8 + 0.166667, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.8 + 0.166667, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi1.p2": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p2_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.8 + 0.333333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.8 + 0.333333, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi1.p3": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p3_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.8 + 0.500000, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.8 + 0.500000, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi1.p4": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p4_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.8 + 0.666667, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.8 + 0.666667, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi1.p5": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p5_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.8 + 0.833333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.8 + 0.833333, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi2.p0": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p0_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.2 + 0.000000, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.2 + 0.000000, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi2.p1": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p1_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.2 + 0.166667, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.2 + 0.166667, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi2.p2": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p2_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.2 + 0.333333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.2 + 0.333333, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi2.p3": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p3_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.2 + 0.500000, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.2 + 0.500000, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi2.p4": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p4_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.2 + 0.666667, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.2 + 0.666667, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi2.p5": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p5_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 6.2 + 0.833333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.2 + 0.833333, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi3.p0": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p0_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 5.6 + 0.000000, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 5.6 + 0.000000, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi3.p1": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p1_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 5.6 + 0.166667, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 5.6 + 0.166667, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi3.p2": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p2_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 5.6 + 0.333333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 5.6 + 0.333333, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi3.p3": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p3_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 5.6 + 0.500000, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 5.6 + 0.500000, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi3.p4": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p4_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 5.6 + 0.666667, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 5.6 + 0.666667, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi3.p5": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "iburi_p5_*": "!context.is_first_person || query.is_in_ui"
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": "math.min(math.clamp((math.mod(query.life_time / 5.6 + 0.833333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 5.6 + 0.833333, 1.0))) / 0.43,0,1))"
+      }
+    }
+  }
+}

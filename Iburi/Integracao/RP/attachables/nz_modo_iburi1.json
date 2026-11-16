@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "nz:modo_iburi1",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/swbr/iburi/fumaca1"
+      },
+      "geometry": {
+        "default": "geometry.nz_modo_iburi1"
+      },
+      "animations": {
+        "idle": "animation.nz_modo_iburi1.idle"
+      },
+      "particle_effects": {
+        "fumaca": "swbr:iburi_transformacao_1"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.swbr.iburi1.p0",
+        "controller.render.swbr.iburi1.p1",
+        "controller.render.swbr.iburi1.p2",
+        "controller.render.swbr.iburi1.p3",
+        "controller.render.swbr.iburi1.p4",
+        "controller.render.swbr.iburi1.p5"
+      ]
+    }
+  }
+}

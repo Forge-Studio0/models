@@ -1,0 +1,87 @@
+{
+  "clan": "Iburi",
+  "base_filename": "SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon",
+  "base_sha256": "c3ef05c2446e2fb8dd359aa7de98761b8623189c94804cb66c2bdd8c79aa21a2",
+  "base_version": [
+    18,
+    11,
+    64
+  ],
+  "version": [
+    18,
+    11,
+    65
+  ],
+  "packs": {
+    "BP": {
+      "original_entry": "SWBR_BP_v18.11.64_MOBILE.mcpack",
+      "updated_entry": "SWBR_BP_v18.11.65_IBURI.mcpack",
+      "files": {
+        "manifest.json": "60f91609e712ff34f45cd67f3f61cac44859e0f0b87f8c5cc09c3deb5ef9b6e9",
+        "scripts/modos/rp_v17058_official_modes.js": "88ba097d5e0c73c6567ed631e1b663bd5bfe5a5d202675e7d7d8d7510b6e92ee"
+      }
+    },
+    "RP": {
+      "original_entry": "SWBR_RP_v18.11.64_MOBILE.mcpack",
+      "updated_entry": "SWBR_RP_v18.11.65_IBURI.mcpack",
+      "files": {
+        "manifest.json": "92d0a5a10ae64ef2d7f32581a730013988bcf8bd79449ab11794cd0f701e5d37",
+        "entity/player.entity.json": "2430f64b239cf53fec2b78a2e407bb68ed7e8aa634f593d6bcceafa5062a6208",
+        "animations/nz_modo_iburi2.idle.json": "ecc21f185a1800e1a31b65a9bb97ef747b4c9a390bdd571486bb7710857c52a1",
+        "animations/nz_modo_iburi1.idle.json": "f35685bfde4e3a90c05446406df95b6afca518e43a2402fcbb118eb2cdcc4210",
+        "animations/nz_modo_iburi3.idle.json": "857136693ea192c2df20c2924cef2d384d600b30e0190fbc6d495912271fc1b5",
+        "render_controllers/swbr_iburi_transformacoes.json": "5ea09f43ed117cb4ab52154788b9cef917f3c75c0d871abea826d049e8cee61e",
+        "attachables/nz_modo_iburi1.json": "81469fb83eb7aa680fca58ed925332ea6fe434c1ac7b7badc1f53abf51aec3c4",
+        "attachables/nz_modo_iburi3.json": "e4ae6597d8978d569dcc679d7d14552a9593f27d9919208157f3998d843d9620",
+        "attachables/nz_modo_iburi2.json": "3a97f583cc92f702d3cb43dca6fc3582d618a0873647fd7d1c5c7b1f87defb26",
+        "texts/es_ES.lang": "d60f5e37af257148e4e285711097bfc98b6df3b694b6596e1d3deaccbb3b0f17",
+        "texts/pt_BR.lang": "144a3b073af2faa67bcd1a65f4f7abbd9f88eb062c36c3be1afa77e7036bc184",
+        "texts/us_EN.lang": "2a699ad8163ba1a1d7b437d202732bb24910364e72b92feab124fe6b88dbaddb",
+        "texts/en_US.lang": "d6c5cd30525e896d9cb5a3752c5d900ba1af6e8ed9dfed16ed93048c5b49b7e6",
+        "texts/es_MX.lang": "57c9a44482a789e2e83917d1400425de892816dafde865dd15040cfa01930235",
+        "particles/swbr_iburi_transformacao_2.json": "83761afdfea61809b595e3b313ac45d8290b8355082a0bf2f4e64f0f3c50d0f2",
+        "particles/swbr_iburi_transformacao_1.json": "12c0bbf289c9b91763529a15807c5d97a33f9ced72f21a4059f1de82dde142fe",
+        "particles/swbr_iburi_transformacao_3.json": "6a922c7e5d68feb587994fb9d8f354a2e529aae97eddc5f6a50395f9e8e6ef0f",
+        "models/entity/nz_modo_iburi1.json": "575f6419e6e535e187a82be8d19eb69fee49c75182c5a0220fdefde504124da4",
+        "models/entity/nz_modo_iburi3l.geo.json": "e75fc7a3e76d0db4380db358f72ea5a59a4dac41736afebb1d191c81b5834446",
+        "models/entity/nz_modo_iburi2.json": "16079b0b49360dbbd7c84c82db684ddfca00539ca9e7a4143eec24728766f5ab",
+        "textures/entity/swbr/iburi/fumaca1.png": "892cbf49ec33ad1dd4019ddb80f8f41df9aba50f4dc4896ab494bf4f3a2342b5",
+        "textures/entity/swbr/iburi/fumaca3.png": "c50e5f36ffa2076e79cd3b30eaca327c04a144b64017518353b95b319c6ccbef",
+        "textures/entity/swbr/iburi/fumaca2.png": "1a0c58d37d0788311db20b620f4fb6522e2f382e48cfa73b70c889bf05d2243e",
+        "textures/entity/swbr/iburi/particulas.png": "f8aa132d0485a4ecc2ec06ae7bc0364ccddb5e835f63ea8ae128d52ec1a2fddd"
+      }
+    }
+  },
+  "removed_files": [],
+  "protected_items": [
+    "nz:modo_iburi1",
+    "nz:modo_iburi2",
+    "nz:modo_iburi3",
+    "nz:jutsu_iburi_fumaca"
+  ],
+  "levels": [
+    10,
+    15,
+    25
+  ],
+  "models": {
+    "1": {
+      "nuvens": 10,
+      "cubos": 30,
+      "fases": 6,
+      "duracao_ciclo": 6.8
+    },
+    "2": {
+      "nuvens": 26,
+      "cubos": 78,
+      "fases": 6,
+      "duracao_ciclo": 6.2
+    },
+    "3": {
+      "nuvens": 50,
+      "cubos": 150,
+      "fases": 6,
+      "duracao_ciclo": 5.6
+    }
+  }
+}

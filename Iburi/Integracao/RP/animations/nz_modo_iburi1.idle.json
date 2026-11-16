@@ -1,0 +1,213 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.nz_modo_iburi1.idle": {
+      "loop": true,
+      "animation_length": 6.8,
+      "bones": {
+        "iburi_p0_ombro_00": {
+          "position": [
+            "0.35*math.sin(query.life_time*37.050+191.689)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.000000, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*29.640+191.689)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*25.935+191.689)",
+            "6*math.sin(query.life_time*22.230+191.689)",
+            "4*math.cos(query.life_time*33.345+191.689)"
+          ]
+        },
+        "iburi_p1_antebraco_01": {
+          "position": [
+            "0.35*math.sin(query.life_time*30.300+194.788)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.166667, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*24.240+194.788)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*21.210+194.788)",
+            "6*math.sin(query.life_time*18.180+194.788)",
+            "4*math.cos(query.life_time*27.270+194.788)"
+          ]
+        },
+        "iburi_p2_antebraco_02": {
+          "position": [
+            "0.35*math.sin(query.life_time*29.450+274.220)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.333333, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*23.560+274.220)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*20.615+274.220)",
+            "6*math.sin(query.life_time*17.670+274.220)",
+            "4*math.cos(query.life_time*26.505+274.220)"
+          ]
+        },
+        "iburi_p3_escapula_03": {
+          "position": [
+            "0.35*math.sin(query.life_time*29.377+258.794)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.500000, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*23.502+258.794)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*20.564+258.794)",
+            "6*math.sin(query.life_time*17.626+258.794)",
+            "4*math.cos(query.life_time*26.440+258.794)"
+          ]
+        },
+        "iburi_p4_ombro_04": {
+          "position": [
+            "0.35*math.sin(query.life_time*23.235+155.159)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.666667, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*18.588+155.159)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*16.264+155.159)",
+            "6*math.sin(query.life_time*13.941+155.159)",
+            "4*math.cos(query.life_time*20.911+155.159)"
+          ]
+        },
+        "iburi_p5_ombro_05": {
+          "position": [
+            "0.35*math.sin(query.life_time*24.587+313.692)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.833333, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*19.669+313.692)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*17.211+313.692)",
+            "6*math.sin(query.life_time*14.752+313.692)",
+            "4*math.cos(query.life_time*22.128+313.692)"
+          ]
+        },
+        "iburi_p0_antebraco_06": {
+          "position": [
+            "0.35*math.sin(query.life_time*37.184+343.585)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.000000, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*29.747+343.585)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*26.029+343.585)",
+            "6*math.sin(query.life_time*22.311+343.585)",
+            "4*math.cos(query.life_time*33.466+343.585)"
+          ]
+        },
+        "iburi_p1_antebraco_07": {
+          "position": [
+            "0.35*math.sin(query.life_time*22.194+51.155)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.166667, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*17.755+51.155)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*15.536+51.155)",
+            "6*math.sin(query.life_time*13.316+51.155)",
+            "4*math.cos(query.life_time*19.974+51.155)"
+          ]
+        },
+        "iburi_p2_escapula_08": {
+          "position": [
+            "0.35*math.sin(query.life_time*37.800+231.818)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.333333, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*30.240+231.818)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*26.460+231.818)",
+            "6*math.sin(query.life_time*22.680+231.818)",
+            "4*math.cos(query.life_time*34.020+231.818)"
+          ]
+        },
+        "iburi_p3_ombro_09": {
+          "position": [
+            "0.35*math.sin(query.life_time*22.379+237.748)",
+            "2.4*((math.mod(query.life_time / 6.8 + 0.500000, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*17.903+237.748)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*15.665+237.748)",
+            "6*math.sin(query.life_time*13.427+237.748)",
+            "4*math.cos(query.life_time*20.141+237.748)"
+          ]
+        }
+      },
+      "particle_effects": {
+        "0.0000": {
+          "effect": "fumaca",
+          "locator": "iburi_ombro_d",
+          "bind_to_actor": false
+        },
+        "1.1333": {
+          "effect": "fumaca",
+          "locator": "iburi_braco_e",
+          "bind_to_actor": false
+        },
+        "2.2667": {
+          "effect": "fumaca",
+          "locator": "iburi_costas",
+          "bind_to_actor": false
+        },
+        "3.4000": {
+          "effect": "fumaca",
+          "locator": "iburi_ombro_e",
+          "bind_to_actor": false
+        },
+        "4.5333": {
+          "effect": "fumaca",
+          "locator": "iburi_braco_d",
+          "bind_to_actor": false
+        },
+        "5.6667": {
+          "effect": "fumaca",
+          "locator": "iburi_torso",
+          "bind_to_actor": false
+        }
+      }
+    }
+  }
+}

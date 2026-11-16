@@ -1,0 +1,41 @@
+{
+  "resultado": "APROVADO",
+  "parser": "Molang do Blockbench 4.12.6",
+  "avaliacoes": 33407,
+  "stages": [
+    {
+      "stage": 1,
+      "ciclos_amostrados": 4,
+      "amostras": 121,
+      "alfa_min": 0,
+      "alfa_max": 1,
+      "limite_y_conservador": [
+        13.400282828410148,
+        28.489258887461794
+      ]
+    },
+    {
+      "stage": 2,
+      "ciclos_amostrados": 4,
+      "amostras": 121,
+      "alfa_min": 0,
+      "alfa_max": 1,
+      "limite_y_conservador": [
+        0.8096131219214349,
+        29.341055685607238
+      ]
+    },
+    {
+      "stage": 3,
+      "ciclos_amostrados": 4,
+      "amostras": 121,
+      "alfa_min": 0,
+      "alfa_max": 1,
+      "limite_y_conservador": [
+        -1.6588342009358803,
+        39.83347575538747
+      ]
+    }
+  ],
+  "controle_visual": "Somente modo 3 ativa a ocultação; os demais preservam o valor original."
+}
