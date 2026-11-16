@@ -4,7 +4,7 @@
 Uses public Blockception Bedrock schemas plus cross-file, geometry, image, UUID,
 archive and actual Blockbench round-trip checks. No assertion implies a game test.
 """
-import base64, io, itertools, json, math, sys, uuid, zipfile
+import base64, hashlib, io, itertools, json, math, sys, uuid, zipfile
 from pathlib import Path
 import numpy as np
 from PIL import Image
@@ -48,6 +48,7 @@ def validate_sources():
     bp=ROOT/'Asas_3D_BP';rp=ROOT/'Asas_3D_RP'
     bm=read(bp/'manifest.json');rm=read(rp/'manifest.json')
     ids=[m['header']['uuid'] for m in [bm,rm]]+[mod['uuid'] for m in [bm,rm] for mod in m['modules']]
+    check(bm['header']['version']==rm['header']['version']==[1,1,0],'Versão 1.1.0 nos dois packs')
     check(len(ids)==len(set(ids)) and all(uuid.UUID(i).version==4 for i in ids),'Quatro UUIDs de pack/módulo válidos e exclusivos')
     check(bm['dependencies']==[{'uuid':rm['header']['uuid'],'version':rm['header']['version']}],'Dependência BP → RP e versão correspondentes')
     check(all(m['header']['min_engine_version']==[1,21,0] for m in [bm,rm]),'Versão mínima declarada: Bedrock 1.21.0')
@@ -69,7 +70,7 @@ def validate_sources():
         with Image.open(texture_path) as img:
             img.verify()
         with Image.open(texture_path) as img:
-            check(img.size==(512,512) and img.mode=='RGBA','PNG RGBA 512×512 válido: '+k)
+            check(img.size==(1024,1024) and img.mode=='RGBA','PNG RGBA 1024×1024 válido: '+k)
             alpha=np.asarray(img)[:,:,3]
             check(np.any((alpha>0)&(alpha<255)) and np.any(alpha==255),'Áreas opacas e halo com transparência: '+k)
         embedded=base64.b64decode(model['textures'][0]['source'].split(',',1)[1])
@@ -101,7 +102,7 @@ def validate_sources():
         for c in model['elements']:
             assert min(np.array(c['to'])-np.array(c['from']))>0,'Cubo plano ou invertido: '+c['name']
             for uv in c['faces'].values():
-                assert all(0<=float(v)<=512 for v in uv['uv']),'UV fora da textura: '+c['name']
+                assert all(0<=float(v)<=1024 for v in uv['uv']),'UV fora da textura: '+c['name']
         check(True,'Todos os cubos têm espessura, dimensão positiva e UV dentro do atlas: '+k)
         points=transformed_vertices(model);lo=points.min(0);hi=points.max(0)
         check(lo[2]>=1.9,'Orientação traseira: todo o volume fica em +Z, atrás do corpo: '+k)
@@ -111,7 +112,7 @@ def validate_sources():
         for w in ['superior','inferior']:
             l=byname['asa_'+w+'_esquerda'];r=byname['asa_'+w+'_direita']
             check(len(l['cubes'])==len(r['cubes']) and l['rotation'][1]==-r['rotation'][1],'Equilíbrio e abertura simétrica '+w+': '+k)
-        stats[k]={'cubos':counts,'bones':len(bones),'limites_em_unidades_modelo':{'min':lo.round(4).tolist(),'max':hi.round(4).tolist()},'profundidade_maxima_asa':2.9,'atlas':[512,512]}
+        stats[k]={'cubos':counts,'bones':len(bones),'limites_em_unidades_modelo':{'min':lo.round(4).tolist(),'max':hi.round(4).tolist()},'espessura_corpo_maxima':1.6,'atlas':[1024,1024]}
     check(not list(bp.glob('entities/*.json')) and not list(rp.glob('entity/player*')),'Não substitui a entidade nem a skin do jogador')
     bb=ROOT/'Validacao_Blockbench.json'
     if bb.exists():
@@ -120,6 +121,8 @@ def validate_sources():
         for row in data['results']:
             key='azuis' if row['name']=='Asas_Azuis' else 'rosas'
             check(row['cubes']==stats[key]['cubos'],'Contagem do editor corresponde à geometria final: '+key)
+            model_path=ROOT/'Modelos_Blockbench'/(row['name']+'.bbmodel')
+            check(row.get('source_sha256')==hashlib.sha256(model_path.read_bytes()).hexdigest(),'Projeto final corresponde ao arquivo aberto no editor: '+key)
     return stats
 
 def validate_archive(path):

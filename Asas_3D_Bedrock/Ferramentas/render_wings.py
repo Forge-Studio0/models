@@ -21,7 +21,7 @@ def make_material(kind,image,aura=False):
     shader.inputs['Roughness'].default_value=.67
     shader.inputs['Specular IOR Level'].default_value=.18
     if 'Emission Color' in shader.inputs:
-        l.new(tex.outputs['Color'],shader.inputs['Emission Color']);shader.inputs['Emission Strength'].default_value=.38 if kind=='azuis' else .55
+        l.new(tex.outputs['Color'],shader.inputs['Emission Color']);shader.inputs['Emission Strength'].default_value=.12 if kind=='azuis' else .18
     m.diffuse_color=(.1,.7,1,1) if kind=='azuis' else (1,.5,.9,1)
     return m
 
@@ -46,7 +46,7 @@ def wings(kind):
               'down':[(x0,y0,z0),(x1,y0,z0),(x1,y0,z1),(x0,y0,z1)]}
             for f,quad in quads.items():
                 k=len(vertices);vertices.extend(transform(m@Vector(v)) for v in quad);faces.append((k,k+1,k+2,k+3))
-                a,b,c,d=e['faces'][f]['uv'];uvs.append([(a/512,1-b/512),(c/512,1-b/512),(c/512,1-d/512),(a/512,1-d/512)])
+                a,b,c,d=e['faces'][f]['uv'];uvs.append([(a/1024,1-b/1024),(c/1024,1-b/1024),(c/1024,1-d/1024),(a/1024,1-d/1024)])
                 matindices.append(1 if g['name'].endswith('_halo') else 0)
     for g in data['outliner']:walk(g,Matrix.Identity(4))
     mesh=bpy.data.meshes.new('Geometria_Exata_'+kind);mesh.from_pydata(vertices,[],faces);mesh.update()
@@ -91,10 +91,10 @@ def setup(kind):
     wings(kind);mannequin()
     floor=solid_material('Chão',(.025,.034,.053))
     box('floor',[-150,-3.5,-150],[150,-3.3,150],floor)
-    area('Key',(2,4,7),520,5,(0,0,2));area('Back',(-3,-5,5),420,4,(0,0,2));area('Fill',(-3,2,2.5),150,4,(0,0,1.7))
+    area('Key',(2,4,7),260,5,(0,0,2));area('Back',(-3,-5,5),240,4,(0,0,2));area('Fill',(-3,2,2.5),100,4,(0,0,1.7))
     camdata=bpy.data.cameras.new('Camera');cam=bpy.data.objects.new('Camera',camdata);bpy.context.collection.objects.link(cam);sc.camera=cam
-    camdata.type='ORTHO';camdata.ortho_scale=4.9
-    for view,location,target in [('frente',(0,9,2.2),(0,0,2.04)),('perspectiva',(4.6,-8,3.55),(0,-.23,2.05))]:
+    camdata.type='ORTHO';camdata.ortho_scale=4.25
+    for view,location,target in [('frente',(0,9,1.8),(0,0,1.72)),('perspectiva',(4.6,-8,3.1),(0,-.23,1.75))]:
         cam.location=location;look(cam,target);sc.render.filepath=str(OUT/f'{kind}_{view}.png');bpy.ops.render.render(write_still=True)
 
 if __name__=='__main__':

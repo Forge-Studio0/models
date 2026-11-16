@@ -1,0 +1,48 @@
+{
+  "azuis": {
+    "1.0.0": {
+      "altura_total": 65.586,
+      "largura_total": 54.039,
+      "altura_maxima": 64.126,
+      "cubos": 1932,
+      "textura": {
+        "width": 512,
+        "height": 512
+      }
+    },
+    "1.1.0": {
+      "altura_total": 56.999,
+      "largura_total": 48.582,
+      "altura_maxima": 57.399,
+      "cubos": 2079,
+      "textura": {
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    "reducao_altura_percentual": 13.1
+  },
+  "rosas": {
+    "1.0.0": {
+      "altura_total": 67.864,
+      "largura_total": 54.05,
+      "altura_maxima": 65.35,
+      "cubos": 1182,
+      "textura": {
+        "width": 512,
+        "height": 512
+      }
+    },
+    "1.1.0": {
+      "altura_total": 52.961,
+      "largura_total": 54.05,
+      "altura_maxima": 53.761,
+      "cubos": 1545,
+      "textura": {
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    "reducao_altura_percentual": 22.0
+  }
+}

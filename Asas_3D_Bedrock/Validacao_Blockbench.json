@@ -6,35 +6,38 @@
       "format": "bedrock",
       "name": "Asas_Azuis",
       "identifier": "asas_teste.chamas_azuis",
-      "cubes": 1932,
+      "cubes": 2079,
       "bones": 15,
       "textures": [
         {
           "name": "chamas_azuis.png",
-          "width": 512,
-          "height": 512,
+          "width": 1024,
+          "height": 1024,
           "error": 0
         }
       ],
-      "newErrors": []
+      "newErrors": [],
+      "source_sha256": "33c1bd16ef182e62225030cacb26c605d85ef534380f4131e91a18ef1831cb92"
     },
     {
       "version": "4.12.6",
       "format": "bedrock",
       "name": "Asas_Rosas",
       "identifier": "asas_teste.chamas_rosas",
-      "cubes": 1182,
+      "cubes": 1545,
       "bones": 15,
       "textures": [
         {
           "name": "chamas_rosas.png",
-          "width": 512,
-          "height": 512,
+          "width": 1024,
+          "height": 1024,
           "error": 0
         }
       ],
-      "newErrors": []
+      "newErrors": [],
+      "source_sha256": "775affeed10b3555d969e248969476c9ffdf100fe78804973e61291542f68ad6"
     }
   ],
-  "round_trip_geometria": "As geometrias exportadas pelo Blockbench correspondem às geometrias geradas, incluindo bones, cubos, pivôs, rotações e UVs (tolerância 0,0001). Os arquivos exportados pelo editor foram incluídos no RP."
+  "versao_addon": "1.1.0",
+  "round_trip_geometria": "Os arquivos exportados pelo Blockbench correspondem aos gerados, incluindo pivôs, rotações e UVs (tolerância 0,0001). O RP inclui as geometrias exportadas pelo editor."
 }

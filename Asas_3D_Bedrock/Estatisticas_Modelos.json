@@ -1,53 +1,69 @@
 {
   "azuis": {
-    "elementos": 1932,
+    "elementos": 2079,
     "bones": 15,
     "asas": {
       "asa_superior_esquerda": {
-        "cubos_volume": 209,
-        "cubos_relevo": 350,
-        "cubos_halo": 29
+        "cubos_volume": 253,
+        "cubos_relevo": 268,
+        "cubos_halo": 96,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       },
       "asa_superior_direita": {
-        "cubos_volume": 209,
-        "cubos_relevo": 350,
-        "cubos_halo": 29
+        "cubos_volume": 253,
+        "cubos_relevo": 268,
+        "cubos_halo": 96,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       },
       "asa_inferior_esquerda": {
-        "cubos_volume": 167,
-        "cubos_relevo": 186,
-        "cubos_halo": 24
+        "cubos_volume": 187,
+        "cubos_relevo": 164,
+        "cubos_halo": 70,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       },
       "asa_inferior_direita": {
-        "cubos_volume": 167,
-        "cubos_relevo": 186,
-        "cubos_halo": 24
+        "cubos_volume": 187,
+        "cubos_relevo": 164,
+        "cubos_halo": 70,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       }
     }
   },
   "rosas": {
-    "elementos": 1182,
+    "elementos": 1545,
     "bones": 15,
     "asas": {
       "asa_superior_esquerda": {
-        "cubos_volume": 220,
-        "cubos_relevo": 112,
-        "cubos_halo": 17
+        "cubos_volume": 183,
+        "cubos_relevo": 204,
+        "cubos_halo": 56,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       },
       "asa_superior_direita": {
-        "cubos_volume": 220,
-        "cubos_relevo": 112,
-        "cubos_halo": 17
+        "cubos_volume": 183,
+        "cubos_relevo": 204,
+        "cubos_halo": 56,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       },
       "asa_inferior_esquerda": {
-        "cubos_volume": 150,
-        "cubos_relevo": 68,
-        "cubos_halo": 23
+        "cubos_volume": 137,
+        "cubos_relevo": 144,
+        "cubos_halo": 47,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       },
       "asa_inferior_direita": {
-        "cubos_volume": 150,
-        "cubos_relevo": 68,
-        "cubos_halo": 23
+        "cubos_volume": 137,
+        "cubos_relevo": 144,
+        "cubos_halo": 47,
+        "passo_contorno": 0.4,
+        "espessura_corpo_maxima": 1.6
       }
     }
   }

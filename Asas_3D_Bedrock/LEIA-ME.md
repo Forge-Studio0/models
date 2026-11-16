@@ -1,10 +1,10 @@
 # Asas 3D Teste — Minecraft Bedrock
 
-Versão 1.0.0 · duas opções cosméticas estáticas · slot do peitoral.
+Versão 1.1.0 · duas opções cosméticas estáticas · slot do peitoral.
 
 ## Instalar
 
-1. Abra **Asas_3D_Teste_Bedrock.mcaddon** com o Minecraft Bedrock e aguarde a importação dos dois packs.
+1. Baixe e abra **Asas_3D_Teste_Bedrock.mcaddon** com o Minecraft Bedrock e aguarde a importação dos dois packs. Se já usa a versão 1.0, importe este arquivo como atualização para a versão 1.1.0.
 2. Nas configurações de um mundo, ative **Asas 3D Teste | Comportamentos** e confirme que **Asas 3D Teste | Recursos** está ativo.
 3. Entre no mundo. Os itens ficam na categoria **Equipamentos**, junto aos peitorais, ou podem ser obtidos pelos comandos abaixo com cheats ativados.
 4. Arraste uma das asas para o slot de peitoral do inventário. Use a câmera de terceira pessoa para vê-las. Remova o item para retirar as asas.
@@ -22,17 +22,20 @@ O slot comporta um item por vez. Não há receita nesta primeira versão. A base
 
 **Asas Espirituais Rosas**: quatro asas com silhueta própria, fundo rosa/magenta, bordas claras e línguas amarelas e douradas. Filamentos amarelos elevados e bordas parcialmente translúcidas.
 
-Os modelos usam volumes de profundidade variável, cuboides rotacionados e camadas sobrepostas. As texturas de 512 × 512 têm UV por face, incluindo frente, verso e laterais. Não são duas imagens sobre planos. A geometria estática é deliberadamente facetada para o formato Bedrock; não é uma reprodução do traço 2D da animação.
+Os modelos usam volumes de profundidade variável, cuboides rotacionados e camadas sobrepostas. As texturas de 1024 × 1024 têm UV por face, incluindo frente, verso e laterais. Não são duas imagens sobre planos. A geometria estática é deliberadamente facetada para o formato Bedrock; não é uma reprodução do traço 2D da animação.
 
-A raiz toca as costas em Z = 1,95 unidades de modelo. O corpo padrão termina em Z = 2. As asas se abrem e recuam levemente com rotação fixa. A hierarquia `waist → body → quatro asas` usa os nomes e pivôs da armadura do jogador, para herdar o movimento do tronco tanto em Steve quanto em Alex. Nenhum arquivo da skin ou da entidade do jogador é substituído.
+A raiz central foi reduzida e arredondada em três volumes. Ela toca as costas em Z = 1,95 unidades de modelo. O corpo padrão termina em Z = 2. As asas se abrem e recuam levemente com rotação fixa. A hierarquia `waist → body → quatro asas` usa os nomes e pivôs da armadura do jogador, para herdar o movimento do tronco tanto em Steve quanto em Alex. Nenhum arquivo da skin ou da entidade do jogador é substituído.
 
 O brilho é sugerido por cores claras e bordas translúcidas, usando os materiais nativos `entity_alphatest` e `entity_alphablend`. Não emite luz no mundo, não requer shader externo e não inclui voo, partículas, animações próprias ou habilidades. A iluminação do jogo ainda influencia a aparência.
+
+As texturas foram refeitas com chamas contínuas e ramificações amarelas conectadas. A geometria usa contorno de 0,4 unidade, biséis estreitos e correntes de energia em relevo nas duas faces. A abertura das superiores foi revista para melhorar a proporção no corpo. Veja o histórico em `ALTERACOES.md` e as dimensões comparadas em `Comparacao_Versoes.json`.
 
 ## Conteúdo dos fontes
 
 - `Asas_3D_BP/`: manifest e os dois itens com `minecraft:wearable` em `slot.armor.chest`.
 - `Asas_3D_RP/`: manifest, duas geometrias, dois attachables, render controller, texturas, ícones e nomes.
 - `Modelos_Blockbench/Asas_Azuis.bbmodel` e `Asas_Rosas.bbmodel`: projetos independentes, com texturas embutidas. Podem ser abertos diretamente em **File → Open Model** no Blockbench, sem plugins.
+- `Ferramentas/Arte/`: pinturas-base em PNG. O gerador prepara o atlas e compartilha o desenho da metade direita entre as asas espelhadas, mantendo o equilíbrio visual.
 - `Ferramentas/`: código completo de construção, inspeção visual e validação; cópias dos schemas usados.
 - `Previews/`: renders de inspeção a partir das geometrias reais, com manequim de escala. São prévias externas, não capturas do Minecraft.
 - `Validacao_Estatica.json`, `Validacao_Blockbench.json` e `Estatisticas_Modelos.json`: resultados e contagens.
@@ -49,7 +52,7 @@ python Ferramentas/build_wings.py --package dist
 python Ferramentas/validate_wings.py dist/Asas_3D_Teste_Bedrock.mcaddon
 ```
 
-O gerador recria os packs e modelos a partir das coordenadas e padrões no código. Faça uma cópia das suas edições manuais antes de regenerar. Os renders podem ser refeitos com Blender 4.3:
+O gerador recria os packs e os modelos a partir das pinturas-base incluídas, convertendo o recorte em volumes sólidos e as correntes de energia em relevo. Não precisa chamar um serviço de geração de imagens. Faça uma cópia das suas edições manuais antes de regenerar. Os renders podem ser refeitos com Blender 4.3:
 
 ```sh
 blender -b --python Ferramentas/render_wings.py

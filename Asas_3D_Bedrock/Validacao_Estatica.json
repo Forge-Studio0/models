@@ -4,49 +4,49 @@
   "minecraft_testado": false,
   "modelos": {
     "azuis": {
-      "cubos": 1932,
+      "cubos": 2079,
       "bones": 15,
       "limites_em_unidades_modelo": {
         "min": [
-          -27.0195,
-          -1.4599,
+          -24.2912,
+          0.4,
           1.95
         ],
         "max": [
-          27.0195,
-          64.1261,
-          8.4938
+          24.2912,
+          57.3991,
+          9.001
         ]
       },
-      "profundidade_maxima_asa": 2.9,
+      "espessura_corpo_maxima": 1.6,
       "atlas": [
-        512,
-        512
+        1024,
+        1024
       ]
     },
     "rosas": {
-      "cubos": 1182,
+      "cubos": 1545,
       "bones": 15,
       "limites_em_unidades_modelo": {
         "min": [
-          -27.025,
-          -2.5131,
+          -27.0251,
+          0.8,
           1.95
         ],
         "max": [
-          27.025,
-          65.3504,
-          9.0173
+          27.0251,
+          53.7606,
+          9.456
         ]
       },
-      "profundidade_maxima_asa": 2.9,
+      "espessura_corpo_maxima": 1.6,
       "atlas": [
-        512,
-        512
+        1024,
+        1024
       ]
     }
   },
-  "numero_de_verificacoes": 168,
+  "numero_de_verificacoes": 171,
   "verificacoes": [
     "Todos os JSONs e BBMODELs têm sintaxe válida",
     "Schema válido: Asas_3D_BP/manifest.json",
@@ -58,6 +58,7 @@
     "Schema válido: Asas_3D_RP/attachables/chamas_rosas.json",
     "Schema válido: Asas_3D_RP/attachables/chamas_azuis.json",
     "Schema válido: Asas_3D_RP/render_controllers/asas_teste.render_controllers.json",
+    "Versão 1.1.0 nos dois packs",
     "Quatro UUIDs de pack/módulo válidos e exclusivos",
     "Dependência BP → RP e versão correspondentes",
     "Versão mínima declarada: Bedrock 1.21.0",
@@ -66,7 +67,7 @@
     "Item cosmético sem habilidades/proteção: azuis",
     "Attachable → geometria → BBMODEL: azuis",
     "Asas estáticas sem animações próprias: azuis",
-    "PNG RGBA 512×512 válido: azuis",
+    "PNG RGBA 1024×1024 válido: azuis",
     "Áreas opacas e halo com transparência: azuis",
     "Textura embutida no BBMODEL corresponde ao RP: azuis",
     "Ícone do item existente e associado: azuis",
@@ -128,7 +129,7 @@
     "Item cosmético sem habilidades/proteção: rosas",
     "Attachable → geometria → BBMODEL: rosas",
     "Asas estáticas sem animações próprias: rosas",
-    "PNG RGBA 512×512 válido: rosas",
+    "PNG RGBA 1024×1024 válido: rosas",
     "Áreas opacas e halo com transparência: rosas",
     "Textura embutida no BBMODEL corresponde ao RP: rosas",
     "Ícone do item existente e associado: rosas",
@@ -188,7 +189,9 @@
     "Não substitui a entidade nem a skin do jogador",
     "Os dois projetos abriram no Blockbench 4.12.6 sem erros de importação/textura",
     "Contagem do editor corresponde à geometria final: azuis",
+    "Projeto final corresponde ao arquivo aberto no editor: azuis",
     "Contagem do editor corresponde à geometria final: rosas",
+    "Projeto final corresponde ao arquivo aberto no editor: rosas",
     "MCADDON íntegro: dois MCPACKs internos",
     "Contêiner interno MCPACK: Asas_3D_BP.mcpack",
     "MCPACK íntegro com manifest na raiz: Asas_3D_BP.mcpack",
