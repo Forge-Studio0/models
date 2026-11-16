@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "asas_teste",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "asas_teste_chamas_azuis": {
+      "textures": "textures/items/chamas_azuis"
+    },
+    "asas_teste_chamas_rosas": {
+      "textures": "textures/items/chamas_rosas"
+    }
+  }
+}

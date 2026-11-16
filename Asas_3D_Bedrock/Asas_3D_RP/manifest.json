@@ -1,0 +1,35 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Asas 3D Teste | Recursos",
+    "description": "Duas asas espirituais 3D: chamas azuis e asas rosas com amarelo. Versão estática 1.0.0.",
+    "uuid": "5cd400b2-e6a4-4952-8583-4c7999857993",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "04bb7c47-6718-4d06-a85a-82eb0039ad87",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Asas 3D Teste"
+    ],
+    "product_type": "addon"
+  }
+}

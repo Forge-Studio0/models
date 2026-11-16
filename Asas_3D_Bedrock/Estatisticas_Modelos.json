@@ -1,0 +1,54 @@
+{
+  "azuis": {
+    "elementos": 1932,
+    "bones": 15,
+    "asas": {
+      "asa_superior_esquerda": {
+        "cubos_volume": 209,
+        "cubos_relevo": 350,
+        "cubos_halo": 29
+      },
+      "asa_superior_direita": {
+        "cubos_volume": 209,
+        "cubos_relevo": 350,
+        "cubos_halo": 29
+      },
+      "asa_inferior_esquerda": {
+        "cubos_volume": 167,
+        "cubos_relevo": 186,
+        "cubos_halo": 24
+      },
+      "asa_inferior_direita": {
+        "cubos_volume": 167,
+        "cubos_relevo": 186,
+        "cubos_halo": 24
+      }
+    }
+  },
+  "rosas": {
+    "elementos": 1182,
+    "bones": 15,
+    "asas": {
+      "asa_superior_esquerda": {
+        "cubos_volume": 220,
+        "cubos_relevo": 112,
+        "cubos_halo": 17
+      },
+      "asa_superior_direita": {
+        "cubos_volume": 220,
+        "cubos_relevo": 112,
+        "cubos_halo": 17
+      },
+      "asa_inferior_esquerda": {
+        "cubos_volume": 150,
+        "cubos_relevo": 68,
+        "cubos_halo": 23
+      },
+      "asa_inferior_direita": {
+        "cubos_volume": 150,
+        "cubos_relevo": 68,
+        "cubos_halo": 23
+      }
+    }
+  }
+}

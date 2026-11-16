@@ -1,0 +1,40 @@
+{
+  "editor": "Blockbench 4.12.6 local, Chromium headless",
+  "results": [
+    {
+      "version": "4.12.6",
+      "format": "bedrock",
+      "name": "Asas_Azuis",
+      "identifier": "asas_teste.chamas_azuis",
+      "cubes": 1932,
+      "bones": 15,
+      "textures": [
+        {
+          "name": "chamas_azuis.png",
+          "width": 512,
+          "height": 512,
+          "error": 0
+        }
+      ],
+      "newErrors": []
+    },
+    {
+      "version": "4.12.6",
+      "format": "bedrock",
+      "name": "Asas_Rosas",
+      "identifier": "asas_teste.chamas_rosas",
+      "cubes": 1182,
+      "bones": 15,
+      "textures": [
+        {
+          "name": "chamas_rosas.png",
+          "width": 512,
+          "height": 512,
+          "error": 0
+        }
+      ],
+      "newErrors": []
+    }
+  ],
+  "round_trip_geometria": "As geometrias exportadas pelo Blockbench correspondem às geometrias geradas, incluindo bones, cubos, pivôs, rotações e UVs (tolerância 0,0001). Os arquivos exportados pelo editor foram incluídos no RP."
+}

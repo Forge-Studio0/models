@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "asas_teste:chamas_azuis",
+      "materials": {
+        "default": "entity_alphatest",
+        "aura": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/asas_teste/chamas_azuis"
+      },
+      "geometry": {
+        "default": "geometry.asas_teste.chamas_azuis"
+      },
+      "render_controllers": [
+        "controller.render.asas_teste.static"
+      ]
+    }
+  }
+}
