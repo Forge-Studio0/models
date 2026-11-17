@@ -5,7 +5,7 @@
       "loop": true,
       "animation_length": 6.8,
       "bones": {
-        "iburi_core_ombro_00": {
+        "swbr_iburi1_core_ombro_00": {
           "position": [
             "0.16*math.sin(query.life_time*24+338.656)",
             "0.23*math.sin(query.life_time*31+338.656)",
@@ -22,16 +22,16 @@
             "3*math.cos(query.life_time*26+338.656)"
           ]
         },
-        "iburi_p0_ombro_00": {
+        "swbr_iburi1_p0_ombro_00": {
           "position": [
             "0.35*math.sin(query.life_time*36.909+132.787)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.000000, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*29.527+132.787)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*25.836+132.787)",
@@ -39,7 +39,7 @@
             "4*math.cos(query.life_time*33.218+132.787)"
           ]
         },
-        "iburi_core_antebraco_01": {
+        "swbr_iburi1_core_antebraco_01": {
           "position": [
             "0.16*math.sin(query.life_time*24+261.557)",
             "0.23*math.sin(query.life_time*31+261.557)",
@@ -56,16 +56,16 @@
             "3*math.cos(query.life_time*26+261.557)"
           ]
         },
-        "iburi_p1_antebraco_01": {
+        "swbr_iburi1_p1_antebraco_01": {
           "position": [
             "0.35*math.sin(query.life_time*26.864+26.191)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.166667, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*21.491+26.191)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*18.805+26.191)",
@@ -73,7 +73,7 @@
             "4*math.cos(query.life_time*24.178+26.191)"
           ]
         },
-        "iburi_core_antebraco_02": {
+        "swbr_iburi1_core_antebraco_02": {
           "position": [
             "0.16*math.sin(query.life_time*24+284.100)",
             "0.23*math.sin(query.life_time*31+284.100)",
@@ -90,16 +90,16 @@
             "3*math.cos(query.life_time*26+284.100)"
           ]
         },
-        "iburi_p2_antebraco_02": {
+        "swbr_iburi1_p2_antebraco_02": {
           "position": [
             "0.35*math.sin(query.life_time*36.306+120.113)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.333333, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*29.044+120.113)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*25.414+120.113)",
@@ -107,7 +107,7 @@
             "4*math.cos(query.life_time*32.675+120.113)"
           ]
         },
-        "iburi_core_escapula_03": {
+        "swbr_iburi1_core_escapula_03": {
           "position": [
             "0.16*math.sin(query.life_time*24+140.187)",
             "0.23*math.sin(query.life_time*31+140.187)",
@@ -124,16 +124,16 @@
             "3*math.cos(query.life_time*26+140.187)"
           ]
         },
-        "iburi_p3_escapula_03": {
+        "swbr_iburi1_p3_escapula_03": {
           "position": [
             "0.35*math.sin(query.life_time*24.472+95.450)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.500000, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*19.577+95.450)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*17.130+95.450)",
@@ -141,7 +141,7 @@
             "4*math.cos(query.life_time*22.025+95.450)"
           ]
         },
-        "iburi_core_ombro_04": {
+        "swbr_iburi1_core_ombro_04": {
           "position": [
             "0.16*math.sin(query.life_time*24+297.486)",
             "0.23*math.sin(query.life_time*31+297.486)",
@@ -158,16 +158,16 @@
             "3*math.cos(query.life_time*26+297.486)"
           ]
         },
-        "iburi_p4_ombro_04": {
+        "swbr_iburi1_p4_ombro_04": {
           "position": [
             "0.35*math.sin(query.life_time*25.442+95.720)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.666667, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*20.353+95.720)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*17.809+95.720)",
@@ -175,7 +175,7 @@
             "4*math.cos(query.life_time*22.898+95.720)"
           ]
         },
-        "iburi_core_flanco_05": {
+        "swbr_iburi1_core_flanco_05": {
           "position": [
             "0.16*math.sin(query.life_time*24+70.738)",
             "0.23*math.sin(query.life_time*31+70.738)",
@@ -192,16 +192,16 @@
             "3*math.cos(query.life_time*26+70.738)"
           ]
         },
-        "iburi_p5_flanco_05": {
+        "swbr_iburi1_p5_flanco_05": {
           "position": [
             "0.35*math.sin(query.life_time*25.292+31.538)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.833333, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*20.233+31.538)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*17.704+31.538)",
@@ -209,7 +209,7 @@
             "4*math.cos(query.life_time*22.763+31.538)"
           ]
         },
-        "iburi_core_ombro_06": {
+        "swbr_iburi1_core_ombro_06": {
           "position": [
             "0.16*math.sin(query.life_time*24+162.326)",
             "0.23*math.sin(query.life_time*31+162.326)",
@@ -226,16 +226,16 @@
             "3*math.cos(query.life_time*26+162.326)"
           ]
         },
-        "iburi_p0_ombro_06": {
+        "swbr_iburi1_p0_ombro_06": {
           "position": [
             "0.35*math.sin(query.life_time*27.053+340.299)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.000000, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*21.642+340.299)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*18.937+340.299)",
@@ -243,7 +243,7 @@
             "4*math.cos(query.life_time*24.348+340.299)"
           ]
         },
-        "iburi_core_antebraco_07": {
+        "swbr_iburi1_core_antebraco_07": {
           "position": [
             "0.16*math.sin(query.life_time*24+349.134)",
             "0.23*math.sin(query.life_time*31+349.134)",
@@ -260,16 +260,16 @@
             "3*math.cos(query.life_time*26+349.134)"
           ]
         },
-        "iburi_p1_antebraco_07": {
+        "swbr_iburi1_p1_antebraco_07": {
           "position": [
             "0.35*math.sin(query.life_time*38.225+28.113)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.166667, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*30.580+28.113)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.166667, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*26.757+28.113)",
@@ -277,7 +277,7 @@
             "4*math.cos(query.life_time*34.402+28.113)"
           ]
         },
-        "iburi_core_antebraco_08": {
+        "swbr_iburi1_core_antebraco_08": {
           "position": [
             "0.16*math.sin(query.life_time*24+72.594)",
             "0.23*math.sin(query.life_time*31+72.594)",
@@ -294,16 +294,16 @@
             "3*math.cos(query.life_time*26+72.594)"
           ]
         },
-        "iburi_p2_antebraco_08": {
+        "swbr_iburi1_p2_antebraco_08": {
           "position": [
             "0.35*math.sin(query.life_time*35.799+254.056)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.333333, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*28.639+254.056)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.333333, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*25.059+254.056)",
@@ -311,7 +311,7 @@
             "4*math.cos(query.life_time*32.219+254.056)"
           ]
         },
-        "iburi_core_escapula_09": {
+        "swbr_iburi1_core_escapula_09": {
           "position": [
             "0.16*math.sin(query.life_time*24+4.104)",
             "0.23*math.sin(query.life_time*31+4.104)",
@@ -328,16 +328,16 @@
             "3*math.cos(query.life_time*26+4.104)"
           ]
         },
-        "iburi_p3_escapula_09": {
+        "swbr_iburi1_p3_escapula_09": {
           "position": [
             "0.35*math.sin(query.life_time*31.100+142.127)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.500000, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*24.880+142.127)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.500000, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*21.770+142.127)",
@@ -345,7 +345,7 @@
             "4*math.cos(query.life_time*27.990+142.127)"
           ]
         },
-        "iburi_core_ombro_10": {
+        "swbr_iburi1_core_ombro_10": {
           "position": [
             "0.16*math.sin(query.life_time*24+151.744)",
             "0.23*math.sin(query.life_time*31+151.744)",
@@ -362,16 +362,16 @@
             "3*math.cos(query.life_time*26+151.744)"
           ]
         },
-        "iburi_p4_ombro_10": {
+        "swbr_iburi1_p4_ombro_10": {
           "position": [
             "0.35*math.sin(query.life_time*38.341+331.885)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.666667, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*30.673+331.885)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.666667, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*26.839+331.885)",
@@ -379,7 +379,7 @@
             "4*math.cos(query.life_time*34.507+331.885)"
           ]
         },
-        "iburi_core_flanco_11": {
+        "swbr_iburi1_core_flanco_11": {
           "position": [
             "0.16*math.sin(query.life_time*24+60.639)",
             "0.23*math.sin(query.life_time*31+60.639)",
@@ -396,16 +396,16 @@
             "3*math.cos(query.life_time*26+60.639)"
           ]
         },
-        "iburi_p5_flanco_11": {
+        "swbr_iburi1_p5_flanco_11": {
           "position": [
             "0.35*math.sin(query.life_time*28.475+37.182)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.833333, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*22.780+37.182)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.833333, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*19.933+37.182)",
@@ -413,7 +413,7 @@
             "4*math.cos(query.life_time*25.628+37.182)"
           ]
         },
-        "iburi_core_costas_12": {
+        "swbr_iburi1_core_costas_12": {
           "position": [
             "0.16*math.sin(query.life_time*24+263.383)",
             "0.23*math.sin(query.life_time*31+263.383)",
@@ -430,16 +430,16 @@
             "3*math.cos(query.life_time*26+263.383)"
           ]
         },
-        "iburi_p0_costas_12": {
+        "swbr_iburi1_p0_costas_12": {
           "position": [
             "0.35*math.sin(query.life_time*24.315+95.660)",
             "2.4*((math.mod(query.life_time / 6.8 + 0.000000, 1.0))-0.18)",
             "0.28*math.cos(query.life_time*19.452+95.660)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
+            "0.79+0.40*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.82+0.44*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))",
+            "0.80+0.34*(math.mod(query.life_time / 6.8 + 0.000000, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*17.020+95.660)",

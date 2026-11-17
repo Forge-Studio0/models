@@ -11,12 +11,13 @@ from PIL import Image
 from scipy.ndimage import gaussian_filter
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=[18,11,67]
+VERSION=[18,11,68]
 PERIODS={1:6.8,2:6.2,3:5.6}
 TEX=512;TILE=128;PHASES=6
 GEO_PATHS={1:'models/entity/nz_modo_iburi1.json',2:'models/entity/nz_modo_iburi2.json',3:'models/entity/nz_modo_iburi3l.geo.json'}
 NATIVE_GEOS=['models/entity/swbr39/custom.geo.json','models/entity/swbr39/custom_b.geo.json']
 SLOT_GEO='models/entity/swbr_iburi_slot.geo.json'
+DRAW_GEO='models/entity/swbr_iburi_draw.geo.json'
 REGISTRY='scripts/modos/rp_v17058_official_modes.js'
 LEGACY_HIDE_SCRIPTS=[
  "variable.swbr_iburi_total = query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3');",
@@ -25,7 +26,7 @@ LEGACY_HIDE_SCRIPTS=[
 ]
 PLAYER_SCRIPTS=[
  "v.swbr_iburi_camera_ok = !v.swbr_view_first_person && !v.swbr39_ui && !v.swbr_view_map_face && !q.is_spectator && q.distance_from_camera > 2.8;",
- "v.swbr_iburi_fade = math.clamp((q.distance_from_camera - 2.8) / 0.7,0,1);",
+ "v.swbr_iburi_fade = math.clamp((q.distance_from_camera - 2.8) / 0.2,0,1);",
  "v.swbr_iburi_stage = q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3') ? 3 : (q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi2') ? 2 : (q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi1') ? 1 : 0));",
  *[f'v.swbr_iburi_draw{i} = v.swbr_iburi_camera_ok && v.swbr_iburi_stage == {i};' for i in [1,2,3]]
 ]
@@ -62,12 +63,12 @@ def cloud_tile(seed,stage):
     for sigma,weight in [(2.5,.18),(6,.40),(14,.42)]:
         layer=gaussian_filter(rng.normal(size=x.shape),sigma)
         layer/=max(float(layer.std()),1e-8);noise+=layer*weight
-    value=np.clip((body-.13)/.82,0,1)
+    value=np.clip((body-.075)/.78,0,1)
     feather=np.clip((1-np.maximum(abs(x),abs(y)))/.16,0,1)
-    opacity={1:.48,2:.56,3:.62}[stage]
-    alpha=np.clip((value**.84)*(1+noise*.08)*feather*opacity,0,1)
+    opacity={1:.76,2:.82,3:.88}[stage]
+    alpha=np.clip((value**.62)*(1+noise*.06)*feather*opacity,0,opacity)
     alpha[alpha<.012]=0
-    grey=np.clip(190-98*value+noise*7,76,198)
+    grey=np.clip(198-{1:74,2:88,3:96}[stage]*value+noise*6,92,202)
     rgba=np.dstack([grey,grey,grey,alpha*255]).astype(np.uint8)
     rgba[:3,:,3]=0;rgba[-3:,:,3]=0;rgba[:,:3,3]=0;rgba[:,-3:,3]=0
     return Image.fromarray(rgba,'RGBA')
@@ -83,29 +84,34 @@ def placements(stage):
     for side in [-1,1]:
         arm='rightArm' if side<0 else 'leftArm'
         leg='rightLeg' if side<0 else 'leftLeg'
-        add(arm,[side*5.3,22.3,.8],[3.7,3.4],'ombro')
-        add(arm,[side*6.8,19.0,-.6],[2.8,3.0],'antebraco')
-        add(arm,[side*5.0,16.1,1.4],[2.8,2.7],'antebraco')
-        add('body',[side*2.3,21.6,2.7],[3.3,3.0],'escapula')
-        add('body',[side*3.8,23.3,1.8],[2.6,2.9],'ombro')
-        if stage==1:add('body',[side*4.0,18.6,1.4],[2.7,3.3],'flanco')
+        # Surface clouds: front z<-2, back z>2, outer arm x>8.
+        # The previous centers sat inside opaque arms/torso and disappeared.
+        add(arm,[side*5.8,23.2,-2.6],[4.0,3.9],'ombro')
+        add(arm,[side*8.0,17.8,-1.7],[3.8,3.4],'antebraco')
+        add(arm,[side*5.8,15.0,-2.8],[3.3,3.5],'antebraco')
+        add('body',[side*2.4,21.7,3.7],[3.6,3.6],'escapula')
+        add('body',[side*4.3,22.4,3.2],[3.6,3.4],'ombro')
+        add('body',[side*4.6,18.8,-1.8],[3.0,4.1],'flanco')
         if stage>=2:
-            add(arm,[side*6.0,21.0,-1.8],[4.3,4.0],'braco')
-            add(arm,[side*6.5,17.1,1.6],[4.4,4.5],'braco')
-            add(arm,[side*6.0,13.4,-.6],[3.8,4.0],'mao')
-            for yy in [20.1,16.6,13.4]:add('body',[side*4.3,yy,.7],[4.0,4.4],'flanco')
-            for yy in [8.5,4.1]:add(leg,[side*2.1,yy,1.0],[3.3,3.5],'perna')
+            add(arm,[side*8.2,21.0,1.4],[4.9,4.5],'braco')
+            add(arm,[side*6.2,17.0,2.9],[4.6,4.7],'braco')
+            add(arm,[side*6.2,13.3,-2.6],[4.4,4.3],'mao')
+            add('body',[side*2.8,20.3,-3.3],[4.0,4.7],'peito')
+            add('body',[side*4.9,15.3,.4],[3.8,4.8],'flanco')
+            add(leg,[side*2.0,9.3,-2.8],[4.3,4.3],'perna')
+            add(leg,[side*2.6,4.4,2.6],[4.0,3.9],'perna')
+            add(leg,[side*3.1,3.2,-2.1],[3.7,3.6],'perna')
         if stage==3:
-            for yy in [22.4,18.5,14.6]:add('body',[side*1.9,yy,-1.6],[5.5,5.5],'nucleo')
-            for yy in [22.5,18.1,13.5]:add('body',[side*1.7,yy,2.0],[5.2,5.8],'nucleo')
-            for yy in [10.3,6.6,2.5]:add(leg,[side*2.0,yy,-.6],[4.7,4.7],'perna')
-            add('head',[side*1.6,28.0,-.3],[5.3,5.8],'cabeca')
-    if stage==1:add('body',[0,20.5,3.1],[3.5,3.6],'costas')
+            add(arm,[side*5.7,20.3,-3.3],[5.4,5.7],'braco')
+            for yy in [21.5,17.6,13.6]:add('body',[side*2.0,yy,-3.4],[5.3,5.4],'nucleo')
+            for yy in [20.2,15.3]:add('body',[side*2.0,yy,3.7],[5.3,5.7],'nucleo')
+            for yy in [8.2,3.8]:add(leg,[side*2.2,yy,-3.0],[5.0,5.0],'perna')
+            add('head',[side*4.9,28.5,0],[4.7,6.0,8.0],'cabeca')
+    add('body',[0,22.0,3.7],[3.6,3.5],'costas')
     if stage==3:
-        add('head',[0,30.0,.7],[6.7,5.6],'cabeca')
-        add('head',[0,25.5,1.0],[6.6,5.3],'cabeca')
-        add('body',[0,19.8,0],[6.3,7.0],'nucleo')
-        add('body',[0,14.2,0],[5.9,5.4],'nucleo')
+        add('head',[0,28.4,-4.9],[8.2,7.5,3.5],'cabeca')
+        add('head',[0,28.5,4.9],[8.2,7.5,3.5],'cabeca')
+        add('head',[0,32.2,0],[8.4,3.8,7.5],'cabeca')
     return result
 
 def cycle(stage,phase):return f'math.mod(query.life_time / {PERIODS[stage]} + {phase/PHASES:.6f}, 1.0)'
@@ -117,18 +123,18 @@ def make_geometry(stage):
     rng=np.random.default_rng(8810+stage)
     # Match SWBR's geometry.swbr39.custom skeleton, including independent legs.
     bones=[{'name':'root','pivot':[0,0,0]},{'name':'waist','parent':'root','pivot':[0,12,0]},
-      {'name':'body','parent':'waist','pivot':[0,24,0],'locators':{'iburi_torso':[0,19,0],'iburi_costas':[0,22,2.5]}},
-      {'name':'head','parent':'body','pivot':[0,24,0],'locators':{'iburi_cabeca':[0,31,0]}},
-      {'name':'rightArm','parent':'body','pivot':[-5,22,0],'locators':{'iburi_braco_d':[-6,17,0],'iburi_ombro_d':[-5,23,0]}},
-      {'name':'leftArm','parent':'body','pivot':[5,22,0],'locators':{'iburi_braco_e':[6,17,0],'iburi_ombro_e':[5,23,0]}},
-      {'name':'rightLeg','parent':'root','pivot':[-1.9,12,0],'locators':{'iburi_perna_d':[-2,7,0]}},
-      {'name':'leftLeg','parent':'root','pivot':[1.9,12,0],'locators':{'iburi_perna_e':[2,7,0]}}]
+      {'name':'body','parent':'waist','pivot':[0,24,0],'locators':{'iburi_torso':[0,19.5,-3.4],'iburi_costas':[0,22,3.7]}},
+      {'name':'head','parent':'body','pivot':[0,24,0],'locators':{'iburi_cabeca':[0,31.6,-5.8]}},
+      {'name':'rightArm','parent':'body','pivot':[-5,22,0],'locators':{'iburi_braco_d':[-8.6,17.5,2.9],'iburi_ombro_d':[-6.5,23.5,-3.4]}},
+      {'name':'leftArm','parent':'body','pivot':[5,22,0],'locators':{'iburi_braco_e':[8.6,17.5,2.9],'iburi_ombro_e':[6.5,23.5,-3.4]}},
+      {'name':'rightLeg','parent':'root','pivot':[-1.9,12,0],'locators':{'iburi_perna_d':[-2.6,6.4,-2.8]}},
+      {'name':'leftLeg','parent':'root','pivot':[1.9,12,0],'locators':{'iburi_perna_e':[2.6,6.4,-2.8]}}]
     anim_bones={};groups=placements(stage)
     for i,(parent,pos,size,kind) in enumerate(groups):
         # A persistent six-sided volume remains visible when a wisp fades out.
-        core_name=f'iburi_core_{kind}_{i:02d}'
+        core_name=f'swbr_iburi{stage}_core_{kind}_{i:02d}'
         tile=(i*3+stage)%16;u=(tile%4)*TILE;v=(tile//4)*TILE
-        w,h=size[0]*.96,size[1]*.94;d=min(w,h)*(.92 if stage==3 else .78)
+        w,h=size[0]*.96,size[1]*.94;d=size[2] if len(size)>2 else min(w,h)*(.92 if stage==3 else .78)
         core={'origin':[round(pos[0]-w/2,5),round(pos[1]-h/2,5),round(pos[2]-d/2,5)],
           'size':[round(w,5),round(h,5),round(d,5)],'pivot':pos,
           'rotation':[round(float(rng.uniform(-14,14)),3),round(float(rng.uniform(-28,28)),3),round(float(rng.uniform(-15,15)),3)],
@@ -139,7 +145,7 @@ def make_geometry(stage):
           'position':[f'0.16*math.sin(query.life_time*24+{angle:.3f})',f'0.23*math.sin(query.life_time*31+{angle:.3f})',f'0.15*math.cos(query.life_time*27+{angle:.3f})'],
           'scale':[f'1.0+0.045*math.sin(query.life_time*37+{angle:.3f})',f'1.0+0.055*math.cos(query.life_time*29+{angle:.3f})',f'1.0+0.045*math.sin(query.life_time*33+{angle:.3f})'],
           'rotation':[f'2*math.sin(query.life_time*19+{angle:.3f})',f'4*math.sin(query.life_time*23+{angle:.3f})',f'3*math.cos(query.life_time*26+{angle:.3f})']}
-        phase=i%PHASES;name=f'iburi_p{phase}_{kind}_{i:02d}'
+        phase=i%PHASES;name=f'swbr_iburi{stage}_p{phase}_{kind}_{i:02d}'
         cubes=[]
         for layer in range(2):
             tile=(i*5+layer*7+stage)%16;u=(tile%4)*TILE;v=(tile//4)*TILE
@@ -150,10 +156,10 @@ def make_geometry(stage):
             cubes.append({'origin':[round(center[0]-w/2,5),round(center[1]-h/2,5),round(z-.0125,5)],'size':[round(w,5),round(h,5),.025],
               'pivot':[round(a,5) for a in center],'rotation':[round(float(rng.uniform(-16,16)),3),round(layer*90+float(rng.uniform(-12,12)),3),round(float(rng.uniform(-13,13)),3)],'uv':uv})
         bones.append({'name':name,'parent':parent,'pivot':pos,'cubes':cubes})
-        c=cycle(stage,phase);angle=float(rng.uniform(0,360));speed=float(rng.uniform(22,39));lift={1:2.4,2:3.6,3:4.2}[stage]
+        c=cycle(stage,phase);angle=float(rng.uniform(0,360));speed=float(rng.uniform(22,39));lift={1:2.4,2:3.0,3:2.8}[stage]
         anim_bones[name]={
           'position':[f'0.35*math.sin(query.life_time*{speed:.3f}+{angle:.3f})',f'{lift}*(({c})-0.18)',f'0.28*math.cos(query.life_time*{speed*.8:.3f}+{angle:.3f})'],
-          'scale':[f'0.79+0.43*({c})',f'0.82+0.50*({c})',f'0.80+0.35*({c})'],
+          'scale':[f'0.79+0.40*({c})',f'0.82+0.44*({c})',f'0.80+0.34*({c})'],
           'rotation':[f'3*math.sin(query.life_time*{speed*.7:.3f}+{angle:.3f})',f'6*math.sin(query.life_time*{speed*.6:.3f}+{angle:.3f})',f'4*math.cos(query.life_time*{speed*.9:.3f}+{angle:.3f})']}
     description={'identifier':f'geometry.nz_modo_iburi{stage}','texture_width':TEX,'texture_height':TEX,'visible_bounds_width':4,'visible_bounds_height':4.5,'visible_bounds_offset':[0,1,0]}
     geometry={'format_version':'1.16.0','minecraft:geometry':[{'description':description,'bones':bones}]}
@@ -174,17 +180,19 @@ def make_controller():
           'transitions':[{'default':f'!v.swbr_iburi_draw{stage}'}]}
     return {'initial_state':'default','states':states}
 
-def render_controller(geometry,stage,phase=None):
-    """Keep the rig enabled. Only individual cloud leaves are masked per pass."""
-    visibility=[{'*':True}]
-    for bone in geometry['minecraft:geometry'][0]['bones']:
-        name=bone['name']
-        if not bone.get('cubes'):continue
-        selected=name.startswith('iburi_core_') if phase is None else name.startswith(f'iburi_p{phase}_')
-        visibility.append({name:selected})
-    opacity=f'{ {1:.68,2:.73,3:.78}[stage]} * v.swbr_iburi_fade' if phase is None else f'({alpha_expr(stage,phase)}) * v.swbr_iburi_fade'
-    return {'geometry':f'Geometry.swbr_iburi{stage}','materials':[{'*':'Material.swbr_iburi_smoke'}],'textures':[f'Texture.swbr_iburi{stage}'],
-      'part_visibility':visibility,'color':{'r':1,'g':1,'b':1,'a':opacity}}
+def draw_geometry(geometry,stage,label):
+    """Each pass gets its own mesh; no repeated mesh with conflicting masks."""
+    result=copy.deepcopy(geometry['minecraft:geometry'][0])
+    result['description']['identifier']=f'geometry.swbr.iburi{stage}.{label}'
+    result['bones']=[b for b in result['bones'] if not b.get('cubes') or b['name'].startswith(f'swbr_iburi{stage}_{label}_')]
+    for bone in result['bones']:bone.pop('locators',None)
+    return result
+
+def render_controller(stage,phase=None):
+    label='core' if phase is None else f'p{phase}'
+    opacity=f'{ {1:.88,2:.92,3:.96}[stage]} * v.swbr_iburi_fade' if phase is None else f'({alpha_expr(stage,phase)}) * v.swbr_iburi_fade'
+    return {'geometry':f'Geometry.swbr_iburi{stage}_{label}','materials':[{'*':'Material.swbr_iburi_smoke'}],'textures':[f'Texture.swbr_iburi{stage}'],
+      'color':{'r':1,'g':1,'b':1,'a':opacity}}
 
 def particle(stage):
     start={1:.06,2:.08,3:.10}[stage];growth={1:.09,2:.11,3:.12}[stage]
@@ -204,8 +212,9 @@ def particle(stage):
 
 def build(base,compatible_bases=None):
     ROOT.mkdir(exist_ok=True,parents=True);summary={}
-    base_packs=read_base(base);bp=base_packs['BP'][1];rp=base_packs['RP'][1];rc={}
+    base_packs=read_base(base);bp=base_packs['BP'][1];rp=base_packs['RP'][1];rc={};draw_geometries=[]
     player=json.loads(rp['entity/player.entity.json']);desc=player['minecraft:client_entity']['description']
+    desc['geometry']={k:v for k,v in desc['geometry'].items() if not k.startswith('swbr_iburi')}
     desc['materials']['swbr_iburi_smoke']='entity_alphablend'
     desc['animations']['swbr_iburi_fx']='controller.animation.swbr.iburi.fx'
     animate=desc['scripts']['animate']
@@ -218,7 +227,9 @@ def build(base,compatible_bases=None):
         tex=f'textures/entity/swbr/iburi/fumaca{stage}'
         put('RP',tex+'.png',png_bytes(atlas(stage)))
         controllers=[f'controller.render.swbr.iburi{stage}.core']+[f'controller.render.swbr.iburi{stage}.p{p}' for p in range(PHASES)]
-        desc['geometry'][f'swbr_iburi{stage}']=f'geometry.nz_modo_iburi{stage}'
+        for label in ['core']+[f'p{p}' for p in range(PHASES)]:
+            part=draw_geometry(geo,stage,label);draw_geometries.append(part)
+            desc['geometry'][f'swbr_iburi{stage}_{label}']=part['description']['identifier']
         desc['textures'][f'swbr_iburi{stage}']=tex
         desc['animations'][f'swbr_iburi{stage}_idle']=f'animation.nz_modo_iburi{stage}.idle'
         desc.setdefault('particle_effects',{})[f'swbr_iburi{stage}_fumaca']=f'swbr:iburi_transformacao_{stage}'
@@ -230,12 +241,13 @@ def build(base,compatible_bases=None):
           'identifier':f'nz:modo_iburi{stage}','materials':{'default':'entity_alphablend'},'textures':{'default':tex},
           'geometry':{'default':'geometry.swbr.iburi.slot'},'render_controllers':['controller.render.swbr.iburi.slot']}}})
         put('RP',f'particles/swbr_iburi_transformacao_{stage}.json',particle(stage))
-        rc[controllers[0]]=render_controller(geo,stage)
+        rc[controllers[0]]=render_controller(stage)
         for phase in range(PHASES):
-            rc[f'controller.render.swbr.iburi{stage}.p{phase}']=render_controller(geo,stage,phase)
+            rc[f'controller.render.swbr.iburi{stage}.p{phase}']=render_controller(stage,phase)
     animate.append('swbr_iburi_fx')
     rc['controller.render.swbr.iburi.slot']={'geometry':'Geometry.default','materials':[{'*':'Material.default'}],'textures':['Texture.default']}
     put('RP',SLOT_GEO,{'format_version':'1.16.0','minecraft:geometry':[{'description':{'identifier':'geometry.swbr.iburi.slot','texture_width':TEX,'texture_height':TEX},'bones':[{'name':'root','pivot':[0,0,0]}]}]})
+    put('RP',DRAW_GEO,{'format_version':'1.16.0','minecraft:geometry':draw_geometries})
     put('RP','render_controllers/swbr_iburi_transformacoes.json',{'format_version':'1.8.0','render_controllers':rc})
     put('RP','animation_controllers/swbr_iburi_fumaca.json',{'format_version':'1.10.0','animation_controllers':{'controller.animation.swbr.iburi.fx':make_controller()}})
     # Dedicated locators on the normal player rig make particle attachment
@@ -276,8 +288,8 @@ def build(base,compatible_bases=None):
         put('RP',path,text.encode('utf-8'))
     for pack,data in [('BP',bp),('RP',rp)]:
         m=json.loads(data['manifest.json']);m['header']['version']=VERSION
-        m['header']['name']=re.sub(r'18\.11\.\d+','18.11.67',m['header']['name']).split(' · Iburi')[0]+' · Iburi'
-        m['header']['description']='Shinobi World BR 18.11.67 | Revisão Iburi: fumaça no jogador, bloqueio de câmera nativo, transparência e partículas limitadas'
+        m['header']['name']=re.sub(r'18\.11\.\d+','18.11.68',m['header']['name']).split(' · Iburi')[0]+' · Iburi'
+        m['header']['description']='Shinobi World BR 18.11.68 | Iburi: nuvens externas à pele, estágios distintos e malhas independentes por camada'
         for module in m['modules']:module['version']=VERSION
         for dep in m.get('dependencies',[]):
             if dep.get('uuid') in ['82dafe0d-c36f-4665-9df0-371f6d8b2a55','ef513a51-2cb2-4cc5-b300-5ef44201c3f5']:dep['version']=VERSION
@@ -287,7 +299,7 @@ def build(base,compatible_bases=None):
         files={}
         for p in (ROOT/'Integracao'/pack).rglob('*'):
             if p.is_file():files[p.relative_to(ROOT/'Integracao'/pack).as_posix()]=hashlib.sha256(p.read_bytes()).hexdigest()
-        entries[pack]={'original_entry':base_packs[pack][0],'updated_entry':f'SWBR_{pack}_v18.11.67_IBURI.mcpack','files':files}
+        entries[pack]={'original_entry':base_packs[pack][0],'updated_entry':f'SWBR_{pack}_v18.11.68_IBURI.mcpack','files':files}
     base_version=json.loads(bp['manifest.json'])['header']['version']
     compatible=[]
     for compatible_base in compatible_bases or []:

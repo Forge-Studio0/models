@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Audit pack preservation, player-owned visuals and the camera regression checks."""
 from pathlib import Path
-import argparse,base64,copy,fnmatch,hashlib,io,json,re,zipfile
+import argparse,base64,copy,hashlib,io,json,re,zipfile
 import numpy as np
 from PIL import Image
 import jsonschema
-from construir_iburi import VERSION,GEO_PATHS,NATIVE_GEOS,SLOT_GEO,REGISTRY,LEGACY_HIDE_SCRIPTS,PLAYER_SCRIPTS
+from construir_iburi import VERSION,GEO_PATHS,NATIVE_GEOS,SLOT_GEO,DRAW_GEO,REGISTRY,LEGACY_HIDE_SCRIPTS,PLAYER_SCRIPTS
 
 ROOT=Path(__file__).resolve().parents[1]
 CHECKS=[]
@@ -18,21 +18,6 @@ def pack_files(data):
     with zipfile.ZipFile(io.BytesIO(data)) as z:
         assert z.testzip() is None and len(z.namelist())==len(set(z.namelist()))
         return {n:z.read(n) for n in z.namelist() if not n.endswith('/')}
-def visible_leaves(controller,bones):
-    flags={n:True for n in bones}
-    for rule in controller['part_visibility']:
-        for pattern,value in rule.items():
-            assert isinstance(value,bool)
-            for name in bones:
-                if fnmatch.fnmatchcase(name,pattern):flags[name]=value
-    result=set()
-    for name,bone in bones.items():
-        if not bone.get('cubes'):continue
-        current=name;visible=True
-        while current:
-            visible=visible and flags[current];current=bones[current].get('parent')
-        if visible:result.add(name)
-    return result
 def clean_player(entity):
     result=copy.deepcopy(entity);d=result['minecraft:client_entity']['description']
     for section in ['materials','textures','geometry','animations','particle_effects']:
@@ -72,7 +57,7 @@ def validate(base,addon,report_path=None):
             if name.endswith('.json'):json.loads(b[name])
         preserved[pack]=sum(a[n]==b[n] for n in a);modified[pack]=sorted(changed);added[pack]=sorted(set(b)-set(a))
         before=json.loads(a['manifest.json']);after=json.loads(b['manifest.json'])
-        check(after['header']['version']==VERSION and all(m['version']==VERSION for m in after['modules']),'Versão 18.11.67 nos manifests: '+pack)
+        check(after['header']['version']==VERSION and all(m['version']==VERSION for m in after['modules']),'Versão 18.11.68 nos manifests: '+pack)
         normalized=copy.deepcopy(after)
         for key in ['name','description','version']:normalized['header'][key]=before['header'][key]
         for m,o in zip(normalized['modules'],before['modules']):m['version']=o['version']
@@ -115,6 +100,8 @@ def validate(base,addon,report_path=None):
             errors=list(validator.iter_errors(read(path)))
             check(not errors,'Schema: '+str(path.relative_to(ROOT))+(' '+errors[0].message if errors else ''))
     controllers=json.loads(rp['render_controllers/swbr_iburi_transformacoes.json'])['render_controllers']
+    draw_list=json.loads(rp[DRAW_GEO])['minecraft:geometry'];draws={g['description']['identifier']:g for g in draw_list}
+    check(len(draw_list)==len(draws)==21,'21 geometrias exclusivas, uma por camada de renderização')
     fx=json.loads(rp['animation_controllers/swbr_iburi_fumaca.json'])['animation_controllers']
     check(d['animations']['swbr_iburi_fx'] in fx and d['scripts']['animate'].count('swbr_iburi_fx')==1,'Controlador de partículas pertence ao jogador e possui uma única instância')
     fx=fx[d['animations']['swbr_iburi_fx']]
@@ -130,7 +117,7 @@ def validate(base,addon,report_path=None):
         anim_path=f'animations/nz_modo_iburi{stage}.idle.json';anims=json.loads(rp[anim_path])['animations'];anim=anims[d['animations'][prefix+'_idle']]
         check(attach['identifier']==f'nz:modo_iburi{stage}' and attach['geometry']['default']==slot['description']['identifier'] and attach['render_controllers']==['controller.render.swbr.iburi.slot'],'Item ligado somente à geometria vazia: '+suffix)
         check(not any(attach.get(k) for k in ['animations','particle_effects','scripts']),'Nenhuma emissão, animação ou fumaça no contexto do item: '+suffix)
-        check(d['geometry'][prefix]==geo['description']['identifier']==f'geometry.nz_modo_iburi{stage}','Fumaça ligada à geometria do jogador: '+suffix)
+        check(geo['description']['identifier']==f'geometry.nz_modo_iburi{stage}' and prefix not in d['geometry'],'Modelo unificado reservado para edição; jogador usa somente as camadas: '+suffix)
         check({prefix+'_idle':f'v.swbr_iburi_draw{stage}'} in d['scripts']['animate'],'Animação vinculada ao modo e à câmera nativa: '+suffix)
         for identifier,folder in [(geo['description']['identifier'],'models/'),(d['animations'][prefix+'_idle'],'animations/')]:
             pattern=rb'"'+identifier.encode()+rb'"\s*:' if folder=='animations/' else rb'"identifier"\s*:\s*"'+identifier.encode()+rb'"'
@@ -148,16 +135,20 @@ def validate(base,addon,report_path=None):
         check(True,'Hierarquia, espessura e UVs válidos: '+suffix)
         rig=['root','waist','body','head','rightArm','leftArm','rightLeg','leftLeg']
         check(all(bones[n].get('parent')==source_rig[n].get('parent') and bones[n]['pivot']==source_rig[n]['pivot'] for n in rig),'Rig e pivôs correspondem ao jogador: '+suffix)
-        check(set(anim['bones'])==leaves and all(n.startswith(('iburi_core_','iburi_p')) for n in anim['bones']),'Animações só alteram os filhos de fumaça: '+suffix)
+        check(set(anim['bones'])==leaves and all(n.startswith(prefix+'_') for n in anim['bones']),'Animações só alteram os filhos privados de cada nível: '+suffix)
         selected=set()
         for index,label in enumerate(['core','p0','p1','p2','p3','p4','p5']):
             identifier=f'controller.render.swbr.iburi{stage}.{label}';rc=controllers[identifier]
             check(own_controllers[identifier]==f'v.swbr_iburi_draw{stage}','Bloqueio da câmera no controlador inteiro: '+identifier)
-            expected={n for n in leaves if n.startswith('iburi_core_' if index==0 else f'iburi_p{index-1}_')};visible=visible_leaves(rc,bones)
-            check(visible==expected and bool(visible) and not selected&visible,'Máscara e todos os ancestrais habilitados: '+identifier);selected.update(visible)
-            check(rc['geometry']=='Geometry.'+prefix and rc['textures']==['Texture.'+prefix] and rc['materials']==[{'*':'Material.swbr_iburi_smoke'}],'Aliases de geometria, material e textura resolvem: '+identifier)
+            expected={n for n in leaves if n.startswith(prefix+'_'+label+'_')}
+            alias=prefix+'_'+label;part=draws[d['geometry'][alias]];part_bones={b['name']:b for b in part['bones']}
+            visible={n for n,b in part_bones.items() if b.get('cubes')}
+            check(visible==expected and bool(visible) and not selected&visible,'Camada com geometria própria, sem duplicação: '+identifier);selected.update(visible)
+            check(all(part_bones[n]==bones[n] for n in visible) and all(not b.get('parent') or b['parent'] in part_bones for b in part_bones.values()),'Cubos, transforms e cadeia de pais correspondem ao modelo editável: '+identifier)
+            check('part_visibility' not in rc and len(part_bones)<=64,'Sem máscaras concorrentes e até 64 bones por malha: '+identifier)
+            check(rc['geometry']=='Geometry.'+alias and rc['textures']==['Texture.'+prefix] and rc['materials']==[{'*':'Material.swbr_iburi_smoke'}],'Aliases exclusivos de geometria, material e textura resolvem: '+identifier)
         check(selected==leaves,'Cada nuvem tem exatamente um passe: '+suffix)
-        core=[b for n,b in bones.items() if n.startswith('iburi_core_')]
+        core=[b for n,b in bones.items() if n.startswith(prefix+'_core_')]
         check(all(min(b['cubes'][0]['size'])>1.5 and len(b['cubes'][0]['uv'])==6 for b in core),'Volumes com seis faces e espessura: '+suffix)
         regions={'body','rightArm','leftArm'}|({'rightLeg','leftLeg'} if stage>=2 else set())|({'head'} if stage==3 else set())
         check(regions<={b['parent'] for b in core},'Fumaça distribuída nas regiões necessárias: '+suffix)
@@ -167,14 +158,14 @@ def validate(base,addon,report_path=None):
         for row in range(4):
             for col in range(4):
                 tile=pixels[row*128:(row+1)*128,col*128:(col+1)*128];assert not tile[[0,-1],:,3].any() and not tile[:,[0,-1],3].any();tiles.append(digest(tile.tobytes()))
-        check(len(set(tiles))==16 and len(np.unique(pixels[:,:,3]))>50 and pixels[:,:,3].max()<192,'Alfa moderado, nuvens diferentes e bordas transparentes: '+suffix)
+        check(len(set(tiles))==16 and len(np.unique(pixels[:,:,3]))>50 and pixels[:,:,3].max()<226,'Alfa graduado, nuvens diferentes e bordas transparentes: '+suffix)
         pfx=json.loads(rp[f'particles/swbr_iburi_transformacao_{stage}.json'])['particle_effect'];effect=prefix+'_fumaca'
         check(d['particle_effects'][effect]==pfx['description']['identifier'],'Partícula pertence ao jogador: '+suffix)
         active=fx['states']['fumaca'+suffix];events=active['particle_effects']
         check(fx['states']['default']['transitions'][stage-1]=={'fumaca'+suffix:f'v.swbr_iburi_draw{stage}'} and active['transitions']==[{'default':f'!v.swbr_iburi_draw{stage}'}],'Estado termina ao trocar modo, câmera ou desequipar: '+suffix)
         for event in events:
             assert event['effect']==effect and event['locator'] in native_locators and event.get('bind_to_actor',True)
-            position=native_locators[event['locator']];assert abs(position[0])<=8 and 0<=position[1]<=32 and abs(position[2])<=4
+            position=native_locators[event['locator']];assert abs(position[0])<=9 and 0<=position[1]<=32 and abs(position[2])<=6
         check(bool(events),'Locators existem no rig humano e usam unidades de modelo: '+suffix)
         c=pfx['components'];limit=c['minecraft:emitter_rate_steady']['max_particles']*len(events)
         check(c['minecraft:emitter_local_space']=={'position':True,'rotation':True,'velocity':False},'Simulação de posição e rotação locais: '+suffix)
@@ -190,6 +181,9 @@ def validate(base,addon,report_path=None):
     numeric=read(ROOT/'Validacao_Molang.json')
     check(numeric['resultado']=='APROVADO' and numeric['minecraft_executado'] is False,'Testes numéricos de câmera e partículas concluídos sem alegar execução do Minecraft')
     for name,checksum in numeric['fontes_sha256'].items():check(digest(rp[name])==checksum,'Teste numérico corresponde ao fonte atual: '+name)
+    exposure=read(ROOT/'Validacao_Exposicao.json')
+    check(exposure['resultado']=='APROVADO' and exposure['minecraft_executado'] is False,'Exposição à frente da pele e progressão dos três níveis verificadas em projeção estática')
+    for name,checksum in exposure['fontes_sha256'].items():check(digest(rp[name])==checksum,'Teste de exposição corresponde ao fonte atual: '+name)
     check(not (ROOT/'Previews').exists(),'Sem prévias de modelos na entrega')
     report={'resultado':'APROVADO','versao':VERSION,'base_sha256':base_hash,'addon_sha256':digest(addon.read_bytes()),'minecraft_executado':False,
       'escopo':'Arquivos e regressões numéricas. Renderização real e multiplayer ainda precisam de teste no Minecraft.',

@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Shinobi World BR 18.11.67 | Revisão Iburi: fumaça no jogador, bloqueio de câmera nativo, transparência e partículas limitadas",
-    "name": "Shinobi World BR 18.11.67 · Recursos MOBILE · Iburi",
+    "description": "Shinobi World BR 18.11.68 | Iburi: nuvens externas à pele, estágios distintos e malhas independentes por camada",
+    "name": "Shinobi World BR 18.11.68 · Recursos MOBILE · Iburi",
     "uuid": "ef513a51-2cb2-4cc5-b300-5ef44201c3f5",
     "version": [
       18,
       11,
-      67
+      68
     ],
     "min_engine_version": [
       1,
@@ -23,7 +23,7 @@
       "version": [
         18,
         11,
-        67
+        68
       ]
     }
   ],
@@ -33,7 +33,7 @@
       "version": [
         18,
         11,
-        67
+        68
       ]
     }
   ]

@@ -22,36 +22,36 @@
         "texture_error": 0
       },
       "errors": [],
-      "source_sha256": "4872561cf7b2016af35508c72a31bd0bfae9f834bcce61f7eae9256c3ffa6927",
-      "native_geometry_sha256": "91265e3b827634c3d240222fafe385a196df3083c9285ef85d8b595d885dd91e",
-      "native_animation_sha256": "2101ec0d68082142f9c65eaf396e30e9755cff3ee390fee84e1a8e7b1270d734",
-      "texture_sha256": "fd6848692eee399029f1eed78ecd093995eb23e64b4cfa0e1ab2c820bd672eff"
+      "source_sha256": "c591a94472de8c4a9b5ec0d10d3c373dbfcfdca7c0822d3a5fee6af08315c8e7",
+      "native_geometry_sha256": "6cb9df41625a5771ab42192429150411ce64526312f2c0f8e8d14807cf1a50cf",
+      "native_animation_sha256": "7bcc441a5e69108ad486da54c5f7eac1ca51506524a0d4a8ec84aff555643f08",
+      "texture_sha256": "468c5b8b41df9a842da161ef6f6376e090af3cc287cd069abefbb2e836f4f96e"
     },
     {
       "stage": 2,
       "editor": "4.12.6",
       "format": "bedrock",
-      "cubes": 78,
-      "bones": 60,
+      "cubes": 87,
+      "bones": 66,
       "animations": [
         {
           "name": "animation.nz_modo_iburi2.idle",
           "length": 6.2,
-          "animators": 52
+          "animators": 58
         }
       ],
       "texture_error": 0,
       "reopened": {
-        "cubes": 78,
-        "bones": 60,
+        "cubes": 87,
+        "bones": 66,
         "animations": 1,
         "texture_error": 0
       },
       "errors": [],
-      "source_sha256": "ecd00a4a1a8fd89632ebc28929483b3adb125431d08c49c5bc2efc13e5de15c3",
-      "native_geometry_sha256": "2a60d164369407588b62dc480a7db55ebb1f11108eb78a168f2ae7f98f939cd1",
-      "native_animation_sha256": "4859cdefc075769769528aeca9e46224a3863155b9b8ff95ddb7ef3740575fd7",
-      "texture_sha256": "51b3d6f9b6b61f873acc0a88fb44b786db6df6ccf7f80f9072c2106f7e2ec3cd"
+      "source_sha256": "817dd8c096eaa8f1154dbbd09a2f57717cd7f43157f30f7e398d2d818970e607",
+      "native_geometry_sha256": "11370ae7cfbca354a0f3cb8319440d7aa23b33319e77c6e3390a48b777039973",
+      "native_animation_sha256": "ed38f5143e5f48822bf13a4a9996f58459c743a6df88309cbfb0ae308a1209c2",
+      "texture_sha256": "1bfbe471d402db01a3edb65c070426a6690d0f2bbc90e19cb4f9b576ecc5f151"
     },
     {
       "stage": 3,
@@ -74,10 +74,10 @@
         "texture_error": 0
       },
       "errors": [],
-      "source_sha256": "77d163040e8438bd1b1cd3d8919b56a639322a1ef43f741f3d67e79b9784159e",
-      "native_geometry_sha256": "49bae93326d4eebdbb92ecc32b08f43ccf2af8455f02e2c0d39e13f8bde58a2d",
-      "native_animation_sha256": "a1424cc58cf4e8c4983f18459af6056413f83d0ac98a5086e96680432c081009",
-      "texture_sha256": "5a6b8f0c016ebb63acad3d53e7e2050548027244b61ea6403aa44f98686ace22"
+      "source_sha256": "32948284e43d2c37c03e21e67f4f7321b12cf3ade009405cea16f70d6ecf65e8",
+      "native_geometry_sha256": "a24c8f03321e6c0abe3793802871615f4759759ae23b022730ed9016af99c648",
+      "native_animation_sha256": "6aaccf7f3d6aa698bc1570e59b652ea97e7683228c611b3c3a483ef12b2fda94",
+      "texture_sha256": "b24442da1f62e0718d923ccd444737d65d1a4d4556c69c68afe3b1172d7037b4"
     }
   ]
 }

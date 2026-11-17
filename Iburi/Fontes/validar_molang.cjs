@@ -11,6 +11,9 @@ const check=(condition,label)=>{if(!condition)throw Error(label);count++};
 const player=read('entity/player.entity.json')['minecraft:client_entity'].description;
 const rc=read('render_controllers/swbr_iburi_transformacoes.json').render_controllers;
 const fx=read('animation_controllers/swbr_iburi_fumaca.json').animation_controllers[player.animations.swbr_iburi_fx];
+const nativeRig=read('models/entity/swbr39/custom.geo.json')['minecraft:geometry'][0].bones;
+const locatorPositions=Object.assign({},...nativeRig.map(b=>b.locators||{}));
+const opaqueBoxes=nativeRig.flatMap(b=>b.cubes||[]).map(c=>({min:c.origin.map(v=>v-(c.inflate||0)-.25),max:c.origin.map((v,i)=>v+c.size[i]+(c.inflate||0)+.25)}));
 const pre=player.scripts.pre_animation;
 const native=pre.filter(s=>['v.swbr39_ui =','v.swbr_view_first_person =','v.swbr_view_map_face ='].some(prefix=>s.startsWith(prefix)));
 check(native.length===3,'Indicadores de câmera nativos não encontrados');
@@ -26,9 +29,9 @@ const cases=[
  {name:'consulta_distância_zero',distance:0},
  {name:'câmera_logo_acima_da_cabeça',distance:2.0},
  {name:'limite_proximidade',distance:2.8},
- {name:'início_transição',distance:2.9},
- {name:'meio_transição',distance:3.15},
- {name:'transição_completa',distance:3.5},
+ {name:'início_transição',distance:2.85},
+ {name:'meio_transição',distance:2.9},
+ {name:'transição_completa',distance:3.0},
  {name:'inventário',ui:1,distance:4},
  {name:'paperdoll',paper:1,distance:4},
  {name:'ícone_mapa',map:1,distance:4},
@@ -60,14 +63,14 @@ for(const c of cases)for(const head of ['nz:modo_iburi1','nz:modo_iburi2','nz:mo
   check(Boolean(evaluate(exit,data,true))===!(allowed&&stage===i),'Emissor não encerra ao sair do estado');
  }
  const fade=evaluate('v.swbr_iburi_fade',data,true);
- check(Number.isFinite(fade)&&Math.abs(fade-Math.max(0,Math.min(1,(c.distance-2.8)/.7)))<1e-9,'Transição de proximidade inválida');
+ check(Number.isFinite(fade)&&Math.abs(fade-Math.max(0,Math.min(1,(c.distance-2.8)/.2)))<1e-9,'Transição de proximidade inválida');
  cameraResults.push({caso:c.name,modo:stage,contexto_item_primeira_pessoa:contextFirst,passes});
 }
 // Real expression from 18.11.66: it missed the player/item-context mismatch.
 const legacy="context.item_slot != 'main_hand' && context.item_slot != 'off_hand' && (!context.is_first_person || query.is_in_ui)";
 const regression=inputs({first:1,distance:4},'nz:modo_iburi3',0);
 check(Boolean(evaluate(legacy,regression))&&!evaluate('v.swbr_iburi_draw3',regression,true),'Regressão não distingue a máscara anterior da câmera nativa');
-const stages=[],files=['entity/player.entity.json','render_controllers/swbr_iburi_transformacoes.json','animation_controllers/swbr_iburi_fumaca.json'];
+const stages=[],files=['entity/player.entity.json','render_controllers/swbr_iburi_transformacoes.json','animation_controllers/swbr_iburi_fumaca.json','models/entity/swbr_iburi_draw.geo.json','models/entity/swbr39/custom.geo.json'];
 for(let stage=1;stage<=3;stage++){
  const geoFile={1:'models/entity/nz_modo_iburi1.json',2:'models/entity/nz_modo_iburi2.json',3:'models/entity/nz_modo_iburi3l.geo.json'}[stage];
  const animationFile=`animations/nz_modo_iburi${stage}.idle.json`,particleFile=`particles/swbr_iburi_transformacao_${stage}.json`;
@@ -78,7 +81,7 @@ for(let stage=1;stage<=3;stage++){
  for(let sample=0;sample<=120;sample++){
   const t=sample*a.animation_length/30,data={'query.life_time':t,'variable.swbr_iburi_fade':1};
   const core=evaluate(rc[`controller.render.swbr.iburi${stage}.core`].color.a,data);
-  check(Number.isFinite(core)&&core>0&&core<=.78,'Alfa central fora do limite');
+  check(Number.isFinite(core)&&core>0&&core<=.96,'Alfa central fora do limite');
   for(let phase=0;phase<6;phase++){
    const value=evaluate(rc[`controller.render.swbr.iburi${stage}.p${phase}`].color.a,data);
    const cycle=(t/a.animation_length+Number((phase/6).toFixed(6)))%1;
@@ -111,11 +114,18 @@ for(let stage=1;stage<=3;stage++){
  }
  const uv=billboard.uv,flip=uv.flipbook;
  check(flip.base_UV[1]+flip.step_UV[1]*flip.max_frame+flip.size_UV[1]<=uv.texture_height,'Flipbook pode ler fora da textura');
- stages.push({stage,ciclos_amostrados:4,amostras:121,alfa_dissipação:[minAlpha,maxAlpha],limite_y_modelo:[minY,maxY],raio_conservador_metros:maxRadius/16,meia_largura_max_partícula_metros:sizeMax});
+ let emitterRadius=0;
+ for(const event of fx.states[`fumaca${stage}`].particle_effects){
+  const point=locatorPositions[event.locator];check(Boolean(point),'Locator de partículas inexistente');
+  check(!opaqueBoxes.some(box=>point.every((v,i)=>v>=box.min[i]&&v<=box.max[i])),'Emissor permanece dentro da pele opaca');
+  const bound=Math.hypot(...point)/16+.055+Math.SQRT2*sizeMax+.04*.45+.5*.23*.45*.45;
+  check(bound<2.8,'Envelope conservador da partícula excede a proteção da câmera');emitterRadius=Math.max(emitterRadius,bound);
+ }
+ stages.push({stage,ciclos_amostrados:4,amostras:121,alfa_dissipação:[minAlpha,maxAlpha],limite_y_modelo:[minY,maxY],raio_conservador_metros:maxRadius/16,meia_largura_max_partícula_metros:sizeMax,raio_emissor_conservador_metros:emitterRadius});
 }
 const fontes_sha256=Object.fromEntries(files.map(file=>[file,sha(file)]));
 const report={resultado:'APROVADO',minecraft_executado:false,parser:'Molang do Blockbench 4.12.6',avaliacoes:count,
- regressao:'Primeira pessoa nativa ativa com context.is_first_person=0: máscara 18.11.66 permitiria fumaça; controladores 18.11.67 ficam desativados.',
+ regressao:'Primeira pessoa nativa ativa com context.is_first_person=0: máscara 18.11.66 permitiria fumaça; controladores 18.11.68 ficam desativados.',
  camera:cameraResults,stages,fontes_sha256,limite:'Casos numéricos dos arquivos reais; não simulam o renderizador nem comprovam o funcionamento dentro do Minecraft.'};
 fs.writeFileSync(path.join(root,'Validacao_Molang.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({resultado:report.resultado,avaliacoes:count,cenarios_camera:cameraResults.length,regressao:report.regressao,stages}));

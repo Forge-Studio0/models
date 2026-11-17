@@ -10,7 +10,7 @@ def apply(base,output,root=None):
     entries={k:v['original_entry'] for k,v in manifest['packs'].items()}
     if digest!=manifest['base_sha256']:
         compatible=next((b for b in manifest.get('compatible_bases',[]) if b['base_sha256']==digest),None)
-        if compatible is None:raise ValueError('A addon de entrada não corresponde a uma das bases SWBR identificadas por SHA-256 no manifesto: 18.11.64, Iburi 18.11.65 ou Iburi 18.11.66.')
+        if compatible is None:raise ValueError('A addon de entrada não corresponde a uma das bases SWBR identificadas por SHA-256 no manifesto: original 18.11.64 ou Iburi 18.11.65/66/67.')
         entries=compatible['pack_entries']
     mappings={entries[k]:(k,v) for k,v in manifest['packs'].items()}
     if base.resolve()==output.resolve():raise ValueError('Use um caminho diferente para a saída; preserve a addon de entrada.')

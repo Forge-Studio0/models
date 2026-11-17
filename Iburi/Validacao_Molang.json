@@ -2,8 +2,8 @@
   "resultado": "APROVADO",
   "minecraft_executado": false,
   "parser": "Molang do Blockbench 4.12.6",
-  "avaliacoes": 70667,
-  "regressao": "Primeira pessoa nativa ativa com context.is_first_person=0: máscara 18.11.66 permitiria fumaça; controladores 18.11.67 ficam desativados.",
+  "avaliacoes": 72914,
+  "regressao": "Primeira pessoa nativa ativa com context.is_first_person=0: máscara 18.11.66 permitiria fumaça; controladores 18.11.68 ficam desativados.",
   "camera": [
     {
       "caso": "terceira_pessoa",
@@ -688,11 +688,12 @@
         1
       ],
       "limite_y_modelo": [
-        13.195987800859724,
-        28.32398629713543
+        11.576333658178699,
+        29.22486984109459
       ],
-      "raio_conservador_metros": 1.797938310372572,
-      "meia_largura_max_partícula_metros": 0.15
+      "raio_conservador_metros": 1.8829278741733504,
+      "meia_largura_max_partícula_metros": 0.15,
+      "raio_emissor_conservador_metros": 1.8470624022756126
     },
     {
       "stage": 2,
@@ -703,11 +704,12 @@
         1
       ],
       "limite_y_modelo": [
-        0.7078914047223197,
-        29.475295107480328
+        -0.4136220529210628,
+        29.836918380786628
       ],
-      "raio_conservador_metros": 1.8667408977492783,
-      "meia_largura_max_partícula_metros": 0.19
+      "raio_conservador_metros": 1.9158346147685867,
+      "meia_largura_max_partícula_metros": 0.19,
+      "raio_emissor_conservador_metros": 1.9036309447705364
     },
     {
       "stage": 3,
@@ -718,25 +720,28 @@
         1
       ],
       "limite_y_modelo": [
-        -2.09344889856455,
-        39.81449025832152
+        -1.0418637071829422,
+        40.99132336211375
       ],
-      "raio_conservador_metros": 2.4891489116209318,
-      "meia_largura_max_partícula_metros": 0.22
+      "raio_conservador_metros": 2.5620816119026775,
+      "meia_largura_max_partícula_metros": 0.22,
+      "raio_emissor_conservador_metros": 2.415406328825043
     }
   ],
   "fontes_sha256": {
-    "entity/player.entity.json": "c58e2e3fe5a2d65ee5c30569abab469af5d083514bf2b60758b417ac5e90ced9",
-    "render_controllers/swbr_iburi_transformacoes.json": "0eeb26f834c0dc3ea3ff5d1f63126591101febceee93ff4fc1565c5e7e78aea6",
+    "entity/player.entity.json": "d30709b0687039863325196dc2ddda7a48d5451790b0288a2a67761747e162d0",
+    "render_controllers/swbr_iburi_transformacoes.json": "23985e17bed2f1a9e2d53f3c00570e9a1d8a9a92b566b010adf59bc74e0ce09e",
     "animation_controllers/swbr_iburi_fumaca.json": "55968a478c241db5d4261816aaa7262d373e07af90eb1c852f505d331c3094e0",
-    "models/entity/nz_modo_iburi1.json": "91265e3b827634c3d240222fafe385a196df3083c9285ef85d8b595d885dd91e",
-    "animations/nz_modo_iburi1.idle.json": "2101ec0d68082142f9c65eaf396e30e9755cff3ee390fee84e1a8e7b1270d734",
+    "models/entity/swbr_iburi_draw.geo.json": "6e088dde13a22ea126a47cfb3f98cbc4efbfc506884f818101171b358a75856a",
+    "models/entity/swbr39/custom.geo.json": "5424d20f88cdced166309601595c08a9be2f0b19d00ed26b01d7f380a454c377",
+    "models/entity/nz_modo_iburi1.json": "6cb9df41625a5771ab42192429150411ce64526312f2c0f8e8d14807cf1a50cf",
+    "animations/nz_modo_iburi1.idle.json": "7bcc441a5e69108ad486da54c5f7eac1ca51506524a0d4a8ec84aff555643f08",
     "particles/swbr_iburi_transformacao_1.json": "fe9ff7c2d2e3083a033b2443e60d3443a60ae090aab120530b1a3eaa5a06600f",
-    "models/entity/nz_modo_iburi2.json": "2a60d164369407588b62dc480a7db55ebb1f11108eb78a168f2ae7f98f939cd1",
-    "animations/nz_modo_iburi2.idle.json": "4859cdefc075769769528aeca9e46224a3863155b9b8ff95ddb7ef3740575fd7",
+    "models/entity/nz_modo_iburi2.json": "11370ae7cfbca354a0f3cb8319440d7aa23b33319e77c6e3390a48b777039973",
+    "animations/nz_modo_iburi2.idle.json": "ed38f5143e5f48822bf13a4a9996f58459c743a6df88309cbfb0ae308a1209c2",
     "particles/swbr_iburi_transformacao_2.json": "4e86a0beaf89663cdcb940faf0bb9355ca9ef877d1e457bb41d91b7c93163cb1",
-    "models/entity/nz_modo_iburi3l.geo.json": "49bae93326d4eebdbb92ecc32b08f43ccf2af8455f02e2c0d39e13f8bde58a2d",
-    "animations/nz_modo_iburi3.idle.json": "a1424cc58cf4e8c4983f18459af6056413f83d0ac98a5086e96680432c081009",
+    "models/entity/nz_modo_iburi3l.geo.json": "a24c8f03321e6c0abe3793802871615f4759759ae23b022730ed9016af99c648",
+    "animations/nz_modo_iburi3.idle.json": "6aaccf7f3d6aa698bc1570e59b652ea97e7683228c611b3c3a483ef12b2fda94",
     "particles/swbr_iburi_transformacao_3.json": "db5953e852af5024d6f1ef77af8f19d524accfc4459110e677bd478cb2a143df"
   },
   "limite": "Casos numéricos dos arquivos reais; não simulam o renderizador nem comprovam o funcionamento dentro do Minecraft."

@@ -1,0 +1,442 @@
+{
+  "resultado": "APROVADO",
+  "minecraft_executado": false,
+  "metodo": "Amostras das faces texturizadas e rotacionadas dos volumes permanentes. Ocultação pela geometria opaca real da addon, pose base e margem de roupa de 0,25 unidade. Composição alfa aproximada ortográfica.",
+  "limites": "Não inclui cabelo/modelos adicionais, poses em movimento, ordenação do Bedrock ou seu material nativo. Não é render do jogo. Compara geometrias em opacidade plena de distância, sem as camadas transitórias.",
+  "atual": {
+    "1": {
+      "frente": {
+        "amostras_visiveis": 92026,
+        "amostras_densas": 200978,
+        "fracao_amostras_expostas": 0.4578909134333111,
+        "pixels_fumaca": 4637,
+        "pixels_fora_da_skin": 716,
+        "cobertura_skin": 0.16329335332333833,
+        "alfa_medio_sobre_skin": 0.07788697212383172,
+        "cobertura_por_regiao": {
+          "body": 0.07147058823529412,
+          "rightArm": 0.52,
+          "leftArm": 0.5036111111111111,
+          "head": 0.004108996539792387,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      },
+      "costas": {
+        "amostras_visiveis": 95533,
+        "amostras_densas": 200978,
+        "fracao_amostras_expostas": 0.4753405845415916,
+        "pixels_fumaca": 3348,
+        "pixels_fora_da_skin": 781,
+        "cobertura_skin": 0.10690488089288688,
+        "alfa_medio_sobre_skin": 0.05621975975795263,
+        "cobertura_por_regiao": {
+          "body": 0.25926470588235295,
+          "rightArm": 0.14722222222222223,
+          "leftArm": 0.13777777777777778,
+          "head": 0.012759515570934256,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      },
+      "lado_direito": {
+        "amostras_visiveis": 122187,
+        "amostras_densas": 201133,
+        "fracao_amostras_expostas": 0.607493549044662,
+        "pixels_fumaca": 2290,
+        "pixels_fora_da_skin": 1764,
+        "cobertura_skin": 0.04573913043478261,
+        "alfa_medio_sobre_skin": 0.02228841027042372,
+        "cobertura_por_regiao": {
+          "body": 0.09111111111111111,
+          "rightArm": 0.09333333333333334,
+          "leftArm": 0.09333333333333334,
+          "head": 0.04346885813148789,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      },
+      "lado_esquerdo": {
+        "amostras_visiveis": 143628,
+        "amostras_densas": 201133,
+        "fracao_amostras_expostas": 0.7140946537863007,
+        "pixels_fumaca": 2440,
+        "pixels_fora_da_skin": 1838,
+        "cobertura_skin": 0.05234782608695652,
+        "alfa_medio_sobre_skin": 0.025534867368844794,
+        "cobertura_por_regiao": {
+          "body": 0.09472222222222222,
+          "rightArm": 0.09472222222222222,
+          "leftArm": 0.09472222222222222,
+          "head": 0.05687716262975778,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      }
+    },
+    "2": {
+      "frente": {
+        "amostras_visiveis": 251263,
+        "amostras_densas": 481194,
+        "fracao_amostras_expostas": 0.5221656961641251,
+        "pixels_fumaca": 12050,
+        "pixels_fora_da_skin": 2354,
+        "cobertura_skin": 0.40379810094952523,
+        "alfa_medio_sobre_skin": 0.22775780114043967,
+        "cobertura_por_regiao": {
+          "body": 0.31941176470588234,
+          "rightArm": 0.7480555555555556,
+          "leftArm": 0.6983333333333334,
+          "head": 0.0034602076124567475,
+          "rightLeg": 0.4175,
+          "leftLeg": 0.4275
+        }
+      },
+      "costas": {
+        "amostras_visiveis": 201982,
+        "amostras_densas": 481194,
+        "fracao_amostras_expostas": 0.41975170097715264,
+        "pixels_fumaca": 9175,
+        "pixels_fora_da_skin": 2441,
+        "cobertura_skin": 0.28044311177744463,
+        "alfa_medio_sobre_skin": 0.1557633903135711,
+        "cobertura_por_regiao": {
+          "body": 0.28441176470588236,
+          "rightArm": 0.5063888888888889,
+          "leftArm": 0.5016666666666667,
+          "head": 0.010813148788927335,
+          "rightLeg": 0.19833333333333333,
+          "leftLeg": 0.22277777777777777
+        }
+      },
+      "lado_direito": {
+        "amostras_visiveis": 285507,
+        "amostras_densas": 481901,
+        "fracao_amostras_expostas": 0.5924598620878562,
+        "pixels_fumaca": 6789,
+        "pixels_fora_da_skin": 5092,
+        "cobertura_skin": 0.14756521739130435,
+        "alfa_medio_sobre_skin": 0.07689135106677249,
+        "cobertura_por_regiao": {
+          "body": 0.2836111111111111,
+          "rightArm": 0.285,
+          "leftArm": 0.285,
+          "head": 0.04736159169550173,
+          "rightLeg": 0.12944444444444445,
+          "leftLeg": 0.12944444444444445
+        }
+      },
+      "lado_esquerdo": {
+        "amostras_visiveis": 292862,
+        "amostras_densas": 481901,
+        "fracao_amostras_expostas": 0.6077223330103071,
+        "pixels_fumaca": 6816,
+        "pixels_fora_da_skin": 5175,
+        "cobertura_skin": 0.14269565217391306,
+        "alfa_medio_sobre_skin": 0.07322452529842811,
+        "cobertura_por_regiao": {
+          "body": 0.29055555555555557,
+          "rightArm": 0.2902777777777778,
+          "leftArm": 0.2902777777777778,
+          "head": 0.060121107266435984,
+          "rightLeg": 0.095,
+          "leftLeg": 0.095
+        }
+      }
+    },
+    "3": {
+      "frente": {
+        "amostras_visiveis": 471111,
+        "amostras_densas": 826691,
+        "fracao_amostras_expostas": 0.5698755641467005,
+        "pixels_fumaca": 25058,
+        "pixels_fora_da_skin": 5861,
+        "cobertura_skin": 0.7994752623688156,
+        "alfa_medio_sobre_skin": 0.5445992059754838,
+        "cobertura_por_regiao": {
+          "body": 0.9130882352941176,
+          "rightArm": 0.8830555555555556,
+          "leftArm": 0.8708333333333333,
+          "head": 0.548659169550173,
+          "rightLeg": 0.7791666666666667,
+          "leftLeg": 0.7672222222222222
+        }
+      },
+      "costas": {
+        "amostras_visiveis": 346956,
+        "amostras_densas": 826691,
+        "fracao_amostras_expostas": 0.4196924848583086,
+        "pixels_fumaca": 20064,
+        "pixels_fora_da_skin": 6379,
+        "cobertura_skin": 0.5699233716475096,
+        "alfa_medio_sobre_skin": 0.3538207621782605,
+        "cobertura_por_regiao": {
+          "body": 0.8110294117647059,
+          "rightArm": 0.68,
+          "leftArm": 0.6027777777777777,
+          "head": 0.6217560553633218,
+          "rightLeg": 0.18722222222222223,
+          "leftLeg": 0.20444444444444446
+        }
+      },
+      "lado_direito": {
+        "amostras_visiveis": 511233,
+        "amostras_densas": 830489,
+        "fracao_amostras_expostas": 0.6155807000453949,
+        "pixels_fumaca": 16328,
+        "pixels_fora_da_skin": 11818,
+        "cobertura_skin": 0.39217391304347826,
+        "alfa_medio_sobre_skin": 0.2221353599992885,
+        "cobertura_por_regiao": {
+          "body": 0.37416666666666665,
+          "rightArm": 0.37833333333333335,
+          "leftArm": 0.37833333333333335,
+          "head": 0.5566608996539792,
+          "rightLeg": 0.16777777777777778,
+          "leftLeg": 0.16777777777777778
+        }
+      },
+      "lado_esquerdo": {
+        "amostras_visiveis": 511511,
+        "amostras_densas": 830489,
+        "fracao_amostras_expostas": 0.6159154425886436,
+        "pixels_fumaca": 16981,
+        "pixels_fora_da_skin": 11655,
+        "cobertura_skin": 0.4631304347826087,
+        "alfa_medio_sobre_skin": 0.27613596471291485,
+        "cobertura_por_regiao": {
+          "body": 0.38722222222222225,
+          "rightArm": 0.38805555555555554,
+          "leftArm": 0.38805555555555554,
+          "head": 0.6682525951557093,
+          "rightLeg": 0.23694444444444446,
+          "leftLeg": 0.23694444444444446
+        }
+      }
+    }
+  },
+  "base_18_11_67": {
+    "1": {
+      "frente": {
+        "amostras_visiveis": 1633,
+        "amostras_densas": 110036,
+        "fracao_amostras_expostas": 0.01484059762259624,
+        "pixels_fumaca": 48,
+        "pixels_fora_da_skin": 29,
+        "cobertura_skin": 0.0007912710311510911,
+        "alfa_medio_sobre_skin": 0.00018835026930978955,
+        "cobertura_por_regiao": {
+          "body": 0.0,
+          "rightArm": 0.0008333333333333334,
+          "leftArm": 0.0038888888888888888,
+          "head": 0.00043252595155709344,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      },
+      "costas": {
+        "amostras_visiveis": 44593,
+        "amostras_densas": 110036,
+        "fracao_amostras_expostas": 0.40525827910865536,
+        "pixels_fumaca": 1803,
+        "pixels_fora_da_skin": 20,
+        "cobertura_skin": 0.07425453939696819,
+        "alfa_medio_sobre_skin": 0.019628004960482722,
+        "cobertura_por_regiao": {
+          "body": 0.1938235294117647,
+          "rightArm": 0.10527777777777778,
+          "leftArm": 0.10222222222222223,
+          "head": 0.005406574394463667,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      },
+      "lado_direito": {
+        "amostras_visiveis": 29624,
+        "amostras_densas": 110279,
+        "fracao_amostras_expostas": 0.26862775324404464,
+        "pixels_fumaca": 596,
+        "pixels_fora_da_skin": 465,
+        "cobertura_skin": 0.011391304347826087,
+        "alfa_medio_sobre_skin": 0.0036405621895192184,
+        "cobertura_por_regiao": {
+          "body": 0.025833333333333333,
+          "rightArm": 0.02638888888888889,
+          "leftArm": 0.02638888888888889,
+          "head": 0.009083044982698962,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      },
+      "lado_esquerdo": {
+        "amostras_visiveis": 28978,
+        "amostras_densas": 110279,
+        "fracao_amostras_expostas": 0.26276988365872017,
+        "pixels_fumaca": 578,
+        "pixels_fora_da_skin": 471,
+        "cobertura_skin": 0.009304347826086957,
+        "alfa_medio_sobre_skin": 0.0027590571985961223,
+        "cobertura_por_regiao": {
+          "body": 0.019166666666666665,
+          "rightArm": 0.02,
+          "leftArm": 0.02,
+          "head": 0.008434256055363323,
+          "rightLeg": 0.0,
+          "leftLeg": 0.0
+        }
+      }
+    },
+    "2": {
+      "frente": {
+        "amostras_visiveis": 28577,
+        "amostras_densas": 269597,
+        "fracao_amostras_expostas": 0.1059989539942952,
+        "pixels_fumaca": 1337,
+        "pixels_fora_da_skin": 312,
+        "cobertura_skin": 0.042686989838414124,
+        "alfa_medio_sobre_skin": 0.012488564541258783,
+        "cobertura_por_regiao": {
+          "body": 0.014705882352941176,
+          "rightArm": 0.14583333333333334,
+          "leftArm": 0.13805555555555554,
+          "head": 0.0,
+          "rightLeg": 0.0008333333333333334,
+          "leftLeg": 0.0
+        }
+      },
+      "costas": {
+        "amostras_visiveis": 63512,
+        "amostras_densas": 269597,
+        "fracao_amostras_expostas": 0.23558125646798742,
+        "pixels_fumaca": 3793,
+        "pixels_fora_da_skin": 109,
+        "cobertura_skin": 0.15342328835582209,
+        "alfa_medio_sobre_skin": 0.0463149629951224,
+        "cobertura_por_regiao": {
+          "body": 0.21470588235294116,
+          "rightArm": 0.3277777777777778,
+          "leftArm": 0.305,
+          "head": 0.005839100346020761,
+          "rightLeg": 0.060833333333333336,
+          "leftLeg": 0.055
+        }
+      },
+      "lado_direito": {
+        "amostras_visiveis": 57269,
+        "amostras_densas": 273860,
+        "fracao_amostras_expostas": 0.20911779741473746,
+        "pixels_fumaca": 1588,
+        "pixels_fora_da_skin": 1019,
+        "cobertura_skin": 0.049478260869565215,
+        "alfa_medio_sobre_skin": 0.015722193611457883,
+        "cobertura_por_regiao": {
+          "body": 0.13194444444444445,
+          "rightArm": 0.13027777777777777,
+          "leftArm": 0.13027777777777777,
+          "head": 0.005622837370242215,
+          "rightLeg": 0.023055555555555555,
+          "leftLeg": 0.023055555555555555
+        }
+      },
+      "lado_esquerdo": {
+        "amostras_visiveis": 47277,
+        "amostras_densas": 273860,
+        "fracao_amostras_expostas": 0.17263200175272037,
+        "pixels_fumaca": 1564,
+        "pixels_fora_da_skin": 987,
+        "cobertura_skin": 0.05017391304347826,
+        "alfa_medio_sobre_skin": 0.01682602294158706,
+        "cobertura_por_regiao": {
+          "body": 0.13555555555555557,
+          "rightArm": 0.13055555555555556,
+          "leftArm": 0.13055555555555556,
+          "head": 0.007569204152249135,
+          "rightLeg": 0.02277777777777778,
+          "leftLeg": 0.02277777777777778
+        }
+      }
+    },
+    "3": {
+      "frente": {
+        "amostras_visiveis": 96234,
+        "amostras_densas": 546905,
+        "fracao_amostras_expostas": 0.17596109013448405,
+        "pixels_fumaca": 9686,
+        "pixels_fora_da_skin": 486,
+        "cobertura_skin": 0.3831417624521073,
+        "alfa_medio_sobre_skin": 0.14014361530897976,
+        "cobertura_por_regiao": {
+          "body": 0.6961764705882353,
+          "rightArm": 0.25333333333333335,
+          "leftArm": 0.2838888888888889,
+          "head": 0.016219723183391002,
+          "rightLeg": 0.45611111111111113,
+          "leftLeg": 0.4047222222222222
+        }
+      },
+      "costas": {
+        "amostras_visiveis": 156723,
+        "amostras_densas": 546905,
+        "fracao_amostras_expostas": 0.2865634799462429,
+        "pixels_fumaca": 10164,
+        "pixels_fora_da_skin": 670,
+        "cobertura_skin": 0.3953856405130768,
+        "alfa_medio_sobre_skin": 0.16303392619766605,
+        "cobertura_por_regiao": {
+          "body": 0.8445588235294118,
+          "rightArm": 0.5063888888888889,
+          "leftArm": 0.43416666666666665,
+          "head": 0.03027681660899654,
+          "rightLeg": 0.1975,
+          "leftLeg": 0.15638888888888888
+        }
+      },
+      "lado_direito": {
+        "amostras_visiveis": 111387,
+        "amostras_densas": 548542,
+        "fracao_amostras_expostas": 0.20306011207892924,
+        "pixels_fumaca": 4702,
+        "pixels_fora_da_skin": 3537,
+        "cobertura_skin": 0.10130434782608695,
+        "alfa_medio_sobre_skin": 0.03494199633000887,
+        "cobertura_por_regiao": {
+          "body": 0.13527777777777777,
+          "rightArm": 0.13583333333333333,
+          "leftArm": 0.13583333333333333,
+          "head": 0.03762975778546713,
+          "rightLeg": 0.145,
+          "leftLeg": 0.145
+        }
+      },
+      "lado_esquerdo": {
+        "amostras_visiveis": 158848,
+        "amostras_densas": 548542,
+        "fracao_amostras_expostas": 0.28958220154518705,
+        "pixels_fumaca": 5553,
+        "pixels_fora_da_skin": 3857,
+        "cobertura_skin": 0.14747826086956523,
+        "alfa_medio_sobre_skin": 0.05259030407896391,
+        "cobertura_por_regiao": {
+          "body": 0.19,
+          "rightArm": 0.1875,
+          "leftArm": 0.1875,
+          "head": 0.07612456747404844,
+          "rightLeg": 0.18944444444444444,
+          "leftLeg": 0.18944444444444444
+        }
+      }
+    }
+  },
+  "base_sha256": "449b039007840e42f8c0324d08163fdb3ca38c507269be5431c4c200fef43b32",
+  "fontes_sha256": {
+    "models/entity/swbr39/custom.geo.json": "5424d20f88cdced166309601595c08a9be2f0b19d00ed26b01d7f380a454c377",
+    "models/entity/swbr_iburi_draw.geo.json": "6e088dde13a22ea126a47cfb3f98cbc4efbfc506884f818101171b358a75856a",
+    "render_controllers/swbr_iburi_transformacoes.json": "23985e17bed2f1a9e2d53f3c00570e9a1d8a9a92b566b010adf59bc74e0ce09e",
+    "models/entity/nz_modo_iburi1.json": "6cb9df41625a5771ab42192429150411ce64526312f2c0f8e8d14807cf1a50cf",
+    "textures/entity/swbr/iburi/fumaca1.png": "468c5b8b41df9a842da161ef6f6376e090af3cc287cd069abefbb2e836f4f96e",
+    "models/entity/nz_modo_iburi2.json": "11370ae7cfbca354a0f3cb8319440d7aa23b33319e77c6e3390a48b777039973",
+    "textures/entity/swbr/iburi/fumaca2.png": "1bfbe471d402db01a3edb65c070426a6690d0f2bbc90e19cb4f9b576ecc5f151",
+    "models/entity/nz_modo_iburi3l.geo.json": "a24c8f03321e6c0abe3793802871615f4759759ae23b022730ed9016af99c648",
+    "textures/entity/swbr/iburi/fumaca3.png": "b24442da1f62e0718d923ccd444737d65d1a4d4556c69c68afe3b1172d7037b4"
+  }
+}
