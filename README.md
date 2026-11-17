@@ -2,14 +2,11 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Iburi — Shinobi World BR 18.11.68 · teste
+## Clã Iburi — modelos atuais 18.11.68
 
-Revisão dos três níveis: nuvens e emissores fora da pele opaca, geometrias independentes por camada e cobertura crescente em ombros, tronco, membros e cabeça. A proteção de primeira pessoa permanece ativa. Inclui addon, modelos editáveis, integração e análise das mudanças; slot da cabeça, níveis e atributos preservados. Verificações de arquivos, exposição geométrica e Blockbench concluídas; aparência final no Minecraft ainda pendente.
+A pasta do clã contém somente os três modelos atuais, com texturas e animações embutidas, editáveis no Blockbench. O funcionamento do modo foi confirmado pelo usuário.
 
-- [Pacote completo Iburi.zip](Iburi/Iburi.zip)
-- [Addon Iburi.mcaddon](Iburi/Iburi.mcaddon)
-- [Arquivos para integrar à base](Iburi/Iburi_Integracao.zip)
-- [Modelos e instruções](Iburi/README.md)
+- [Modelos atuais do clã Iburi](Iburi/Modelos_Blockbench)
 
 ## Asas 3D — versão 1.1.0
 
