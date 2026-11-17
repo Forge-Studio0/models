@@ -6,12 +6,18 @@ import argparse,hashlib,io,json,zipfile
 def apply(base,output,root=None):
     root=root or (Path(__file__).resolve().parents[1] if Path(__file__).parent.name=='Fontes' else Path(__file__).resolve().parent)
     manifest=json.loads((root/'Integracao_Manifesto.json').read_text())
-    if hashlib.sha256(base.read_bytes()).hexdigest()!=manifest['base_sha256']:
-        raise ValueError('A addon de entrada não corresponde à base SWBR 18.11.64 fornecida. Use o arquivo original indicado no manifesto.')
-    mappings={v['original_entry']:(k,v) for k,v in manifest['packs'].items()}
+    digest=hashlib.sha256(base.read_bytes()).hexdigest()
+    entries={k:v['original_entry'] for k,v in manifest['packs'].items()}
+    if digest!=manifest['base_sha256']:
+        compatible=next((b for b in manifest.get('compatible_bases',[]) if b['base_sha256']==digest),None)
+        if compatible is None:raise ValueError('A addon de entrada não corresponde a uma das bases SWBR identificadas por SHA-256 no manifesto: 18.11.64 ou Iburi 18.11.65.')
+        entries=compatible['pack_entries']
+    mappings={entries[k]:(k,v) for k,v in manifest['packs'].items()}
+    if base.resolve()==output.resolve():raise ValueError('Use um caminho diferente para a saída; preserve a addon de entrada.')
     output.parent.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(base) as original,zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as result:
         for entry in original.infolist():
+            if entry.filename=='LEIA-ME_IBURI.md':continue
             data=original.read(entry.filename)
             if entry.filename not in mappings:
                 result.writestr(entry,data);continue

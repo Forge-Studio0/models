@@ -906,10 +906,7 @@
           "v.sw55_anjo_manual = math.mod(math.floor(v.swbr_v1878_mask / 64),4) == 1 && q.is_item_name_any('slot.armor.chest',0,'nz:modo_anjo_manual_admin') && !q.is_spectator && !v.swbr_view_map_face && !v.swbr_v1878_ape && !v.swbr_douma14;",
           "v.sw55_sombras_alado = math.mod(math.floor(v.swbr_v1878_mask / 64),4) == 2 && q.is_item_name_any('slot.armor.chest',0,'nz:modo_sombras_alado_admin') && !q.is_spectator && !v.swbr_view_map_face && !v.swbr_v1878_ape && !v.swbr_douma14;",
           "v.sw55_carinha_gelo = math.mod(math.floor(v.swbr_v1878_mask / 64),4) == 3 && q.is_item_name_any('slot.armor.feet',0,'nz:modo_carinha_gelo_admin') && !q.is_spectator && !v.swbr_view_map_face && !v.swbr_v1878_ape && !v.swbr_douma14;",
-          "v.sw55_outfit = v.sw55_anjo_manual || v.sw55_sombras_alado || v.sw55_carinha_gelo;",
-          "variable.swbr_iburi_total = query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3');",
-          "v.swbr_v18733_full_body = v.swbr_v18733_full_body || variable.swbr_iburi_total;",
-          "v.swbr_v18733_hair = v.swbr_v18733_hair || variable.swbr_iburi_total;"
+          "v.sw55_outfit = v.sw55_anjo_manual || v.sw55_sombras_alado || v.sw55_carinha_gelo;"
         ],
         "animate": [
           {

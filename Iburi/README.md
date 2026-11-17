@@ -1,13 +1,20 @@
-# Clã Iburi — Shinobi World BR 18.11.65
+# Clã Iburi — SWBR 18.11.66 · versão de teste
 
-Reformulação visual dos três modos Iburi, sobre a base **SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon** fornecida. O arquivo **Iburi.zip** reúne a addon completa e os arquivos de integração. A addon também está disponível separadamente em **Iburi.mcaddon**. Os arquivos alterados para integração estão em **Iburi_Integracao.zip** e na pasta **Integracao/**.
+Correção dos três modos existentes, a partir do Iburi 18.11.65 que apresentou falhas nas capturas do Minecraft enviadas pelo usuário. **Iburi.zip** reúne a addon completa, os três modelos editáveis e os arquivos para integração. Não foram geradas prévias.
 
-## Instalar a addon completa
+- [Addon completa: Iburi.mcaddon](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Iburi/Iburi.mcaddon)
+- [Pacote completo: Iburi.zip](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Iburi/Iburi.zip)
+- [Arquivos para integração](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Iburi/Iburi_Integracao.zip)
 
-1. Baixe `Iburi.mcaddon` e abra-o com o Minecraft Bedrock, compatível com a versão mínima da base: **1.26.10**.
-2. Confirme a atualização dos packs de Comportamento e Recursos para **18.11.65**. Seus UUIDs foram mantidos. O pack Desmaio Nativo 1.0.9 também foi preservado.
-3. Ative os packs no mundo que utiliza o sistema Shinobi World BR.
-4. Desbloqueie os modos pelo menu normal do clã. Para conferência em um mundo de teste com comandos habilitados:
+**Minecraft não está disponível neste ambiente.** Os arquivos foram verificados e os projetos foram abertos, salvos e reabertos no Blockbench. A renderização efetiva no Bedrock e o comportamento durante movimento e desequipamento precisam de teste no jogo.
+
+## Instalação
+
+1. Baixe `Iburi.mcaddon` e abra com Minecraft Bedrock. A versão mínima declarada pela base continua **1.26.10**.
+2. Confirme que os packs de Recursos e Comportamento ativos estão na versão **18.11.66**. Os UUIDs foram mantidos para atualizar os packs existentes. O pack Desmaio Nativo 1.0.9 foi preservado.
+3. Utilize o menu normal do clã e equipe o modo no **slot da cabeça**. Os níveis e requisitos continuam ativos.
+
+Para conferir em um mundo de teste com comandos habilitados:
 
 ```mcfunction
 /give @s nz:modo_iburi1 1
@@ -15,37 +22,44 @@ Reformulação visual dos três modos Iburi, sobre a base **SWBR_v18.11.64_GUI_V
 /give @s nz:modo_iburi3 1
 ```
 
-Equipe os itens no **slot da cabeça**, como na base original. Os requisitos de desbloqueio continuam ativos; os comandos não substituem o fluxo normal do menu.
-
-| Modo | Identificador | Nível | Representação |
+| Modo | Identificador | Nível | Correção visual implementada |
 | --- | --- | --- | --- |
-| Fumaça I | `nz:modo_iburi1` | 10 | Pequenas massas nos ombros, antebraços e escápulas; corpo e skin continuam visíveis. |
-| Fumaça II | `nz:modo_iburi2` | 15 | Camadas nos braços, flancos e pernas, com emissão de partículas. A skin sob a fumaça continua opaca; a dissolução parcial é uma composição visual. |
-| Fumaça Total | `nz:modo_iburi3` | 25 | Nuvens em diferentes profundidades formam uma silhueta humana difusa. O controle de renderização já existente na addon é ativado somente para esse item, ocultando o corpo base e o cabelo. |
+| Fumaça I | `nz:modo_iburi1` | 10 | 13 pequenos volumes em ombros, antebraços, laterais e costas; corpo preservado. |
+| Fumaça II | `nz:modo_iburi2` | 15 | 26 volumes em braços, tronco e pernas, com camadas que sobem, crescem e desaparecem. |
+| Fumaça Total | `nz:modo_iburi3` | 25 | 50 volumes distribuídos pela cabeça, tronco, braços e pernas, com cobertura mais densa. |
 
-Não foi aplicada invisibilidade por efeito de jogo. A ocultação visual do modo 3 não muda física, colisão, dano ou atributos. Nenhum corpo humano foi feito de blocos opacos: as massas usam peças finas em três ângulos, com texturas alfa de bordas suaves.
+**Solução temporária para Fumaça Total:** os três comandos de ocultação visual adicionados na 18.11.65 foram removidos. O corpo e o cabelo permanecem sob a fumaça. Esta entrega não afirma que a substituição completa da skin por fumaça foi concluída ou comprovada no jogo. Não há novo efeito de invisibilidade.
 
-## Animações e integração
+## O que foi corrigido
 
-Cada modo tem sua própria animação `animation.nz_modo_iburiN.idle`. Os ciclos usam seis fases de opacidade, subida e expansão, com oscilação individual das nuvens. As partículas se desprendem dos braços, ombros e, nos estágios maiores, pernas, tronco e cabeça. A progressão aumenta a quantidade de fumaça, mantendo a forma vertical do personagem.
+- As máscaras anteriores começavam com `"*": false`, desativando também os ancestrais das nuvens. Agora o rig permanece habilitado e cada passe seleciona explicitamente apenas seus volumes. A validação verifica a cadeia inteira de pais, em vez de conferir somente o nome da nuvem.
+- Cada massa tem um volume com espessura e textura nas seis faces, além de duas camadas cruzadas de dissipação. O volume central permanece visível durante todo o ciclo; as camadas externas mudam de tamanho, posição e opacidade.
+- As texturas 512 × 512 têm 16 nuvens diferentes por modo, somente em cinza, com centros mais densos e bordas de alfa zero. Não foram utilizados fundos azuis ou sprites retangulares preenchidos.
+- O esqueleto agora corresponde ao `geometry.swbr39.custom` da própria addon, incluindo raiz, pivôs e hierarquia das pernas. As animações próprias atuam apenas nos filhos de fumaça.
+- As partículas deixaram a linha do tempo com `bind_to_actor: false`. Elas são iniciadas por estados de um controlador exclusivo do Iburi, usando o vínculo padrão ao ator e simulação em espaço local de posição e rotação. Os locators acompanham os bones corporais.
+- Sair do estado equipado encerra os emissores, conforme o mecanismo nativo dos controladores Bedrock. As partículas têm vida de no máximo 0,55 s e limites por jogador de 18, 32 e 36, respectivamente. A remoção visual efetiva, inclusive possíveis resíduos breves, ainda precisa ser confirmada no jogo.
 
-Os bones `body`, `head`, `rightArm`, `leftArm`, `rightLeg` e `leftLeg` acompanham o rig do jogador; as animações próprias atuam somente nos bones das nuvens. A antiga animação inexistente do modo 2 foi criada, a grafia `iburu3` foi corrigida e o modo 3 deixou de usar a animação do Aburame e o controlador genérico compartilhado.
+Há sete passes por modo: um para os volumes centrais e seis para a dissipação. O terceiro estágio mantém 150 cubos, a mesma quantidade total da implementação anterior. Não há entidades auxiliares nem emissão por scripts em coordenadas fixas do mundo.
 
-O arquivo compartilhado `player.entity.json` recebe somente três instruções no fim de `pre_animation`: verificar se `nz:modo_iburi3` está equipado e combinar essa condição com os dois controles visuais existentes. As instruções originais e os render controllers permanecem intactos. Fora desse modo, os controles mantêm seus valores originais a cada quadro.
+## Sistemas preservados
 
-Os três itens de modo, os níveis 10/15/25, os requisitos, os atributos, os multiplicadores e o jutsu `nz:jutsu_iburi_fumaca` foram preservados. No registro de combate, apenas os três nomes de apresentação foram atualizados para Fumaça I, Fumaça II e Fumaça Total. Os nomes desses itens também foram corrigidos nas cinco localizações já presentes, preservando todas as demais entradas.
+Os itens, identificadores, slot da cabeça, níveis 10/15/25, multiplicadores, atributos, requisitos, jutsu `nz:jutsu_iburi_fumaca`, menus, híbridos e sistemas administrativos permanecem preservados. O Behavior Pack não recebeu alterações de lógica nesta correção; sua versão foi atualizada.
 
-## Adicionar os arquivos à base original
+Em `player.entity.json`, somente as três instruções Iburi de ocultação da 18.11.65 foram removidas. O restante desse arquivo permanece igual. Também foi conferida a preservação dos arquivos fora do escopo em relação à base original 18.11.64.
 
-Extraia `Iburi_Integracao.zip` e execute, na pasta extraída:
+## Integração à addon existente
+
+Extraia `Iburi_Integracao.zip` e execute na pasta extraída:
 
 ```sh
-python aplicar_integracao.py "SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon" "Iburi.mcaddon"
+python aplicar_integracao.py "SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon" "Iburi_corrigido.mcaddon"
 ```
 
-Esse aplicador usa apenas a biblioteca padrão do Python. Ele verifica a assinatura SHA-256 da base, substitui somente os arquivos listados em `Integracao_Manifesto.json`, adiciona os novos recursos e preserva os demais arquivos. Use a base original enviada nesta conversa. O aplicador rejeita uma addon diferente para evitar sobrescrever alterações posteriores.
+O aplicador também aceita o `Iburi.mcaddon` da versão **18.11.65** desta conversa como entrada. As duas bases são reconhecidas pelas assinaturas SHA-256 registradas em `Integracao_Manifesto.json`. Uma base diferente é recusada para evitar sobrescrever alterações posteriores.
 
-Em uma árvore de desenvolvimento já extraída, `Integracao/BP/` e `Integracao/RP/` são os arquivos que devem substituir ou complementar os packs correspondentes. O nome legado `models/entity/nz_modo_iburi3l.geo.json` foi mantido para substituir a geometria antiga sem deixar um segundo arquivo com o mesmo identificador.
+O aplicador usa apenas a biblioteca padrão do Python, preserva a entrada e copia os arquivos fora do escopo sem alterar seu conteúdo. Os diretórios `Integracao/BP/` e `Integracao/RP/` contêm os arquivos necessários para uma árvore de desenvolvimento extraída. **Inclua `entity/player.entity.json` ao atualizar a 18.11.65**, pois ele remove o ocultamento que causou o desaparecimento do corpo.
+
+O nome legado `models/entity/nz_modo_iburi3l.geo.json` foi mantido para substituir o arquivo anterior sem duplicar o identificador da geometria.
 
 ## Arquivos editáveis
 
@@ -53,25 +67,29 @@ Em uma árvore de desenvolvimento já extraída, `Integracao/BP/` e `Integracao/
 - `Modelos_Blockbench/Iburi_Fumaca_II.bbmodel`
 - `Modelos_Blockbench/Iburi_Fumaca_Total.bbmodel`
 
-Os projetos incluem textura e animação. Abra-os diretamente no Blockbench. As geometrias, PNGs, animações, partículas e attachables do jogo estão em `Integracao/RP/`. Cada atlas tem 16 nuvens diferentes em cinza, com densidade central e transparência gradual. Não foram geradas prévias dos modelos.
+Os três projetos incluem textura e animação e foram reabertos no Blockbench 4.12.6 sem erros registrados. Geometrias, PNGs, animações, controladores, partículas e attachables ficam em `Integracao/RP/`. Os fontes de geração e verificação ficam em `Fontes/`.
 
-Para reconstruir o overlay a partir dos fontes:
+Para reconstruir a partir da implementação anterior e registrar também a compatibilidade com a base original:
 
 ```sh
 python -m pip install -r Fontes/requirements.txt
-python Fontes/construir_iburi.py "SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon"
-python Fontes/aplicar_integracao.py "SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon" "Iburi.mcaddon"
-python Fontes/validar_iburi.py "SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon" "Iburi.mcaddon"
+python Fontes/construir_iburi.py "Iburi_18.11.65.mcaddon" --compatible-base "SWBR_v18.11.64_GUI_VILA_CORRIGIDA.mcaddon"
+node Fontes/exportar_blockbench.cjs
+node Fontes/validar_molang.cjs
+python Fontes/aplicar_integracao.py "Iburi_18.11.65.mcaddon" "Iburi.mcaddon"
+python Fontes/validar_iburi.py "Iburi_18.11.65.mcaddon" "Iburi.mcaddon"
 ```
 
-Se modificar o gerador ou as pinturas, exporte os modelos novamente no Blockbench e refaça as verificações antes de empacotar. `Fontes/validar_molang.cjs` usa o parser Molang do editor; o caminho desse módulo pode ser definido por `IBURI_MOLANG_MODULE`.
+O helper do Blockbench exige Playwright e uma cópia local do editor servida por HTTP (`IBURI_BLOCKBENCH_URL`). O verificador Molang usa o parser do editor, configurável em `IBURI_MOLANG_MODULE`. Os `.bbmodel` prontos dispensam esses programas para instalação no jogo.
 
-Os `.bbmodel` entregues foram importados e salvos pelo Blockbench 4.12.6. O helper opcional `Fontes/exportar_blockbench.cjs` faz essa etapa com Playwright e uma cópia local do editor servida em HTTP; ele não produz capturas de tela.
+## Verificações e limites
 
-## Verificação
+`Validacao.json` registra integridade ZIP/CRC, schemas, referências, hierarquia, máscaras com ancestrais, volumes, texturas, controle de emissores e comparação de arquivos com a 18.11.65. `Validacao_Base_18.11.64.json` registra a auditoria contra a base original. `Validacao_Blockbench.json` registra importação, exportação e reabertura dos projetos. `Validacao_Molang.json` registra os ciclos e as condições de entrada e saída dos emissores.
 
-`Validacao.json` registra a comparação de arquivos com a base, a preservação dos itens e sistemas, a estrutura do `.mcaddon`, os JSONs, schemas, referências, bones, locators, materiais, texturas e os ciclos Molang. `Validacao_Blockbench.json` registra a abertura dos três projetos com animações e sem erros.
+A conferência dentro do Minecraft ainda deve verificar os três modos de frente, costas e lados; caminhada, corrida, salto e agachamento; troca entre os três itens; desequipamento e retorno da aparência normal; ausência de retângulos ou partículas deixadas no mundo. Esses comportamentos não foram marcados como aprovados por um teste real do jogo.
 
-**Minecraft Bedrock não foi executado neste ambiente.** A importação no jogo, a renderização efetiva, a ocultação do corpo no modo 3, as partículas e o encaixe ao andar, correr, pular e agachar precisam de confirmação no jogo. Os modelos foram preparados para essas poses pela hierarquia do rig; isso não equivale a um teste dentro do Minecraft.
+Referências artísticas usadas na implementação anterior: `Referencias.md`. Referências técnicas desta correção:
 
-As referências analisadas e o limite de acesso ao vídeo estão em `Referencias.md`.
+- [Integração de partículas e término ao sair de estados](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particleentityintegration)
+- [Simulação de partículas em espaço local](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlecomponents/minecraftemitter_local_space)
+- [Eventos de partículas e vínculo padrão ao ator](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/visualreference/actor_animation_controller.v1.10.0)

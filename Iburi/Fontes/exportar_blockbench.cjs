@@ -40,8 +40,13 @@ const names={1:'Iburi_Fumaca_I',2:'Iburi_Fumaca_II',3:'Iburi_Fumaca_Total'};
   fs.writeFileSync(file,JSON.stringify(state.project,null,2)+'\n');
   fs.writeFileSync(path.join(scratch,`iburi${stage}.geometry.json`),JSON.stringify(state.geometry,null,2));
   fs.writeFileSync(path.join(scratch,`iburi${stage}.animation.json`),JSON.stringify(state.animation,null,2));
+  // Reopen the actual saved project, rather than only checking the native import.
+  await page.evaluate(({project,name})=>Codecs.project.load(project,{path:name+'.bbmodel'}),{project:state.project,name:names[stage]});
+  await page.waitForFunction(()=>Texture.all.length===1&&Texture.all[0].img.complete&&Texture.all[0].img.naturalWidth===512);
+  const reopened=await page.evaluate(()=>({cubes:Cube.all.length,bones:Group.all.length,animations:Animation.all.length,texture_error:Texture.all[0].error}));
+  if(reopened.cubes!==state.cubes||reopened.bones!==state.bones||reopened.animations!==1||reopened.texture_error)throw Error('Saved BBMODEL failed to reopen: '+JSON.stringify(reopened));
   const errors=await page.evaluate(b=>ErrorLog.slice(b),baseline);
-  const result={stage,editor:state.version,format:state.format,cubes:state.cubes,bones:state.bones,animations:state.animations,texture_error:state.texture_error,errors,source_sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')};
+  const result={stage,editor:state.version,format:state.format,cubes:state.cubes,bones:state.bones,animations:state.animations,texture_error:state.texture_error,reopened,errors,source_sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')};
   if(errors.length||result.texture_error||result.animations.length!==1)throw Error(JSON.stringify(result));
   results.push(result);console.log(JSON.stringify(result));
  }

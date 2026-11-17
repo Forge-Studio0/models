@@ -5,6 +5,7 @@ const modulePath=process.env.IBURI_MOLANG_MODULE||'/workspace/work/bb_app/blockb
 const Molang=require(modulePath);const m=new Molang();let count=0;
 const load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const rc=load(path.join(root,'Integracao/RP/render_controllers/swbr_iburi_transformacoes.json')).render_controllers;
+const controllers=load(path.join(root,'Integracao/RP/animation_controllers/swbr_iburi_fumaca.json')).animation_controllers;
 const check=(v,label)=>{if(!v)throw Error(label);count++};
 const parse=(e,t)=>typeof e==='number'?e:m.parse(e,{'query.life_time':t});
 const stages=[];
@@ -28,24 +29,28 @@ for(const stage of [1,2,3]){
    const position=channels.position.map(v=>parse(v,t));const scale=channels.scale.map(v=>parse(v,t));const rotation=channels.rotation.map(v=>parse(v,t));
    check([...position,...scale,...rotation].every(Number.isFinite),'Expressão não finita: '+name);
    check(scale.every(s=>s>.7&&s<1.4),'Expansão fora dos limites');
-   const radius=Math.max(...bones[name].cubes.map(c=>Math.hypot(c.size[0]/2,c.size[1]/2,.5)))*Math.max(...scale)+.5;
+   const radius=Math.max(...bones[name].cubes.map(c=>Math.hypot(...c.size.map(s=>s/2))))*Math.max(...scale)+.5;
    const p=bones[name].pivot.map((v,i)=>v+position[i]);
    check(Math.abs(p[0])+radius<32&&Math.abs(p[2])+radius<32&&p[1]+radius<52&&p[1]-radius>-20,'Nuvem ultrapassa os limites visíveis');
    minY=Math.min(minY,p[1]-radius);maxY=Math.max(maxY,p[1]+radius);
   }
  }
  check(rangeMin<.001&&rangeMax>.99,'Fumaça não percorre desaparecimento e recomposição');
+ check(rc[`controller.render.swbr.iburi${stage}.core`].color.a===1,'Núcleo de fumaça deve permanecer visível');
+ const controller=controllers[`controller.animation.swbr.iburi${stage}.smoke`];
+ const enter=controller.states.default.transitions[0].equipado;
+ const exit=controller.states.equipado.transitions[0].default;
+ for(const item of ['nz:modo_iburi1','nz:modo_iburi2','nz:modo_iburi3','nz:modo_outro']){
+  for(const first of [0,1])for(const ui of [0,1]){
+   const data={'query.is_item_name_any':(slot,index,...ids)=>slot==='slot.armor.head'&&ids.includes(item)?1:0,'context.is_first_person':first,'query.is_in_ui':ui};
+   const expected=item===`nz:modo_iburi${stage}`&&!first&&!ui;
+   check(Boolean(m.parse(enter,data))===expected,'Estado de emissão ativado indevidamente');
+   check(Boolean(m.parse(exit,data))===!expected,'Emissão não termina ao desequipar ou mudar o modo');
+  }
+ }
  stages.push({stage,ciclos_amostrados:4,amostras:121,alfa_min:rangeMin,alfa_max:rangeMax,limite_y_conservador:[minY,maxY]});
 }
-const scripts=load(path.join(root,'Integracao/RP/entity/player.entity.json'))['minecraft:client_entity'].description.scripts.pre_animation.slice(-3).join('');
-for(const item of ['nz:modo_iburi1','nz:modo_iburi2','nz:modo_iburi3','nz:modo_outro']){
- for(const initial of [0,1]){
-  const value=m.parse(scripts+'return v.swbr_v18733_full_body;',{
-   'query.is_item_name_any':(slot,index,...ids)=>ids.includes(item)?1:0,
-   'variable.swbr_v18733_full_body':initial,'variable.swbr_v18733_hair':initial
-  });
-  check(value===(item==='nz:modo_iburi3'?1:initial),'Ocultação afetou um modo diferente');
- }
-}
-const report={resultado:'APROVADO',parser:'Molang do Blockbench 4.12.6',avaliacoes:count,stages,controle_visual:'Somente modo 3 ativa a ocultação; os demais preservam o valor original.'};
+const scripts=load(path.join(root,'Integracao/RP/entity/player.entity.json'))['minecraft:client_entity'].description.scripts.pre_animation.join('');
+check(!scripts.includes('swbr_iburi_total'),'Ocultação Iburi da versão anterior ainda presente');
+const report={resultado:'APROVADO',parser:'Molang do Blockbench 4.12.6',avaliacoes:count,stages,controle_visual:'Os três modos preservam o corpo. Volumes centrais nunca desaparecem; emissores encerram ao sair do estado equipado. Verificação numérica, sem executar Minecraft.'};
 fs.writeFileSync(path.join(root,'Validacao_Molang.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

@@ -13,17 +13,20 @@
         "default": "geometry.nz_modo_iburi2"
       },
       "animations": {
-        "idle": "animation.nz_modo_iburi2.idle"
+        "idle": "animation.nz_modo_iburi2.idle",
+        "smoke": "controller.animation.swbr.iburi2.smoke"
       },
       "particle_effects": {
         "fumaca": "swbr:iburi_transformacao_2"
       },
       "scripts": {
         "animate": [
-          "idle"
+          "idle",
+          "smoke"
         ]
       },
       "render_controllers": [
+        "controller.render.swbr.iburi2.core",
         "controller.render.swbr.iburi2.p0",
         "controller.render.swbr.iburi2.p1",
         "controller.render.swbr.iburi2.p2",

@@ -5,53 +5,70 @@
       "stage": 1,
       "editor": "4.12.6",
       "format": "bedrock",
-      "cubes": 30,
-      "bones": 17,
+      "cubes": 39,
+      "bones": 34,
       "animations": [
         {
           "name": "animation.nz_modo_iburi1.idle",
           "length": 6.8,
-          "animators": 11
+          "animators": 26
         }
       ],
       "texture_error": 0,
+      "reopened": {
+        "cubes": 39,
+        "bones": 34,
+        "animations": 1,
+        "texture_error": 0
+      },
       "errors": [],
-      "source_sha256": "3d15cf5dbff146cf42d72e8cf994e2e5d687f5ac7efb8f635ab0ace9455bc3a0"
+      "source_sha256": "e56e9ece945cbf628edea35688add969771649a9117924d488fd085f2dba8918"
     },
     {
       "stage": 2,
       "editor": "4.12.6",
       "format": "bedrock",
       "cubes": 78,
-      "bones": 33,
+      "bones": 60,
       "animations": [
         {
           "name": "animation.nz_modo_iburi2.idle",
           "length": 6.2,
-          "animators": 27
+          "animators": 52
         }
       ],
       "texture_error": 0,
+      "reopened": {
+        "cubes": 78,
+        "bones": 60,
+        "animations": 1,
+        "texture_error": 0
+      },
       "errors": [],
-      "source_sha256": "5f816ab7d0cbdc287cf85b5848bb9818935334b2d14eeda963c599ee03cf2366"
+      "source_sha256": "ddb976e11f03d11f2b7154387ebbce97c9a73fcdba20a538c9a1cab4aec11725"
     },
     {
       "stage": 3,
       "editor": "4.12.6",
       "format": "bedrock",
       "cubes": 150,
-      "bones": 57,
+      "bones": 108,
       "animations": [
         {
           "name": "animation.nz_modo_iburi3.idle",
           "length": 5.6,
-          "animators": 51
+          "animators": 100
         }
       ],
       "texture_error": 0,
+      "reopened": {
+        "cubes": 150,
+        "bones": 108,
+        "animations": 1,
+        "texture_error": 0
+      },
       "errors": [],
-      "source_sha256": "b3892a97b24a0d486ca9b208b06b32ba47d2d7bf07f2b044e932364ee2e93f36"
+      "source_sha256": "7f007235ddbf5c71959cb5281087c0e7d254ea2ea6f7c114419e9f29e5c7bb72"
     }
-  ],
-  "geometry_roundtrip": "Três geometrias comparadas ao export do editor: descrições, bones, pais, locators, cubos, pivôs, rotações e UVs correspondem (tolerância 0,0001)."
+  ]
 }

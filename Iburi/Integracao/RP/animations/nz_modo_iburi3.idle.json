@@ -5,11 +5,28 @@
       "loop": true,
       "animation_length": 5.6,
       "bones": {
+        "iburi_core_ombro_00": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+343.575)",
+            "0.23*math.sin(query.life_time*31+343.575)",
+            "0.15*math.cos(query.life_time*27+343.575)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+343.575)",
+            "1.0+0.055*math.cos(query.life_time*29+343.575)",
+            "1.0+0.045*math.sin(query.life_time*33+343.575)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+343.575)",
+            "4*math.sin(query.life_time*23+343.575)",
+            "3*math.cos(query.life_time*26+343.575)"
+          ]
+        },
         "iburi_p0_ombro_00": {
           "position": [
-            "0.35*math.sin(query.life_time*25.553+217.700)",
+            "0.35*math.sin(query.life_time*36.289+246.805)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*20.443+217.700)"
+            "0.28*math.cos(query.life_time*29.031+246.805)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -17,16 +34,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*17.887+217.700)",
-            "6*math.sin(query.life_time*15.332+217.700)",
-            "4*math.cos(query.life_time*22.998+217.700)"
+            "3*math.sin(query.life_time*25.402+246.805)",
+            "6*math.sin(query.life_time*21.774+246.805)",
+            "4*math.cos(query.life_time*32.660+246.805)"
+          ]
+        },
+        "iburi_core_antebraco_01": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+261.837)",
+            "0.23*math.sin(query.life_time*31+261.837)",
+            "0.15*math.cos(query.life_time*27+261.837)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+261.837)",
+            "1.0+0.055*math.cos(query.life_time*29+261.837)",
+            "1.0+0.045*math.sin(query.life_time*33+261.837)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+261.837)",
+            "4*math.sin(query.life_time*23+261.837)",
+            "3*math.cos(query.life_time*26+261.837)"
           ]
         },
         "iburi_p1_antebraco_01": {
           "position": [
-            "0.35*math.sin(query.life_time*34.019+8.952)",
+            "0.35*math.sin(query.life_time*36.720+143.029)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*27.215+8.952)"
+            "0.28*math.cos(query.life_time*29.376+143.029)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
@@ -34,16 +68,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*23.813+8.952)",
-            "6*math.sin(query.life_time*20.411+8.952)",
-            "4*math.cos(query.life_time*30.617+8.952)"
+            "3*math.sin(query.life_time*25.704+143.029)",
+            "6*math.sin(query.life_time*22.032+143.029)",
+            "4*math.cos(query.life_time*33.048+143.029)"
+          ]
+        },
+        "iburi_core_antebraco_02": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+6.078)",
+            "0.23*math.sin(query.life_time*31+6.078)",
+            "0.15*math.cos(query.life_time*27+6.078)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+6.078)",
+            "1.0+0.055*math.cos(query.life_time*29+6.078)",
+            "1.0+0.045*math.sin(query.life_time*33+6.078)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+6.078)",
+            "4*math.sin(query.life_time*23+6.078)",
+            "3*math.cos(query.life_time*26+6.078)"
           ]
         },
         "iburi_p2_antebraco_02": {
           "position": [
-            "0.35*math.sin(query.life_time*33.511+138.406)",
+            "0.35*math.sin(query.life_time*31.311+237.103)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*26.809+138.406)"
+            "0.28*math.cos(query.life_time*25.049+237.103)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
@@ -51,16 +102,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*23.458+138.406)",
-            "6*math.sin(query.life_time*20.107+138.406)",
-            "4*math.cos(query.life_time*30.160+138.406)"
+            "3*math.sin(query.life_time*21.918+237.103)",
+            "6*math.sin(query.life_time*18.787+237.103)",
+            "4*math.cos(query.life_time*28.180+237.103)"
+          ]
+        },
+        "iburi_core_escapula_03": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+296.897)",
+            "0.23*math.sin(query.life_time*31+296.897)",
+            "0.15*math.cos(query.life_time*27+296.897)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+296.897)",
+            "1.0+0.055*math.cos(query.life_time*29+296.897)",
+            "1.0+0.045*math.sin(query.life_time*33+296.897)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+296.897)",
+            "4*math.sin(query.life_time*23+296.897)",
+            "3*math.cos(query.life_time*26+296.897)"
           ]
         },
         "iburi_p3_escapula_03": {
           "position": [
-            "0.35*math.sin(query.life_time*25.012+70.325)",
+            "0.35*math.sin(query.life_time*37.149+206.211)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*20.010+70.325)"
+            "0.28*math.cos(query.life_time*29.719+206.211)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
@@ -68,16 +136,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*17.509+70.325)",
-            "6*math.sin(query.life_time*15.007+70.325)",
-            "4*math.cos(query.life_time*22.511+70.325)"
+            "3*math.sin(query.life_time*26.004+206.211)",
+            "6*math.sin(query.life_time*22.289+206.211)",
+            "4*math.cos(query.life_time*33.434+206.211)"
+          ]
+        },
+        "iburi_core_ombro_04": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+277.547)",
+            "0.23*math.sin(query.life_time*31+277.547)",
+            "0.15*math.cos(query.life_time*27+277.547)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+277.547)",
+            "1.0+0.055*math.cos(query.life_time*29+277.547)",
+            "1.0+0.045*math.sin(query.life_time*33+277.547)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+277.547)",
+            "4*math.sin(query.life_time*23+277.547)",
+            "3*math.cos(query.life_time*26+277.547)"
           ]
         },
         "iburi_p4_ombro_04": {
           "position": [
-            "0.35*math.sin(query.life_time*31.902+169.038)",
+            "0.35*math.sin(query.life_time*37.190+92.426)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*25.522+169.038)"
+            "0.28*math.cos(query.life_time*29.752+92.426)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
@@ -85,16 +170,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*22.332+169.038)",
-            "6*math.sin(query.life_time*19.141+169.038)",
-            "4*math.cos(query.life_time*28.712+169.038)"
+            "3*math.sin(query.life_time*26.033+92.426)",
+            "6*math.sin(query.life_time*22.314+92.426)",
+            "4*math.cos(query.life_time*33.471+92.426)"
+          ]
+        },
+        "iburi_core_braco_05": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+51.628)",
+            "0.23*math.sin(query.life_time*31+51.628)",
+            "0.15*math.cos(query.life_time*27+51.628)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+51.628)",
+            "1.0+0.055*math.cos(query.life_time*29+51.628)",
+            "1.0+0.045*math.sin(query.life_time*33+51.628)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+51.628)",
+            "4*math.sin(query.life_time*23+51.628)",
+            "3*math.cos(query.life_time*26+51.628)"
           ]
         },
         "iburi_p5_braco_05": {
           "position": [
-            "0.35*math.sin(query.life_time*37.619+100.028)",
+            "0.35*math.sin(query.life_time*22.714+92.877)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*30.096+100.028)"
+            "0.28*math.cos(query.life_time*18.171+92.877)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
@@ -102,16 +204,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*26.334+100.028)",
-            "6*math.sin(query.life_time*22.572+100.028)",
-            "4*math.cos(query.life_time*33.857+100.028)"
+            "3*math.sin(query.life_time*15.900+92.877)",
+            "6*math.sin(query.life_time*13.628+92.877)",
+            "4*math.cos(query.life_time*20.443+92.877)"
+          ]
+        },
+        "iburi_core_braco_06": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+295.947)",
+            "0.23*math.sin(query.life_time*31+295.947)",
+            "0.15*math.cos(query.life_time*27+295.947)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+295.947)",
+            "1.0+0.055*math.cos(query.life_time*29+295.947)",
+            "1.0+0.045*math.sin(query.life_time*33+295.947)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+295.947)",
+            "4*math.sin(query.life_time*23+295.947)",
+            "3*math.cos(query.life_time*26+295.947)"
           ]
         },
         "iburi_p0_braco_06": {
           "position": [
-            "0.35*math.sin(query.life_time*26.979+85.257)",
+            "0.35*math.sin(query.life_time*30.461+18.196)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*21.583+85.257)"
+            "0.28*math.cos(query.life_time*24.369+18.196)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -119,16 +238,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*18.885+85.257)",
-            "6*math.sin(query.life_time*16.187+85.257)",
-            "4*math.cos(query.life_time*24.281+85.257)"
+            "3*math.sin(query.life_time*21.323+18.196)",
+            "6*math.sin(query.life_time*18.277+18.196)",
+            "4*math.cos(query.life_time*27.415+18.196)"
+          ]
+        },
+        "iburi_core_mao_07": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+329.654)",
+            "0.23*math.sin(query.life_time*31+329.654)",
+            "0.15*math.cos(query.life_time*27+329.654)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+329.654)",
+            "1.0+0.055*math.cos(query.life_time*29+329.654)",
+            "1.0+0.045*math.sin(query.life_time*33+329.654)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+329.654)",
+            "4*math.sin(query.life_time*23+329.654)",
+            "3*math.cos(query.life_time*26+329.654)"
           ]
         },
         "iburi_p1_mao_07": {
           "position": [
-            "0.35*math.sin(query.life_time*27.442+167.749)",
+            "0.35*math.sin(query.life_time*26.026+227.726)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*21.954+167.749)"
+            "0.28*math.cos(query.life_time*20.821+227.726)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
@@ -136,16 +272,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*19.210+167.749)",
-            "6*math.sin(query.life_time*16.465+167.749)",
-            "4*math.cos(query.life_time*24.698+167.749)"
+            "3*math.sin(query.life_time*18.218+227.726)",
+            "6*math.sin(query.life_time*15.616+227.726)",
+            "4*math.cos(query.life_time*23.423+227.726)"
+          ]
+        },
+        "iburi_core_flanco_08": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+280.368)",
+            "0.23*math.sin(query.life_time*31+280.368)",
+            "0.15*math.cos(query.life_time*27+280.368)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+280.368)",
+            "1.0+0.055*math.cos(query.life_time*29+280.368)",
+            "1.0+0.045*math.sin(query.life_time*33+280.368)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+280.368)",
+            "4*math.sin(query.life_time*23+280.368)",
+            "3*math.cos(query.life_time*26+280.368)"
           ]
         },
         "iburi_p2_flanco_08": {
           "position": [
-            "0.35*math.sin(query.life_time*25.387+131.148)",
+            "0.35*math.sin(query.life_time*37.014+154.536)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*20.309+131.148)"
+            "0.28*math.cos(query.life_time*29.611+154.536)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
@@ -153,16 +306,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*17.771+131.148)",
-            "6*math.sin(query.life_time*15.232+131.148)",
-            "4*math.cos(query.life_time*22.848+131.148)"
+            "3*math.sin(query.life_time*25.910+154.536)",
+            "6*math.sin(query.life_time*22.209+154.536)",
+            "4*math.cos(query.life_time*33.313+154.536)"
+          ]
+        },
+        "iburi_core_flanco_09": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+115.247)",
+            "0.23*math.sin(query.life_time*31+115.247)",
+            "0.15*math.cos(query.life_time*27+115.247)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+115.247)",
+            "1.0+0.055*math.cos(query.life_time*29+115.247)",
+            "1.0+0.045*math.sin(query.life_time*33+115.247)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+115.247)",
+            "4*math.sin(query.life_time*23+115.247)",
+            "3*math.cos(query.life_time*26+115.247)"
           ]
         },
         "iburi_p3_flanco_09": {
           "position": [
-            "0.35*math.sin(query.life_time*22.235+15.802)",
+            "0.35*math.sin(query.life_time*28.032+52.223)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*17.788+15.802)"
+            "0.28*math.cos(query.life_time*22.425+52.223)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
@@ -170,16 +340,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*15.565+15.802)",
-            "6*math.sin(query.life_time*13.341+15.802)",
-            "4*math.cos(query.life_time*20.012+15.802)"
+            "3*math.sin(query.life_time*19.622+52.223)",
+            "6*math.sin(query.life_time*16.819+52.223)",
+            "4*math.cos(query.life_time*25.228+52.223)"
+          ]
+        },
+        "iburi_core_flanco_10": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+110.181)",
+            "0.23*math.sin(query.life_time*31+110.181)",
+            "0.15*math.cos(query.life_time*27+110.181)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+110.181)",
+            "1.0+0.055*math.cos(query.life_time*29+110.181)",
+            "1.0+0.045*math.sin(query.life_time*33+110.181)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+110.181)",
+            "4*math.sin(query.life_time*23+110.181)",
+            "3*math.cos(query.life_time*26+110.181)"
           ]
         },
         "iburi_p4_flanco_10": {
           "position": [
-            "0.35*math.sin(query.life_time*25.440+167.255)",
+            "0.35*math.sin(query.life_time*29.529+235.924)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*20.352+167.255)"
+            "0.28*math.cos(query.life_time*23.623+235.924)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
@@ -187,16 +374,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*17.808+167.255)",
-            "6*math.sin(query.life_time*15.264+167.255)",
-            "4*math.cos(query.life_time*22.896+167.255)"
+            "3*math.sin(query.life_time*20.670+235.924)",
+            "6*math.sin(query.life_time*17.717+235.924)",
+            "4*math.cos(query.life_time*26.576+235.924)"
+          ]
+        },
+        "iburi_core_perna_11": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+203.999)",
+            "0.23*math.sin(query.life_time*31+203.999)",
+            "0.15*math.cos(query.life_time*27+203.999)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+203.999)",
+            "1.0+0.055*math.cos(query.life_time*29+203.999)",
+            "1.0+0.045*math.sin(query.life_time*33+203.999)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+203.999)",
+            "4*math.sin(query.life_time*23+203.999)",
+            "3*math.cos(query.life_time*26+203.999)"
           ]
         },
         "iburi_p5_perna_11": {
           "position": [
-            "0.35*math.sin(query.life_time*32.099+97.502)",
+            "0.35*math.sin(query.life_time*28.640+87.807)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*25.679+97.502)"
+            "0.28*math.cos(query.life_time*22.912+87.807)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
@@ -204,16 +408,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*22.469+97.502)",
-            "6*math.sin(query.life_time*19.259+97.502)",
-            "4*math.cos(query.life_time*28.889+97.502)"
+            "3*math.sin(query.life_time*20.048+87.807)",
+            "6*math.sin(query.life_time*17.184+87.807)",
+            "4*math.cos(query.life_time*25.776+87.807)"
+          ]
+        },
+        "iburi_core_perna_12": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+66.664)",
+            "0.23*math.sin(query.life_time*31+66.664)",
+            "0.15*math.cos(query.life_time*27+66.664)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+66.664)",
+            "1.0+0.055*math.cos(query.life_time*29+66.664)",
+            "1.0+0.045*math.sin(query.life_time*33+66.664)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+66.664)",
+            "4*math.sin(query.life_time*23+66.664)",
+            "3*math.cos(query.life_time*26+66.664)"
           ]
         },
         "iburi_p0_perna_12": {
           "position": [
-            "0.35*math.sin(query.life_time*22.448+93.611)",
+            "0.35*math.sin(query.life_time*24.280+272.808)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*17.958+93.611)"
+            "0.28*math.cos(query.life_time*19.424+272.808)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -221,16 +442,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*15.713+93.611)",
-            "6*math.sin(query.life_time*13.469+93.611)",
-            "4*math.cos(query.life_time*20.203+93.611)"
+            "3*math.sin(query.life_time*16.996+272.808)",
+            "6*math.sin(query.life_time*14.568+272.808)",
+            "4*math.cos(query.life_time*21.852+272.808)"
+          ]
+        },
+        "iburi_core_nucleo_13": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+181.172)",
+            "0.23*math.sin(query.life_time*31+181.172)",
+            "0.15*math.cos(query.life_time*27+181.172)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+181.172)",
+            "1.0+0.055*math.cos(query.life_time*29+181.172)",
+            "1.0+0.045*math.sin(query.life_time*33+181.172)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+181.172)",
+            "4*math.sin(query.life_time*23+181.172)",
+            "3*math.cos(query.life_time*26+181.172)"
           ]
         },
         "iburi_p1_nucleo_13": {
           "position": [
-            "0.35*math.sin(query.life_time*29.026+340.759)",
+            "0.35*math.sin(query.life_time*22.944+217.111)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*23.220+340.759)"
+            "0.28*math.cos(query.life_time*18.356+217.111)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
@@ -238,16 +476,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*20.318+340.759)",
-            "6*math.sin(query.life_time*17.415+340.759)",
-            "4*math.cos(query.life_time*26.123+340.759)"
+            "3*math.sin(query.life_time*16.061+217.111)",
+            "6*math.sin(query.life_time*13.767+217.111)",
+            "4*math.cos(query.life_time*20.650+217.111)"
+          ]
+        },
+        "iburi_core_nucleo_14": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+17.516)",
+            "0.23*math.sin(query.life_time*31+17.516)",
+            "0.15*math.cos(query.life_time*27+17.516)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+17.516)",
+            "1.0+0.055*math.cos(query.life_time*29+17.516)",
+            "1.0+0.045*math.sin(query.life_time*33+17.516)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+17.516)",
+            "4*math.sin(query.life_time*23+17.516)",
+            "3*math.cos(query.life_time*26+17.516)"
           ]
         },
         "iburi_p2_nucleo_14": {
           "position": [
-            "0.35*math.sin(query.life_time*36.224+343.443)",
+            "0.35*math.sin(query.life_time*34.344+9.484)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*28.980+343.443)"
+            "0.28*math.cos(query.life_time*27.475+9.484)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
@@ -255,16 +510,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*25.357+343.443)",
-            "6*math.sin(query.life_time*21.735+343.443)",
-            "4*math.cos(query.life_time*32.602+343.443)"
+            "3*math.sin(query.life_time*24.041+9.484)",
+            "6*math.sin(query.life_time*20.607+9.484)",
+            "4*math.cos(query.life_time*30.910+9.484)"
+          ]
+        },
+        "iburi_core_nucleo_15": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+79.528)",
+            "0.23*math.sin(query.life_time*31+79.528)",
+            "0.15*math.cos(query.life_time*27+79.528)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+79.528)",
+            "1.0+0.055*math.cos(query.life_time*29+79.528)",
+            "1.0+0.045*math.sin(query.life_time*33+79.528)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+79.528)",
+            "4*math.sin(query.life_time*23+79.528)",
+            "3*math.cos(query.life_time*26+79.528)"
           ]
         },
         "iburi_p3_nucleo_15": {
           "position": [
-            "0.35*math.sin(query.life_time*38.361+147.286)",
+            "0.35*math.sin(query.life_time*30.457+26.831)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*30.689+147.286)"
+            "0.28*math.cos(query.life_time*24.365+26.831)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
@@ -272,16 +544,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*26.853+147.286)",
-            "6*math.sin(query.life_time*23.016+147.286)",
-            "4*math.cos(query.life_time*34.525+147.286)"
+            "3*math.sin(query.life_time*21.320+26.831)",
+            "6*math.sin(query.life_time*18.274+26.831)",
+            "4*math.cos(query.life_time*27.411+26.831)"
+          ]
+        },
+        "iburi_core_nucleo_16": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+103.606)",
+            "0.23*math.sin(query.life_time*31+103.606)",
+            "0.15*math.cos(query.life_time*27+103.606)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+103.606)",
+            "1.0+0.055*math.cos(query.life_time*29+103.606)",
+            "1.0+0.045*math.sin(query.life_time*33+103.606)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+103.606)",
+            "4*math.sin(query.life_time*23+103.606)",
+            "3*math.cos(query.life_time*26+103.606)"
           ]
         },
         "iburi_p4_nucleo_16": {
           "position": [
-            "0.35*math.sin(query.life_time*36.868+187.120)",
+            "0.35*math.sin(query.life_time*29.438+129.986)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*29.495+187.120)"
+            "0.28*math.cos(query.life_time*23.551+129.986)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
@@ -289,16 +578,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*25.808+187.120)",
-            "6*math.sin(query.life_time*22.121+187.120)",
-            "4*math.cos(query.life_time*33.181+187.120)"
+            "3*math.sin(query.life_time*20.607+129.986)",
+            "6*math.sin(query.life_time*17.663+129.986)",
+            "4*math.cos(query.life_time*26.495+129.986)"
+          ]
+        },
+        "iburi_core_nucleo_17": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+343.443)",
+            "0.23*math.sin(query.life_time*31+343.443)",
+            "0.15*math.cos(query.life_time*27+343.443)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+343.443)",
+            "1.0+0.055*math.cos(query.life_time*29+343.443)",
+            "1.0+0.045*math.sin(query.life_time*33+343.443)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+343.443)",
+            "4*math.sin(query.life_time*23+343.443)",
+            "3*math.cos(query.life_time*26+343.443)"
           ]
         },
         "iburi_p5_nucleo_17": {
           "position": [
-            "0.35*math.sin(query.life_time*37.578+208.762)",
+            "0.35*math.sin(query.life_time*28.483+77.456)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*30.062+208.762)"
+            "0.28*math.cos(query.life_time*22.787+77.456)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
@@ -306,16 +612,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*26.304+208.762)",
-            "6*math.sin(query.life_time*22.547+208.762)",
-            "4*math.cos(query.life_time*33.820+208.762)"
+            "3*math.sin(query.life_time*19.938+77.456)",
+            "6*math.sin(query.life_time*17.090+77.456)",
+            "4*math.cos(query.life_time*25.635+77.456)"
+          ]
+        },
+        "iburi_core_nucleo_18": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+105.379)",
+            "0.23*math.sin(query.life_time*31+105.379)",
+            "0.15*math.cos(query.life_time*27+105.379)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+105.379)",
+            "1.0+0.055*math.cos(query.life_time*29+105.379)",
+            "1.0+0.045*math.sin(query.life_time*33+105.379)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+105.379)",
+            "4*math.sin(query.life_time*23+105.379)",
+            "3*math.cos(query.life_time*26+105.379)"
           ]
         },
         "iburi_p0_nucleo_18": {
           "position": [
-            "0.35*math.sin(query.life_time*31.062+85.220)",
+            "0.35*math.sin(query.life_time*32.566+23.971)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*24.850+85.220)"
+            "0.28*math.cos(query.life_time*26.053+23.971)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -323,21 +646,140 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*21.744+85.220)",
-            "6*math.sin(query.life_time*18.637+85.220)",
-            "4*math.cos(query.life_time*27.956+85.220)"
+            "3*math.sin(query.life_time*22.796+23.971)",
+            "6*math.sin(query.life_time*19.540+23.971)",
+            "4*math.cos(query.life_time*29.309+23.971)"
+          ]
+        },
+        "iburi_core_perna_19": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+307.173)",
+            "0.23*math.sin(query.life_time*31+307.173)",
+            "0.15*math.cos(query.life_time*27+307.173)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+307.173)",
+            "1.0+0.055*math.cos(query.life_time*29+307.173)",
+            "1.0+0.045*math.sin(query.life_time*33+307.173)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+307.173)",
+            "4*math.sin(query.life_time*23+307.173)",
+            "3*math.cos(query.life_time*26+307.173)"
           ]
         },
         "iburi_p1_perna_19": {
           "position": [
-            "0.35*math.sin(query.life_time*27.846+296.673)",
+            "0.35*math.sin(query.life_time*38.785+323.075)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*22.277+296.673)"
+            "0.28*math.cos(query.life_time*31.028+323.075)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
             "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*27.149+323.075)",
+            "6*math.sin(query.life_time*23.271+323.075)",
+            "4*math.cos(query.life_time*34.906+323.075)"
+          ]
+        },
+        "iburi_core_perna_20": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+310.951)",
+            "0.23*math.sin(query.life_time*31+310.951)",
+            "0.15*math.cos(query.life_time*27+310.951)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+310.951)",
+            "1.0+0.055*math.cos(query.life_time*29+310.951)",
+            "1.0+0.045*math.sin(query.life_time*33+310.951)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+310.951)",
+            "4*math.sin(query.life_time*23+310.951)",
+            "3*math.cos(query.life_time*26+310.951)"
+          ]
+        },
+        "iburi_p2_perna_20": {
+          "position": [
+            "0.35*math.sin(query.life_time*38.549+224.728)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*30.839+224.728)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*26.985+224.728)",
+            "6*math.sin(query.life_time*23.130+224.728)",
+            "4*math.cos(query.life_time*34.694+224.728)"
+          ]
+        },
+        "iburi_core_perna_21": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+239.055)",
+            "0.23*math.sin(query.life_time*31+239.055)",
+            "0.15*math.cos(query.life_time*27+239.055)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+239.055)",
+            "1.0+0.055*math.cos(query.life_time*29+239.055)",
+            "1.0+0.045*math.sin(query.life_time*33+239.055)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+239.055)",
+            "4*math.sin(query.life_time*23+239.055)",
+            "3*math.cos(query.life_time*26+239.055)"
+          ]
+        },
+        "iburi_p3_perna_21": {
+          "position": [
+            "0.35*math.sin(query.life_time*32.161+196.048)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*25.729+196.048)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*22.513+196.048)",
+            "6*math.sin(query.life_time*19.296+196.048)",
+            "4*math.cos(query.life_time*28.945+196.048)"
+          ]
+        },
+        "iburi_core_cabeca_22": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+332.028)",
+            "0.23*math.sin(query.life_time*31+332.028)",
+            "0.15*math.cos(query.life_time*27+332.028)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+332.028)",
+            "1.0+0.055*math.cos(query.life_time*29+332.028)",
+            "1.0+0.045*math.sin(query.life_time*33+332.028)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+332.028)",
+            "4*math.sin(query.life_time*23+332.028)",
+            "3*math.cos(query.life_time*26+332.028)"
+          ]
+        },
+        "iburi_p4_cabeca_22": {
+          "position": [
+            "0.35*math.sin(query.life_time*27.846+296.673)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*22.277+296.673)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
           ],
           "rotation": [
             "3*math.sin(query.life_time*19.492+296.673)",
@@ -345,62 +787,28 @@
             "4*math.cos(query.life_time*25.061+296.673)"
           ]
         },
-        "iburi_p2_perna_20": {
+        "iburi_core_ombro_23": {
           "position": [
-            "0.35*math.sin(query.life_time*34.177+22.307)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*27.341+22.307)"
+            "0.16*math.sin(query.life_time*24+346.024)",
+            "0.23*math.sin(query.life_time*31+346.024)",
+            "0.15*math.cos(query.life_time*27+346.024)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
+            "1.0+0.045*math.sin(query.life_time*37+346.024)",
+            "1.0+0.055*math.cos(query.life_time*29+346.024)",
+            "1.0+0.045*math.sin(query.life_time*33+346.024)"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*23.924+22.307)",
-            "6*math.sin(query.life_time*20.506+22.307)",
-            "4*math.cos(query.life_time*30.759+22.307)"
-          ]
-        },
-        "iburi_p3_perna_21": {
-          "position": [
-            "0.35*math.sin(query.life_time*34.320+300.174)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*27.456+300.174)"
-          ],
-          "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
-          ],
-          "rotation": [
-            "3*math.sin(query.life_time*24.024+300.174)",
-            "6*math.sin(query.life_time*20.592+300.174)",
-            "4*math.cos(query.life_time*30.888+300.174)"
-          ]
-        },
-        "iburi_p4_cabeca_22": {
-          "position": [
-            "0.35*math.sin(query.life_time*22.408+32.958)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*17.926+32.958)"
-          ],
-          "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
-          ],
-          "rotation": [
-            "3*math.sin(query.life_time*15.686+32.958)",
-            "6*math.sin(query.life_time*13.445+32.958)",
-            "4*math.cos(query.life_time*20.167+32.958)"
+            "2*math.sin(query.life_time*19+346.024)",
+            "4*math.sin(query.life_time*23+346.024)",
+            "3*math.cos(query.life_time*26+346.024)"
           ]
         },
         "iburi_p5_ombro_23": {
           "position": [
-            "0.35*math.sin(query.life_time*23.249+191.440)",
+            "0.35*math.sin(query.life_time*22.421+31.320)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*18.599+191.440)"
+            "0.28*math.cos(query.life_time*17.937+31.320)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
@@ -408,16 +816,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*16.274+191.440)",
-            "6*math.sin(query.life_time*13.949+191.440)",
-            "4*math.cos(query.life_time*20.924+191.440)"
+            "3*math.sin(query.life_time*15.695+31.320)",
+            "6*math.sin(query.life_time*13.453+31.320)",
+            "4*math.cos(query.life_time*20.179+31.320)"
+          ]
+        },
+        "iburi_core_antebraco_24": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+282.090)",
+            "0.23*math.sin(query.life_time*31+282.090)",
+            "0.15*math.cos(query.life_time*27+282.090)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+282.090)",
+            "1.0+0.055*math.cos(query.life_time*29+282.090)",
+            "1.0+0.045*math.sin(query.life_time*33+282.090)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+282.090)",
+            "4*math.sin(query.life_time*23+282.090)",
+            "3*math.cos(query.life_time*26+282.090)"
           ]
         },
         "iburi_p0_antebraco_24": {
           "position": [
-            "0.35*math.sin(query.life_time*36.141+5.225)",
+            "0.35*math.sin(query.life_time*22.391+260.903)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*28.913+5.225)"
+            "0.28*math.cos(query.life_time*17.913+260.903)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -425,16 +850,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*25.299+5.225)",
-            "6*math.sin(query.life_time*21.685+5.225)",
-            "4*math.cos(query.life_time*32.527+5.225)"
+            "3*math.sin(query.life_time*15.674+260.903)",
+            "6*math.sin(query.life_time*13.435+260.903)",
+            "4*math.cos(query.life_time*20.152+260.903)"
+          ]
+        },
+        "iburi_core_antebraco_25": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+123.651)",
+            "0.23*math.sin(query.life_time*31+123.651)",
+            "0.15*math.cos(query.life_time*27+123.651)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+123.651)",
+            "1.0+0.055*math.cos(query.life_time*29+123.651)",
+            "1.0+0.045*math.sin(query.life_time*33+123.651)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+123.651)",
+            "4*math.sin(query.life_time*23+123.651)",
+            "3*math.cos(query.life_time*26+123.651)"
           ]
         },
         "iburi_p1_antebraco_25": {
           "position": [
-            "0.35*math.sin(query.life_time*30.518+348.557)",
+            "0.35*math.sin(query.life_time*24.491+127.920)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*24.414+348.557)"
+            "0.28*math.cos(query.life_time*19.593+127.920)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
@@ -442,16 +884,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*21.362+348.557)",
-            "6*math.sin(query.life_time*18.311+348.557)",
-            "4*math.cos(query.life_time*27.466+348.557)"
+            "3*math.sin(query.life_time*17.144+127.920)",
+            "6*math.sin(query.life_time*14.695+127.920)",
+            "4*math.cos(query.life_time*22.042+127.920)"
+          ]
+        },
+        "iburi_core_escapula_26": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+336.210)",
+            "0.23*math.sin(query.life_time*31+336.210)",
+            "0.15*math.cos(query.life_time*27+336.210)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+336.210)",
+            "1.0+0.055*math.cos(query.life_time*29+336.210)",
+            "1.0+0.045*math.sin(query.life_time*33+336.210)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+336.210)",
+            "4*math.sin(query.life_time*23+336.210)",
+            "3*math.cos(query.life_time*26+336.210)"
           ]
         },
         "iburi_p2_escapula_26": {
           "position": [
-            "0.35*math.sin(query.life_time*24.911+257.873)",
+            "0.35*math.sin(query.life_time*30.676+210.947)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*19.929+257.873)"
+            "0.28*math.cos(query.life_time*24.540+210.947)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
@@ -459,16 +918,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*17.438+257.873)",
-            "6*math.sin(query.life_time*14.947+257.873)",
-            "4*math.cos(query.life_time*22.420+257.873)"
+            "3*math.sin(query.life_time*21.473+210.947)",
+            "6*math.sin(query.life_time*18.405+210.947)",
+            "4*math.cos(query.life_time*27.608+210.947)"
+          ]
+        },
+        "iburi_core_ombro_27": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+329.869)",
+            "0.23*math.sin(query.life_time*31+329.869)",
+            "0.15*math.cos(query.life_time*27+329.869)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+329.869)",
+            "1.0+0.055*math.cos(query.life_time*29+329.869)",
+            "1.0+0.045*math.sin(query.life_time*33+329.869)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+329.869)",
+            "4*math.sin(query.life_time*23+329.869)",
+            "3*math.cos(query.life_time*26+329.869)"
           ]
         },
         "iburi_p3_ombro_27": {
           "position": [
-            "0.35*math.sin(query.life_time*36.045+162.347)",
+            "0.35*math.sin(query.life_time*32.011+17.446)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*28.836+162.347)"
+            "0.28*math.cos(query.life_time*25.608+17.446)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
@@ -476,16 +952,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*25.232+162.347)",
-            "6*math.sin(query.life_time*21.627+162.347)",
-            "4*math.cos(query.life_time*32.441+162.347)"
+            "3*math.sin(query.life_time*22.407+17.446)",
+            "6*math.sin(query.life_time*19.206+17.446)",
+            "4*math.cos(query.life_time*28.810+17.446)"
+          ]
+        },
+        "iburi_core_braco_28": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+98.409)",
+            "0.23*math.sin(query.life_time*31+98.409)",
+            "0.15*math.cos(query.life_time*27+98.409)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+98.409)",
+            "1.0+0.055*math.cos(query.life_time*29+98.409)",
+            "1.0+0.045*math.sin(query.life_time*33+98.409)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+98.409)",
+            "4*math.sin(query.life_time*23+98.409)",
+            "3*math.cos(query.life_time*26+98.409)"
           ]
         },
         "iburi_p4_braco_28": {
           "position": [
-            "0.35*math.sin(query.life_time*35.911+258.366)",
+            "0.35*math.sin(query.life_time*30.708+241.146)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*28.729+258.366)"
+            "0.28*math.cos(query.life_time*24.566+241.146)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
@@ -493,16 +986,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*25.138+258.366)",
-            "6*math.sin(query.life_time*21.546+258.366)",
-            "4*math.cos(query.life_time*32.320+258.366)"
+            "3*math.sin(query.life_time*21.495+241.146)",
+            "6*math.sin(query.life_time*18.425+241.146)",
+            "4*math.cos(query.life_time*27.637+241.146)"
+          ]
+        },
+        "iburi_core_braco_29": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+297.510)",
+            "0.23*math.sin(query.life_time*31+297.510)",
+            "0.15*math.cos(query.life_time*27+297.510)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+297.510)",
+            "1.0+0.055*math.cos(query.life_time*29+297.510)",
+            "1.0+0.045*math.sin(query.life_time*33+297.510)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+297.510)",
+            "4*math.sin(query.life_time*23+297.510)",
+            "3*math.cos(query.life_time*26+297.510)"
           ]
         },
         "iburi_p5_braco_29": {
           "position": [
-            "0.35*math.sin(query.life_time*27.243+124.560)",
+            "0.35*math.sin(query.life_time*31.322+300.443)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*21.795+124.560)"
+            "0.28*math.cos(query.life_time*25.058+300.443)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
@@ -510,16 +1020,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*19.070+124.560)",
-            "6*math.sin(query.life_time*16.346+124.560)",
-            "4*math.cos(query.life_time*24.519+124.560)"
+            "3*math.sin(query.life_time*21.925+300.443)",
+            "6*math.sin(query.life_time*18.793+300.443)",
+            "4*math.cos(query.life_time*28.190+300.443)"
+          ]
+        },
+        "iburi_core_mao_30": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+274.241)",
+            "0.23*math.sin(query.life_time*31+274.241)",
+            "0.15*math.cos(query.life_time*27+274.241)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+274.241)",
+            "1.0+0.055*math.cos(query.life_time*29+274.241)",
+            "1.0+0.045*math.sin(query.life_time*33+274.241)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+274.241)",
+            "4*math.sin(query.life_time*23+274.241)",
+            "3*math.cos(query.life_time*26+274.241)"
           ]
         },
         "iburi_p0_mao_30": {
           "position": [
-            "0.35*math.sin(query.life_time*35.435+113.029)",
+            "0.35*math.sin(query.life_time*34.177+42.141)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*28.348+113.029)"
+            "0.28*math.cos(query.life_time*27.342+42.141)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -527,16 +1054,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*24.804+113.029)",
-            "6*math.sin(query.life_time*21.261+113.029)",
-            "4*math.cos(query.life_time*31.891+113.029)"
+            "3*math.sin(query.life_time*23.924+42.141)",
+            "6*math.sin(query.life_time*20.506+42.141)",
+            "4*math.cos(query.life_time*30.760+42.141)"
+          ]
+        },
+        "iburi_core_flanco_31": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+249.172)",
+            "0.23*math.sin(query.life_time*31+249.172)",
+            "0.15*math.cos(query.life_time*27+249.172)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+249.172)",
+            "1.0+0.055*math.cos(query.life_time*29+249.172)",
+            "1.0+0.045*math.sin(query.life_time*33+249.172)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+249.172)",
+            "4*math.sin(query.life_time*23+249.172)",
+            "3*math.cos(query.life_time*26+249.172)"
           ]
         },
         "iburi_p1_flanco_31": {
           "position": [
-            "0.35*math.sin(query.life_time*37.905+67.440)",
+            "0.35*math.sin(query.life_time*35.347+341.864)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*30.324+67.440)"
+            "0.28*math.cos(query.life_time*28.277+341.864)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
@@ -544,16 +1088,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*26.533+67.440)",
-            "6*math.sin(query.life_time*22.743+67.440)",
-            "4*math.cos(query.life_time*34.114+67.440)"
+            "3*math.sin(query.life_time*24.743+341.864)",
+            "6*math.sin(query.life_time*21.208+341.864)",
+            "4*math.cos(query.life_time*31.812+341.864)"
+          ]
+        },
+        "iburi_core_flanco_32": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+297.433)",
+            "0.23*math.sin(query.life_time*31+297.433)",
+            "0.15*math.cos(query.life_time*27+297.433)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+297.433)",
+            "1.0+0.055*math.cos(query.life_time*29+297.433)",
+            "1.0+0.045*math.sin(query.life_time*33+297.433)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+297.433)",
+            "4*math.sin(query.life_time*23+297.433)",
+            "3*math.cos(query.life_time*26+297.433)"
           ]
         },
         "iburi_p2_flanco_32": {
           "position": [
-            "0.35*math.sin(query.life_time*22.025+5.004)",
+            "0.35*math.sin(query.life_time*31.077+132.041)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*17.620+5.004)"
+            "0.28*math.cos(query.life_time*24.861+132.041)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
@@ -561,16 +1122,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*15.417+5.004)",
-            "6*math.sin(query.life_time*13.215+5.004)",
-            "4*math.cos(query.life_time*19.822+5.004)"
+            "3*math.sin(query.life_time*21.754+132.041)",
+            "6*math.sin(query.life_time*18.646+132.041)",
+            "4*math.cos(query.life_time*27.969+132.041)"
+          ]
+        },
+        "iburi_core_flanco_33": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+114.444)",
+            "0.23*math.sin(query.life_time*31+114.444)",
+            "0.15*math.cos(query.life_time*27+114.444)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+114.444)",
+            "1.0+0.055*math.cos(query.life_time*29+114.444)",
+            "1.0+0.045*math.sin(query.life_time*33+114.444)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+114.444)",
+            "4*math.sin(query.life_time*23+114.444)",
+            "3*math.cos(query.life_time*26+114.444)"
           ]
         },
         "iburi_p3_flanco_33": {
           "position": [
-            "0.35*math.sin(query.life_time*27.767+94.088)",
+            "0.35*math.sin(query.life_time*28.089+87.345)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*22.214+94.088)"
+            "0.28*math.cos(query.life_time*22.471+87.345)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
@@ -578,16 +1156,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*19.437+94.088)",
-            "6*math.sin(query.life_time*16.660+94.088)",
-            "4*math.cos(query.life_time*24.991+94.088)"
+            "3*math.sin(query.life_time*19.662+87.345)",
+            "6*math.sin(query.life_time*16.854+87.345)",
+            "4*math.cos(query.life_time*25.280+87.345)"
+          ]
+        },
+        "iburi_core_perna_34": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+296.619)",
+            "0.23*math.sin(query.life_time*31+296.619)",
+            "0.15*math.cos(query.life_time*27+296.619)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+296.619)",
+            "1.0+0.055*math.cos(query.life_time*29+296.619)",
+            "1.0+0.045*math.sin(query.life_time*33+296.619)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+296.619)",
+            "4*math.sin(query.life_time*23+296.619)",
+            "3*math.cos(query.life_time*26+296.619)"
           ]
         },
         "iburi_p4_perna_34": {
           "position": [
-            "0.35*math.sin(query.life_time*34.389+186.892)",
+            "0.35*math.sin(query.life_time*30.259+147.205)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*27.511+186.892)"
+            "0.28*math.cos(query.life_time*24.207+147.205)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
@@ -595,16 +1190,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*24.072+186.892)",
-            "6*math.sin(query.life_time*20.633+186.892)",
-            "4*math.cos(query.life_time*30.950+186.892)"
+            "3*math.sin(query.life_time*21.181+147.205)",
+            "6*math.sin(query.life_time*18.155+147.205)",
+            "4*math.cos(query.life_time*27.233+147.205)"
+          ]
+        },
+        "iburi_core_perna_35": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+259.893)",
+            "0.23*math.sin(query.life_time*31+259.893)",
+            "0.15*math.cos(query.life_time*27+259.893)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+259.893)",
+            "1.0+0.055*math.cos(query.life_time*29+259.893)",
+            "1.0+0.045*math.sin(query.life_time*33+259.893)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+259.893)",
+            "4*math.sin(query.life_time*23+259.893)",
+            "3*math.cos(query.life_time*26+259.893)"
           ]
         },
         "iburi_p5_perna_35": {
           "position": [
-            "0.35*math.sin(query.life_time*22.331+105.868)",
+            "0.35*math.sin(query.life_time*22.591+264.668)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*17.865+105.868)"
+            "0.28*math.cos(query.life_time*18.073+264.668)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
@@ -612,16 +1224,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*15.632+105.868)",
-            "6*math.sin(query.life_time*13.398+105.868)",
-            "4*math.cos(query.life_time*20.098+105.868)"
+            "3*math.sin(query.life_time*15.814+264.668)",
+            "6*math.sin(query.life_time*13.554+264.668)",
+            "4*math.cos(query.life_time*20.332+264.668)"
+          ]
+        },
+        "iburi_core_nucleo_36": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+315.067)",
+            "0.23*math.sin(query.life_time*31+315.067)",
+            "0.15*math.cos(query.life_time*27+315.067)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+315.067)",
+            "1.0+0.055*math.cos(query.life_time*29+315.067)",
+            "1.0+0.045*math.sin(query.life_time*33+315.067)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+315.067)",
+            "4*math.sin(query.life_time*23+315.067)",
+            "3*math.cos(query.life_time*26+315.067)"
           ]
         },
         "iburi_p0_nucleo_36": {
           "position": [
-            "0.35*math.sin(query.life_time*34.967+66.480)",
+            "0.35*math.sin(query.life_time*32.143+197.090)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*27.974+66.480)"
+            "0.28*math.cos(query.life_time*25.714+197.090)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -629,16 +1258,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*24.477+66.480)",
-            "6*math.sin(query.life_time*20.980+66.480)",
-            "4*math.cos(query.life_time*31.471+66.480)"
+            "3*math.sin(query.life_time*22.500+197.090)",
+            "6*math.sin(query.life_time*19.286+197.090)",
+            "4*math.cos(query.life_time*28.929+197.090)"
+          ]
+        },
+        "iburi_core_nucleo_37": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+289.587)",
+            "0.23*math.sin(query.life_time*31+289.587)",
+            "0.15*math.cos(query.life_time*27+289.587)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+289.587)",
+            "1.0+0.055*math.cos(query.life_time*29+289.587)",
+            "1.0+0.045*math.sin(query.life_time*33+289.587)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+289.587)",
+            "4*math.sin(query.life_time*23+289.587)",
+            "3*math.cos(query.life_time*26+289.587)"
           ]
         },
         "iburi_p1_nucleo_37": {
           "position": [
-            "0.35*math.sin(query.life_time*27.574+125.391)",
+            "0.35*math.sin(query.life_time*28.011+0.522)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*22.059+125.391)"
+            "0.28*math.cos(query.life_time*22.409+0.522)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
@@ -646,16 +1292,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*19.302+125.391)",
-            "6*math.sin(query.life_time*16.544+125.391)",
-            "4*math.cos(query.life_time*24.817+125.391)"
+            "3*math.sin(query.life_time*19.608+0.522)",
+            "6*math.sin(query.life_time*16.807+0.522)",
+            "4*math.cos(query.life_time*25.210+0.522)"
+          ]
+        },
+        "iburi_core_nucleo_38": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+23.727)",
+            "0.23*math.sin(query.life_time*31+23.727)",
+            "0.15*math.cos(query.life_time*27+23.727)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+23.727)",
+            "1.0+0.055*math.cos(query.life_time*29+23.727)",
+            "1.0+0.045*math.sin(query.life_time*33+23.727)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+23.727)",
+            "4*math.sin(query.life_time*23+23.727)",
+            "3*math.cos(query.life_time*26+23.727)"
           ]
         },
         "iburi_p2_nucleo_38": {
           "position": [
-            "0.35*math.sin(query.life_time*31.878+307.642)",
+            "0.35*math.sin(query.life_time*36.878+181.198)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*25.502+307.642)"
+            "0.28*math.cos(query.life_time*29.502+181.198)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
@@ -663,12 +1326,233 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*22.315+307.642)",
-            "6*math.sin(query.life_time*19.127+307.642)",
-            "4*math.cos(query.life_time*28.690+307.642)"
+            "3*math.sin(query.life_time*25.814+181.198)",
+            "6*math.sin(query.life_time*22.127+181.198)",
+            "4*math.cos(query.life_time*33.190+181.198)"
+          ]
+        },
+        "iburi_core_nucleo_39": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+231.407)",
+            "0.23*math.sin(query.life_time*31+231.407)",
+            "0.15*math.cos(query.life_time*27+231.407)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+231.407)",
+            "1.0+0.055*math.cos(query.life_time*29+231.407)",
+            "1.0+0.045*math.sin(query.life_time*33+231.407)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+231.407)",
+            "4*math.sin(query.life_time*23+231.407)",
+            "3*math.cos(query.life_time*26+231.407)"
           ]
         },
         "iburi_p3_nucleo_39": {
+          "position": [
+            "0.35*math.sin(query.life_time*35.096+118.407)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*28.077+118.407)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*24.567+118.407)",
+            "6*math.sin(query.life_time*21.058+118.407)",
+            "4*math.cos(query.life_time*31.586+118.407)"
+          ]
+        },
+        "iburi_core_nucleo_40": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+186.892)",
+            "0.23*math.sin(query.life_time*31+186.892)",
+            "0.15*math.cos(query.life_time*27+186.892)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+186.892)",
+            "1.0+0.055*math.cos(query.life_time*29+186.892)",
+            "1.0+0.045*math.sin(query.life_time*33+186.892)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+186.892)",
+            "4*math.sin(query.life_time*23+186.892)",
+            "3*math.cos(query.life_time*26+186.892)"
+          ]
+        },
+        "iburi_p4_nucleo_40": {
+          "position": [
+            "0.35*math.sin(query.life_time*32.426+92.739)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*25.941+92.739)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*22.698+92.739)",
+            "6*math.sin(query.life_time*19.456+92.739)",
+            "4*math.cos(query.life_time*29.183+92.739)"
+          ]
+        },
+        "iburi_core_nucleo_41": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+233.974)",
+            "0.23*math.sin(query.life_time*31+233.974)",
+            "0.15*math.cos(query.life_time*27+233.974)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+233.974)",
+            "1.0+0.055*math.cos(query.life_time*29+233.974)",
+            "1.0+0.045*math.sin(query.life_time*33+233.974)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+233.974)",
+            "4*math.sin(query.life_time*23+233.974)",
+            "3*math.cos(query.life_time*26+233.974)"
+          ]
+        },
+        "iburi_p5_nucleo_41": {
+          "position": [
+            "0.35*math.sin(query.life_time*29.784+81.350)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*23.827+81.350)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*20.849+81.350)",
+            "6*math.sin(query.life_time*17.870+81.350)",
+            "4*math.cos(query.life_time*26.806+81.350)"
+          ]
+        },
+        "iburi_core_perna_42": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+129.050)",
+            "0.23*math.sin(query.life_time*31+129.050)",
+            "0.15*math.cos(query.life_time*27+129.050)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+129.050)",
+            "1.0+0.055*math.cos(query.life_time*29+129.050)",
+            "1.0+0.045*math.sin(query.life_time*33+129.050)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+129.050)",
+            "4*math.sin(query.life_time*23+129.050)",
+            "3*math.cos(query.life_time*26+129.050)"
+          ]
+        },
+        "iburi_p0_perna_42": {
+          "position": [
+            "0.35*math.sin(query.life_time*36.833+81.748)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*29.467+81.748)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*25.783+81.748)",
+            "6*math.sin(query.life_time*22.100+81.748)",
+            "4*math.cos(query.life_time*33.150+81.748)"
+          ]
+        },
+        "iburi_core_perna_43": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+336.936)",
+            "0.23*math.sin(query.life_time*31+336.936)",
+            "0.15*math.cos(query.life_time*27+336.936)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+336.936)",
+            "1.0+0.055*math.cos(query.life_time*29+336.936)",
+            "1.0+0.045*math.sin(query.life_time*33+336.936)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+336.936)",
+            "4*math.sin(query.life_time*23+336.936)",
+            "3*math.cos(query.life_time*26+336.936)"
+          ]
+        },
+        "iburi_p1_perna_43": {
+          "position": [
+            "0.35*math.sin(query.life_time*27.645+136.735)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*22.116+136.735)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*19.351+136.735)",
+            "6*math.sin(query.life_time*16.587+136.735)",
+            "4*math.cos(query.life_time*24.880+136.735)"
+          ]
+        },
+        "iburi_core_perna_44": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+62.739)",
+            "0.23*math.sin(query.life_time*31+62.739)",
+            "0.15*math.cos(query.life_time*27+62.739)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+62.739)",
+            "1.0+0.055*math.cos(query.life_time*29+62.739)",
+            "1.0+0.045*math.sin(query.life_time*33+62.739)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+62.739)",
+            "4*math.sin(query.life_time*23+62.739)",
+            "3*math.cos(query.life_time*26+62.739)"
+          ]
+        },
+        "iburi_p2_perna_44": {
+          "position": [
+            "0.35*math.sin(query.life_time*22.425+126.358)",
+            "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
+            "0.28*math.cos(query.life_time*17.940+126.358)"
+          ],
+          "scale": [
+            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
+            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
+            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
+          ],
+          "rotation": [
+            "3*math.sin(query.life_time*15.698+126.358)",
+            "6*math.sin(query.life_time*13.455+126.358)",
+            "4*math.cos(query.life_time*20.183+126.358)"
+          ]
+        },
+        "iburi_core_cabeca_45": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+299.261)",
+            "0.23*math.sin(query.life_time*31+299.261)",
+            "0.15*math.cos(query.life_time*27+299.261)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+299.261)",
+            "1.0+0.055*math.cos(query.life_time*29+299.261)",
+            "1.0+0.045*math.sin(query.life_time*33+299.261)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+299.261)",
+            "4*math.sin(query.life_time*23+299.261)",
+            "3*math.cos(query.life_time*26+299.261)"
+          ]
+        },
+        "iburi_p3_cabeca_45": {
           "position": [
             "0.35*math.sin(query.life_time*27.828+116.000)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
@@ -685,113 +1569,28 @@
             "4*math.cos(query.life_time*25.046+116.000)"
           ]
         },
-        "iburi_p4_nucleo_40": {
+        "iburi_core_cabeca_46": {
           "position": [
-            "0.35*math.sin(query.life_time*28.408+269.888)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*22.727+269.888)"
+            "0.16*math.sin(query.life_time*24+307.047)",
+            "0.23*math.sin(query.life_time*31+307.047)",
+            "0.15*math.cos(query.life_time*27+307.047)"
           ],
           "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
+            "1.0+0.045*math.sin(query.life_time*37+307.047)",
+            "1.0+0.055*math.cos(query.life_time*29+307.047)",
+            "1.0+0.045*math.sin(query.life_time*33+307.047)"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*19.886+269.888)",
-            "6*math.sin(query.life_time*17.045+269.888)",
-            "4*math.cos(query.life_time*25.567+269.888)"
-          ]
-        },
-        "iburi_p5_nucleo_41": {
-          "position": [
-            "0.35*math.sin(query.life_time*32.408+353.440)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*25.926+353.440)"
-          ],
-          "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
-          ],
-          "rotation": [
-            "3*math.sin(query.life_time*22.685+353.440)",
-            "6*math.sin(query.life_time*19.445+353.440)",
-            "4*math.cos(query.life_time*29.167+353.440)"
-          ]
-        },
-        "iburi_p0_perna_42": {
-          "position": [
-            "0.35*math.sin(query.life_time*29.656+0.281)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*23.725+0.281)"
-          ],
-          "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
-          ],
-          "rotation": [
-            "3*math.sin(query.life_time*20.760+0.281)",
-            "6*math.sin(query.life_time*17.794+0.281)",
-            "4*math.cos(query.life_time*26.691+0.281)"
-          ]
-        },
-        "iburi_p1_perna_43": {
-          "position": [
-            "0.35*math.sin(query.life_time*37.368+299.169)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*29.894+299.169)"
-          ],
-          "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
-          ],
-          "rotation": [
-            "3*math.sin(query.life_time*26.158+299.169)",
-            "6*math.sin(query.life_time*22.421+299.169)",
-            "4*math.cos(query.life_time*33.631+299.169)"
-          ]
-        },
-        "iburi_p2_perna_44": {
-          "position": [
-            "0.35*math.sin(query.life_time*38.261+334.244)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.333333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*30.609+334.244)"
-          ],
-          "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.333333, 1.0))"
-          ],
-          "rotation": [
-            "3*math.sin(query.life_time*26.783+334.244)",
-            "6*math.sin(query.life_time*22.956+334.244)",
-            "4*math.cos(query.life_time*34.435+334.244)"
-          ]
-        },
-        "iburi_p3_cabeca_45": {
-          "position": [
-            "0.35*math.sin(query.life_time*36.423+45.808)",
-            "4.2*((math.mod(query.life_time / 5.6 + 0.500000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*29.138+45.808)"
-          ],
-          "scale": [
-            "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
-            "0.82+0.50*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))",
-            "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.500000, 1.0))"
-          ],
-          "rotation": [
-            "3*math.sin(query.life_time*25.496+45.808)",
-            "6*math.sin(query.life_time*21.854+45.808)",
-            "4*math.cos(query.life_time*32.781+45.808)"
+            "2*math.sin(query.life_time*19+307.047)",
+            "4*math.sin(query.life_time*23+307.047)",
+            "3*math.cos(query.life_time*26+307.047)"
           ]
         },
         "iburi_p4_cabeca_46": {
           "position": [
-            "0.35*math.sin(query.life_time*26.526+308.649)",
+            "0.35*math.sin(query.life_time*37.361+253.917)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.666667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*21.221+308.649)"
+            "0.28*math.cos(query.life_time*29.888+253.917)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))",
@@ -799,16 +1598,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.666667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*18.568+308.649)",
-            "6*math.sin(query.life_time*15.916+308.649)",
-            "4*math.cos(query.life_time*23.873+308.649)"
+            "3*math.sin(query.life_time*26.152+253.917)",
+            "6*math.sin(query.life_time*22.416+253.917)",
+            "4*math.cos(query.life_time*33.624+253.917)"
+          ]
+        },
+        "iburi_core_cabeca_47": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+227.700)",
+            "0.23*math.sin(query.life_time*31+227.700)",
+            "0.15*math.cos(query.life_time*27+227.700)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+227.700)",
+            "1.0+0.055*math.cos(query.life_time*29+227.700)",
+            "1.0+0.045*math.sin(query.life_time*33+227.700)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+227.700)",
+            "4*math.sin(query.life_time*23+227.700)",
+            "3*math.cos(query.life_time*26+227.700)"
           ]
         },
         "iburi_p5_cabeca_47": {
           "position": [
-            "0.35*math.sin(query.life_time*30.013+196.424)",
+            "0.35*math.sin(query.life_time*36.880+123.033)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.833333, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*24.010+196.424)"
+            "0.28*math.cos(query.life_time*29.504+123.033)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))",
@@ -816,16 +1632,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.833333, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*21.009+196.424)",
-            "6*math.sin(query.life_time*18.008+196.424)",
-            "4*math.cos(query.life_time*27.012+196.424)"
+            "3*math.sin(query.life_time*25.816+123.033)",
+            "6*math.sin(query.life_time*22.128+123.033)",
+            "4*math.cos(query.life_time*33.192+123.033)"
+          ]
+        },
+        "iburi_core_nucleo_48": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+268.623)",
+            "0.23*math.sin(query.life_time*31+268.623)",
+            "0.15*math.cos(query.life_time*27+268.623)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+268.623)",
+            "1.0+0.055*math.cos(query.life_time*29+268.623)",
+            "1.0+0.045*math.sin(query.life_time*33+268.623)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+268.623)",
+            "4*math.sin(query.life_time*23+268.623)",
+            "3*math.cos(query.life_time*26+268.623)"
           ]
         },
         "iburi_p0_nucleo_48": {
           "position": [
-            "0.35*math.sin(query.life_time*38.810+339.577)",
+            "0.35*math.sin(query.life_time*32.591+259.841)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.000000, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*31.048+339.577)"
+            "0.28*math.cos(query.life_time*26.073+259.841)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))",
@@ -833,16 +1666,33 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.000000, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*27.167+339.577)",
-            "6*math.sin(query.life_time*23.286+339.577)",
-            "4*math.cos(query.life_time*34.929+339.577)"
+            "3*math.sin(query.life_time*22.814+259.841)",
+            "6*math.sin(query.life_time*19.555+259.841)",
+            "4*math.cos(query.life_time*29.332+259.841)"
+          ]
+        },
+        "iburi_core_nucleo_49": {
+          "position": [
+            "0.16*math.sin(query.life_time*24+308.409)",
+            "0.23*math.sin(query.life_time*31+308.409)",
+            "0.15*math.cos(query.life_time*27+308.409)"
+          ],
+          "scale": [
+            "1.0+0.045*math.sin(query.life_time*37+308.409)",
+            "1.0+0.055*math.cos(query.life_time*29+308.409)",
+            "1.0+0.045*math.sin(query.life_time*33+308.409)"
+          ],
+          "rotation": [
+            "2*math.sin(query.life_time*19+308.409)",
+            "4*math.sin(query.life_time*23+308.409)",
+            "3*math.cos(query.life_time*26+308.409)"
           ]
         },
         "iburi_p1_nucleo_49": {
           "position": [
-            "0.35*math.sin(query.life_time*28.466+246.292)",
+            "0.35*math.sin(query.life_time*26.957+110.245)",
             "4.2*((math.mod(query.life_time / 5.6 + 0.166667, 1.0))-0.18)",
-            "0.28*math.cos(query.life_time*22.773+246.292)"
+            "0.28*math.cos(query.life_time*21.566+110.245)"
           ],
           "scale": [
             "0.79+0.43*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))",
@@ -850,72 +1700,10 @@
             "0.80+0.35*(math.mod(query.life_time / 5.6 + 0.166667, 1.0))"
           ],
           "rotation": [
-            "3*math.sin(query.life_time*19.926+246.292)",
-            "6*math.sin(query.life_time*17.080+246.292)",
-            "4*math.cos(query.life_time*25.619+246.292)"
+            "3*math.sin(query.life_time*18.870+110.245)",
+            "6*math.sin(query.life_time*16.174+110.245)",
+            "4*math.cos(query.life_time*24.261+110.245)"
           ]
-        }
-      },
-      "particle_effects": {
-        "0.0000": {
-          "effect": "fumaca",
-          "locator": "iburi_ombro_d",
-          "bind_to_actor": false
-        },
-        "0.4667": {
-          "effect": "fumaca",
-          "locator": "iburi_braco_e",
-          "bind_to_actor": false
-        },
-        "0.9333": {
-          "effect": "fumaca",
-          "locator": "iburi_costas",
-          "bind_to_actor": false
-        },
-        "1.4000": {
-          "effect": "fumaca",
-          "locator": "iburi_ombro_e",
-          "bind_to_actor": false
-        },
-        "1.8667": {
-          "effect": "fumaca",
-          "locator": "iburi_braco_d",
-          "bind_to_actor": false
-        },
-        "2.3333": {
-          "effect": "fumaca",
-          "locator": "iburi_torso",
-          "bind_to_actor": false
-        },
-        "2.8000": {
-          "effect": "fumaca",
-          "locator": "iburi_perna_d",
-          "bind_to_actor": false
-        },
-        "3.2667": {
-          "effect": "fumaca",
-          "locator": "iburi_perna_e",
-          "bind_to_actor": false
-        },
-        "3.7333": {
-          "effect": "fumaca",
-          "locator": "iburi_cabeca",
-          "bind_to_actor": false
-        },
-        "4.2000": {
-          "effect": "fumaca",
-          "locator": "iburi_torso",
-          "bind_to_actor": false
-        },
-        "4.6667": {
-          "effect": "fumaca",
-          "locator": "iburi_perna_e",
-          "bind_to_actor": false
-        },
-        "5.1333": {
-          "effect": "fumaca",
-          "locator": "iburi_braco_d",
-          "bind_to_actor": false
         }
       }
     }

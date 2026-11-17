@@ -1,7 +1,7 @@
 {
   "resultado": "APROVADO",
   "parser": "Molang do Blockbench 4.12.6",
-  "avaliacoes": 33407,
+  "avaliacoes": 66895,
   "stages": [
     {
       "stage": 1,
@@ -10,8 +10,8 @@
       "alfa_min": 0,
       "alfa_max": 1,
       "limite_y_conservador": [
-        13.400282828410148,
-        28.489258887461794
+        13.195987800859724,
+        28.32398629713543
       ]
     },
     {
@@ -21,8 +21,8 @@
       "alfa_min": 0,
       "alfa_max": 1,
       "limite_y_conservador": [
-        0.8096131219214349,
-        29.341055685607238
+        0.7078914047223197,
+        29.475295107480328
       ]
     },
     {
@@ -32,10 +32,10 @@
       "alfa_min": 0,
       "alfa_max": 1,
       "limite_y_conservador": [
-        -1.6588342009358803,
-        39.83347575538747
+        -2.09344889856455,
+        39.81449025832152
       ]
     }
   ],
-  "controle_visual": "Somente modo 3 ativa a ocultação; os demais preservam o valor original."
+  "controle_visual": "Os três modos preservam o corpo. Volumes centrais nunca desaparecem; emissores encerram ao sair do estado equipado. Verificação numérica, sem executar Minecraft."
 }

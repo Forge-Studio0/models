@@ -1,0 +1,160 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.swbr.iburi1.smoke": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "equipado": "query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi1') && !context.is_first_person && !query.is_in_ui"
+            }
+          ]
+        },
+        "equipado": {
+          "particle_effects": [
+            {
+              "effect": "fumaca",
+              "locator": "iburi_ombro_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_braco_e"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_costas"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_ombro_e"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_braco_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_torso"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!(query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi1') && !context.is_first_person && !query.is_in_ui)"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.swbr.iburi2.smoke": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "equipado": "query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi2') && !context.is_first_person && !query.is_in_ui"
+            }
+          ]
+        },
+        "equipado": {
+          "particle_effects": [
+            {
+              "effect": "fumaca",
+              "locator": "iburi_ombro_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_braco_e"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_costas"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_ombro_e"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_braco_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_torso"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_perna_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_perna_e"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!(query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi2') && !context.is_first_person && !query.is_in_ui)"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.swbr.iburi3.smoke": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "equipado": "query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3') && !context.is_first_person && !query.is_in_ui"
+            }
+          ]
+        },
+        "equipado": {
+          "particle_effects": [
+            {
+              "effect": "fumaca",
+              "locator": "iburi_ombro_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_braco_e"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_costas"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_ombro_e"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_braco_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_torso"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_perna_d"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_perna_e"
+            },
+            {
+              "effect": "fumaca",
+              "locator": "iburi_cabeca"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!(query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3') && !context.is_first_person && !query.is_in_ui)"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

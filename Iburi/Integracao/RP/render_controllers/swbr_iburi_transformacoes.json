@@ -1,6 +1,106 @@
 {
   "format_version": "1.8.0",
   "render_controllers": {
+    "controller.render.swbr.iburi1.core": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "iburi_core_ombro_00": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_flanco_05": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_flanco_05": false
+        },
+        {
+          "iburi_core_ombro_06": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_ombro_06": false
+        },
+        {
+          "iburi_core_antebraco_07": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_antebraco_07": false
+        },
+        {
+          "iburi_core_antebraco_08": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_antebraco_08": false
+        },
+        {
+          "iburi_core_escapula_09": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_escapula_09": false
+        },
+        {
+          "iburi_core_ombro_10": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_ombro_10": false
+        },
+        {
+          "iburi_core_flanco_11": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_flanco_11": false
+        },
+        {
+          "iburi_core_costas_12": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_costas_12": false
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      }
+    },
     "controller.render.swbr.iburi1.p0": {
       "geometry": "Geometry.default",
       "materials": [
@@ -13,10 +113,85 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p0_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_flanco_05": false
+        },
+        {
+          "iburi_p5_flanco_05": false
+        },
+        {
+          "iburi_core_ombro_06": false
+        },
+        {
+          "iburi_p0_ombro_06": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_07": false
+        },
+        {
+          "iburi_p1_antebraco_07": false
+        },
+        {
+          "iburi_core_antebraco_08": false
+        },
+        {
+          "iburi_p2_antebraco_08": false
+        },
+        {
+          "iburi_core_escapula_09": false
+        },
+        {
+          "iburi_p3_escapula_09": false
+        },
+        {
+          "iburi_core_ombro_10": false
+        },
+        {
+          "iburi_p4_ombro_10": false
+        },
+        {
+          "iburi_core_flanco_11": false
+        },
+        {
+          "iburi_p5_flanco_11": false
+        },
+        {
+          "iburi_core_costas_12": false
+        },
+        {
+          "iburi_p0_costas_12": "!context.is_first_person || query.is_in_ui"
         }
       ],
       "color": {
@@ -38,10 +213,85 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p1_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_flanco_05": false
+        },
+        {
+          "iburi_p5_flanco_05": false
+        },
+        {
+          "iburi_core_ombro_06": false
+        },
+        {
+          "iburi_p0_ombro_06": false
+        },
+        {
+          "iburi_core_antebraco_07": false
+        },
+        {
+          "iburi_p1_antebraco_07": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_08": false
+        },
+        {
+          "iburi_p2_antebraco_08": false
+        },
+        {
+          "iburi_core_escapula_09": false
+        },
+        {
+          "iburi_p3_escapula_09": false
+        },
+        {
+          "iburi_core_ombro_10": false
+        },
+        {
+          "iburi_p4_ombro_10": false
+        },
+        {
+          "iburi_core_flanco_11": false
+        },
+        {
+          "iburi_p5_flanco_11": false
+        },
+        {
+          "iburi_core_costas_12": false
+        },
+        {
+          "iburi_p0_costas_12": false
         }
       ],
       "color": {
@@ -63,10 +313,85 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p2_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_flanco_05": false
+        },
+        {
+          "iburi_p5_flanco_05": false
+        },
+        {
+          "iburi_core_ombro_06": false
+        },
+        {
+          "iburi_p0_ombro_06": false
+        },
+        {
+          "iburi_core_antebraco_07": false
+        },
+        {
+          "iburi_p1_antebraco_07": false
+        },
+        {
+          "iburi_core_antebraco_08": false
+        },
+        {
+          "iburi_p2_antebraco_08": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_escapula_09": false
+        },
+        {
+          "iburi_p3_escapula_09": false
+        },
+        {
+          "iburi_core_ombro_10": false
+        },
+        {
+          "iburi_p4_ombro_10": false
+        },
+        {
+          "iburi_core_flanco_11": false
+        },
+        {
+          "iburi_p5_flanco_11": false
+        },
+        {
+          "iburi_core_costas_12": false
+        },
+        {
+          "iburi_p0_costas_12": false
         }
       ],
       "color": {
@@ -88,10 +413,85 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p3_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_flanco_05": false
+        },
+        {
+          "iburi_p5_flanco_05": false
+        },
+        {
+          "iburi_core_ombro_06": false
+        },
+        {
+          "iburi_p0_ombro_06": false
+        },
+        {
+          "iburi_core_antebraco_07": false
+        },
+        {
+          "iburi_p1_antebraco_07": false
+        },
+        {
+          "iburi_core_antebraco_08": false
+        },
+        {
+          "iburi_p2_antebraco_08": false
+        },
+        {
+          "iburi_core_escapula_09": false
+        },
+        {
+          "iburi_p3_escapula_09": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_10": false
+        },
+        {
+          "iburi_p4_ombro_10": false
+        },
+        {
+          "iburi_core_flanco_11": false
+        },
+        {
+          "iburi_p5_flanco_11": false
+        },
+        {
+          "iburi_core_costas_12": false
+        },
+        {
+          "iburi_p0_costas_12": false
         }
       ],
       "color": {
@@ -113,10 +513,85 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p4_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_05": false
+        },
+        {
+          "iburi_p5_flanco_05": false
+        },
+        {
+          "iburi_core_ombro_06": false
+        },
+        {
+          "iburi_p0_ombro_06": false
+        },
+        {
+          "iburi_core_antebraco_07": false
+        },
+        {
+          "iburi_p1_antebraco_07": false
+        },
+        {
+          "iburi_core_antebraco_08": false
+        },
+        {
+          "iburi_p2_antebraco_08": false
+        },
+        {
+          "iburi_core_escapula_09": false
+        },
+        {
+          "iburi_p3_escapula_09": false
+        },
+        {
+          "iburi_core_ombro_10": false
+        },
+        {
+          "iburi_p4_ombro_10": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_11": false
+        },
+        {
+          "iburi_p5_flanco_11": false
+        },
+        {
+          "iburi_core_costas_12": false
+        },
+        {
+          "iburi_p0_costas_12": false
         }
       ],
       "color": {
@@ -138,10 +613,85 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p5_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_flanco_05": false
+        },
+        {
+          "iburi_p5_flanco_05": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_06": false
+        },
+        {
+          "iburi_p0_ombro_06": false
+        },
+        {
+          "iburi_core_antebraco_07": false
+        },
+        {
+          "iburi_p1_antebraco_07": false
+        },
+        {
+          "iburi_core_antebraco_08": false
+        },
+        {
+          "iburi_p2_antebraco_08": false
+        },
+        {
+          "iburi_core_escapula_09": false
+        },
+        {
+          "iburi_p3_escapula_09": false
+        },
+        {
+          "iburi_core_ombro_10": false
+        },
+        {
+          "iburi_p4_ombro_10": false
+        },
+        {
+          "iburi_core_flanco_11": false
+        },
+        {
+          "iburi_p5_flanco_11": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_costas_12": false
+        },
+        {
+          "iburi_p0_costas_12": false
         }
       ],
       "color": {
@@ -149,6 +699,184 @@
         "g": 1,
         "b": 1,
         "a": "math.min(math.clamp((math.mod(query.life_time / 6.8 + 0.833333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.8 + 0.833333, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi2.core": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "iburi_core_ombro_00": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_ombro_13": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_ombro_13": false
+        },
+        {
+          "iburi_core_antebraco_14": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_antebraco_14": false
+        },
+        {
+          "iburi_core_antebraco_15": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_antebraco_15": false
+        },
+        {
+          "iburi_core_escapula_16": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_escapula_16": false
+        },
+        {
+          "iburi_core_ombro_17": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_ombro_17": false
+        },
+        {
+          "iburi_core_braco_18": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_braco_18": false
+        },
+        {
+          "iburi_core_braco_19": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_braco_19": false
+        },
+        {
+          "iburi_core_mao_20": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_mao_20": false
+        },
+        {
+          "iburi_core_flanco_21": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_flanco_21": false
+        },
+        {
+          "iburi_core_flanco_22": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_flanco_22": false
+        },
+        {
+          "iburi_core_flanco_23": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_flanco_23": false
+        },
+        {
+          "iburi_core_perna_24": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_perna_24": false
+        },
+        {
+          "iburi_core_perna_25": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_perna_25": false
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
       }
     },
     "controller.render.swbr.iburi2.p0": {
@@ -163,10 +891,163 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p0_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_13": false
+        },
+        {
+          "iburi_p1_ombro_13": false
+        },
+        {
+          "iburi_core_antebraco_14": false
+        },
+        {
+          "iburi_p2_antebraco_14": false
+        },
+        {
+          "iburi_core_antebraco_15": false
+        },
+        {
+          "iburi_p3_antebraco_15": false
+        },
+        {
+          "iburi_core_escapula_16": false
+        },
+        {
+          "iburi_p4_escapula_16": false
+        },
+        {
+          "iburi_core_ombro_17": false
+        },
+        {
+          "iburi_p5_ombro_17": false
+        },
+        {
+          "iburi_core_braco_18": false
+        },
+        {
+          "iburi_p0_braco_18": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_19": false
+        },
+        {
+          "iburi_p1_braco_19": false
+        },
+        {
+          "iburi_core_mao_20": false
+        },
+        {
+          "iburi_p2_mao_20": false
+        },
+        {
+          "iburi_core_flanco_21": false
+        },
+        {
+          "iburi_p3_flanco_21": false
+        },
+        {
+          "iburi_core_flanco_22": false
+        },
+        {
+          "iburi_p4_flanco_22": false
+        },
+        {
+          "iburi_core_flanco_23": false
+        },
+        {
+          "iburi_p5_flanco_23": false
+        },
+        {
+          "iburi_core_perna_24": false
+        },
+        {
+          "iburi_p0_perna_24": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_25": false
+        },
+        {
+          "iburi_p1_perna_25": false
         }
       ],
       "color": {
@@ -188,10 +1069,163 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p1_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_ombro_13": false
+        },
+        {
+          "iburi_p1_ombro_13": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_14": false
+        },
+        {
+          "iburi_p2_antebraco_14": false
+        },
+        {
+          "iburi_core_antebraco_15": false
+        },
+        {
+          "iburi_p3_antebraco_15": false
+        },
+        {
+          "iburi_core_escapula_16": false
+        },
+        {
+          "iburi_p4_escapula_16": false
+        },
+        {
+          "iburi_core_ombro_17": false
+        },
+        {
+          "iburi_p5_ombro_17": false
+        },
+        {
+          "iburi_core_braco_18": false
+        },
+        {
+          "iburi_p0_braco_18": false
+        },
+        {
+          "iburi_core_braco_19": false
+        },
+        {
+          "iburi_p1_braco_19": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_mao_20": false
+        },
+        {
+          "iburi_p2_mao_20": false
+        },
+        {
+          "iburi_core_flanco_21": false
+        },
+        {
+          "iburi_p3_flanco_21": false
+        },
+        {
+          "iburi_core_flanco_22": false
+        },
+        {
+          "iburi_p4_flanco_22": false
+        },
+        {
+          "iburi_core_flanco_23": false
+        },
+        {
+          "iburi_p5_flanco_23": false
+        },
+        {
+          "iburi_core_perna_24": false
+        },
+        {
+          "iburi_p0_perna_24": false
+        },
+        {
+          "iburi_core_perna_25": false
+        },
+        {
+          "iburi_p1_perna_25": "!context.is_first_person || query.is_in_ui"
         }
       ],
       "color": {
@@ -213,10 +1247,163 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p2_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_ombro_13": false
+        },
+        {
+          "iburi_p1_ombro_13": false
+        },
+        {
+          "iburi_core_antebraco_14": false
+        },
+        {
+          "iburi_p2_antebraco_14": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_15": false
+        },
+        {
+          "iburi_p3_antebraco_15": false
+        },
+        {
+          "iburi_core_escapula_16": false
+        },
+        {
+          "iburi_p4_escapula_16": false
+        },
+        {
+          "iburi_core_ombro_17": false
+        },
+        {
+          "iburi_p5_ombro_17": false
+        },
+        {
+          "iburi_core_braco_18": false
+        },
+        {
+          "iburi_p0_braco_18": false
+        },
+        {
+          "iburi_core_braco_19": false
+        },
+        {
+          "iburi_p1_braco_19": false
+        },
+        {
+          "iburi_core_mao_20": false
+        },
+        {
+          "iburi_p2_mao_20": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_21": false
+        },
+        {
+          "iburi_p3_flanco_21": false
+        },
+        {
+          "iburi_core_flanco_22": false
+        },
+        {
+          "iburi_p4_flanco_22": false
+        },
+        {
+          "iburi_core_flanco_23": false
+        },
+        {
+          "iburi_p5_flanco_23": false
+        },
+        {
+          "iburi_core_perna_24": false
+        },
+        {
+          "iburi_p0_perna_24": false
+        },
+        {
+          "iburi_core_perna_25": false
+        },
+        {
+          "iburi_p1_perna_25": false
         }
       ],
       "color": {
@@ -238,10 +1425,163 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p3_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_ombro_13": false
+        },
+        {
+          "iburi_p1_ombro_13": false
+        },
+        {
+          "iburi_core_antebraco_14": false
+        },
+        {
+          "iburi_p2_antebraco_14": false
+        },
+        {
+          "iburi_core_antebraco_15": false
+        },
+        {
+          "iburi_p3_antebraco_15": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_escapula_16": false
+        },
+        {
+          "iburi_p4_escapula_16": false
+        },
+        {
+          "iburi_core_ombro_17": false
+        },
+        {
+          "iburi_p5_ombro_17": false
+        },
+        {
+          "iburi_core_braco_18": false
+        },
+        {
+          "iburi_p0_braco_18": false
+        },
+        {
+          "iburi_core_braco_19": false
+        },
+        {
+          "iburi_p1_braco_19": false
+        },
+        {
+          "iburi_core_mao_20": false
+        },
+        {
+          "iburi_p2_mao_20": false
+        },
+        {
+          "iburi_core_flanco_21": false
+        },
+        {
+          "iburi_p3_flanco_21": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_22": false
+        },
+        {
+          "iburi_p4_flanco_22": false
+        },
+        {
+          "iburi_core_flanco_23": false
+        },
+        {
+          "iburi_p5_flanco_23": false
+        },
+        {
+          "iburi_core_perna_24": false
+        },
+        {
+          "iburi_p0_perna_24": false
+        },
+        {
+          "iburi_core_perna_25": false
+        },
+        {
+          "iburi_p1_perna_25": false
         }
       ],
       "color": {
@@ -263,10 +1603,163 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p4_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_ombro_13": false
+        },
+        {
+          "iburi_p1_ombro_13": false
+        },
+        {
+          "iburi_core_antebraco_14": false
+        },
+        {
+          "iburi_p2_antebraco_14": false
+        },
+        {
+          "iburi_core_antebraco_15": false
+        },
+        {
+          "iburi_p3_antebraco_15": false
+        },
+        {
+          "iburi_core_escapula_16": false
+        },
+        {
+          "iburi_p4_escapula_16": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_17": false
+        },
+        {
+          "iburi_p5_ombro_17": false
+        },
+        {
+          "iburi_core_braco_18": false
+        },
+        {
+          "iburi_p0_braco_18": false
+        },
+        {
+          "iburi_core_braco_19": false
+        },
+        {
+          "iburi_p1_braco_19": false
+        },
+        {
+          "iburi_core_mao_20": false
+        },
+        {
+          "iburi_p2_mao_20": false
+        },
+        {
+          "iburi_core_flanco_21": false
+        },
+        {
+          "iburi_p3_flanco_21": false
+        },
+        {
+          "iburi_core_flanco_22": false
+        },
+        {
+          "iburi_p4_flanco_22": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_23": false
+        },
+        {
+          "iburi_p5_flanco_23": false
+        },
+        {
+          "iburi_core_perna_24": false
+        },
+        {
+          "iburi_p0_perna_24": false
+        },
+        {
+          "iburi_core_perna_25": false
+        },
+        {
+          "iburi_p1_perna_25": false
         }
       ],
       "color": {
@@ -288,10 +1781,163 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p5_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_ombro_13": false
+        },
+        {
+          "iburi_p1_ombro_13": false
+        },
+        {
+          "iburi_core_antebraco_14": false
+        },
+        {
+          "iburi_p2_antebraco_14": false
+        },
+        {
+          "iburi_core_antebraco_15": false
+        },
+        {
+          "iburi_p3_antebraco_15": false
+        },
+        {
+          "iburi_core_escapula_16": false
+        },
+        {
+          "iburi_p4_escapula_16": false
+        },
+        {
+          "iburi_core_ombro_17": false
+        },
+        {
+          "iburi_p5_ombro_17": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_18": false
+        },
+        {
+          "iburi_p0_braco_18": false
+        },
+        {
+          "iburi_core_braco_19": false
+        },
+        {
+          "iburi_p1_braco_19": false
+        },
+        {
+          "iburi_core_mao_20": false
+        },
+        {
+          "iburi_p2_mao_20": false
+        },
+        {
+          "iburi_core_flanco_21": false
+        },
+        {
+          "iburi_p3_flanco_21": false
+        },
+        {
+          "iburi_core_flanco_22": false
+        },
+        {
+          "iburi_p4_flanco_22": false
+        },
+        {
+          "iburi_core_flanco_23": false
+        },
+        {
+          "iburi_p5_flanco_23": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_24": false
+        },
+        {
+          "iburi_p0_perna_24": false
+        },
+        {
+          "iburi_core_perna_25": false
+        },
+        {
+          "iburi_p1_perna_25": false
         }
       ],
       "color": {
@@ -299,6 +1945,328 @@
         "g": 1,
         "b": 1,
         "a": "math.min(math.clamp((math.mod(query.life_time / 6.2 + 0.833333, 1.0)) / 0.17,0,1),math.clamp((1-(math.mod(query.life_time / 6.2 + 0.833333, 1.0))) / 0.43,0,1))"
+      }
+    },
+    "controller.render.swbr.iburi3.core": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "iburi_core_ombro_00": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_nucleo_13": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_nucleo_13": false
+        },
+        {
+          "iburi_core_nucleo_14": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_nucleo_14": false
+        },
+        {
+          "iburi_core_nucleo_15": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_nucleo_15": false
+        },
+        {
+          "iburi_core_nucleo_16": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_nucleo_16": false
+        },
+        {
+          "iburi_core_nucleo_17": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_nucleo_17": false
+        },
+        {
+          "iburi_core_nucleo_18": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_nucleo_18": false
+        },
+        {
+          "iburi_core_perna_19": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_perna_19": false
+        },
+        {
+          "iburi_core_perna_20": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_perna_20": false
+        },
+        {
+          "iburi_core_perna_21": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_perna_21": false
+        },
+        {
+          "iburi_core_cabeca_22": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_cabeca_22": false
+        },
+        {
+          "iburi_core_ombro_23": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_ombro_23": false
+        },
+        {
+          "iburi_core_antebraco_24": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_antebraco_24": false
+        },
+        {
+          "iburi_core_antebraco_25": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_antebraco_25": false
+        },
+        {
+          "iburi_core_escapula_26": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_escapula_26": false
+        },
+        {
+          "iburi_core_ombro_27": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_ombro_27": false
+        },
+        {
+          "iburi_core_braco_28": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_braco_28": false
+        },
+        {
+          "iburi_core_braco_29": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_braco_29": false
+        },
+        {
+          "iburi_core_mao_30": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_mao_30": false
+        },
+        {
+          "iburi_core_flanco_31": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_flanco_31": false
+        },
+        {
+          "iburi_core_flanco_32": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_flanco_32": false
+        },
+        {
+          "iburi_core_flanco_33": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_flanco_33": false
+        },
+        {
+          "iburi_core_perna_34": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_perna_34": false
+        },
+        {
+          "iburi_core_perna_35": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_perna_35": false
+        },
+        {
+          "iburi_core_nucleo_36": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_nucleo_36": false
+        },
+        {
+          "iburi_core_nucleo_37": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_nucleo_37": false
+        },
+        {
+          "iburi_core_nucleo_38": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_nucleo_38": false
+        },
+        {
+          "iburi_core_nucleo_39": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_nucleo_39": false
+        },
+        {
+          "iburi_core_nucleo_40": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_nucleo_40": false
+        },
+        {
+          "iburi_core_nucleo_41": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_nucleo_41": false
+        },
+        {
+          "iburi_core_perna_42": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_perna_42": false
+        },
+        {
+          "iburi_core_perna_43": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_perna_43": false
+        },
+        {
+          "iburi_core_perna_44": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p2_perna_44": false
+        },
+        {
+          "iburi_core_cabeca_45": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p3_cabeca_45": false
+        },
+        {
+          "iburi_core_cabeca_46": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p4_cabeca_46": false
+        },
+        {
+          "iburi_core_cabeca_47": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p5_cabeca_47": false
+        },
+        {
+          "iburi_core_nucleo_48": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p0_nucleo_48": false
+        },
+        {
+          "iburi_core_nucleo_49": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_p1_nucleo_49": false
+        }
+      ],
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
       }
     },
     "controller.render.swbr.iburi3.p0": {
@@ -313,10 +2281,307 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p0_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_13": false
+        },
+        {
+          "iburi_p1_nucleo_13": false
+        },
+        {
+          "iburi_core_nucleo_14": false
+        },
+        {
+          "iburi_p2_nucleo_14": false
+        },
+        {
+          "iburi_core_nucleo_15": false
+        },
+        {
+          "iburi_p3_nucleo_15": false
+        },
+        {
+          "iburi_core_nucleo_16": false
+        },
+        {
+          "iburi_p4_nucleo_16": false
+        },
+        {
+          "iburi_core_nucleo_17": false
+        },
+        {
+          "iburi_p5_nucleo_17": false
+        },
+        {
+          "iburi_core_nucleo_18": false
+        },
+        {
+          "iburi_p0_nucleo_18": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_19": false
+        },
+        {
+          "iburi_p1_perna_19": false
+        },
+        {
+          "iburi_core_perna_20": false
+        },
+        {
+          "iburi_p2_perna_20": false
+        },
+        {
+          "iburi_core_perna_21": false
+        },
+        {
+          "iburi_p3_perna_21": false
+        },
+        {
+          "iburi_core_cabeca_22": false
+        },
+        {
+          "iburi_p4_cabeca_22": false
+        },
+        {
+          "iburi_core_ombro_23": false
+        },
+        {
+          "iburi_p5_ombro_23": false
+        },
+        {
+          "iburi_core_antebraco_24": false
+        },
+        {
+          "iburi_p0_antebraco_24": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_25": false
+        },
+        {
+          "iburi_p1_antebraco_25": false
+        },
+        {
+          "iburi_core_escapula_26": false
+        },
+        {
+          "iburi_p2_escapula_26": false
+        },
+        {
+          "iburi_core_ombro_27": false
+        },
+        {
+          "iburi_p3_ombro_27": false
+        },
+        {
+          "iburi_core_braco_28": false
+        },
+        {
+          "iburi_p4_braco_28": false
+        },
+        {
+          "iburi_core_braco_29": false
+        },
+        {
+          "iburi_p5_braco_29": false
+        },
+        {
+          "iburi_core_mao_30": false
+        },
+        {
+          "iburi_p0_mao_30": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_31": false
+        },
+        {
+          "iburi_p1_flanco_31": false
+        },
+        {
+          "iburi_core_flanco_32": false
+        },
+        {
+          "iburi_p2_flanco_32": false
+        },
+        {
+          "iburi_core_flanco_33": false
+        },
+        {
+          "iburi_p3_flanco_33": false
+        },
+        {
+          "iburi_core_perna_34": false
+        },
+        {
+          "iburi_p4_perna_34": false
+        },
+        {
+          "iburi_core_perna_35": false
+        },
+        {
+          "iburi_p5_perna_35": false
+        },
+        {
+          "iburi_core_nucleo_36": false
+        },
+        {
+          "iburi_p0_nucleo_36": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_37": false
+        },
+        {
+          "iburi_p1_nucleo_37": false
+        },
+        {
+          "iburi_core_nucleo_38": false
+        },
+        {
+          "iburi_p2_nucleo_38": false
+        },
+        {
+          "iburi_core_nucleo_39": false
+        },
+        {
+          "iburi_p3_nucleo_39": false
+        },
+        {
+          "iburi_core_nucleo_40": false
+        },
+        {
+          "iburi_p4_nucleo_40": false
+        },
+        {
+          "iburi_core_nucleo_41": false
+        },
+        {
+          "iburi_p5_nucleo_41": false
+        },
+        {
+          "iburi_core_perna_42": false
+        },
+        {
+          "iburi_p0_perna_42": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_43": false
+        },
+        {
+          "iburi_p1_perna_43": false
+        },
+        {
+          "iburi_core_perna_44": false
+        },
+        {
+          "iburi_p2_perna_44": false
+        },
+        {
+          "iburi_core_cabeca_45": false
+        },
+        {
+          "iburi_p3_cabeca_45": false
+        },
+        {
+          "iburi_core_cabeca_46": false
+        },
+        {
+          "iburi_p4_cabeca_46": false
+        },
+        {
+          "iburi_core_cabeca_47": false
+        },
+        {
+          "iburi_p5_cabeca_47": false
+        },
+        {
+          "iburi_core_nucleo_48": false
+        },
+        {
+          "iburi_p0_nucleo_48": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_49": false
+        },
+        {
+          "iburi_p1_nucleo_49": false
         }
       ],
       "color": {
@@ -338,10 +2603,307 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p1_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_nucleo_13": false
+        },
+        {
+          "iburi_p1_nucleo_13": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_14": false
+        },
+        {
+          "iburi_p2_nucleo_14": false
+        },
+        {
+          "iburi_core_nucleo_15": false
+        },
+        {
+          "iburi_p3_nucleo_15": false
+        },
+        {
+          "iburi_core_nucleo_16": false
+        },
+        {
+          "iburi_p4_nucleo_16": false
+        },
+        {
+          "iburi_core_nucleo_17": false
+        },
+        {
+          "iburi_p5_nucleo_17": false
+        },
+        {
+          "iburi_core_nucleo_18": false
+        },
+        {
+          "iburi_p0_nucleo_18": false
+        },
+        {
+          "iburi_core_perna_19": false
+        },
+        {
+          "iburi_p1_perna_19": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_20": false
+        },
+        {
+          "iburi_p2_perna_20": false
+        },
+        {
+          "iburi_core_perna_21": false
+        },
+        {
+          "iburi_p3_perna_21": false
+        },
+        {
+          "iburi_core_cabeca_22": false
+        },
+        {
+          "iburi_p4_cabeca_22": false
+        },
+        {
+          "iburi_core_ombro_23": false
+        },
+        {
+          "iburi_p5_ombro_23": false
+        },
+        {
+          "iburi_core_antebraco_24": false
+        },
+        {
+          "iburi_p0_antebraco_24": false
+        },
+        {
+          "iburi_core_antebraco_25": false
+        },
+        {
+          "iburi_p1_antebraco_25": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_escapula_26": false
+        },
+        {
+          "iburi_p2_escapula_26": false
+        },
+        {
+          "iburi_core_ombro_27": false
+        },
+        {
+          "iburi_p3_ombro_27": false
+        },
+        {
+          "iburi_core_braco_28": false
+        },
+        {
+          "iburi_p4_braco_28": false
+        },
+        {
+          "iburi_core_braco_29": false
+        },
+        {
+          "iburi_p5_braco_29": false
+        },
+        {
+          "iburi_core_mao_30": false
+        },
+        {
+          "iburi_p0_mao_30": false
+        },
+        {
+          "iburi_core_flanco_31": false
+        },
+        {
+          "iburi_p1_flanco_31": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_32": false
+        },
+        {
+          "iburi_p2_flanco_32": false
+        },
+        {
+          "iburi_core_flanco_33": false
+        },
+        {
+          "iburi_p3_flanco_33": false
+        },
+        {
+          "iburi_core_perna_34": false
+        },
+        {
+          "iburi_p4_perna_34": false
+        },
+        {
+          "iburi_core_perna_35": false
+        },
+        {
+          "iburi_p5_perna_35": false
+        },
+        {
+          "iburi_core_nucleo_36": false
+        },
+        {
+          "iburi_p0_nucleo_36": false
+        },
+        {
+          "iburi_core_nucleo_37": false
+        },
+        {
+          "iburi_p1_nucleo_37": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_38": false
+        },
+        {
+          "iburi_p2_nucleo_38": false
+        },
+        {
+          "iburi_core_nucleo_39": false
+        },
+        {
+          "iburi_p3_nucleo_39": false
+        },
+        {
+          "iburi_core_nucleo_40": false
+        },
+        {
+          "iburi_p4_nucleo_40": false
+        },
+        {
+          "iburi_core_nucleo_41": false
+        },
+        {
+          "iburi_p5_nucleo_41": false
+        },
+        {
+          "iburi_core_perna_42": false
+        },
+        {
+          "iburi_p0_perna_42": false
+        },
+        {
+          "iburi_core_perna_43": false
+        },
+        {
+          "iburi_p1_perna_43": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_44": false
+        },
+        {
+          "iburi_p2_perna_44": false
+        },
+        {
+          "iburi_core_cabeca_45": false
+        },
+        {
+          "iburi_p3_cabeca_45": false
+        },
+        {
+          "iburi_core_cabeca_46": false
+        },
+        {
+          "iburi_p4_cabeca_46": false
+        },
+        {
+          "iburi_core_cabeca_47": false
+        },
+        {
+          "iburi_p5_cabeca_47": false
+        },
+        {
+          "iburi_core_nucleo_48": false
+        },
+        {
+          "iburi_p0_nucleo_48": false
+        },
+        {
+          "iburi_core_nucleo_49": false
+        },
+        {
+          "iburi_p1_nucleo_49": "!context.is_first_person || query.is_in_ui"
         }
       ],
       "color": {
@@ -363,10 +2925,307 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p2_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_nucleo_13": false
+        },
+        {
+          "iburi_p1_nucleo_13": false
+        },
+        {
+          "iburi_core_nucleo_14": false
+        },
+        {
+          "iburi_p2_nucleo_14": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_15": false
+        },
+        {
+          "iburi_p3_nucleo_15": false
+        },
+        {
+          "iburi_core_nucleo_16": false
+        },
+        {
+          "iburi_p4_nucleo_16": false
+        },
+        {
+          "iburi_core_nucleo_17": false
+        },
+        {
+          "iburi_p5_nucleo_17": false
+        },
+        {
+          "iburi_core_nucleo_18": false
+        },
+        {
+          "iburi_p0_nucleo_18": false
+        },
+        {
+          "iburi_core_perna_19": false
+        },
+        {
+          "iburi_p1_perna_19": false
+        },
+        {
+          "iburi_core_perna_20": false
+        },
+        {
+          "iburi_p2_perna_20": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_21": false
+        },
+        {
+          "iburi_p3_perna_21": false
+        },
+        {
+          "iburi_core_cabeca_22": false
+        },
+        {
+          "iburi_p4_cabeca_22": false
+        },
+        {
+          "iburi_core_ombro_23": false
+        },
+        {
+          "iburi_p5_ombro_23": false
+        },
+        {
+          "iburi_core_antebraco_24": false
+        },
+        {
+          "iburi_p0_antebraco_24": false
+        },
+        {
+          "iburi_core_antebraco_25": false
+        },
+        {
+          "iburi_p1_antebraco_25": false
+        },
+        {
+          "iburi_core_escapula_26": false
+        },
+        {
+          "iburi_p2_escapula_26": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_27": false
+        },
+        {
+          "iburi_p3_ombro_27": false
+        },
+        {
+          "iburi_core_braco_28": false
+        },
+        {
+          "iburi_p4_braco_28": false
+        },
+        {
+          "iburi_core_braco_29": false
+        },
+        {
+          "iburi_p5_braco_29": false
+        },
+        {
+          "iburi_core_mao_30": false
+        },
+        {
+          "iburi_p0_mao_30": false
+        },
+        {
+          "iburi_core_flanco_31": false
+        },
+        {
+          "iburi_p1_flanco_31": false
+        },
+        {
+          "iburi_core_flanco_32": false
+        },
+        {
+          "iburi_p2_flanco_32": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_33": false
+        },
+        {
+          "iburi_p3_flanco_33": false
+        },
+        {
+          "iburi_core_perna_34": false
+        },
+        {
+          "iburi_p4_perna_34": false
+        },
+        {
+          "iburi_core_perna_35": false
+        },
+        {
+          "iburi_p5_perna_35": false
+        },
+        {
+          "iburi_core_nucleo_36": false
+        },
+        {
+          "iburi_p0_nucleo_36": false
+        },
+        {
+          "iburi_core_nucleo_37": false
+        },
+        {
+          "iburi_p1_nucleo_37": false
+        },
+        {
+          "iburi_core_nucleo_38": false
+        },
+        {
+          "iburi_p2_nucleo_38": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_39": false
+        },
+        {
+          "iburi_p3_nucleo_39": false
+        },
+        {
+          "iburi_core_nucleo_40": false
+        },
+        {
+          "iburi_p4_nucleo_40": false
+        },
+        {
+          "iburi_core_nucleo_41": false
+        },
+        {
+          "iburi_p5_nucleo_41": false
+        },
+        {
+          "iburi_core_perna_42": false
+        },
+        {
+          "iburi_p0_perna_42": false
+        },
+        {
+          "iburi_core_perna_43": false
+        },
+        {
+          "iburi_p1_perna_43": false
+        },
+        {
+          "iburi_core_perna_44": false
+        },
+        {
+          "iburi_p2_perna_44": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_cabeca_45": false
+        },
+        {
+          "iburi_p3_cabeca_45": false
+        },
+        {
+          "iburi_core_cabeca_46": false
+        },
+        {
+          "iburi_p4_cabeca_46": false
+        },
+        {
+          "iburi_core_cabeca_47": false
+        },
+        {
+          "iburi_p5_cabeca_47": false
+        },
+        {
+          "iburi_core_nucleo_48": false
+        },
+        {
+          "iburi_p0_nucleo_48": false
+        },
+        {
+          "iburi_core_nucleo_49": false
+        },
+        {
+          "iburi_p1_nucleo_49": false
         }
       ],
       "color": {
@@ -388,10 +3247,307 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p3_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_nucleo_13": false
+        },
+        {
+          "iburi_p1_nucleo_13": false
+        },
+        {
+          "iburi_core_nucleo_14": false
+        },
+        {
+          "iburi_p2_nucleo_14": false
+        },
+        {
+          "iburi_core_nucleo_15": false
+        },
+        {
+          "iburi_p3_nucleo_15": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_16": false
+        },
+        {
+          "iburi_p4_nucleo_16": false
+        },
+        {
+          "iburi_core_nucleo_17": false
+        },
+        {
+          "iburi_p5_nucleo_17": false
+        },
+        {
+          "iburi_core_nucleo_18": false
+        },
+        {
+          "iburi_p0_nucleo_18": false
+        },
+        {
+          "iburi_core_perna_19": false
+        },
+        {
+          "iburi_p1_perna_19": false
+        },
+        {
+          "iburi_core_perna_20": false
+        },
+        {
+          "iburi_p2_perna_20": false
+        },
+        {
+          "iburi_core_perna_21": false
+        },
+        {
+          "iburi_p3_perna_21": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_cabeca_22": false
+        },
+        {
+          "iburi_p4_cabeca_22": false
+        },
+        {
+          "iburi_core_ombro_23": false
+        },
+        {
+          "iburi_p5_ombro_23": false
+        },
+        {
+          "iburi_core_antebraco_24": false
+        },
+        {
+          "iburi_p0_antebraco_24": false
+        },
+        {
+          "iburi_core_antebraco_25": false
+        },
+        {
+          "iburi_p1_antebraco_25": false
+        },
+        {
+          "iburi_core_escapula_26": false
+        },
+        {
+          "iburi_p2_escapula_26": false
+        },
+        {
+          "iburi_core_ombro_27": false
+        },
+        {
+          "iburi_p3_ombro_27": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_28": false
+        },
+        {
+          "iburi_p4_braco_28": false
+        },
+        {
+          "iburi_core_braco_29": false
+        },
+        {
+          "iburi_p5_braco_29": false
+        },
+        {
+          "iburi_core_mao_30": false
+        },
+        {
+          "iburi_p0_mao_30": false
+        },
+        {
+          "iburi_core_flanco_31": false
+        },
+        {
+          "iburi_p1_flanco_31": false
+        },
+        {
+          "iburi_core_flanco_32": false
+        },
+        {
+          "iburi_p2_flanco_32": false
+        },
+        {
+          "iburi_core_flanco_33": false
+        },
+        {
+          "iburi_p3_flanco_33": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_34": false
+        },
+        {
+          "iburi_p4_perna_34": false
+        },
+        {
+          "iburi_core_perna_35": false
+        },
+        {
+          "iburi_p5_perna_35": false
+        },
+        {
+          "iburi_core_nucleo_36": false
+        },
+        {
+          "iburi_p0_nucleo_36": false
+        },
+        {
+          "iburi_core_nucleo_37": false
+        },
+        {
+          "iburi_p1_nucleo_37": false
+        },
+        {
+          "iburi_core_nucleo_38": false
+        },
+        {
+          "iburi_p2_nucleo_38": false
+        },
+        {
+          "iburi_core_nucleo_39": false
+        },
+        {
+          "iburi_p3_nucleo_39": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_40": false
+        },
+        {
+          "iburi_p4_nucleo_40": false
+        },
+        {
+          "iburi_core_nucleo_41": false
+        },
+        {
+          "iburi_p5_nucleo_41": false
+        },
+        {
+          "iburi_core_perna_42": false
+        },
+        {
+          "iburi_p0_perna_42": false
+        },
+        {
+          "iburi_core_perna_43": false
+        },
+        {
+          "iburi_p1_perna_43": false
+        },
+        {
+          "iburi_core_perna_44": false
+        },
+        {
+          "iburi_p2_perna_44": false
+        },
+        {
+          "iburi_core_cabeca_45": false
+        },
+        {
+          "iburi_p3_cabeca_45": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_cabeca_46": false
+        },
+        {
+          "iburi_p4_cabeca_46": false
+        },
+        {
+          "iburi_core_cabeca_47": false
+        },
+        {
+          "iburi_p5_cabeca_47": false
+        },
+        {
+          "iburi_core_nucleo_48": false
+        },
+        {
+          "iburi_p0_nucleo_48": false
+        },
+        {
+          "iburi_core_nucleo_49": false
+        },
+        {
+          "iburi_p1_nucleo_49": false
         }
       ],
       "color": {
@@ -413,10 +3569,307 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p4_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": false
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": false
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_nucleo_13": false
+        },
+        {
+          "iburi_p1_nucleo_13": false
+        },
+        {
+          "iburi_core_nucleo_14": false
+        },
+        {
+          "iburi_p2_nucleo_14": false
+        },
+        {
+          "iburi_core_nucleo_15": false
+        },
+        {
+          "iburi_p3_nucleo_15": false
+        },
+        {
+          "iburi_core_nucleo_16": false
+        },
+        {
+          "iburi_p4_nucleo_16": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_17": false
+        },
+        {
+          "iburi_p5_nucleo_17": false
+        },
+        {
+          "iburi_core_nucleo_18": false
+        },
+        {
+          "iburi_p0_nucleo_18": false
+        },
+        {
+          "iburi_core_perna_19": false
+        },
+        {
+          "iburi_p1_perna_19": false
+        },
+        {
+          "iburi_core_perna_20": false
+        },
+        {
+          "iburi_p2_perna_20": false
+        },
+        {
+          "iburi_core_perna_21": false
+        },
+        {
+          "iburi_p3_perna_21": false
+        },
+        {
+          "iburi_core_cabeca_22": false
+        },
+        {
+          "iburi_p4_cabeca_22": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_ombro_23": false
+        },
+        {
+          "iburi_p5_ombro_23": false
+        },
+        {
+          "iburi_core_antebraco_24": false
+        },
+        {
+          "iburi_p0_antebraco_24": false
+        },
+        {
+          "iburi_core_antebraco_25": false
+        },
+        {
+          "iburi_p1_antebraco_25": false
+        },
+        {
+          "iburi_core_escapula_26": false
+        },
+        {
+          "iburi_p2_escapula_26": false
+        },
+        {
+          "iburi_core_ombro_27": false
+        },
+        {
+          "iburi_p3_ombro_27": false
+        },
+        {
+          "iburi_core_braco_28": false
+        },
+        {
+          "iburi_p4_braco_28": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_29": false
+        },
+        {
+          "iburi_p5_braco_29": false
+        },
+        {
+          "iburi_core_mao_30": false
+        },
+        {
+          "iburi_p0_mao_30": false
+        },
+        {
+          "iburi_core_flanco_31": false
+        },
+        {
+          "iburi_p1_flanco_31": false
+        },
+        {
+          "iburi_core_flanco_32": false
+        },
+        {
+          "iburi_p2_flanco_32": false
+        },
+        {
+          "iburi_core_flanco_33": false
+        },
+        {
+          "iburi_p3_flanco_33": false
+        },
+        {
+          "iburi_core_perna_34": false
+        },
+        {
+          "iburi_p4_perna_34": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_35": false
+        },
+        {
+          "iburi_p5_perna_35": false
+        },
+        {
+          "iburi_core_nucleo_36": false
+        },
+        {
+          "iburi_p0_nucleo_36": false
+        },
+        {
+          "iburi_core_nucleo_37": false
+        },
+        {
+          "iburi_p1_nucleo_37": false
+        },
+        {
+          "iburi_core_nucleo_38": false
+        },
+        {
+          "iburi_p2_nucleo_38": false
+        },
+        {
+          "iburi_core_nucleo_39": false
+        },
+        {
+          "iburi_p3_nucleo_39": false
+        },
+        {
+          "iburi_core_nucleo_40": false
+        },
+        {
+          "iburi_p4_nucleo_40": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_41": false
+        },
+        {
+          "iburi_p5_nucleo_41": false
+        },
+        {
+          "iburi_core_perna_42": false
+        },
+        {
+          "iburi_p0_perna_42": false
+        },
+        {
+          "iburi_core_perna_43": false
+        },
+        {
+          "iburi_p1_perna_43": false
+        },
+        {
+          "iburi_core_perna_44": false
+        },
+        {
+          "iburi_p2_perna_44": false
+        },
+        {
+          "iburi_core_cabeca_45": false
+        },
+        {
+          "iburi_p3_cabeca_45": false
+        },
+        {
+          "iburi_core_cabeca_46": false
+        },
+        {
+          "iburi_p4_cabeca_46": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_cabeca_47": false
+        },
+        {
+          "iburi_p5_cabeca_47": false
+        },
+        {
+          "iburi_core_nucleo_48": false
+        },
+        {
+          "iburi_p0_nucleo_48": false
+        },
+        {
+          "iburi_core_nucleo_49": false
+        },
+        {
+          "iburi_p1_nucleo_49": false
         }
       ],
       "color": {
@@ -438,10 +3891,307 @@
       ],
       "part_visibility": [
         {
-          "*": false
+          "*": true
         },
         {
-          "iburi_p5_*": "!context.is_first_person || query.is_in_ui"
+          "iburi_core_ombro_00": false
+        },
+        {
+          "iburi_p0_ombro_00": false
+        },
+        {
+          "iburi_core_antebraco_01": false
+        },
+        {
+          "iburi_p1_antebraco_01": false
+        },
+        {
+          "iburi_core_antebraco_02": false
+        },
+        {
+          "iburi_p2_antebraco_02": false
+        },
+        {
+          "iburi_core_escapula_03": false
+        },
+        {
+          "iburi_p3_escapula_03": false
+        },
+        {
+          "iburi_core_ombro_04": false
+        },
+        {
+          "iburi_p4_ombro_04": false
+        },
+        {
+          "iburi_core_braco_05": false
+        },
+        {
+          "iburi_p5_braco_05": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_braco_06": false
+        },
+        {
+          "iburi_p0_braco_06": false
+        },
+        {
+          "iburi_core_mao_07": false
+        },
+        {
+          "iburi_p1_mao_07": false
+        },
+        {
+          "iburi_core_flanco_08": false
+        },
+        {
+          "iburi_p2_flanco_08": false
+        },
+        {
+          "iburi_core_flanco_09": false
+        },
+        {
+          "iburi_p3_flanco_09": false
+        },
+        {
+          "iburi_core_flanco_10": false
+        },
+        {
+          "iburi_p4_flanco_10": false
+        },
+        {
+          "iburi_core_perna_11": false
+        },
+        {
+          "iburi_p5_perna_11": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_12": false
+        },
+        {
+          "iburi_p0_perna_12": false
+        },
+        {
+          "iburi_core_nucleo_13": false
+        },
+        {
+          "iburi_p1_nucleo_13": false
+        },
+        {
+          "iburi_core_nucleo_14": false
+        },
+        {
+          "iburi_p2_nucleo_14": false
+        },
+        {
+          "iburi_core_nucleo_15": false
+        },
+        {
+          "iburi_p3_nucleo_15": false
+        },
+        {
+          "iburi_core_nucleo_16": false
+        },
+        {
+          "iburi_p4_nucleo_16": false
+        },
+        {
+          "iburi_core_nucleo_17": false
+        },
+        {
+          "iburi_p5_nucleo_17": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_18": false
+        },
+        {
+          "iburi_p0_nucleo_18": false
+        },
+        {
+          "iburi_core_perna_19": false
+        },
+        {
+          "iburi_p1_perna_19": false
+        },
+        {
+          "iburi_core_perna_20": false
+        },
+        {
+          "iburi_p2_perna_20": false
+        },
+        {
+          "iburi_core_perna_21": false
+        },
+        {
+          "iburi_p3_perna_21": false
+        },
+        {
+          "iburi_core_cabeca_22": false
+        },
+        {
+          "iburi_p4_cabeca_22": false
+        },
+        {
+          "iburi_core_ombro_23": false
+        },
+        {
+          "iburi_p5_ombro_23": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_antebraco_24": false
+        },
+        {
+          "iburi_p0_antebraco_24": false
+        },
+        {
+          "iburi_core_antebraco_25": false
+        },
+        {
+          "iburi_p1_antebraco_25": false
+        },
+        {
+          "iburi_core_escapula_26": false
+        },
+        {
+          "iburi_p2_escapula_26": false
+        },
+        {
+          "iburi_core_ombro_27": false
+        },
+        {
+          "iburi_p3_ombro_27": false
+        },
+        {
+          "iburi_core_braco_28": false
+        },
+        {
+          "iburi_p4_braco_28": false
+        },
+        {
+          "iburi_core_braco_29": false
+        },
+        {
+          "iburi_p5_braco_29": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_mao_30": false
+        },
+        {
+          "iburi_p0_mao_30": false
+        },
+        {
+          "iburi_core_flanco_31": false
+        },
+        {
+          "iburi_p1_flanco_31": false
+        },
+        {
+          "iburi_core_flanco_32": false
+        },
+        {
+          "iburi_p2_flanco_32": false
+        },
+        {
+          "iburi_core_flanco_33": false
+        },
+        {
+          "iburi_p3_flanco_33": false
+        },
+        {
+          "iburi_core_perna_34": false
+        },
+        {
+          "iburi_p4_perna_34": false
+        },
+        {
+          "iburi_core_perna_35": false
+        },
+        {
+          "iburi_p5_perna_35": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_36": false
+        },
+        {
+          "iburi_p0_nucleo_36": false
+        },
+        {
+          "iburi_core_nucleo_37": false
+        },
+        {
+          "iburi_p1_nucleo_37": false
+        },
+        {
+          "iburi_core_nucleo_38": false
+        },
+        {
+          "iburi_p2_nucleo_38": false
+        },
+        {
+          "iburi_core_nucleo_39": false
+        },
+        {
+          "iburi_p3_nucleo_39": false
+        },
+        {
+          "iburi_core_nucleo_40": false
+        },
+        {
+          "iburi_p4_nucleo_40": false
+        },
+        {
+          "iburi_core_nucleo_41": false
+        },
+        {
+          "iburi_p5_nucleo_41": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_perna_42": false
+        },
+        {
+          "iburi_p0_perna_42": false
+        },
+        {
+          "iburi_core_perna_43": false
+        },
+        {
+          "iburi_p1_perna_43": false
+        },
+        {
+          "iburi_core_perna_44": false
+        },
+        {
+          "iburi_p2_perna_44": false
+        },
+        {
+          "iburi_core_cabeca_45": false
+        },
+        {
+          "iburi_p3_cabeca_45": false
+        },
+        {
+          "iburi_core_cabeca_46": false
+        },
+        {
+          "iburi_p4_cabeca_46": false
+        },
+        {
+          "iburi_core_cabeca_47": false
+        },
+        {
+          "iburi_p5_cabeca_47": "!context.is_first_person || query.is_in_ui"
+        },
+        {
+          "iburi_core_nucleo_48": false
+        },
+        {
+          "iburi_p0_nucleo_48": false
+        },
+        {
+          "iburi_core_nucleo_49": false
+        },
+        {
+          "iburi_p1_nucleo_49": false
         }
       ],
       "color": {
