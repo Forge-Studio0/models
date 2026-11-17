@@ -37,6 +37,7 @@ Para conferir em um mundo de teste com comandos habilitados:
 - As texturas 512 × 512 têm 16 nuvens diferentes por modo, somente em cinza, com centros mais densos e bordas de alfa zero. Não foram utilizados fundos azuis ou sprites retangulares preenchidos.
 - O esqueleto agora corresponde ao `geometry.swbr39.custom` da própria addon, incluindo raiz, pivôs e hierarquia das pernas. As animações próprias atuam apenas nos filhos de fumaça.
 - As partículas deixaram a linha do tempo com `bind_to_actor: false`. Elas são iniciadas por estados de um controlador exclusivo do Iburi, usando o vínculo padrão ao ator e simulação em espaço local de posição e rotação. Os locators acompanham os bones corporais.
+- A renderização e os emissores excluem as instâncias dos itens nas mãos, evitando duplicação e fumaça ligada ao item segurado depois de desequipar o modo.
 - Sair do estado equipado encerra os emissores, conforme o mecanismo nativo dos controladores Bedrock. As partículas têm vida de no máximo 0,55 s e limites por jogador de 18, 32 e 36, respectivamente. A remoção visual efetiva, inclusive possíveis resíduos breves, ainda precisa ser confirmada no jogo.
 
 Há sete passes por modo: um para os volumes centrais e seis para a dissipação. O terceiro estágio mantém 150 cubos, a mesma quantidade total da implementação anterior. Não há entidades auxiliares nem emissão por scripts em coordenadas fixas do mundo.

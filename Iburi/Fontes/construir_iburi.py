@@ -156,7 +156,7 @@ def make_controller(stage):
     locators=['iburi_ombro_d','iburi_braco_e','iburi_costas','iburi_ombro_e','iburi_braco_d','iburi_torso']
     if stage>=2:locators+=['iburi_perna_d','iburi_perna_e']
     if stage==3:locators+=['iburi_cabeca']
-    active=f"query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi{stage}') && !context.is_first_person && !query.is_in_ui"
+    active=f"context.item_slot != 'main_hand' && context.item_slot != 'off_hand' && query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi{stage}') && !context.is_first_person && !query.is_in_ui"
     return {'initial_state':'default','states':{
       'default':{'transitions':[{'equipado':active}]},
       # Omitted bind_to_actor uses Bedrock's documented default (bound/true).
@@ -170,7 +170,7 @@ def render_controller(geometry,stage,phase=None):
         name=bone['name']
         if not bone.get('cubes'):continue
         selected=name.startswith('iburi_core_') if phase is None else name.startswith(f'iburi_p{phase}_')
-        visibility.append({name:'!context.is_first_person || query.is_in_ui' if selected else False})
+        visibility.append({name:"context.item_slot != 'main_hand' && context.item_slot != 'off_hand' && (!context.is_first_person || query.is_in_ui)" if selected else False})
     return {'geometry':'Geometry.default','materials':[{'*':'Material.default'}],'textures':['Texture.default'],
       'part_visibility':visibility,'color':{'r':1,'g':1,'b':1,'a':1 if phase is None else alpha_expr(stage,phase)}}
 

@@ -18,14 +18,16 @@ def pack_files(data):
         assert z.testzip() is None
         return {n:z.read(n) for n in z.namelist() if not n.endswith('/')}
 
-def visible_leaves(controller,bones,first_person=False):
+def visible_leaves(controller,bones,first_person=False,item_slot='head'):
     """Resolve ordered part masks, then check every ancestor, not just a leaf."""
     visibility={n:True for n in bones}
     for rule in controller['part_visibility']:
         for pattern,value in rule.items():
             if isinstance(value,str):
-                assert value=='!context.is_first_person || query.is_in_ui'
-                value=not first_person
+                if value=='!context.is_first_person || query.is_in_ui':value=not first_person
+                else:
+                    assert value=="context.item_slot != 'main_hand' && context.item_slot != 'off_hand' && (!context.is_first_person || query.is_in_ui)"
+                    value=not first_person and item_slot not in ['main_hand','off_hand']
             for name in bones:
                 if fnmatch.fnmatchcase(name,pattern):visibility[name]=bool(value)
     result=set()
@@ -154,6 +156,7 @@ def validate(base,addon,report_path=None):
             visible=visible_leaves(row,bones)
             check(visible==expected and bool(visible),'Nuvens e todos os seus ancestrais visíveis no passe: '+str(stage)+'/'+str(index))
             check(not visible_leaves(row,bones,first_person=True),'Nuvens não cobrem a câmera em primeira pessoa: '+str(stage)+'/'+str(index))
+            check(not visible_leaves(row,bones,item_slot='main_hand') and not visible_leaves(row,bones,item_slot='off_hand'),'Item nas mãos não duplica ou mantém a fumaça após desequipar: '+str(stage)+'/'+str(index))
             check(not selected&visible,'Nenhuma nuvem desenhada por dois passes: '+str(stage)+'/'+str(index))
             selected.update(visible)
         check(selected==all_leaves==set(anim['bones']),'Todos os volumes e nuvens possuem exatamente um passe: '+str(stage))

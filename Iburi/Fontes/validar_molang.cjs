@@ -41,11 +41,16 @@ for(const stage of [1,2,3]){
  const enter=controller.states.default.transitions[0].equipado;
  const exit=controller.states.equipado.transitions[0].default;
  for(const item of ['nz:modo_iburi1','nz:modo_iburi2','nz:modo_iburi3','nz:modo_outro']){
-  for(const first of [0,1])for(const ui of [0,1]){
-   const data={'query.is_item_name_any':(slot,index,...ids)=>slot==='slot.armor.head'&&ids.includes(item)?1:0,'context.is_first_person':first,'query.is_in_ui':ui};
-   const expected=item===`nz:modo_iburi${stage}`&&!first&&!ui;
+  for(const first of [0,1])for(const ui of [0,1])for(const itemSlot of ['head','main_hand','off_hand']){
+   // Blockbench treats string-valued inputs as expressions, so quote the slot.
+   const data={'query.is_item_name_any':(slot,index,...ids)=>slot==='slot.armor.head'&&ids.includes(item)?1:0,'context.is_first_person':first,'query.is_in_ui':ui,'context.item_slot':`'${itemSlot}'`};
+   const expected=item===`nz:modo_iburi${stage}`&&!first&&!ui&&itemSlot==='head';
    check(Boolean(m.parse(enter,data))===expected,'Estado de emissão ativado indevidamente');
    check(Boolean(m.parse(exit,data))===!expected,'Emissão não termina ao desequipar ou mudar o modo');
+   for(const suffix of ['core','p0','p1','p2','p3','p4','p5']){
+    const mask=rc[`controller.render.swbr.iburi${stage}.${suffix}`].part_visibility.map(rule=>Object.values(rule)[0]).find(value=>typeof value==='string');
+    check(Boolean(m.parse(mask,data))===(itemSlot==='head'&&(!first||Boolean(ui))),'Máscara deixa o item nas mãos visível ou bloqueia o equipado');
+   }
   }
  }
  stages.push({stage,ciclos_amostrados:4,amostras:121,alfa_min:rangeMin,alfa_max:rangeMax,limite_y_conservador:[minY,maxY]});
