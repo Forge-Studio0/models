@@ -18,7 +18,8 @@
         "swbr_susanoo_ribs12": "slime_outer",
         "swbr_chakra35": "swbr_chakra35",
         "swbr_chakra_base36": "entity_alphatest",
-        "swbr_chakra_glow36": "swbr_chakra36"
+        "swbr_chakra_glow36": "swbr_chakra36",
+        "swbr_iburi_smoke": "entity_alphablend"
       },
       "textures": {
         "cego1": "textures/cego/cego1",
@@ -536,7 +537,10 @@
         "swbr38_wendigo": "textures/entity/swbr38/wendigo",
         "sw55_anjo_manual": "textures/entity/swbr55/anjo_manual",
         "sw55_sombras_alado": "textures/entity/swbr55/sombras_alado",
-        "sw55_carinha_gelo": "textures/entity/swbr55/carinha_gelo"
+        "sw55_carinha_gelo": "textures/entity/swbr55/carinha_gelo",
+        "swbr_iburi1": "textures/entity/swbr/iburi/fumaca1",
+        "swbr_iburi2": "textures/entity/swbr/iburi/fumaca2",
+        "swbr_iburi3": "textures/entity/swbr/iburi/fumaca3"
       },
       "geometry": {
         "custom": "geometry.swbr39.custom",
@@ -800,7 +804,10 @@
         "sw55_anjo_manual": "geometry.sw55_anjo_manual",
         "sw55_sombras_alado": "geometry.sw55_sombras_alado",
         "sw55_carinha_gelo": "geometry.sw55_carinha_gelo",
-        "sw59_saiyan_eyes": "geometry.sw59.saiyan_eyes"
+        "sw59_saiyan_eyes": "geometry.sw59.saiyan_eyes",
+        "swbr_iburi1": "geometry.nz_modo_iburi1",
+        "swbr_iburi2": "geometry.nz_modo_iburi2",
+        "swbr_iburi3": "geometry.nz_modo_iburi3"
       },
       "particle_effects": {
         "nz_kamui": "nz:kamui_",
@@ -824,7 +831,10 @@
         "sw55_aura_entry_blue": "swbr55:aura_entry_blue",
         "sw55_aura_bolt_blue": "swbr55:aura_bolt_blue",
         "sw55_reverse": "swbr61:reverse_aura",
-        "sw55_reverse_entry": "swbr61:reverse_entry"
+        "sw55_reverse_entry": "swbr61:reverse_entry",
+        "swbr_iburi1_fumaca": "swbr:iburi_transformacao_1",
+        "swbr_iburi2_fumaca": "swbr:iburi_transformacao_2",
+        "swbr_iburi3_fumaca": "swbr:iburi_transformacao_3"
       },
       "scripts": {
         "scale": "q.is_item_name_any('slot.armor.legs',0,'nz:modo_douma_admin') ? 0.9375 : (v.swbr_view_first_person ? 0.9375 : (0.9375 * (q.property('nzs:body_age') == 1 ? 0.87 : (q.property('nzs:body_age') == 2 ? 0.70 : 1.0))))",
@@ -906,7 +916,13 @@
           "v.sw55_anjo_manual = math.mod(math.floor(v.swbr_v1878_mask / 64),4) == 1 && q.is_item_name_any('slot.armor.chest',0,'nz:modo_anjo_manual_admin') && !q.is_spectator && !v.swbr_view_map_face && !v.swbr_v1878_ape && !v.swbr_douma14;",
           "v.sw55_sombras_alado = math.mod(math.floor(v.swbr_v1878_mask / 64),4) == 2 && q.is_item_name_any('slot.armor.chest',0,'nz:modo_sombras_alado_admin') && !q.is_spectator && !v.swbr_view_map_face && !v.swbr_v1878_ape && !v.swbr_douma14;",
           "v.sw55_carinha_gelo = math.mod(math.floor(v.swbr_v1878_mask / 64),4) == 3 && q.is_item_name_any('slot.armor.feet',0,'nz:modo_carinha_gelo_admin') && !q.is_spectator && !v.swbr_view_map_face && !v.swbr_v1878_ape && !v.swbr_douma14;",
-          "v.sw55_outfit = v.sw55_anjo_manual || v.sw55_sombras_alado || v.sw55_carinha_gelo;"
+          "v.sw55_outfit = v.sw55_anjo_manual || v.sw55_sombras_alado || v.sw55_carinha_gelo;",
+          "v.swbr_iburi_camera_ok = !v.swbr_view_first_person && !v.swbr39_ui && !v.swbr_view_map_face && !q.is_spectator && q.distance_from_camera > 2.8;",
+          "v.swbr_iburi_fade = math.clamp((q.distance_from_camera - 2.8) / 0.7,0,1);",
+          "v.swbr_iburi_stage = q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3') ? 3 : (q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi2') ? 2 : (q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi1') ? 1 : 0));",
+          "v.swbr_iburi_draw1 = v.swbr_iburi_camera_ok && v.swbr_iburi_stage == 1;",
+          "v.swbr_iburi_draw2 = v.swbr_iburi_camera_ok && v.swbr_iburi_stage == 2;",
+          "v.swbr_iburi_draw3 = v.swbr_iburi_camera_ok && v.swbr_iburi_stage == 3;"
         ],
         "animate": [
           {
@@ -1138,7 +1154,17 @@
             "sw55_sombras_alado": "v.sw55_sombras_alado && !v.swbr_view_first_person"
           },
           "sw55_auras",
-          "sw55_reverse"
+          "sw55_reverse",
+          {
+            "swbr_iburi1_idle": "v.swbr_iburi_draw1"
+          },
+          {
+            "swbr_iburi2_idle": "v.swbr_iburi_draw2"
+          },
+          {
+            "swbr_iburi3_idle": "v.swbr_iburi_draw3"
+          },
+          "swbr_iburi_fx"
         ]
       },
       "animations": {
@@ -1407,7 +1433,11 @@
         "sw55_anjo_manual": "animation.sw55_anjo_manual",
         "sw55_sombras_alado": "animation.sw55_sombras_alado",
         "sw55_auras": "controller.animation.sw55_auras",
-        "sw55_reverse": "controller.animation.sw55_reverse"
+        "sw55_reverse": "controller.animation.sw55_reverse",
+        "swbr_iburi_fx": "controller.animation.swbr.iburi.fx",
+        "swbr_iburi1_idle": "animation.nz_modo_iburi1.idle",
+        "swbr_iburi2_idle": "animation.nz_modo_iburi2.idle",
+        "swbr_iburi3_idle": "animation.nz_modo_iburi3.idle"
       },
       "render_controllers": [
         {
@@ -2462,6 +2492,69 @@
         },
         {
           "controller.render.sw55_carinha_gelo_fp": "v.sw55_carinha_gelo && v.swbr_view_first_person && !v.swbr39_ui"
+        },
+        {
+          "controller.render.swbr.iburi1.core": "v.swbr_iburi_draw1"
+        },
+        {
+          "controller.render.swbr.iburi1.p0": "v.swbr_iburi_draw1"
+        },
+        {
+          "controller.render.swbr.iburi1.p1": "v.swbr_iburi_draw1"
+        },
+        {
+          "controller.render.swbr.iburi1.p2": "v.swbr_iburi_draw1"
+        },
+        {
+          "controller.render.swbr.iburi1.p3": "v.swbr_iburi_draw1"
+        },
+        {
+          "controller.render.swbr.iburi1.p4": "v.swbr_iburi_draw1"
+        },
+        {
+          "controller.render.swbr.iburi1.p5": "v.swbr_iburi_draw1"
+        },
+        {
+          "controller.render.swbr.iburi2.core": "v.swbr_iburi_draw2"
+        },
+        {
+          "controller.render.swbr.iburi2.p0": "v.swbr_iburi_draw2"
+        },
+        {
+          "controller.render.swbr.iburi2.p1": "v.swbr_iburi_draw2"
+        },
+        {
+          "controller.render.swbr.iburi2.p2": "v.swbr_iburi_draw2"
+        },
+        {
+          "controller.render.swbr.iburi2.p3": "v.swbr_iburi_draw2"
+        },
+        {
+          "controller.render.swbr.iburi2.p4": "v.swbr_iburi_draw2"
+        },
+        {
+          "controller.render.swbr.iburi2.p5": "v.swbr_iburi_draw2"
+        },
+        {
+          "controller.render.swbr.iburi3.core": "v.swbr_iburi_draw3"
+        },
+        {
+          "controller.render.swbr.iburi3.p0": "v.swbr_iburi_draw3"
+        },
+        {
+          "controller.render.swbr.iburi3.p1": "v.swbr_iburi_draw3"
+        },
+        {
+          "controller.render.swbr.iburi3.p2": "v.swbr_iburi_draw3"
+        },
+        {
+          "controller.render.swbr.iburi3.p3": "v.swbr_iburi_draw3"
+        },
+        {
+          "controller.render.swbr.iburi3.p4": "v.swbr_iburi_draw3"
+        },
+        {
+          "controller.render.swbr.iburi3.p5": "v.swbr_iburi_draw3"
         }
       ],
       "enable_attachables": true

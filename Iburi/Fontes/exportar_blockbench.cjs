@@ -46,7 +46,11 @@ const names={1:'Iburi_Fumaca_I',2:'Iburi_Fumaca_II',3:'Iburi_Fumaca_Total'};
   const reopened=await page.evaluate(()=>({cubes:Cube.all.length,bones:Group.all.length,animations:Animation.all.length,texture_error:Texture.all[0].error}));
   if(reopened.cubes!==state.cubes||reopened.bones!==state.bones||reopened.animations!==1||reopened.texture_error)throw Error('Saved BBMODEL failed to reopen: '+JSON.stringify(reopened));
   const errors=await page.evaluate(b=>ErrorLog.slice(b),baseline);
-  const result={stage,editor:state.version,format:state.format,cubes:state.cubes,bones:state.bones,animations:state.animations,texture_error:state.texture_error,reopened,errors,source_sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')};
+  const checksum=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+  const result={stage,editor:state.version,format:state.format,cubes:state.cubes,bones:state.bones,animations:state.animations,texture_error:state.texture_error,reopened,errors,source_sha256:checksum(file),
+    native_geometry_sha256:checksum(path.join(root,'Integracao/RP/models/entity',geometryPaths[stage])),
+    native_animation_sha256:checksum(path.join(root,`Integracao/RP/animations/nz_modo_iburi${stage}.idle.json`)),
+    texture_sha256:checksum(path.join(root,`Integracao/RP/textures/entity/swbr/iburi/fumaca${stage}.png`))};
   if(errors.length||result.texture_error||result.animations.length!==1)throw Error(JSON.stringify(result));
   results.push(result);console.log(JSON.stringify(result));
  }

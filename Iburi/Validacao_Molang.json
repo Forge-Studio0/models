@@ -1,41 +1,743 @@
 {
   "resultado": "APROVADO",
+  "minecraft_executado": false,
   "parser": "Molang do Blockbench 4.12.6",
-  "avaliacoes": 68095,
+  "avaliacoes": 70667,
+  "regressao": "Primeira pessoa nativa ativa com context.is_first_person=0: máscara 18.11.66 permitiria fumaça; controladores 18.11.67 ficam desativados.",
+  "camera": [
+    {
+      "caso": "terceira_pessoa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_contexto_item_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada_contexto_item_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_recolhida_por_parede",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "consulta_distância_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "câmera_logo_acima_da_cabeça",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite_proximidade",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "início_transição",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "início_transição",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "início_transição",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "início_transição",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "início_transição",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "início_transição",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "início_transição",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "início_transição",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "meio_transição",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 7
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 7
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "transição_completa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "ícone_mapa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    }
+  ],
   "stages": [
     {
       "stage": 1,
       "ciclos_amostrados": 4,
       "amostras": 121,
-      "alfa_min": 0,
-      "alfa_max": 1,
-      "limite_y_conservador": [
+      "alfa_dissipação": [
+        0,
+        1
+      ],
+      "limite_y_modelo": [
         13.195987800859724,
         28.32398629713543
-      ]
+      ],
+      "raio_conservador_metros": 1.797938310372572,
+      "meia_largura_max_partícula_metros": 0.15
     },
     {
       "stage": 2,
       "ciclos_amostrados": 4,
       "amostras": 121,
-      "alfa_min": 0,
-      "alfa_max": 1,
-      "limite_y_conservador": [
+      "alfa_dissipação": [
+        0,
+        1
+      ],
+      "limite_y_modelo": [
         0.7078914047223197,
         29.475295107480328
-      ]
+      ],
+      "raio_conservador_metros": 1.8667408977492783,
+      "meia_largura_max_partícula_metros": 0.19
     },
     {
       "stage": 3,
       "ciclos_amostrados": 4,
       "amostras": 121,
-      "alfa_min": 0,
-      "alfa_max": 1,
-      "limite_y_conservador": [
+      "alfa_dissipação": [
+        0,
+        1
+      ],
+      "limite_y_modelo": [
         -2.09344889856455,
         39.81449025832152
-      ]
+      ],
+      "raio_conservador_metros": 2.4891489116209318,
+      "meia_largura_max_partícula_metros": 0.22
     }
   ],
-  "controle_visual": "Os três modos preservam o corpo. Volumes centrais nunca desaparecem; emissores encerram ao sair do estado equipado. Verificação numérica, sem executar Minecraft."
+  "fontes_sha256": {
+    "entity/player.entity.json": "c58e2e3fe5a2d65ee5c30569abab469af5d083514bf2b60758b417ac5e90ced9",
+    "render_controllers/swbr_iburi_transformacoes.json": "0eeb26f834c0dc3ea3ff5d1f63126591101febceee93ff4fc1565c5e7e78aea6",
+    "animation_controllers/swbr_iburi_fumaca.json": "55968a478c241db5d4261816aaa7262d373e07af90eb1c852f505d331c3094e0",
+    "models/entity/nz_modo_iburi1.json": "91265e3b827634c3d240222fafe385a196df3083c9285ef85d8b595d885dd91e",
+    "animations/nz_modo_iburi1.idle.json": "2101ec0d68082142f9c65eaf396e30e9755cff3ee390fee84e1a8e7b1270d734",
+    "particles/swbr_iburi_transformacao_1.json": "fe9ff7c2d2e3083a033b2443e60d3443a60ae090aab120530b1a3eaa5a06600f",
+    "models/entity/nz_modo_iburi2.json": "2a60d164369407588b62dc480a7db55ebb1f11108eb78a168f2ae7f98f939cd1",
+    "animations/nz_modo_iburi2.idle.json": "4859cdefc075769769528aeca9e46224a3863155b9b8ff95ddb7ef3740575fd7",
+    "particles/swbr_iburi_transformacao_2.json": "4e86a0beaf89663cdcb940faf0bb9355ca9ef877d1e457bb41d91b7c93163cb1",
+    "models/entity/nz_modo_iburi3l.geo.json": "49bae93326d4eebdbb92ecc32b08f43ccf2af8455f02e2c0d39e13f8bde58a2d",
+    "animations/nz_modo_iburi3.idle.json": "a1424cc58cf4e8c4983f18459af6056413f83d0ac98a5086e96680432c081009",
+    "particles/swbr_iburi_transformacao_3.json": "db5953e852af5024d6f1ef77af8f19d524accfc4459110e677bd478cb2a143df"
+  },
+  "limite": "Casos numéricos dos arquivos reais; não simulam o renderizador nem comprovam o funcionamento dentro do Minecraft."
 }

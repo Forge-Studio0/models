@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Shinobi World BR 18.11.66 | Correção visual Iburi: volumes persistentes, rig visível e partículas locais; corpo preservado nesta versão de teste",
-    "name": "Shinobi World BR 18.11.66 · Comportamento MOBILE · Iburi",
+    "description": "Shinobi World BR 18.11.67 | Revisão Iburi: fumaça no jogador, bloqueio de câmera nativo, transparência e partículas limitadas",
+    "name": "Shinobi World BR 18.11.67 · Comportamento MOBILE · Iburi",
     "uuid": "82dafe0d-c36f-4665-9df0-371f6d8b2a55",
     "version": [
       18,
       11,
-      66
+      67
     ],
     "min_engine_version": [
       1,
@@ -23,7 +23,7 @@
       "version": [
         18,
         11,
-        66
+        67
       ]
     },
     {
@@ -32,7 +32,7 @@
       "version": [
         18,
         11,
-        66
+        67
       ],
       "entry": "scripts/main.js",
       "language": "javascript"
@@ -44,7 +44,7 @@
       "version": [
         18,
         11,
-        66
+        67
       ]
     },
     {

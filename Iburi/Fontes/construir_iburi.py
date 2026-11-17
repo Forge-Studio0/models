@@ -11,15 +11,23 @@ from PIL import Image
 from scipy.ndimage import gaussian_filter
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=[18,11,66]
+VERSION=[18,11,67]
 PERIODS={1:6.8,2:6.2,3:5.6}
 TEX=512;TILE=128;PHASES=6
 GEO_PATHS={1:'models/entity/nz_modo_iburi1.json',2:'models/entity/nz_modo_iburi2.json',3:'models/entity/nz_modo_iburi3l.geo.json'}
+NATIVE_GEOS=['models/entity/swbr39/custom.geo.json','models/entity/swbr39/custom_b.geo.json']
+SLOT_GEO='models/entity/swbr_iburi_slot.geo.json'
 REGISTRY='scripts/modos/rp_v17058_official_modes.js'
 LEGACY_HIDE_SCRIPTS=[
  "variable.swbr_iburi_total = query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3');",
  'v.swbr_v18733_full_body = v.swbr_v18733_full_body || variable.swbr_iburi_total;',
  'v.swbr_v18733_hair = v.swbr_v18733_hair || variable.swbr_iburi_total;'
+]
+PLAYER_SCRIPTS=[
+ "v.swbr_iburi_camera_ok = !v.swbr_view_first_person && !v.swbr39_ui && !v.swbr_view_map_face && !q.is_spectator && q.distance_from_camera > 2.8;",
+ "v.swbr_iburi_fade = math.clamp((q.distance_from_camera - 2.8) / 0.7,0,1);",
+ "v.swbr_iburi_stage = q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi3') ? 3 : (q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi2') ? 2 : (q.is_item_name_any('slot.armor.head',0,'nz:modo_iburi1') ? 1 : 0));",
+ *[f'v.swbr_iburi_draw{i} = v.swbr_iburi_camera_ok && v.swbr_iburi_stage == {i};' for i in [1,2,3]]
 ]
 
 def read_base(base):
@@ -56,10 +64,10 @@ def cloud_tile(seed,stage):
         layer/=max(float(layer.std()),1e-8);noise+=layer*weight
     value=np.clip((body-.13)/.82,0,1)
     feather=np.clip((1-np.maximum(abs(x),abs(y)))/.16,0,1)
-    opacity={1:.80,2:.90,3:.96}[stage]
+    opacity={1:.48,2:.56,3:.62}[stage]
     alpha=np.clip((value**.84)*(1+noise*.08)*feather*opacity,0,1)
     alpha[alpha<.012]=0
-    grey=np.clip(170-106*value+noise*9,48,180)
+    grey=np.clip(190-98*value+noise*7,76,198)
     rgba=np.dstack([grey,grey,grey,alpha*255]).astype(np.uint8)
     rgba[:3,:,3]=0;rgba[-3:,:,3]=0;rgba[:,:3,3]=0;rgba[:,-3:,3]=0
     return Image.fromarray(rgba,'RGBA')
@@ -152,16 +160,19 @@ def make_geometry(stage):
     anim={'format_version':'1.8.0','animations':{f'animation.nz_modo_iburi{stage}.idle':{'loop':True,'animation_length':PERIODS[stage],'bones':anim_bones}}}
     return geometry,anim,{'nuvens':len(groups),'volumes_persistentes':len(groups),'laminas_difusas':len(groups)*2,'cubos':len(groups)*3,'passes':PHASES+1,'duracao_ciclo':PERIODS[stage]}
 
-def make_controller(stage):
+def particle_locators(stage):
     locators=['iburi_ombro_d','iburi_braco_e','iburi_costas','iburi_ombro_e','iburi_braco_d','iburi_torso']
     if stage>=2:locators+=['iburi_perna_d','iburi_perna_e']
     if stage==3:locators+=['iburi_cabeca']
-    active=f"context.item_slot != 'main_hand' && context.item_slot != 'off_hand' && query.is_item_name_any('slot.armor.head',0,'nz:modo_iburi{stage}') && !context.is_first_person && !query.is_in_ui"
-    return {'initial_state':'default','states':{
-      'default':{'transitions':[{'equipado':active}]},
-      # Omitted bind_to_actor uses Bedrock's documented default (bound/true).
-      'equipado':{'particle_effects':[{'effect':'fumaca','locator':loc} for loc in locators],
-        'transitions':[{'default':f'!({active})'}]}}}
+    return locators
+
+def make_controller():
+    # Runs on the player, whose first-person/UI flags SWBR already maintains.
+    states={'default':{'transitions':[{f'fumaca{i}':f'v.swbr_iburi_draw{i}'} for i in [1,2,3]]}}
+    for stage in [1,2,3]:
+        states[f'fumaca{stage}']={'particle_effects':[{'effect':f'swbr_iburi{stage}_fumaca','locator':'swbr_'+loc} for loc in particle_locators(stage)],
+          'transitions':[{'default':f'!v.swbr_iburi_draw{stage}'}]}
+    return {'initial_state':'default','states':states}
 
 def render_controller(geometry,stage,phase=None):
     """Keep the rig enabled. Only individual cloud leaves are masked per pass."""
@@ -170,28 +181,36 @@ def render_controller(geometry,stage,phase=None):
         name=bone['name']
         if not bone.get('cubes'):continue
         selected=name.startswith('iburi_core_') if phase is None else name.startswith(f'iburi_p{phase}_')
-        visibility.append({name:"context.item_slot != 'main_hand' && context.item_slot != 'off_hand' && (!context.is_first_person || query.is_in_ui)" if selected else False})
-    return {'geometry':'Geometry.default','materials':[{'*':'Material.default'}],'textures':['Texture.default'],
-      'part_visibility':visibility,'color':{'r':1,'g':1,'b':1,'a':1 if phase is None else alpha_expr(stage,phase)}}
+        visibility.append({name:selected})
+    opacity=f'{ {1:.68,2:.73,3:.78}[stage]} * v.swbr_iburi_fade' if phase is None else f'({alpha_expr(stage,phase)}) * v.swbr_iburi_fade'
+    return {'geometry':f'Geometry.swbr_iburi{stage}','materials':[{'*':'Material.swbr_iburi_smoke'}],'textures':[f'Texture.swbr_iburi{stage}'],
+      'part_visibility':visibility,'color':{'r':1,'g':1,'b':1,'a':opacity}}
 
 def particle(stage):
-    start={1:.10,2:.13,3:.16}[stage];growth={1:.17,2:.21,3:.25}[stage]
+    start={1:.06,2:.08,3:.10}[stage];growth={1:.09,2:.11,3:.12}[stage]
+    age='math.clamp(variable.particle_age / math.max(variable.particle_lifetime,0.001),0,1)'
     return {'format_version':'1.10.0','particle_effect':{'description':{'identifier':f'swbr:iburi_transformacao_{stage}','basic_render_parameters':{'material':'particles_blend','texture':'textures/entity/swbr/iburi/particulas'}},'components':{
       'minecraft:emitter_local_space':{'position':True,'rotation':True,'velocity':False},
-      'minecraft:emitter_rate_steady':{'spawn_rate':3+stage,'max_particles':3 if stage==1 else 4},
+      'minecraft:emitter_rate_steady':{'spawn_rate':3 if stage==1 else 4,'max_particles':2 if stage==1 else 3},
       'minecraft:emitter_lifetime_looping':{'active_time':1,'sleep_time':0},
-      'minecraft:emitter_shape_sphere':{'offset':[0,0,0],'radius':.075,'surface_only':False,'direction':'outwards'},
-      'minecraft:particle_lifetime_expression':{'max_lifetime':f'math.random(0.30,{.40+stage*.05:.2f})'},
-      'minecraft:particle_initial_speed':.06,
-      'minecraft:particle_motion_dynamic':{'linear_acceleration':[.025,.27,-.016],'linear_drag_coefficient':.2},
+      'minecraft:emitter_shape_sphere':{'offset':[0,0,0],'radius':.055,'surface_only':False,'direction':'outwards'},
+      'minecraft:particle_lifetime_expression':{'max_lifetime':f'math.random(0.30,{.30+stage*.05:.2f})'},
+      'minecraft:particle_initial_speed':.04,
+      'minecraft:particle_motion_dynamic':{'linear_acceleration':[.025,.22,-.016],'linear_drag_coefficient':.2},
       'minecraft:particle_initial_spin':{'rotation':'math.random(0,360)','rotation_rate':'math.random(-18,18)'},
-      'minecraft:particle_appearance_billboard':{'size':[f'{start}+{growth}*(variable.particle_age/variable.particle_lifetime)',f'{start*1.1:.4f}+{growth*1.2:.4f}*(variable.particle_age/variable.particle_lifetime)'],'facing_camera_mode':'lookat_xyz','uv':{'texture_width':128,'texture_height':512,'flipbook':{'base_UV':[0,0],'size_UV':[128,128],'step_UV':[0,128],'frames_per_second':4,'max_frame':4,'stretch_to_lifetime':True}}},
-      'minecraft:particle_appearance_tinting':{'color':[1,1,1,f'{.68+stage*.06:.2f}*math.clamp(variable.particle_age/0.06,0,1)*math.pow(1-variable.particle_age/variable.particle_lifetime,1.30)']},
+      'minecraft:particle_appearance_billboard':{'size':[f'{start}+{growth}*({age})',f'{start}+{growth}*({age})'],'facing_camera_mode':'lookat_xyz','uv':{'texture_width':128,'texture_height':512,'flipbook':{'base_UV':[0,0],'size_UV':[128,128],'step_UV':[0,128],'frames_per_second':4,'max_frame':3,'stretch_to_lifetime':True}}},
+      'minecraft:particle_appearance_tinting':{'color':[1,1,1,f'0.60*math.clamp(variable.particle_age/0.06,0,1)*math.pow(1-({age}),1.30)']},
       'minecraft:particle_appearance_lighting':{}}}}
 
-def build(base,compatible_base=None):
+def build(base,compatible_bases=None):
     ROOT.mkdir(exist_ok=True,parents=True);summary={}
-    base_packs=read_base(base);bp=base_packs['BP'][1];rp=base_packs['RP'][1];rc={};animation_controllers={}
+    base_packs=read_base(base);bp=base_packs['BP'][1];rp=base_packs['RP'][1];rc={}
+    player=json.loads(rp['entity/player.entity.json']);desc=player['minecraft:client_entity']['description']
+    desc['materials']['swbr_iburi_smoke']='entity_alphablend'
+    desc['animations']['swbr_iburi_fx']='controller.animation.swbr.iburi.fx'
+    animate=desc['scripts']['animate']
+    animate[:]=[a for a in animate if not (isinstance(a,str) and a.startswith('swbr_iburi')) and not (isinstance(a,dict) and any(k.startswith('swbr_iburi') for k in a))]
+    desc['render_controllers'][:]=[r for r in desc['render_controllers'] if not any(k.startswith('controller.render.swbr.iburi') for k in ([r] if isinstance(r,str) else r))]
     for stage in [1,2,3]:
         geo,anim,stats=make_geometry(stage);summary[str(stage)]=stats
         put('RP',GEO_PATHS[stage],geo)
@@ -199,25 +218,46 @@ def build(base,compatible_base=None):
         tex=f'textures/entity/swbr/iburi/fumaca{stage}'
         put('RP',tex+'.png',png_bytes(atlas(stage)))
         controllers=[f'controller.render.swbr.iburi{stage}.core']+[f'controller.render.swbr.iburi{stage}.p{p}' for p in range(PHASES)]
+        desc['geometry'][f'swbr_iburi{stage}']=f'geometry.nz_modo_iburi{stage}'
+        desc['textures'][f'swbr_iburi{stage}']=tex
+        desc['animations'][f'swbr_iburi{stage}_idle']=f'animation.nz_modo_iburi{stage}.idle'
+        desc.setdefault('particle_effects',{})[f'swbr_iburi{stage}_fumaca']=f'swbr:iburi_transformacao_{stage}'
+        animate.append({f'swbr_iburi{stage}_idle':f'v.swbr_iburi_draw{stage}'})
+        desc['render_controllers'].extend({controller:f'v.swbr_iburi_draw{stage}'} for controller in controllers)
+        # The wearable is still the existing head-slot item. It no longer
+        # carries a body-sized mesh or emits particles from an item context.
         put('RP',f'attachables/nz_modo_iburi{stage}.json',{'format_version':'1.10.0','minecraft:attachable':{'description':{
           'identifier':f'nz:modo_iburi{stage}','materials':{'default':'entity_alphablend'},'textures':{'default':tex},
-          'geometry':{'default':f'geometry.nz_modo_iburi{stage}'},'animations':{'idle':f'animation.nz_modo_iburi{stage}.idle','smoke':f'controller.animation.swbr.iburi{stage}.smoke'},
-          'particle_effects':{'fumaca':f'swbr:iburi_transformacao_{stage}'},'scripts':{'animate':['idle','smoke']},'render_controllers':controllers}}})
+          'geometry':{'default':'geometry.swbr.iburi.slot'},'render_controllers':['controller.render.swbr.iburi.slot']}}})
         put('RP',f'particles/swbr_iburi_transformacao_{stage}.json',particle(stage))
-        animation_controllers[f'controller.animation.swbr.iburi{stage}.smoke']=make_controller(stage)
         rc[controllers[0]]=render_controller(geo,stage)
         for phase in range(PHASES):
             rc[f'controller.render.swbr.iburi{stage}.p{phase}']=render_controller(geo,stage,phase)
+    animate.append('swbr_iburi_fx')
+    rc['controller.render.swbr.iburi.slot']={'geometry':'Geometry.default','materials':[{'*':'Material.default'}],'textures':['Texture.default']}
+    put('RP',SLOT_GEO,{'format_version':'1.16.0','minecraft:geometry':[{'description':{'identifier':'geometry.swbr.iburi.slot','texture_width':TEX,'texture_height':TEX},'bones':[{'name':'root','pivot':[0,0,0]}]}]})
     put('RP','render_controllers/swbr_iburi_transformacoes.json',{'format_version':'1.8.0','render_controllers':rc})
-    put('RP','animation_controllers/swbr_iburi_fumaca.json',{'format_version':'1.10.0','animation_controllers':animation_controllers})
+    put('RP','animation_controllers/swbr_iburi_fumaca.json',{'format_version':'1.10.0','animation_controllers':{'controller.animation.swbr.iburi.fx':make_controller()}})
+    # Dedicated locators on the normal player rig make particle attachment
+    # independent of which extra smoke geometry is being rendered.
+    locator_rig=make_geometry(3)[0]['minecraft:geometry'][0]['bones']
+    for path in NATIVE_GEOS:
+        data=json.loads(rp[path])
+        native={b['name']:b for b in data['minecraft:geometry'][0]['bones']}
+        for bone in locator_rig:
+            if not bone.get('locators'):continue
+            target=native[bone['name']].setdefault('locators',{})
+            for name,position in bone['locators'].items():target['swbr_'+name]=position
+        put('RP',path,data)
     sheet=Image.new('RGBA',(128,512))
     for i in range(4):sheet.paste(cloud_tile(99001+i,2),(0,128*i))
     put('RP','textures/entity/swbr/iburi/particulas.png',png_bytes(sheet))
-    player=json.loads(rp['entity/player.entity.json']);scripts=player['minecraft:client_entity']['description']['scripts']['pre_animation']
+    scripts=desc['scripts']['pre_animation']
     assert any('v.swbr_v18733_full_body =' in s for s in scripts)
     # Roll back only the three Iburi-only hide hooks introduced in 18.11.65.
-    scripts[:]=[s for s in scripts if s not in LEGACY_HIDE_SCRIPTS]
+    scripts[:]=[s for s in scripts if s not in LEGACY_HIDE_SCRIPTS and not s.startswith('v.swbr_iburi_')]
     assert not any('swbr_iburi_total' in s for s in scripts)
+    scripts.extend(PLAYER_SCRIPTS)
     put('RP','entity/player.entity.json',player)
     registry=bp[REGISTRY].decode()
     labels={1:'Iburi — Fumaça I',2:'Iburi — Fumaça II',3:'Iburi — Fumaça Total'}
@@ -236,8 +276,8 @@ def build(base,compatible_base=None):
         put('RP',path,text.encode('utf-8'))
     for pack,data in [('BP',bp),('RP',rp)]:
         m=json.loads(data['manifest.json']);m['header']['version']=VERSION
-        m['header']['name']=re.sub(r'18\.11\.\d+','18.11.66',m['header']['name']).split(' · Iburi')[0]+' · Iburi'
-        m['header']['description']='Shinobi World BR 18.11.66 | Correção visual Iburi: volumes persistentes, rig visível e partículas locais; corpo preservado nesta versão de teste'
+        m['header']['name']=re.sub(r'18\.11\.\d+','18.11.67',m['header']['name']).split(' · Iburi')[0]+' · Iburi'
+        m['header']['description']='Shinobi World BR 18.11.67 | Revisão Iburi: fumaça no jogador, bloqueio de câmera nativo, transparência e partículas limitadas'
         for module in m['modules']:module['version']=VERSION
         for dep in m.get('dependencies',[]):
             if dep.get('uuid') in ['82dafe0d-c36f-4665-9df0-371f6d8b2a55','ef513a51-2cb2-4cc5-b300-5ef44201c3f5']:dep['version']=VERSION
@@ -247,10 +287,10 @@ def build(base,compatible_base=None):
         files={}
         for p in (ROOT/'Integracao'/pack).rglob('*'):
             if p.is_file():files[p.relative_to(ROOT/'Integracao'/pack).as_posix()]=hashlib.sha256(p.read_bytes()).hexdigest()
-        entries[pack]={'original_entry':base_packs[pack][0],'updated_entry':f'SWBR_{pack}_v18.11.66_IBURI.mcpack','files':files}
+        entries[pack]={'original_entry':base_packs[pack][0],'updated_entry':f'SWBR_{pack}_v18.11.67_IBURI.mcpack','files':files}
     base_version=json.loads(bp['manifest.json'])['header']['version']
     compatible=[]
-    if compatible_base:
+    for compatible_base in compatible_bases or []:
         extra=read_base(compatible_base)
         compatible.append({'base_filename':compatible_base.name,'base_sha256':hashlib.sha256(compatible_base.read_bytes()).hexdigest(),
           'base_version':json.loads(extra['BP'][1]['manifest.json'])['header']['version'],'pack_entries':{p:extra[p][0] for p in extra}})
@@ -260,4 +300,4 @@ def build(base,compatible_base=None):
     print(json.dumps({'modified_files':{k:len(v['files']) for k,v in entries.items()},'models':summary},indent=2))
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('base',type=Path);parser.add_argument('--compatible-base',type=Path);args=parser.parse_args();build(args.base,args.compatible_base)
+    parser=argparse.ArgumentParser();parser.add_argument('base',type=Path);parser.add_argument('--compatible-base',type=Path,action='append');args=parser.parse_args();build(args.base,args.compatible_base)

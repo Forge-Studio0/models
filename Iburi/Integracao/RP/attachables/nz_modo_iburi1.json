@@ -10,29 +10,10 @@
         "default": "textures/entity/swbr/iburi/fumaca1"
       },
       "geometry": {
-        "default": "geometry.nz_modo_iburi1"
-      },
-      "animations": {
-        "idle": "animation.nz_modo_iburi1.idle",
-        "smoke": "controller.animation.swbr.iburi1.smoke"
-      },
-      "particle_effects": {
-        "fumaca": "swbr:iburi_transformacao_1"
-      },
-      "scripts": {
-        "animate": [
-          "idle",
-          "smoke"
-        ]
+        "default": "geometry.swbr.iburi.slot"
       },
       "render_controllers": [
-        "controller.render.swbr.iburi1.core",
-        "controller.render.swbr.iburi1.p0",
-        "controller.render.swbr.iburi1.p1",
-        "controller.render.swbr.iburi1.p2",
-        "controller.render.swbr.iburi1.p3",
-        "controller.render.swbr.iburi1.p4",
-        "controller.render.swbr.iburi1.p5"
+        "controller.render.swbr.iburi.slot"
       ]
     }
   }

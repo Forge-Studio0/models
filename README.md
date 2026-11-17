@@ -2,9 +2,9 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Iburi — Shinobi World BR 18.11.66 · teste
+## Clã Iburi — Shinobi World BR 18.11.67 · teste
 
-Correção dos três modos de fumaça: volumes com espessura, máscaras de renderização corrigidas e partículas vinculadas ao personagem. Fumaça Total mantém o corpo visível sob a cobertura densa nesta versão de teste. Modelos editáveis e arquivos de integração incluídos; slot da cabeça e níveis 10, 15 e 25 preservados. Verificações de arquivos e Blockbench concluídas; teste dentro do Minecraft ainda pendente.
+Revisão da fumaça cobrindo a câmera: efeito transferido para o jogador, bloqueado em primeira pessoa e perto da câmera, com transparência e partículas limitadas. Fumaça Total mantém o corpo visível sob a cobertura. Inclui modelos editáveis, integração e relatório da revisão; slot da cabeça e níveis 10, 15 e 25 preservados. Verificações de arquivos e Blockbench concluídas; teste dentro do Minecraft ainda pendente.
 
 - [Pacote completo Iburi.zip](Iburi/Iburi.zip)
 - [Addon Iburi.mcaddon](Iburi/Iburi.mcaddon)

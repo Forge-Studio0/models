@@ -11,7 +11,10 @@ def package():
     assert validation['resultado']=='APROVADO'
     assert hashlib.sha256(addon.read_bytes()).hexdigest()==validation['addon_sha256']
     integration=ROOT/'Iburi_Integracao.zip'
-    documents=['README.md','Referencias.md','Integracao_Manifesto.json','Validacao.json','Validacao_Base_18.11.64.json','Validacao_Blockbench.json','Validacao_Molang.json']
+    documents=['README.md','Referencias.md','Revisao_18.11.67.md','Integracao_Manifesto.json','Validacao.json','Validacao_Base_18.11.64.json','Validacao_Base_18.11.65.json','Validacao_Blockbench.json','Validacao_Molang.json']
+    for name in ['Validacao_Base_18.11.64.json','Validacao_Base_18.11.65.json']:
+        report=json.loads((ROOT/name).read_text())
+        assert report['resultado']=='APROVADO' and report['addon_sha256']==validation['addon_sha256']
     with zipfile.ZipFile(integration,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as output:
         for name in documents:output.write(ROOT/name,name)
         output.write(ROOT/'Fontes/aplicar_integracao.py','aplicar_integracao.py')
