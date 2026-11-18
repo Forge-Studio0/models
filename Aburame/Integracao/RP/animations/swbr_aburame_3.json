@@ -1,0 +1,1201 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.swbr.aburame3.idle": {
+      "loop": true,
+      "animation_length": 6.8,
+      "bones": {
+        "swbr_aburame3_solid_a_besouro_00": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*44.801+28.865),2))+0.00000*math.sin(q.life_time*35.841+28.865)",
+            "0.00000*(math.pow(math.sin(q.life_time*44.801+28.865),2))+0.12000*math.sin(q.life_time*35.841+28.865)",
+            "-0.55000*(math.pow(math.sin(q.life_time*44.801+28.865),2))+0.00000*math.sin(q.life_time*35.841+28.865)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*26.881+28.865)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_00_elytro_d": {
+          "rotation": [
+            0,
+            "-1*7*math.sin(q.life_time*1500+28.865)*(math.pow(math.sin(q.life_time*44.801+28.865),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_00_elytro_e": {
+          "rotation": [
+            0,
+            "1*7*math.sin(q.life_time*1500+28.865)*(math.pow(math.sin(q.life_time*44.801+28.865),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_01": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*43.995+255.070),2))+0.00000*math.sin(q.life_time*35.196+255.070)",
+            "0.00000*(math.pow(math.sin(q.life_time*43.995+255.070),2))+0.12000*math.sin(q.life_time*35.196+255.070)",
+            "-0.03500*(math.pow(math.sin(q.life_time*43.995+255.070),2))+0.00000*math.sin(q.life_time*35.196+255.070)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*26.397+255.070)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_01_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+255.070)*(math.pow(math.sin(q.life_time*43.995+255.070),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_01_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+255.070)*(math.pow(math.sin(q.life_time*43.995+255.070),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_02": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*60.894+107.816),2))+0.00000*math.sin(q.life_time*48.715+107.816)",
+            "0.00000*(math.pow(math.sin(q.life_time*60.894+107.816),2))+0.12000*math.sin(q.life_time*48.715+107.816)",
+            "0.03500*(math.pow(math.sin(q.life_time*60.894+107.816),2))+0.00000*math.sin(q.life_time*48.715+107.816)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*36.536+107.816)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_02_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+107.816)*(math.pow(math.sin(q.life_time*60.894+107.816),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_02_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+107.816)*(math.pow(math.sin(q.life_time*60.894+107.816),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_03": {
+          "position": [
+            "-0.55000*(math.pow(math.sin(q.life_time*54.185+330.500),2))+0.00000*math.sin(q.life_time*43.348+330.500)",
+            "0.00000*(math.pow(math.sin(q.life_time*54.185+330.500),2))+0.12000*math.sin(q.life_time*43.348+330.500)",
+            "0.00000*(math.pow(math.sin(q.life_time*54.185+330.500),2))+0.00000*math.sin(q.life_time*43.348+330.500)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*32.511+330.500)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_03_elytro_d": {
+          "rotation": [
+            0,
+            "-1*7*math.sin(q.life_time*1500+330.500)*(math.pow(math.sin(q.life_time*54.185+330.500),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_03_elytro_e": {
+          "rotation": [
+            0,
+            "1*7*math.sin(q.life_time*1500+330.500)*(math.pow(math.sin(q.life_time*54.185+330.500),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_04": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*62.320+266.047),2))+0.12000*math.sin(q.life_time*49.856+266.047)",
+            "0.03500*(math.pow(math.sin(q.life_time*62.320+266.047),2))+0.00000*math.sin(q.life_time*49.856+266.047)",
+            "0.00000*(math.pow(math.sin(q.life_time*62.320+266.047),2))+0.00000*math.sin(q.life_time*49.856+266.047)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*37.392+266.047)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_04_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+266.047)*(math.pow(math.sin(q.life_time*62.320+266.047),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_04_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+266.047)*(math.pow(math.sin(q.life_time*62.320+266.047),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_05": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*59.802+39.098),2))+0.00000*math.sin(q.life_time*47.841+39.098)",
+            "0.00000*(math.pow(math.sin(q.life_time*59.802+39.098),2))+0.12000*math.sin(q.life_time*47.841+39.098)",
+            "0.03500*(math.pow(math.sin(q.life_time*59.802+39.098),2))+0.00000*math.sin(q.life_time*47.841+39.098)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*35.881+39.098)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_05_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+39.098)*(math.pow(math.sin(q.life_time*59.802+39.098),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_05_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+39.098)*(math.pow(math.sin(q.life_time*59.802+39.098),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_06": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*62.039+160.505),2))+0.00000*math.sin(q.life_time*49.631+160.505)",
+            "0.00000*(math.pow(math.sin(q.life_time*62.039+160.505),2))+0.12000*math.sin(q.life_time*49.631+160.505)",
+            "-0.55000*(math.pow(math.sin(q.life_time*62.039+160.505),2))+0.00000*math.sin(q.life_time*49.631+160.505)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*37.224+160.505)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_06_elytro_d": {
+          "rotation": [
+            0,
+            "-1*7*math.sin(q.life_time*1500+160.505)*(math.pow(math.sin(q.life_time*62.039+160.505),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_06_elytro_e": {
+          "rotation": [
+            0,
+            "1*7*math.sin(q.life_time*1500+160.505)*(math.pow(math.sin(q.life_time*62.039+160.505),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_07": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*50.254+309.250),2))+0.00000*math.sin(q.life_time*40.203+309.250)",
+            "0.00000*(math.pow(math.sin(q.life_time*50.254+309.250),2))+0.12000*math.sin(q.life_time*40.203+309.250)",
+            "-0.03500*(math.pow(math.sin(q.life_time*50.254+309.250),2))+0.00000*math.sin(q.life_time*40.203+309.250)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*30.152+309.250)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_07_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+309.250)*(math.pow(math.sin(q.life_time*50.254+309.250),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_07_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+309.250)*(math.pow(math.sin(q.life_time*50.254+309.250),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_08": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*52.679+236.913),2))+0.00000*math.sin(q.life_time*42.143+236.913)",
+            "0.00000*(math.pow(math.sin(q.life_time*52.679+236.913),2))+0.12000*math.sin(q.life_time*42.143+236.913)",
+            "0.03500*(math.pow(math.sin(q.life_time*52.679+236.913),2))+0.00000*math.sin(q.life_time*42.143+236.913)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*31.607+236.913)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_08_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+236.913)*(math.pow(math.sin(q.life_time*52.679+236.913),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_08_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+236.913)*(math.pow(math.sin(q.life_time*52.679+236.913),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_09": {
+          "position": [
+            "0.55000*(math.pow(math.sin(q.life_time*36.875+301.822),2))+0.00000*math.sin(q.life_time*29.500+301.822)",
+            "0.00000*(math.pow(math.sin(q.life_time*36.875+301.822),2))+0.12000*math.sin(q.life_time*29.500+301.822)",
+            "0.00000*(math.pow(math.sin(q.life_time*36.875+301.822),2))+0.00000*math.sin(q.life_time*29.500+301.822)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*22.125+301.822)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_09_elytro_d": {
+          "rotation": [
+            0,
+            "-1*7*math.sin(q.life_time*1500+301.822)*(math.pow(math.sin(q.life_time*36.875+301.822),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_09_elytro_e": {
+          "rotation": [
+            0,
+            "1*7*math.sin(q.life_time*1500+301.822)*(math.pow(math.sin(q.life_time*36.875+301.822),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_10": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*46.673+287.458),2))+0.12000*math.sin(q.life_time*37.338+287.458)",
+            "0.03500*(math.pow(math.sin(q.life_time*46.673+287.458),2))+0.00000*math.sin(q.life_time*37.338+287.458)",
+            "0.00000*(math.pow(math.sin(q.life_time*46.673+287.458),2))+0.00000*math.sin(q.life_time*37.338+287.458)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*28.004+287.458)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_10_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+287.458)*(math.pow(math.sin(q.life_time*46.673+287.458),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_10_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+287.458)*(math.pow(math.sin(q.life_time*46.673+287.458),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_11": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*44.867+116.726),2))+0.00000*math.sin(q.life_time*35.894+116.726)",
+            "0.00000*(math.pow(math.sin(q.life_time*44.867+116.726),2))+0.12000*math.sin(q.life_time*35.894+116.726)",
+            "0.03500*(math.pow(math.sin(q.life_time*44.867+116.726),2))+0.00000*math.sin(q.life_time*35.894+116.726)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*26.920+116.726)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_11_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+116.726)*(math.pow(math.sin(q.life_time*44.867+116.726),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_11_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+116.726)*(math.pow(math.sin(q.life_time*44.867+116.726),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_12": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*47.820+7.974),2))+0.00000*math.sin(q.life_time*38.256+7.974)",
+            "0.00000*(math.pow(math.sin(q.life_time*47.820+7.974),2))+0.12000*math.sin(q.life_time*38.256+7.974)",
+            "-0.55000*(math.pow(math.sin(q.life_time*47.820+7.974),2))+0.00000*math.sin(q.life_time*38.256+7.974)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*28.692+7.974)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_12_elytro_d": {
+          "rotation": [
+            0,
+            "-1*7*math.sin(q.life_time*1500+7.974)*(math.pow(math.sin(q.life_time*47.820+7.974),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_12_elytro_e": {
+          "rotation": [
+            0,
+            "1*7*math.sin(q.life_time*1500+7.974)*(math.pow(math.sin(q.life_time*47.820+7.974),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_13": {
+          "position": [
+            "-0.03500*(math.pow(math.sin(q.life_time*42.461+166.080),2))+0.00000*math.sin(q.life_time*33.968+166.080)",
+            "0.00000*(math.pow(math.sin(q.life_time*42.461+166.080),2))+0.12000*math.sin(q.life_time*33.968+166.080)",
+            "0.00000*(math.pow(math.sin(q.life_time*42.461+166.080),2))+0.00000*math.sin(q.life_time*33.968+166.080)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*25.476+166.080)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_13_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+166.080)*(math.pow(math.sin(q.life_time*42.461+166.080),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_13_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+166.080)*(math.pow(math.sin(q.life_time*42.461+166.080),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_14": {
+          "position": [
+            "-0.03500*(math.pow(math.sin(q.life_time*37.441+42.231),2))+0.00000*math.sin(q.life_time*29.953+42.231)",
+            "0.00000*(math.pow(math.sin(q.life_time*37.441+42.231),2))+0.12000*math.sin(q.life_time*29.953+42.231)",
+            "0.00000*(math.pow(math.sin(q.life_time*37.441+42.231),2))+0.00000*math.sin(q.life_time*29.953+42.231)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*22.465+42.231)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_14_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+42.231)*(math.pow(math.sin(q.life_time*37.441+42.231),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_14_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+42.231)*(math.pow(math.sin(q.life_time*37.441+42.231),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_15": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*44.797+250.706),2))+0.00000*math.sin(q.life_time*35.838+250.706)",
+            "0.00000*(math.pow(math.sin(q.life_time*44.797+250.706),2))+0.12000*math.sin(q.life_time*35.838+250.706)",
+            "-0.55000*(math.pow(math.sin(q.life_time*44.797+250.706),2))+0.00000*math.sin(q.life_time*35.838+250.706)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*26.878+250.706)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_15_elytro_d": {
+          "rotation": [
+            0,
+            "-1*7*math.sin(q.life_time*1500+250.706)*(math.pow(math.sin(q.life_time*44.797+250.706),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_15_elytro_e": {
+          "rotation": [
+            0,
+            "1*7*math.sin(q.life_time*1500+250.706)*(math.pow(math.sin(q.life_time*44.797+250.706),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_16": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*57.227+191.014),2))+0.00000*math.sin(q.life_time*45.782+191.014)",
+            "0.00000*(math.pow(math.sin(q.life_time*57.227+191.014),2))+0.12000*math.sin(q.life_time*45.782+191.014)",
+            "-0.03500*(math.pow(math.sin(q.life_time*57.227+191.014),2))+0.00000*math.sin(q.life_time*45.782+191.014)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*34.336+191.014)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_16_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+191.014)*(math.pow(math.sin(q.life_time*57.227+191.014),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_16_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+191.014)*(math.pow(math.sin(q.life_time*57.227+191.014),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_17": {
+          "position": [
+            "0.03500*(math.pow(math.sin(q.life_time*60.971+237.020),2))+0.00000*math.sin(q.life_time*48.777+237.020)",
+            "0.00000*(math.pow(math.sin(q.life_time*60.971+237.020),2))+0.12000*math.sin(q.life_time*48.777+237.020)",
+            "0.00000*(math.pow(math.sin(q.life_time*60.971+237.020),2))+0.00000*math.sin(q.life_time*48.777+237.020)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*36.583+237.020)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_17_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+237.020)*(math.pow(math.sin(q.life_time*60.971+237.020),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_17_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+237.020)*(math.pow(math.sin(q.life_time*60.971+237.020),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_18": {
+          "position": [
+            "0.55000*(math.pow(math.sin(q.life_time*42.173+67.773),2))+0.00000*math.sin(q.life_time*33.738+67.773)",
+            "0.00000*(math.pow(math.sin(q.life_time*42.173+67.773),2))+0.12000*math.sin(q.life_time*33.738+67.773)",
+            "0.00000*(math.pow(math.sin(q.life_time*42.173+67.773),2))+0.00000*math.sin(q.life_time*33.738+67.773)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*25.304+67.773)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_18_elytro_d": {
+          "rotation": [
+            0,
+            "-1*7*math.sin(q.life_time*1500+67.773)*(math.pow(math.sin(q.life_time*42.173+67.773),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_a_besouro_18_elytro_e": {
+          "rotation": [
+            0,
+            "1*7*math.sin(q.life_time*1500+67.773)*(math.pow(math.sin(q.life_time*42.173+67.773),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_19": {
+          "position": [
+            "0.00000*(math.pow(math.sin(q.life_time*39.921+46.875),2))+0.00000*math.sin(q.life_time*31.937+46.875)",
+            "0.00000*(math.pow(math.sin(q.life_time*39.921+46.875),2))+0.12000*math.sin(q.life_time*31.937+46.875)",
+            "-0.03500*(math.pow(math.sin(q.life_time*39.921+46.875),2))+0.00000*math.sin(q.life_time*31.937+46.875)"
+          ],
+          "rotation": [
+            0,
+            0,
+            "5*math.sin(q.life_time*23.953+46.875)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_19_elytro_d": {
+          "rotation": [
+            0,
+            "-1*1.5*math.sin(q.life_time*90+46.875)*(math.pow(math.sin(q.life_time*39.921+46.875),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_solid_b_besouro_19_elytro_e": {
+          "rotation": [
+            0,
+            "1*1.5*math.sin(q.life_time*90+46.875)*(math.pow(math.sin(q.life_time*39.921+46.875),2))",
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_a_grupo_00": {
+          "position": [
+            "0.95*math.sin(q.life_time*50.876+106.517)",
+            "0.6+1.4*math.sin(q.life_time*35.613+106.517)",
+            "0.7600*math.sin(q.life_time*36.122+106.517)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+106.517)",
+            "5*math.cos(q.life_time*19+106.517)",
+            "4*math.sin(q.life_time*23+106.517)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*27.982+106.517)",
+            "1+0.08*math.cos(q.life_time*31.034+106.517)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_b_grupo_01": {
+          "position": [
+            "0.95*math.sin(q.life_time*45.329+228.162)",
+            "0.6+1.4*math.sin(q.life_time*31.730+228.162)",
+            "0.7600*math.sin(q.life_time*32.184+228.162)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+228.162)",
+            "5*math.cos(q.life_time*19+228.162)",
+            "4*math.sin(q.life_time*23+228.162)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*24.931+228.162)",
+            "1+0.08*math.cos(q.life_time*27.651+228.162)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_a_grupo_02": {
+          "position": [
+            "0.95*math.sin(q.life_time*53.904+323.577)",
+            "0.6+1.4*math.sin(q.life_time*37.733+323.577)",
+            "0.7600*math.sin(q.life_time*38.272+323.577)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+323.577)",
+            "5*math.cos(q.life_time*19+323.577)",
+            "4*math.sin(q.life_time*23+323.577)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*29.647+323.577)",
+            "1+0.08*math.cos(q.life_time*32.881+323.577)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_b_grupo_03": {
+          "position": [
+            "0.95*math.sin(q.life_time*40.096+238.513)",
+            "0.6+1.4*math.sin(q.life_time*28.067+238.513)",
+            "0.7600*math.sin(q.life_time*28.468+238.513)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+238.513)",
+            "5*math.cos(q.life_time*19+238.513)",
+            "4*math.sin(q.life_time*23+238.513)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*22.053+238.513)",
+            "1+0.08*math.cos(q.life_time*24.459+238.513)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_a_grupo_04": {
+          "position": [
+            "0.95*math.sin(q.life_time*38.933+24.967)",
+            "0.6650*math.cos(q.life_time*32.315+24.967)",
+            "0.7600*math.sin(q.life_time*27.643+24.967)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+24.967)",
+            "5*math.cos(q.life_time*19+24.967)",
+            "4*math.sin(q.life_time*23+24.967)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*21.413+24.967)",
+            "1+0.08*math.cos(q.life_time*23.749+24.967)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_b_grupo_05": {
+          "position": [
+            "0.95*math.sin(q.life_time*45.875+85.322)",
+            "0.6650*math.cos(q.life_time*38.076+85.322)",
+            "0.7600*math.sin(q.life_time*32.571+85.322)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+85.322)",
+            "5*math.cos(q.life_time*19+85.322)",
+            "4*math.sin(q.life_time*23+85.322)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*25.231+85.322)",
+            "1+0.08*math.cos(q.life_time*27.984+85.322)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_a_grupo_06": {
+          "position": [
+            "0.95*math.sin(q.life_time*30.755+341.740)",
+            "0.6650*math.cos(q.life_time*25.527+341.740)",
+            "0.7600*math.sin(q.life_time*21.836+341.740)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+341.740)",
+            "5*math.cos(q.life_time*19+341.740)",
+            "4*math.sin(q.life_time*23+341.740)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*16.915+341.740)",
+            "1+0.08*math.cos(q.life_time*18.761+341.740)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_b_grupo_07": {
+          "position": [
+            "0.95*math.sin(q.life_time*31.882+159.959)",
+            "0.6650*math.cos(q.life_time*26.462+159.959)",
+            "0.7600*math.sin(q.life_time*22.636+159.959)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+159.959)",
+            "5*math.cos(q.life_time*19+159.959)",
+            "4*math.sin(q.life_time*23+159.959)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*17.535+159.959)",
+            "1+0.08*math.cos(q.life_time*19.448+159.959)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_a_grupo_08": {
+          "position": [
+            "0.95*math.sin(q.life_time*59.256+174.294)",
+            "0.6650*math.cos(q.life_time*49.182+174.294)",
+            "0.7600*math.sin(q.life_time*42.071+174.294)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+174.294)",
+            "5*math.cos(q.life_time*19+174.294)",
+            "4*math.sin(q.life_time*23+174.294)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*32.591+174.294)",
+            "1+0.08*math.cos(q.life_time*36.146+174.294)",
+            1
+          ]
+        },
+        "swbr_aburame3_swarm_b_grupo_09": {
+          "position": [
+            "0.95*math.sin(q.life_time*47.644+331.366)",
+            "0.6650*math.cos(q.life_time*39.545+331.366)",
+            "0.7600*math.sin(q.life_time*33.827+331.366)"
+          ],
+          "rotation": [
+            "3*math.sin(q.life_time*17+331.366)",
+            "5*math.cos(q.life_time*19+331.366)",
+            "4*math.sin(q.life_time*23+331.366)"
+          ],
+          "scale": [
+            "1+0.09*math.sin(q.life_time*26.204+331.366)",
+            "1+0.08*math.cos(q.life_time*29.063+331.366)",
+            1
+          ]
+        }
+      }
+    }
+  }
+}

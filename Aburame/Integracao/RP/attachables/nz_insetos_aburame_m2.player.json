@@ -1,0 +1,23 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "nz:insetos_aburame_m2.player",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/swbr/aburame/modo_2"
+      },
+      "geometry": {
+        "default": "geometry.swbr.aburame.slot"
+      },
+      "render_controllers": [
+        "controller.render.swbr.aburame.slot"
+      ],
+      "item": {
+        "nz:insetos_aburame_m2": "query.owner_identifier == 'minecraft:player'"
+      }
+    }
+  }
+}

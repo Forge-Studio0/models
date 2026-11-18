@@ -1,0 +1,266 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.swbr.aburame.fx": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "modo1": "v.swbr_aburame_draw1"
+            },
+            {
+              "modo2": "v.swbr_aburame_draw2"
+            },
+            {
+              "modo3": "v.swbr_aburame_draw3"
+            },
+            {
+              "modo4": "v.swbr_aburame_draw4"
+            },
+            {
+              "modo5": "v.swbr_aburame_draw5"
+            },
+            {
+              "modo6": "v.swbr_aburame_draw6"
+            }
+          ]
+        },
+        "modo1": {
+          "particle_effects": [
+            {
+              "effect": "swbr_aburame1_insetos",
+              "locator": "swbr_aburame_mao_d"
+            },
+            {
+              "effect": "swbr_aburame1_insetos",
+              "locator": "swbr_aburame_mao_e"
+            },
+            {
+              "effect": "swbr_aburame1_insetos",
+              "locator": "swbr_aburame_antebraco_d"
+            },
+            {
+              "effect": "swbr_aburame1_insetos",
+              "locator": "swbr_aburame_antebraco_e"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!v.swbr_aburame_draw1"
+            }
+          ]
+        },
+        "modo2": {
+          "particle_effects": [
+            {
+              "effect": "swbr_aburame2_insetos",
+              "locator": "swbr_aburame_mao_d"
+            },
+            {
+              "effect": "swbr_aburame2_insetos",
+              "locator": "swbr_aburame_mao_e"
+            },
+            {
+              "effect": "swbr_aburame2_insetos",
+              "locator": "swbr_aburame_antebraco_d"
+            },
+            {
+              "effect": "swbr_aburame2_insetos",
+              "locator": "swbr_aburame_antebraco_e"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!v.swbr_aburame_draw2"
+            }
+          ]
+        },
+        "modo3": {
+          "particle_effects": [
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_mao_d"
+            },
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_mao_e"
+            },
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_antebraco_d"
+            },
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_antebraco_e"
+            },
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_ombro_d"
+            },
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_ombro_e"
+            },
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_peito"
+            },
+            {
+              "effect": "swbr_aburame3_insetos",
+              "locator": "swbr_aburame_costas"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!v.swbr_aburame_draw3"
+            }
+          ]
+        },
+        "modo4": {
+          "particle_effects": [
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_mao_d"
+            },
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_mao_e"
+            },
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_antebraco_d"
+            },
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_antebraco_e"
+            },
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_ombro_d"
+            },
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_ombro_e"
+            },
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_peito"
+            },
+            {
+              "effect": "swbr_aburame4_insetos",
+              "locator": "swbr_aburame_costas"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!v.swbr_aburame_draw4"
+            }
+          ]
+        },
+        "modo5": {
+          "particle_effects": [
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_mao_d"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_mao_e"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_antebraco_d"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_antebraco_e"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_ombro_d"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_ombro_e"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_peito"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_costas"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_perna_d"
+            },
+            {
+              "effect": "swbr_aburame5_insetos",
+              "locator": "swbr_aburame_perna_e"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!v.swbr_aburame_draw5"
+            }
+          ]
+        },
+        "modo6": {
+          "particle_effects": [
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_mao_d"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_mao_e"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_antebraco_d"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_antebraco_e"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_ombro_d"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_ombro_e"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_peito"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_costas"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_perna_d"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_perna_e"
+            },
+            {
+              "effect": "swbr_aburame6_insetos",
+              "locator": "swbr_aburame_cabeca"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "!v.swbr_aburame_draw6"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

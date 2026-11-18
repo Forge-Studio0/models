@@ -1,0 +1,1322 @@
+{
+  "resultado": "APROVADO",
+  "minecraft_executado": false,
+  "parser": "Molang do Blockbench 4.12.6",
+  "avaliacoes": 427293,
+  "camera": [
+    {
+      "caso": "terceira_pessoa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "terceira_pessoa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_item_contexto_zero",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "primeira_pessoa_câmera_afastada",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "parede",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "distância_ausente",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "sobre_cabeça",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "limite",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "início_fade",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "início_fade",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "início_fade",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "início_fade",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "início_fade",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "início_fade",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "início_fade",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "início_fade",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "início_fade",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "início_fade",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "início_fade",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "início_fade",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "início_fade",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "início_fade",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "meio_fade",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 4
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 4
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 3
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 3
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "fade_completo",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "inventário",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "paperdoll",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "mapa",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 1,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 2,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 3,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 4,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 5,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 6,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 0,
+      "passes": 0
+    },
+    {
+      "caso": "espectador",
+      "modo": 0,
+      "contexto_item_primeira_pessoa": 1,
+      "passes": 0
+    }
+  ],
+  "modelos": [
+    {
+      "mode": 1,
+      "amostras": 91,
+      "ciclos": 4,
+      "raio_modelo_metros": 1.582172795902682,
+      "limite_y_modelo": [
+        12.460896657314912,
+        24.541149856910206
+      ],
+      "meio_tamanho_max_particula_metros": 0.032,
+      "raio_emissores_metros": 1.3394272288975173
+    },
+    {
+      "mode": 2,
+      "amostras": 91,
+      "ciclos": 4,
+      "raio_modelo_metros": 1.3198300390698985,
+      "limite_y_modelo": [
+        11.65,
+        19.3
+      ],
+      "meio_tamanho_max_particula_metros": 0.015,
+      "raio_emissores_metros": 1.3153855983371747
+    },
+    {
+      "mode": 3,
+      "amostras": 91,
+      "ciclos": 4,
+      "raio_modelo_metros": 1.7504890272392457,
+      "limite_y_modelo": [
+        11.882343080914005,
+        26.764509403538142
+      ],
+      "meio_tamanho_max_particula_metros": 0.038,
+      "raio_emissores_metros": 1.628462258114566
+    },
+    {
+      "mode": 4,
+      "amostras": 91,
+      "ciclos": 4,
+      "raio_modelo_metros": 1.6074922737469846,
+      "limite_y_modelo": [
+        11.6,
+        24.25
+      ],
+      "meio_tamanho_max_particula_metros": 0.018,
+      "raio_emissores_metros": 1.6001779868671042
+    },
+    {
+      "mode": 5,
+      "amostras": 91,
+      "ciclos": 4,
+      "raio_modelo_metros": 1.7916637838075447,
+      "limite_y_modelo": [
+        -0.7809212946192117,
+        27.311666221841797
+      ],
+      "meio_tamanho_max_particula_metros": 0.044,
+      "raio_emissores_metros": 1.6369475394888047
+    },
+    {
+      "mode": 6,
+      "amostras": 91,
+      "ciclos": 4,
+      "raio_modelo_metros": 2.0484869606919642,
+      "limite_y_modelo": [
+        -0.32,
+        32.2
+      ],
+      "meio_tamanho_max_particula_metros": 0.020999999999999998,
+      "raio_emissores_metros": 1.9260067614905212
+    }
+  ],
+  "trocas": [
+    {
+      "target": 1,
+      "state": "modo1"
+    },
+    {
+      "target": 3,
+      "state": "modo3"
+    },
+    {
+      "target": 5,
+      "state": "modo5"
+    },
+    {
+      "target": 0,
+      "state": "default"
+    },
+    {
+      "target": 2,
+      "state": "modo2"
+    },
+    {
+      "target": 4,
+      "state": "modo4"
+    },
+    {
+      "target": 6,
+      "state": "modo6"
+    },
+    {
+      "target": 0,
+      "state": "default"
+    },
+    {
+      "target": 1,
+      "state": "modo1"
+    }
+  ],
+  "fontes_sha256": {
+    "entity/player.entity.json": "fb57d4f459fa7502a57c09ebc163d8546f184917f1d6ea7795b0d0a6d68ab5df",
+    "render_controllers/swbr_aburame.json": "7ef772243bff7c0ae3c060551d582626886bda8b426640b70c2d3a74e55367bf",
+    "animation_controllers/swbr_aburame.json": "9315d2b0a6b03ae28149bc6856cb012104846c3e6ade3169565f269fe647dca8",
+    "models/entity/swbr_aburame_draw.geo.json": "e90696847e3f9fb3a3f80ec65bfd449690b1031f64f8519cd41997461bf34d7d",
+    "models/entity/swbr39/custom.geo.json": "7475d54119ac416692e30cb5ecfd268a53889dbedb88af864e06a80fc25e0a2b",
+    "models/entity/nz_insetos_aburame_m.json": "a162458d73bcf598dfb2c89abe3ea9e2347c7c46d67b544939ec5e3b5a96af18",
+    "animations/swbr_aburame_1.json": "1567dfcdd2e8bed786207ac89495f6b9cca93dd31c31c8657300b1fcb3914f4f",
+    "particles/swbr_aburame_1.json": "7e7d3b84355bc8dfd6b3fca130a088f1a24724b9f7109ed30b0ac36278edc39f",
+    "models/entity/nz_insetos_aburame_m2.json": "443fe168b0ab26d1dc9c6e983114deb709fc7e72b8ed02d46ba39de3263d7d7e",
+    "animations/swbr_aburame_2.json": "5187edd809ee288b0aab8de3449c124489d5ee8493675ee36076ab80f6836de5",
+    "particles/swbr_aburame_2.json": "a471fd226f00df8bd7cbb9b4d1115ffe3989adbefc2d498464ac925f67854c30",
+    "models/entity/nz_insetos_aburame_half.geo.json": "9f1050e861c7cefddb07833cfcc389158914382f563f26f57fb88d64515494e1",
+    "animations/swbr_aburame_3.json": "3a344eb8311ef75cd178e93c011fe8be5a6b0fd30517183c0c4150929ab16f5c",
+    "particles/swbr_aburame_3.json": "3609350fd76dfc7f21d664840113a81124cca7447c2f0df0d4413ca52af61dae",
+    "models/entity/nz_insetos_aburame_half_poison.geo.json": "ba734b7267972b3fbf7bf59e4e511f64d38d677d9f06db508760ba6500db62b1",
+    "animations/swbr_aburame_4.json": "9ed3801fb7dd1f3d931ca686dd777a89721f499b2c53a372af71603005bfafc5",
+    "particles/swbr_aburame_4.json": "a30b70894313045e275ba797ea80d6178c32392c29e66e94402f43ac17358384",
+    "models/entity/nz_insetos_aburame_full.geo.json": "1d17e82870fa7cd07b8362590d8495a3b92007a86613721e389f569899bcd135",
+    "animations/swbr_aburame_5.json": "51397912ce6a91619da1f2e372a832e86eca48ae8af23d1a9ac61f2af3771a83",
+    "particles/swbr_aburame_5.json": "c9091b8c533f2fedede0bffb5f974e45c757d45f55c82647e04f8b0dbc941292",
+    "models/entity/nz_insetos_aburame_full_poison.geo.json": "8bd0f07494acce9e303a58b685dadca0ea765b2e233a52b64e330daf9227e172",
+    "animations/swbr_aburame_6.json": "20045aa8e15a1a3463e3b8ef2a63544f0b0681fff37b1721a094602ebaffb74d",
+    "particles/swbr_aburame_6.json": "fe48f4e699bd1078ae6b513699c3e74bd9c95e33ee0456f2262b655a834135db"
+  },
+  "limites": "Transformações dos efeitos sobre o rig em pose base, projeções numéricas e condições de estado. Não é teste do renderizador, de multiplayer ou do desempenho no Minecraft."
+}

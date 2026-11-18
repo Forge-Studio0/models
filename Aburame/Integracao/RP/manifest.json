@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "SWBR 18.11.69 | Seis modos Aburame reconstruídos; base 18.11.68, Iburi e sistemas preservados",
+    "name": "Shinobi World BR 18.11.69 · Aburame",
+    "uuid": "ef513a51-2cb2-4cc5-b300-5ef44201c3f5",
+    "version": [
+      18,
+      11,
+      69
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      10
+    ]
+  },
+  "modules": [
+    {
+      "description": "Naruto Zenkai (Final) (BY:Tio-LP)",
+      "type": "resources",
+      "uuid": "b04cbfe3-d7c5-489f-a8f6-3cef2b6a52cd",
+      "version": [
+        18,
+        11,
+        69
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "82dafe0d-c36f-4665-9df0-371f6d8b2a55",
+      "version": [
+        18,
+        11,
+        69
+      ]
+    }
+  ]
+}

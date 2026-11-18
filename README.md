@@ -2,6 +2,16 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
+## Clã Aburame — seis modos reconstruídos 18.11.69
+
+Besouros e enxames nos modos comuns; revestimento violeta microscópico nos venenosos. Mantidos os itens no slot da cabeça, atributos, níveis, `AburameRaro`, jutsus e o Iburi aprovado. Sem prévias.
+
+- [Aburame.zip — addon, integração e seis modelos editáveis](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.zip)
+- [Aburame.mcaddon — addon atualizada](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.mcaddon)
+- [Pasta do clã, instruções e validações](Aburame)
+
+Os seis projetos foram conferidos no Blockbench e os arquivos passaram por validação estática. Os testes dentro do Minecraft ainda precisam ser feitos.
+
 ## Clã Iburi — modelos atuais 18.11.68
 
 A pasta do clã contém somente os três modelos atuais, com texturas e animações embutidas, editáveis no Blockbench. O funcionamento do modo foi confirmado pelo usuário.

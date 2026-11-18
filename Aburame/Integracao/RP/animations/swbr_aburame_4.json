@@ -1,0 +1,249 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.swbr.aburame4.idle": {
+      "loop": true,
+      "animation_length": 7.8,
+      "bones": {
+        "swbr_aburame4_crawl_pontos_00": {
+          "position": [
+            "0.045*math.sin(q.life_time*47+159.303)",
+            "0.07*math.cos(q.life_time*53+159.303)",
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            "0.8*math.sin(q.life_time*31+159.303)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame4_crawl_pontos_01": {
+          "position": [
+            "0.045*math.sin(q.life_time*47+191.381)",
+            "0.07*math.cos(q.life_time*53+191.381)",
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            "0.8*math.sin(q.life_time*31+191.381)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame4_crawl_pontos_02": {
+          "position": [
+            "0.045*math.sin(q.life_time*47+300.591)",
+            "0.07*math.cos(q.life_time*53+300.591)",
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            "0.8*math.sin(q.life_time*31+300.591)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame4_crawl_pontos_03": {
+          "position": [
+            "0.045*math.sin(q.life_time*47+114.081)",
+            "0.07*math.cos(q.life_time*53+114.081)",
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            "0.8*math.sin(q.life_time*31+114.081)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame4_crawl_pontos_04": {
+          "position": [
+            "0.045*math.sin(q.life_time*47+157.699)",
+            "0.07*math.cos(q.life_time*53+157.699)",
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            "0.8*math.sin(q.life_time*31+157.699)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame4_crawl_pontos_05": {
+          "position": [
+            "0.045*math.sin(q.life_time*47+123.266)",
+            "0.07*math.cos(q.life_time*53+123.266)",
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            "0.8*math.sin(q.life_time*31+123.266)"
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_00": {
+          "position": [
+            "0.12*math.sin(q.life_time*45.243+8.194)",
+            "0.16*math.cos(q.life_time*36.194+8.194)",
+            "0.10*math.sin(q.life_time*31.670+8.194)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+8.194)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+8.194)",
+            "1+0.04*math.cos(q.life_time*41+8.194)",
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_01": {
+          "position": [
+            "0.12*math.sin(q.life_time*49.946+193.618)",
+            "0.16*math.cos(q.life_time*39.957+193.618)",
+            "0.10*math.sin(q.life_time*34.962+193.618)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+193.618)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+193.618)",
+            "1+0.04*math.cos(q.life_time*41+193.618)",
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_02": {
+          "position": [
+            "0.12*math.sin(q.life_time*55.714+175.955)",
+            "0.16*math.cos(q.life_time*44.571+175.955)",
+            "0.10*math.sin(q.life_time*39.000+175.955)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+175.955)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+175.955)",
+            "1+0.04*math.cos(q.life_time*41+175.955)",
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_03": {
+          "position": [
+            "0.12*math.sin(q.life_time*37.960+159.608)",
+            "0.16*math.cos(q.life_time*30.368+159.608)",
+            "0.10*math.sin(q.life_time*26.572+159.608)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+159.608)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+159.608)",
+            "1+0.04*math.cos(q.life_time*41+159.608)",
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_04": {
+          "position": [
+            "0.12*math.sin(q.life_time*57.647+179.060)",
+            "0.16*math.cos(q.life_time*46.117+179.060)",
+            "0.10*math.sin(q.life_time*40.353+179.060)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+179.060)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+179.060)",
+            "1+0.04*math.cos(q.life_time*41+179.060)",
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_05": {
+          "position": [
+            "0.12*math.sin(q.life_time*46.190+351.820)",
+            "0.16*math.cos(q.life_time*36.952+351.820)",
+            "0.10*math.sin(q.life_time*32.333+351.820)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+351.820)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+351.820)",
+            "1+0.04*math.cos(q.life_time*41+351.820)",
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_06": {
+          "position": [
+            "0.12*math.sin(q.life_time*45.919+147.388)",
+            "0.16*math.cos(q.life_time*36.736+147.388)",
+            "0.10*math.sin(q.life_time*32.144+147.388)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+147.388)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+147.388)",
+            "1+0.04*math.cos(q.life_time*41+147.388)",
+            1
+          ]
+        },
+        "swbr_aburame4_micro_grupo_07": {
+          "position": [
+            "0.12*math.sin(q.life_time*41.510+121.219)",
+            "0.16*math.cos(q.life_time*33.208+121.219)",
+            "0.10*math.sin(q.life_time*29.057+121.219)"
+          ],
+          "rotation": [
+            0,
+            "2*math.sin(q.life_time*29+121.219)",
+            0
+          ],
+          "scale": [
+            "1+0.05*math.sin(q.life_time*37+121.219)",
+            "1+0.04*math.cos(q.life_time*41+121.219)",
+            1
+          ]
+        }
+      }
+    }
+  }
+}

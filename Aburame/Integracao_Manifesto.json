@@ -1,0 +1,241 @@
+{
+  "clan": "Aburame",
+  "base_filename": "SWBR_18.11.68_IBURI.mcaddon",
+  "base_sha256": "fbcd94172035065c04d38d8060ebd132956cd66855eecbe494431108aab7fe40",
+  "base_version": [
+    18,
+    11,
+    68
+  ],
+  "version": [
+    18,
+    11,
+    69
+  ],
+  "packs": {
+    "BP": {
+      "original_entry": "SWBR_BP_v18.11.68_IBURI.mcpack",
+      "updated_entry": "SWBR_BP_v18.11.69_ABURAME.mcpack",
+      "files": {
+        "manifest.json": "15fa7c14a5f611e8288158b75cbcbd71f32f8de4c56075903aa4c9ce7c902629"
+      }
+    },
+    "RP": {
+      "original_entry": "SWBR_RP_v18.11.68_IBURI.mcpack",
+      "updated_entry": "SWBR_RP_v18.11.69_ABURAME.mcpack",
+      "files": {
+        "animation_controllers/swbr_aburame.json": "9315d2b0a6b03ae28149bc6856cb012104846c3e6ade3169565f269fe647dca8",
+        "animations/swbr_aburame_1.json": "1567dfcdd2e8bed786207ac89495f6b9cca93dd31c31c8657300b1fcb3914f4f",
+        "animations/swbr_aburame_2.json": "5187edd809ee288b0aab8de3449c124489d5ee8493675ee36076ab80f6836de5",
+        "animations/swbr_aburame_3.json": "3a344eb8311ef75cd178e93c011fe8be5a6b0fd30517183c0c4150929ab16f5c",
+        "animations/swbr_aburame_4.json": "9ed3801fb7dd1f3d931ca686dd777a89721f499b2c53a372af71603005bfafc5",
+        "animations/swbr_aburame_5.json": "51397912ce6a91619da1f2e372a832e86eca48ae8af23d1a9ac61f2af3771a83",
+        "animations/swbr_aburame_6.json": "20045aa8e15a1a3463e3b8ef2a63544f0b0681fff37b1721a094602ebaffb74d",
+        "attachables/nz_insetos_aburame_full.json": "ae4f6c5e36643ef5ef5f6dcc7de14632b3f64c0b11112aa8904afc2668263966",
+        "attachables/nz_insetos_aburame_full_poison.json": "7e98a96535220e5dbff0cd8436c9b6e3ced215f5e3d3d485bb56964095bbb617",
+        "attachables/nz_insetos_aburame_half.json": "028e48f6c6676dad02d86ff2d031cd536af401e83993b270b572043d2cbd28b4",
+        "attachables/nz_insetos_aburame_half.player.json": "c762ea95ed92307452f3e5b9619926e566bf326383fefd6e9acd126ae7f29412",
+        "attachables/nz_insetos_aburame_half_poison.json": "10a29193fe29a7655b6189328007197fdb307bb36fd068d9385d4a21798b7b29",
+        "attachables/nz_insetos_aburame_half_poison.player.json": "a39e2144f7e68b93d0352c7727bf32f5eae8ac63ec975e24c9d252deee78675a",
+        "attachables/nz_insetos_aburame_m.json": "dd5a2417f8df31eb71a4d59c4144f0caa806c2878e1eb9687ddd9498cebb3a08",
+        "attachables/nz_insetos_aburame_m.player.json": "b1ca1933d0272ce8117ec8f511364cc5997aa7b46169cdafe805f3ba29c5332a",
+        "attachables/nz_insetos_aburame_m2.json": "1b02134f65332db5d898eb90355463619b54b2bd5d52c46972000bd6a5532e0d",
+        "attachables/nz_insetos_aburame_m2.player.json": "54ff81119188e945521c248776da745b1365fd03e77acd91c1a976c5251550d9",
+        "entity/player.entity.json": "fb57d4f459fa7502a57c09ebc163d8546f184917f1d6ea7795b0d0a6d68ab5df",
+        "manifest.json": "187375fdcdaa15f8f5a139afb634c974a6ffebb13ac382e54f17c7b47dc5d906",
+        "models/entity/nz_insetos_aburame_full.geo.json": "1d17e82870fa7cd07b8362590d8495a3b92007a86613721e389f569899bcd135",
+        "models/entity/nz_insetos_aburame_full_poison.geo.json": "8bd0f07494acce9e303a58b685dadca0ea765b2e233a52b64e330daf9227e172",
+        "models/entity/nz_insetos_aburame_half.geo.json": "9f1050e861c7cefddb07833cfcc389158914382f563f26f57fb88d64515494e1",
+        "models/entity/nz_insetos_aburame_half_poison.geo.json": "ba734b7267972b3fbf7bf59e4e511f64d38d677d9f06db508760ba6500db62b1",
+        "models/entity/nz_insetos_aburame_m.json": "a162458d73bcf598dfb2c89abe3ea9e2347c7c46d67b544939ec5e3b5a96af18",
+        "models/entity/nz_insetos_aburame_m2.json": "443fe168b0ab26d1dc9c6e983114deb709fc7e72b8ed02d46ba39de3263d7d7e",
+        "models/entity/swbr39/custom.geo.json": "7475d54119ac416692e30cb5ecfd268a53889dbedb88af864e06a80fc25e0a2b",
+        "models/entity/swbr39/custom_b.geo.json": "da304fb832c15898a35f5d160c0d8af1f0fb3356e2b45c1dd90c8b3e0fa4c0f7",
+        "models/entity/swbr_aburame_draw.geo.json": "e90696847e3f9fb3a3f80ec65bfd449690b1031f64f8519cd41997461bf34d7d",
+        "models/entity/swbr_aburame_slot.geo.json": "9dc92e500492b667e715449d3d87e569dbcca09201dcc796ab65efa79f430b16",
+        "particles/swbr_aburame_1.json": "7e7d3b84355bc8dfd6b3fca130a088f1a24724b9f7109ed30b0ac36278edc39f",
+        "particles/swbr_aburame_2.json": "a471fd226f00df8bd7cbb9b4d1115ffe3989adbefc2d498464ac925f67854c30",
+        "particles/swbr_aburame_3.json": "3609350fd76dfc7f21d664840113a81124cca7447c2f0df0d4413ca52af61dae",
+        "particles/swbr_aburame_4.json": "a30b70894313045e275ba797ea80d6178c32392c29e66e94402f43ac17358384",
+        "particles/swbr_aburame_5.json": "c9091b8c533f2fedede0bffb5f974e45c757d45f55c82647e04f8b0dbc941292",
+        "particles/swbr_aburame_6.json": "fe48f4e699bd1078ae6b513699c3e74bd9c95e33ee0456f2262b655a834135db",
+        "render_controllers/swbr_aburame.json": "7ef772243bff7c0ae3c060551d582626886bda8b426640b70c2d3a74e55367bf",
+        "textures/entity/swbr/aburame/modo_1.png": "941338511c7d576f51cb9e96ddae2b5aa7cd16dfccfde882a1a51f6382c9a27e",
+        "textures/entity/swbr/aburame/modo_2.png": "67ce94605df4c69276f7213165857141b51256129920d1487f85dddb67c70855",
+        "textures/entity/swbr/aburame/modo_3.png": "bde562e4898cd475880e209d7a98f2e78eb000e913307b504686be55e8f48fa0",
+        "textures/entity/swbr/aburame/modo_4.png": "12721583681195a663df1e700a27bc092e801008022584560172537c9ea37704",
+        "textures/entity/swbr/aburame/modo_5.png": "acffe6a57771c739f0300c85c588a7d2af8bbd714ac2562e116b6a1829715d79",
+        "textures/entity/swbr/aburame/modo_6.png": "665c9f5467a58c3667e44d9bcf0765e7f2b136bf51a64abab9e8256c2a380c4c",
+        "textures/entity/swbr/aburame/particulas_1.png": "bc9e8d6fc472ab974659d36a185d58f3d405ec62959113e7c0127bf128a4e334",
+        "textures/entity/swbr/aburame/particulas_2.png": "9cb1315fdd10f6374c1df3fcd77a3d4db788a468ccd6a7e349afe2f919c5fa8d",
+        "textures/entity/swbr/aburame/particulas_3.png": "bc9e8d6fc472ab974659d36a185d58f3d405ec62959113e7c0127bf128a4e334",
+        "textures/entity/swbr/aburame/particulas_4.png": "05952439149a99b6444abe67a832ca630a11d7392ce19405f80b8148f1cefbed",
+        "textures/entity/swbr/aburame/particulas_5.png": "bc9e8d6fc472ab974659d36a185d58f3d405ec62959113e7c0127bf128a4e334",
+        "textures/entity/swbr/aburame/particulas_6.png": "fe6a758380ce247b0074a8ba2e783804e95fb0db2ae75bf85dcf505999e8cb37"
+      }
+    }
+  },
+  "removed_files": [],
+  "modes": {
+    "1": {
+      "id": "nz:insetos_aburame_m",
+      "level": 10,
+      "kind": "comum",
+      "tier": 1,
+      "name": "Aburame_01_Insetos",
+      "path": "models/entity/nz_insetos_aburame_m.json",
+      "gid": "geometry.nz_insetos_aburame_m"
+    },
+    "2": {
+      "id": "nz:insetos_aburame_m2",
+      "level": 10,
+      "kind": "venenoso",
+      "tier": 1,
+      "name": "Aburame_02_Venenosos",
+      "path": "models/entity/nz_insetos_aburame_m2.json",
+      "gid": "geometry.nz_insetos_aburame_m2"
+    },
+    "3": {
+      "id": "nz:insetos_aburame_half",
+      "level": 20,
+      "kind": "comum",
+      "tier": 2,
+      "name": "Aburame_03_Imbuidos",
+      "path": "models/entity/nz_insetos_aburame_half.geo.json",
+      "gid": "geometry.nz_insetos_aburame_half"
+    },
+    "4": {
+      "id": "nz:insetos_aburame_half_poison",
+      "level": 30,
+      "kind": "venenoso",
+      "tier": 2,
+      "name": "Aburame_04_Venenosos_Imbuidos",
+      "path": "models/entity/nz_insetos_aburame_half_poison.geo.json",
+      "gid": "geometry.nz_insetos_aburame_half_poison"
+    },
+    "5": {
+      "id": "nz:insetos_aburame_full",
+      "level": 40,
+      "kind": "comum",
+      "tier": 3,
+      "name": "Aburame_05_Totalmente_Imbuido",
+      "path": "models/entity/nz_insetos_aburame_full.geo.json",
+      "gid": "geometry.nz_insetos_aburame_full"
+    },
+    "6": {
+      "id": "nz:insetos_aburame_full_poison",
+      "level": 50,
+      "kind": "venenoso",
+      "tier": 3,
+      "name": "Aburame_06_Venenoso_Totalmente_Imbuido",
+      "path": "models/entity/nz_insetos_aburame_full_poison.geo.json",
+      "gid": "geometry.nz_insetos_aburame_full_poison"
+    }
+  },
+  "modelos_anteriores": {
+    "1": {
+      "bones": 714,
+      "cubos": 707
+    },
+    "2": {
+      "bones": 714,
+      "cubos": 707
+    },
+    "3": {
+      "bones": 714,
+      "cubos": 707
+    },
+    "4": {
+      "bones": 714,
+      "cubos": 707
+    },
+    "5": {
+      "bones": 723,
+      "cubos": 714
+    },
+    "6": {
+      "bones": 723,
+      "cubos": 714
+    }
+  },
+  "modelos_novos": {
+    "1": {
+      "besouros_3d": 12,
+      "agrupamentos_vazados": 4,
+      "bones": 48,
+      "cubos": 72,
+      "passes": 4,
+      "roles": [
+        "solid_a",
+        "solid_b",
+        "swarm_a",
+        "swarm_b"
+      ]
+    },
+    "2": {
+      "superficies_aderidas": 2,
+      "regioes_micro_rastejantes": 4,
+      "micro_agrupamentos": 4,
+      "bones": 18,
+      "cubos": 14,
+      "passes": 3,
+      "roles": [
+        "coat",
+        "crawl",
+        "micro"
+      ]
+    },
+    "3": {
+      "besouros_3d": 20,
+      "agrupamentos_vazados": 10,
+      "bones": 78,
+      "cubos": 130,
+      "passes": 4,
+      "roles": [
+        "solid_a",
+        "solid_b",
+        "swarm_a",
+        "swarm_b"
+      ]
+    },
+    "4": {
+      "superficies_aderidas": 3,
+      "regioes_micro_rastejantes": 6,
+      "micro_agrupamentos": 8,
+      "bones": 25,
+      "cubos": 25,
+      "passes": 3,
+      "roles": [
+        "coat",
+        "crawl",
+        "micro"
+      ]
+    },
+    "5": {
+      "besouros_3d": 30,
+      "agrupamentos_vazados": 20,
+      "bones": 118,
+      "cubos": 210,
+      "passes": 4,
+      "roles": [
+        "solid_a",
+        "solid_b",
+        "swarm_a",
+        "swarm_b"
+      ]
+    },
+    "6": {
+      "superficies_aderidas": 6,
+      "regioes_micro_rastejantes": 12,
+      "micro_agrupamentos": 12,
+      "bones": 38,
+      "cubos": 42,
+      "passes": 3,
+      "roles": [
+        "coat",
+        "crawl",
+        "micro"
+      ]
+    }
+  }
+}

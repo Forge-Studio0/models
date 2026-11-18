@@ -1,0 +1,174 @@
+{
+  "screenshots_created": false,
+  "minecraft_executado": false,
+  "results": [
+    {
+      "mode": 1,
+      "editor": "4.12.6",
+      "format": "bedrock",
+      "cubes": 72,
+      "bones": 48,
+      "animations": [
+        {
+          "name": "animation.swbr.aburame1.idle",
+          "length": 7.2,
+          "animators": 40
+        }
+      ],
+      "texture_error": 0,
+      "reopened": {
+        "cubes": 72,
+        "bones": 48,
+        "animations": 1,
+        "texture_error": 0
+      },
+      "errors": [],
+      "geometry_roundtrip": true,
+      "animation_roundtrip": true,
+      "source_sha256": "364e1386a071cbd987febe6e25183c805609b9cb2b2ca346a541dec1c3950d6f",
+      "native_geometry_sha256": "a162458d73bcf598dfb2c89abe3ea9e2347c7c46d67b544939ec5e3b5a96af18",
+      "native_animation_sha256": "1567dfcdd2e8bed786207ac89495f6b9cca93dd31c31c8657300b1fcb3914f4f",
+      "texture_sha256": "941338511c7d576f51cb9e96ddae2b5aa7cd16dfccfde882a1a51f6382c9a27e"
+    },
+    {
+      "mode": 2,
+      "editor": "4.12.6",
+      "format": "bedrock",
+      "cubes": 14,
+      "bones": 18,
+      "animations": [
+        {
+          "name": "animation.swbr.aburame2.idle",
+          "length": 8.4,
+          "animators": 8
+        }
+      ],
+      "texture_error": 0,
+      "reopened": {
+        "cubes": 14,
+        "bones": 18,
+        "animations": 1,
+        "texture_error": 0
+      },
+      "errors": [],
+      "geometry_roundtrip": true,
+      "animation_roundtrip": true,
+      "source_sha256": "901bc0d5a19f237c00763fa347c94e1e75fb74568ce72d7e68f7adaa6cb5e0ee",
+      "native_geometry_sha256": "443fe168b0ab26d1dc9c6e983114deb709fc7e72b8ed02d46ba39de3263d7d7e",
+      "native_animation_sha256": "5187edd809ee288b0aab8de3449c124489d5ee8493675ee36076ab80f6836de5",
+      "texture_sha256": "67ce94605df4c69276f7213165857141b51256129920d1487f85dddb67c70855"
+    },
+    {
+      "mode": 3,
+      "editor": "4.12.6",
+      "format": "bedrock",
+      "cubes": 130,
+      "bones": 78,
+      "animations": [
+        {
+          "name": "animation.swbr.aburame3.idle",
+          "length": 6.8,
+          "animators": 70
+        }
+      ],
+      "texture_error": 0,
+      "reopened": {
+        "cubes": 130,
+        "bones": 78,
+        "animations": 1,
+        "texture_error": 0
+      },
+      "errors": [],
+      "geometry_roundtrip": true,
+      "animation_roundtrip": true,
+      "source_sha256": "6aafa3eb7f86b5bf15ed0f6ed476ed1d08c45c00f56811c807769d113fb4b861",
+      "native_geometry_sha256": "9f1050e861c7cefddb07833cfcc389158914382f563f26f57fb88d64515494e1",
+      "native_animation_sha256": "3a344eb8311ef75cd178e93c011fe8be5a6b0fd30517183c0c4150929ab16f5c",
+      "texture_sha256": "bde562e4898cd475880e209d7a98f2e78eb000e913307b504686be55e8f48fa0"
+    },
+    {
+      "mode": 4,
+      "editor": "4.12.6",
+      "format": "bedrock",
+      "cubes": 25,
+      "bones": 25,
+      "animations": [
+        {
+          "name": "animation.swbr.aburame4.idle",
+          "length": 7.8,
+          "animators": 14
+        }
+      ],
+      "texture_error": 0,
+      "reopened": {
+        "cubes": 25,
+        "bones": 25,
+        "animations": 1,
+        "texture_error": 0
+      },
+      "errors": [],
+      "geometry_roundtrip": true,
+      "animation_roundtrip": true,
+      "source_sha256": "aea15ea1d47799b7181e1c7fc70d502e3788dcd24c9846965bf8a7c38b8e796c",
+      "native_geometry_sha256": "ba734b7267972b3fbf7bf59e4e511f64d38d677d9f06db508760ba6500db62b1",
+      "native_animation_sha256": "9ed3801fb7dd1f3d931ca686dd777a89721f499b2c53a372af71603005bfafc5",
+      "texture_sha256": "12721583681195a663df1e700a27bc092e801008022584560172537c9ea37704"
+    },
+    {
+      "mode": 5,
+      "editor": "4.12.6",
+      "format": "bedrock",
+      "cubes": 210,
+      "bones": 118,
+      "animations": [
+        {
+          "name": "animation.swbr.aburame5.idle",
+          "length": 6.2,
+          "animators": 110
+        }
+      ],
+      "texture_error": 0,
+      "reopened": {
+        "cubes": 210,
+        "bones": 118,
+        "animations": 1,
+        "texture_error": 0
+      },
+      "errors": [],
+      "geometry_roundtrip": true,
+      "animation_roundtrip": true,
+      "source_sha256": "5f92ab1590472224932ef2538247c26c3021fd0614ecaabbf8f13254de349b21",
+      "native_geometry_sha256": "1d17e82870fa7cd07b8362590d8495a3b92007a86613721e389f569899bcd135",
+      "native_animation_sha256": "51397912ce6a91619da1f2e372a832e86eca48ae8af23d1a9ac61f2af3771a83",
+      "texture_sha256": "acffe6a57771c739f0300c85c588a7d2af8bbd714ac2562e116b6a1829715d79"
+    },
+    {
+      "mode": 6,
+      "editor": "4.12.6",
+      "format": "bedrock",
+      "cubes": 42,
+      "bones": 38,
+      "animations": [
+        {
+          "name": "animation.swbr.aburame6.idle",
+          "length": 7.2,
+          "animators": 24
+        }
+      ],
+      "texture_error": 0,
+      "reopened": {
+        "cubes": 42,
+        "bones": 38,
+        "animations": 1,
+        "texture_error": 0
+      },
+      "errors": [],
+      "geometry_roundtrip": true,
+      "animation_roundtrip": true,
+      "source_sha256": "363445a3bf2272cd1f1b0df841c6055b44516685b45ea32456f109cb0510454d",
+      "native_geometry_sha256": "8bd0f07494acce9e303a58b685dadca0ea765b2e233a52b64e330daf9227e172",
+      "native_animation_sha256": "20045aa8e15a1a3463e3b8ef2a63544f0b0681fff37b1721a094602ebaffb74d",
+      "texture_sha256": "665c9f5467a58c3667e44d9bcf0765e7f2b136bf51a64abab9e8256c2a380c4c"
+    }
+  ]
+}
