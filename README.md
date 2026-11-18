@@ -2,10 +2,11 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Kaguya — versão de teste 18.11.73
+## Clã Kaguya — modelos aprovados 18.11.73
 
 - [Cinco modelos do Blockbench e opções de instalação](Kaguya/)
-- [Pacote com addon e integração](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Kaguya/Kaguya.zip)
+- [Pacote final com addon e integração](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Kaguya/Kaguya.zip)
+- [Addon para importar no Minecraft](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Kaguya/Kaguya.mcaddon)
 
 ## Clã Aburame — modelos aprovados 18.11.72
 
