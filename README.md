@@ -2,16 +2,11 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Aburame — correção visual 18.11.72
+## Clã Aburame — modelos aprovados 18.11.72
 
-Enxames pretos com recortes mais nítidos, violeta aplicado à textura das peles SWBR e marcadores pequenos quando o rastreio encontra um alvo. Os seis itens são equipáveis no slot da cabeça.
-
-- [Aburame.zip — addon, integração e seis modelos editáveis](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.zip)
-- [Aburame.mcaddon — addon atualizada](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.mcaddon)
-- [Pasta do clã, instruções e validações](Aburame)
-- [Diagnóstico e correção dos efeitos](Aburame/Correcao_Visual.md)
-
-Os seis projetos foram conferidos no Blockbench e os arquivos passaram por validação estática. Os testes dentro do Minecraft ainda precisam ser feitos.
+- [Seis modelos atuais do Blockbench](Aburame/Modelos_Blockbench)
+- [Pacote completo com addon e integração](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.zip)
+- [Addon para importar no Minecraft](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.mcaddon)
 
 ## Clã Iburi — modelos atuais 18.11.68
 
