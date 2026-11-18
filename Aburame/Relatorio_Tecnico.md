@@ -8,6 +8,8 @@ Os seis modelos foram reconstruídos. Os modos comuns combinam besouros com corp
 
 Há seis atlas diferentes de 512 × 512, além de seis flipbooks de partículas. As bordas dos agrupamentos terminam em pixels transparentes e deixam espaços entre organismos. As cores dos venenos são foscas e escuras; os materiais usam `entity_alphatest`, `entity_alphablend` e `particles_blend`, sem emissão luminosa.
 
+Na revisão 18.11.71, os atlas dos enxames concentram besouros sobrepostos em núcleos com bordas vazadas. As faces cruzadas variam em tamanho, profundidade e inclinação. Nos venenosos, as manchas têm contraste mais baixo e a opacidade varia em cada região. As mãos recebem o violeta mais forte nos primeiros estágios. No último, a frente da cabeça usa uma área do atlas mais translúcida para que a pele apareça por baixo. [Comparativo dos seis modos](Comparativo_dos_Modos.md)
+
 | Modo | Bones antes → agora | Cubos antes → agora | Organização |
 | --- | ---: | ---: | --- |
 | 1 | 714 → 62 | 707 → 98 | 16 besouros modelados e 6 grupos com profundidade |
@@ -37,7 +39,7 @@ Os emissores usam locators novos nos dois rigs nativos e simulação em espaço 
 
 ## Preservação da addon
 
-A integração usa exclusivamente a base aprovada 18.11.68, identificada por SHA-256. O BP mudou apenas o manifesto para 18.11.70. Itens, atributos, níveis, proteção, multiplicadores, scripts de combate, seleção do clã e jutsus continuam idênticos aos originais.
+A integração usa a base aprovada 18.11.68, identificada por SHA-256. O pacote contém as versões 18.11.71 de BP e RP. A comparação confirma a integridade dos itens, atributos, níveis, proteção, multiplicadores, scripts de combate, seleção do clã e jutsus.
 
 O sorteio e a tag `AburameRaro` não foram reescritos. A exigência explícita na primeira entrada venenosa do menu continua igual; os demais modos mantêm as verificações da base. Não foram acrescentadas novas condições de raridade.
 

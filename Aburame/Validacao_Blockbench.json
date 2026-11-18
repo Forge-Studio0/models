@@ -25,10 +25,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "6d97afaddc59289d8c1c56e4eec674882097addfb14e07888f0a10b3e66bdf48",
-      "native_geometry_sha256": "a1fa553f518487d8ebc8457a972287c3b3b2491f8410d2bbfa2523b4cc82dbb8",
+      "source_sha256": "28542e06f4ad27a30cd2d7d23b138b6642407fdf0802b624a03e86c61429ff1d",
+      "native_geometry_sha256": "a6f69d663a7dc7a0ee20b749944e91bfef9c37460b425235f06fc064ef89062b",
       "native_animation_sha256": "3290a9d47555706feb7fb0e289fa39c847cafa105b4cb5592ba438117ecef124",
-      "texture_sha256": "42f3be4376379d3ed5bec5f1aec04ee9c1fb9d25c7a017438e9e65bbf9a8e60d"
+      "texture_sha256": "8dec4a05dde8c7b23e20d66c2d6db3d48501b57266b69c3a2898780547b5599c"
     },
     {
       "mode": 2,
@@ -53,10 +53,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "901bc0d5a19f237c00763fa347c94e1e75fb74568ce72d7e68f7adaa6cb5e0ee",
-      "native_geometry_sha256": "443fe168b0ab26d1dc9c6e983114deb709fc7e72b8ed02d46ba39de3263d7d7e",
+      "source_sha256": "79ee141f84e11f6a45972660dc2be300de34dc9c6903b174c962725e11feef7d",
+      "native_geometry_sha256": "757e89ce5c45fc9670735f747d3460cf38d5c6f54c2013aa3e71fb662cf9f607",
       "native_animation_sha256": "5187edd809ee288b0aab8de3449c124489d5ee8493675ee36076ab80f6836de5",
-      "texture_sha256": "67ce94605df4c69276f7213165857141b51256129920d1487f85dddb67c70855"
+      "texture_sha256": "1410787bc708ba79e9492f0033900c165e1572fdab4428fb016f59ac468cda8e"
     },
     {
       "mode": 3,
@@ -81,10 +81,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "6aafa3eb7f86b5bf15ed0f6ed476ed1d08c45c00f56811c807769d113fb4b861",
-      "native_geometry_sha256": "9f1050e861c7cefddb07833cfcc389158914382f563f26f57fb88d64515494e1",
-      "native_animation_sha256": "3a344eb8311ef75cd178e93c011fe8be5a6b0fd30517183c0c4150929ab16f5c",
-      "texture_sha256": "bde562e4898cd475880e209d7a98f2e78eb000e913307b504686be55e8f48fa0"
+      "source_sha256": "1e7bfbff07718c83399260b6b5ba8a7d9520275fd999e690cd8cffc7ddb1d4af",
+      "native_geometry_sha256": "17b34da873845804ecb0fd434ce4dee8b76bd848a5d58a501e3feda6b6d7b2b1",
+      "native_animation_sha256": "f16f4d7709cfd9462ee03c4876fa0520043120322192e52a73e860e09911be4c",
+      "texture_sha256": "6cc2173c192c4ecf426d6095c2443cad70aa753884773920114f3e59e6482083"
     },
     {
       "mode": 4,
@@ -109,10 +109,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "aea15ea1d47799b7181e1c7fc70d502e3788dcd24c9846965bf8a7c38b8e796c",
-      "native_geometry_sha256": "ba734b7267972b3fbf7bf59e4e511f64d38d677d9f06db508760ba6500db62b1",
+      "source_sha256": "f567d14a02c1b00272115c4b6b53dbc1ec08f22132e03b534c87cc2669b771d5",
+      "native_geometry_sha256": "35585e2b03aa186e28517863f7e488df0fed648175861119684d995771b11b2a",
       "native_animation_sha256": "9ed3801fb7dd1f3d931ca686dd777a89721f499b2c53a372af71603005bfafc5",
-      "texture_sha256": "12721583681195a663df1e700a27bc092e801008022584560172537c9ea37704"
+      "texture_sha256": "3224ce143dca7f8fdb10cb0bf5110588afa97f0ea532679b5b9a6ffaea4f21fb"
     },
     {
       "mode": 5,
@@ -137,10 +137,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "5f92ab1590472224932ef2538247c26c3021fd0614ecaabbf8f13254de349b21",
-      "native_geometry_sha256": "1d17e82870fa7cd07b8362590d8495a3b92007a86613721e389f569899bcd135",
-      "native_animation_sha256": "51397912ce6a91619da1f2e372a832e86eca48ae8af23d1a9ac61f2af3771a83",
-      "texture_sha256": "acffe6a57771c739f0300c85c588a7d2af8bbd714ac2562e116b6a1829715d79"
+      "source_sha256": "5b620ba14ab6606a696d0f4fedbfacca8fc1c72839166b1933d061e6109c8f52",
+      "native_geometry_sha256": "7460f1080d10544e9df95f5b3f11860dc686f34cfaf85103675a5b72bb1235f8",
+      "native_animation_sha256": "d801704f23cbae436c183422eeb7b65b736bad14f9f85216f3b759bf527fea34",
+      "texture_sha256": "8203da2161f38caa6cf91c2abd2384433e2d9d6df30534354930492b5b31dd6c"
     },
     {
       "mode": 6,
@@ -165,10 +165,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "363445a3bf2272cd1f1b0df841c6055b44516685b45ea32456f109cb0510454d",
-      "native_geometry_sha256": "8bd0f07494acce9e303a58b685dadca0ea765b2e233a52b64e330daf9227e172",
+      "source_sha256": "d0ca61a042ef0c1cf499d193c579f1c4a2e110526eb7cdc22d8b38f8805214e2",
+      "native_geometry_sha256": "e06eca9f0690013012a7cfdabd3a35734b6589729af506cd47a54639d09d3a77",
       "native_animation_sha256": "20045aa8e15a1a3463e3b8ef2a63544f0b0681fff37b1721a094602ebaffb74d",
-      "texture_sha256": "665c9f5467a58c3667e44d9bcf0765e7f2b136bf51a64abab9e8256c2a380c4c"
+      "texture_sha256": "b83e7daed5f7ef92837a441ce47e5f42a289c01c7980ebd3cda3425e48f7581b"
     }
   ]
 }

@@ -49,7 +49,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.86+0.10*math.sin(q.life_time*29+47))*v.swbr_aburame_fade"
+        "a": "(0.94+0.035*math.sin(q.life_time*29+47))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame1.swarm_b": {
@@ -66,7 +66,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.86+0.10*math.sin(q.life_time*29+164))*v.swbr_aburame_fade"
+        "a": "(0.94+0.035*math.sin(q.life_time*29+164))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame2.coat": {
@@ -83,7 +83,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.93+0.025*math.sin(q.life_time*23+106))*v.swbr_aburame_fade"
+        "a": "(0.97+0.018*math.sin(q.life_time*23+106))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame2.crawl": {
@@ -168,7 +168,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.86+0.10*math.sin(q.life_time*29+141))*v.swbr_aburame_fade"
+        "a": "(0.94+0.035*math.sin(q.life_time*29+141))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame3.swarm_b": {
@@ -185,7 +185,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.86+0.10*math.sin(q.life_time*29+258))*v.swbr_aburame_fade"
+        "a": "(0.94+0.035*math.sin(q.life_time*29+258))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame4.coat": {
@@ -202,7 +202,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.93+0.025*math.sin(q.life_time*23+212))*v.swbr_aburame_fade"
+        "a": "(0.97+0.018*math.sin(q.life_time*23+212))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame4.crawl": {
@@ -287,7 +287,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.86+0.10*math.sin(q.life_time*29+235))*v.swbr_aburame_fade"
+        "a": "(0.94+0.035*math.sin(q.life_time*29+235))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame5.swarm_b": {
@@ -304,7 +304,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.86+0.10*math.sin(q.life_time*29+352))*v.swbr_aburame_fade"
+        "a": "(0.94+0.035*math.sin(q.life_time*29+352))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame6.coat": {
@@ -321,7 +321,7 @@
         "r": 1,
         "g": 1,
         "b": 1,
-        "a": "(0.93+0.025*math.sin(q.life_time*23+318))*v.swbr_aburame_fade"
+        "a": "(0.97+0.018*math.sin(q.life_time*23+318))*v.swbr_aburame_fade"
       }
     },
     "controller.render.swbr.aburame6.crawl": {

@@ -1,8 +1,8 @@
-# Clã Aburame — SWBR 18.11.70
+# Clã Aburame — SWBR 18.11.71
 
 Reconstrução dos seis modos sobre a **18.11.68 com o Iburi aprovado**. Os seis itens continuam no **slot da cabeça**, com os mesmos identificadores, níveis, atributos, desbloqueios e regras de raridade.
 
-A **18.11.70** refina o primeiro modo após comparar a gravação do usuário com Shino: concentra mais insetos nas mangas e antebraços e melhora a leitura dos besouros, mantendo a progressão dos estágios. Veja o [comparativo e as alterações](Comparativo_Primeiro_Modo.md).
+A **18.11.71** revisa os seis visuais a partir das capturas no jogo. Os enxames formam concentrações mais nítidas e ganham volume entre os estágios. O violeta se espalha gradualmente pela pele, com menos granulação e o rosto legível no estágio final. [Comparativo dos seis modos](Comparativo_dos_Modos.md)
 
 ## Downloads
 
@@ -11,24 +11,22 @@ A **18.11.70** refina o primeiro modo após comparar a gravação do usuário co
 - [Aburame_Integracao.zip — arquivos para integrar e editar](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame_Integracao.zip).
 - [Seis modelos editáveis](Modelos_Blockbench), com textura e animação embutidas.
 
-Não foram geradas prévias.
-
 ## Os seis modos
 
 | Modo | Identificador existente | Nível | Reconstrução visual |
 | --- | --- | ---: | --- |
-| 1 — Insetos | `nz:insetos_aburame_m` | 10 | Besouros pequenos nos braços e ombros, grupos espaçados, rastejo e voos curtos. |
-| 2 — Insetos venenosos | `nz:insetos_aburame_m2` | 10 | Revestimento violeta escuro nas mãos e antebraços; pontos microscópicos com dispersão curta. |
-| 3 — Insetos imbuídos | `nz:insetos_aburame_half` | 20 | Mais besouros e grupos nos braços, ombros, flancos e costas; cabeça livre. |
-| 4 — Venenosos imbuídos | `nz:insetos_aburame_half_poison` | 30 | Revestimento nos braços e partes do tronco, limites irregulares e pequenas nuvens junto às mãos. |
-| 5 — Totalmente imbuído | `nz:insetos_aburame_full` | 40 | Colônia densa com várias profundidades, grupos assimétricos, expansão e retorno; corpo reconhecível. |
-| 6 — Venenoso totalmente imbuído | `nz:insetos_aburame_full_poison` | 50 | Revestimento microscópico violeta em quase todo o corpo e pequenos agrupamentos próximos à superfície. |
+| 1 — Insetos | `nz:insetos_aburame_m` | 10 | Pequenas concentrações junto aos punhos e antebraços, com besouros individuais nos braços e ombros. |
+| 2 — Insetos venenosos | `nz:insetos_aburame_m2` | 10 | Violeta fosco nas mãos, com bordas que se dissipam pelo antebraço. |
+| 3 — Insetos imbuídos | `nz:insetos_aburame_half` | 20 | Enxames mais compactos nos braços, ombros, flancos e costas, com espaços entre eles. |
+| 4 — Venenosos imbuídos | `nz:insetos_aburame_half_poison` | 30 | Violeta dos antebraços aos ombros e às laterais do tronco, com transição mais leve no centro do peito. |
+| 5 — Totalmente imbuído | `nz:insetos_aburame_full` | 40 | Colônia densa e assimétrica, com vários planos ao redor dos braços e focos menores perto das pernas. |
+| 6 — Venenoso totalmente imbuído | `nz:insetos_aburame_full_poison` | 50 | Revestimento violeta contínuo com manchas suaves e maior translucidez na frente do rosto. |
 
 Os estágios são a progressão do sistema SWBR; não representam seis transformações oficiais do anime. Os modos comuns usam besouros modelados, recortes transparentes em diferentes profundidades e partículas. Os venenosos usam revestimentos aderidos à geometria humana, textura de colônias microscópicas e pontos escuros. Nenhum modo usa asas, carapaça de inseto gigante ou brilho emissivo.
 
 ## Instalação da addon
 
-Importe `Aburame.mcaddon` no Minecraft Bedrock e selecione o Behavior Pack e o Resource Pack **18.11.70** no mundo. Esta é a addon completa, incluindo os sistemas da base e o Iburi aprovado. Confira se o mundo está usando os dois packs atualizados, sem outra versão dos mesmos packs ativa por cima.
+Importe `Aburame.mcaddon` no Minecraft Bedrock e selecione o Behavior Pack e o Resource Pack **18.11.71** no mundo. Esta é a addon completa, incluindo os sistemas da base e o Iburi aprovado.
 
 O requisito de motor da base, **1.26.10**, e suas dependências de Script API foram mantidos. Equipar continua sendo pelo sistema original da addon. Para conferir cada item separadamente com comandos habilitados, use `/give @s` seguido do identificador da tabela e equipe na cabeça.
 

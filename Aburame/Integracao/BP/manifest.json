@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "description": "SWBR 18.11.70 | Primeiro modo Aburame refinado após comparação com Shino; Iburi e sistemas preservados",
-    "name": "Shinobi World BR 18.11.70 · Aburame",
+    "description": "SWBR 18.11.71 | Seis visuais Aburame revisados com base nas capturas e nas referências de Shino e Torune",
+    "name": "Shinobi World BR 18.11.71 · Aburame",
     "uuid": "82dafe0d-c36f-4665-9df0-371f6d8b2a55",
     "version": [
       18,
       11,
-      70
+      71
     ],
     "min_engine_version": [
       1,
@@ -23,7 +23,7 @@
       "version": [
         18,
         11,
-        70
+        71
       ]
     },
     {
@@ -32,7 +32,7 @@
       "version": [
         18,
         11,
-        70
+        71
       ],
       "entry": "scripts/main.js",
       "language": "javascript"
@@ -44,7 +44,7 @@
       "version": [
         18,
         11,
-        70
+        71
       ]
     },
     {

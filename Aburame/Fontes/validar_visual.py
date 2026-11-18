@@ -7,7 +7,7 @@ from pathlib import Path
 import hashlib,json,math
 import numpy as np
 from PIL import Image
-from construir_aburame import MODES,NATIVE_GEOS,RC_FILE
+from construir_aburame import COAT_OPACITY,MODES,NATIVE_GEOS,RC_FILE,SWARM_OPACITY
 
 ROOT=Path(__file__).resolve().parents[1];RP=ROOT/'Integracao/RP'
 VIEWS={'frente':(0,1,2,1),'costas':(0,-1,2,-1),'direita':(2,-1,0,-1),'esquerda':(2,1,0,1)}
@@ -50,7 +50,7 @@ def measure(geometry,pixels,boxes):
     for label,view in VIEWS.items():
         image=np.zeros((HEIGHT,WIDTH));eligible=exposed_total=0
         for bone in bones.values():
-            opacity=.93 if '_coat_' in bone['name'] else (.86 if '_swarm_' in bone['name'] else 1)
+            opacity=COAT_OPACITY if '_coat_' in bone['name'] else (SWARM_OPACITY if '_swarm_' in bone['name'] else 1)
             for cube in bone.get('cubes',[]):
                 layer=np.zeros_like(image)
                 for face in cube['uv']:
@@ -75,7 +75,8 @@ def measure(geometry,pixels,boxes):
             mask=(xx>=left)&(xx<=right)&(yy>=bottom)&(yy<=top)
             skin|=mask;regions[name]=float(footprint[mask].mean())
         result[label]={'pixels_visiveis':int(footprint.sum()),'pixels_fora_skin':int((footprint&~skin).sum()),'fracao_amostras_expostas':exposed_total/max(1,eligible),
-          'cobertura_skin':float(footprint[skin].mean()),'cobertura_regioes':regions}
+          'cobertura_skin':float(footprint[skin].mean()),'cobertura_regioes':regions,
+          'alfa_medio_sobre_skin':float(image[skin].mean()),'massa_alfa':float(image.sum())}
     return result
 
 def validate():
@@ -108,7 +109,9 @@ def validate():
         for family in [(1,3,5),(2,4,6)]:
             a,b,c=[results[str(mode)][label]['pixels_visiveis'] for mode in family]
             assert b>a*1.12 and c>b*1.12,f'Progressão de densidade insuficiente: {family}/{label}'
-        for mode in [1,2,3,4]:
+        a,b,c=[results[str(mode)][label]['massa_alfa'] for mode in (1,3,5)]
+        assert b>a*1.45 and c>b*1.7,f'Camadas comuns com densidades muito próximas: {label}'
+        for mode in [1,2,3,4,5]:
             assert results[str(mode)][label]['cobertura_regioes']['head']<.12,f'Cabeça coberta sem autorização: {mode}/{label}'
         assert results['6'][label]['cobertura_skin']>.60,f'Revestimento final insuficiente: {label}'
     for mode in [2,4]:

@@ -7,7 +7,10 @@ from PIL import Image,ImageDraw
 from scipy.ndimage import gaussian_filter
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=[18,11,70];TEX=512;TILE=128
+VERSION=[18,11,71];TEX=512;TILE=128
+VERSION_TEXT='.'.join(map(str,VERSION))
+SWARM_OPACITY=.94
+COAT_OPACITY=.97
 MODES={
  1:dict(id='nz:insetos_aburame_m',level=10,kind='comum',tier=1,name='Aburame_01_Insetos',path='models/entity/nz_insetos_aburame_m.json',gid='geometry.nz_insetos_aburame_m'),
  2:dict(id='nz:insetos_aburame_m2',level=10,kind='venenoso',tier=1,name='Aburame_02_Venenosos',path='models/entity/nz_insetos_aburame_m2.json',gid='geometry.nz_insetos_aburame_m2'),
@@ -65,37 +68,81 @@ def insect_stamp(width=11,height=15,color=(16,19,24,255)):
     return im
 
 def swarm_tile(seed,tier,poison=False):
-    rng=np.random.default_rng(seed);im=Image.new('RGBA',(TILE,TILE))
-    count=({1:32,2:62,3:128} if not poison else {1:90,2:150,3:210})[tier]
-    for i in range(count):
-        # Empty gaps between actual organisms, never a filled smoke background.
-        x,y=rng.normal(64,[23,26]);x=int(x);y=int(y)
-        if not 9<=x<=118 or not 9<=y<=118:continue
-        if poison:
-            d=ImageDraw.Draw(im);rad=int(rng.choice([0,1,1]));value=int(rng.integers(24,64))
-            d.ellipse((x-rad,y-rad,x+rad,y+rad),fill=(value,int(value*.55),int(value*1.30),int(rng.integers(180,246))))
+    rng=np.random.default_rng(seed)
+    image=Image.new('RGBA',(TILE,TILE))
+    draw=ImageDraw.Draw(image)
+    count=({1:70,2:124,3:172} if not poison else {1:96,2:152,3:206})[tier]
+    bend=rng.choice([-1,1])
+    centers=np.array([[63,65],[63+17*bend,43],[63-14*bend,87]])+rng.uniform(-5,5,(3,2))
+    for organism in range(count):
+        # Overlapping knots form broken silhouettes. The last few insects
+        # leave the denser groups, with open space between their flight paths.
+        if organism >= count*.84:
+            point=rng.normal([64,65],[23,25])
         else:
-            width=int(rng.integers(4,8));height=int(rng.integers(6,10));v=int(rng.integers(10,30))
-            bug=insect_stamp(width,height,(v,v+2,v+5,255)).rotate(float(rng.uniform(0,360)),expand=True,resample=Image.Resampling.NEAREST)
-            im.alpha_composite(bug,(x-bug.width//2,y-bug.height//2))
-    a=np.array(im);a[:4,:,3]=0;a[-4:,:,3]=0;a[:,:4,3]=0;a[:,-4:,3]=0
-    return Image.fromarray(a,'RGBA')
+            center=centers[rng.choice(3,p=[.52,.28,.20])]
+            point=rng.normal(center,[11+tier*1.6,12+tier])
+        x,y=map(int,point)
+        if not (13<=x<=114 and 13<=y<=114):
+            continue
+        if poison:
+            radius=int(rng.choice([0,1,1,2]))
+            tone=int(rng.integers(28,65))
+            draw.ellipse((x-radius,y-radius,x+radius,y+radius),fill=(tone,int(tone*.71),int(tone*1.35),int(rng.integers(170,235))))
+            continue
+        width=int(rng.integers(7,11));height=int(rng.integers(9,15))
+        tone=int(rng.integers(15,46))
+        bug=insect_stamp(width,height,(tone,tone+2,tone+3,255))
+        bug=bug.rotate(float(rng.uniform(-170,170)),expand=True,resample=Image.Resampling.NEAREST)
+        image.alpha_composite(bug,(x-bug.width//2,y-bug.height//2))
+    # Gutters keep adjacent UV cells clean under filtering.
+    pixels=np.array(image)
+    pixels[:4]=pixels[-4:]=0
+    pixels[:,:4]=pixels[:,-4:]=0
+    return Image.fromarray(pixels,'RGBA')
+
+def smoothstep(lower,upper,values):
+    amount=np.clip((values-lower)/(upper-lower),0,1)
+    return amount*amount*(3-2*amount)
 
 def poison_tile(seed,tier,index):
-    rng=np.random.default_rng(seed);y,x=np.mgrid[0:TILE,0:TILE];v=y/(TILE-1)
-    broad=gaussian_filter(rng.random((TILE,TILE)),8,mode='wrap');broad=(broad-broad.min())/(broad.max()-broad.min())
-    fine=gaussian_filter(rng.random((TILE,TILE)),.55,mode='wrap')
-    if tier==1:
-        strength=np.clip((v-.06-broad*.20)/.28,0,1) if index<4 else np.ones_like(v)*.92
-    elif tier==2:
-        strength=np.clip((v-.02-broad*.15)/.22,0,1) if index<4 else np.clip((1-v)*.95+.10-broad*.30,0,1)
-    else:strength=np.ones_like(v)*.98
-    if index==7:strength=np.ones_like(v)*.97
-    # Microscopic colonies read as a textured violet skin coating, not plates.
-    grain=np.clip((fine-.30)/.4,0,1);holes=(rng.random((TILE,TILE))>.035).astype(float)
-    alpha=np.clip(strength*(.78+.21*grain)*holes,0,1)
-    red=42+grain*43+broad*8;green=25+grain*28;blue=61+grain*54+broad*7
-    return Image.fromarray(np.dstack([red,green,blue,alpha*255]).astype(np.uint8),'RGBA')
+    rng=np.random.default_rng(seed)
+    y,x=np.mgrid[0:TILE,0:TILE]
+    u=x/(TILE-1);v=y/(TILE-1)
+    broad=gaussian_filter(rng.random((TILE,TILE)),10,mode='wrap')
+    broad=(broad-broad.min())/max(broad.max()-broad.min(),1e-6)
+    medium=gaussian_filter(rng.random((TILE,TILE)),2.2,mode='wrap')
+    medium=(medium-medium.min())/max(medium.max()-medium.min(),1e-6)
+    # Layer the colour over the original skin to retain its shading and facial
+    # details. Quiet mottling replaces the high-contrast noise of the old coat.
+    mottling=.63*broad+.37*medium
+    grain=rng.random((TILE,TILE))-.5
+    micropoints=np.where(rng.random((TILE,TILE))<.026,10,0)
+    red=67+28*mottling+5*grain-micropoints
+    green=47+23*mottling+5*grain-micropoints
+    blue=88+36*mottling+6*grain-micropoints
+    if tier==1 and index<4:
+        edge=.33+.14*np.sin(2*math.pi*u+index*.7)+.19*(broad-.5)+.09*(medium-.5)
+        alpha=(.76+.14*mottling)*smoothstep(-.05,.25,v-edge)
+    elif tier==2 and index<4:
+        edge=.05+.11*np.sin(2*math.pi*u+index*.7)+.14*(broad-.5)+.06*(medium-.5)
+        alpha=(.78+.11*mottling)*(.26+.74*smoothstep(-.06,.24,v-edge))
+    elif tier==2 and index in (4,5):
+        shoulder=smoothstep(.14,.92,abs(2*u-1))
+        edge=.26+.43*shoulder+.20*(broad-.5)+.09*(medium-.5)
+        alpha=(.46+.21*shoulder+.11*mottling)*smoothstep(-.13,.14,edge-v)
+    elif tier==2 and index==6:
+        alpha=.28+.18*mottling
+    elif tier==3 and index==5:
+        # Across the front of the head, retain the existing eyes and expression.
+        cheek_edges=smoothstep(.54,.96,abs(2*u-1))
+        alpha=.43+.14*mottling+.14*cheek_edges
+    elif tier==3 and index==6:
+        alpha=.62+.15*mottling
+    else:
+        alpha=.74+.15*mottling
+    rgba=np.dstack([red,green,blue,alpha*255]).clip(0,255).astype(np.uint8)
+    return Image.fromarray(rgba,'RGBA')
 
 def atlas(mode):
     spec=MODES[mode];tier=spec['tier'];im=Image.new('RGBA',(TEX,TEX))
@@ -161,19 +208,28 @@ def swarm_sites(tier):
     result=[]
     for side in [-1,1]:
         arm='rightArm' if side<0 else 'leftArm'
-        result += [(arm,[side*8.8,14.2,-3.5],[2.2,2.5]),(arm,[side*9.4,19.6,2.5],[2.5,2.9])]
+        if tier==1:
+            result += [(arm,[side*8.8,14.2,-3.5],[2.2,2.5]),(arm,[side*9.4,19.6,2.5],[2.5,2.9])]
+        else:
+            result += [(arm,[side*6.5,14.8+.4*side,-3.45],[3.8,4.9]),
+                       (arm,[side*8.85,19.1-.4*side,1.2],[3.7,4.8])]
     if tier==1:
         for side in [-1,1]:
             # Compact, porous sleeve-to-forearm colonies; head/torso stay free.
             result.append(('rightArm' if side<0 else 'leftArm',[side*6.0,15.3,-2.8],[3.2,4.1]))
     if tier>=2:
         for side in [-1,1]:
-            result += [('body',[side*8.6,23.4,.6],[3.4,3.5]),('body',[side*4.7,18.6,-3.5],[3.5,4.1]),('body',[side*2.6,21,3.8],[3.2,3.4])]
+            result += [('body',[side*8.25,23.1+.65*side,.8],[4.0,4.5]),
+                       ('body',[side*4.5,18.7+.5*side,-3.45],[3.5,4.7]),
+                       ('body',[side*3.1,20.9-.75*side,3.7],[4.1,4.6])]
     if tier==3:
         for side in [-1,1]:
             arm='rightArm' if side<0 else 'leftArm';leg='rightLeg' if side<0 else 'leftLeg'
-            result += [(arm,[side*11.2,17.4,-2.6],[5.7,5.0]),('body',[side*5.2,15.4,3.8],[4.7,4.9]),
-              ('body',[side*7.5,21.2,-4.0],[4.8,5.4]),(leg,[side*4.7,8.0,-2.9],[3.7,4.6]),(leg,[side*4.3,3.2,2.8],[3.4,3.8])]
+            result += [(arm,[side*(10.25+.4*side),16.7-1.1*side,-2.25],[6.1,6.65]),
+                       ('body',[side*5.2,15.6+.6*side,3.65],[4.6,5.3]),
+                       ('body',[side*(9.9-.47*side),22.4+1.15*side,-3.15],[4.9,5.15]),
+                       (leg,[side*4.55,8.65-.52*side,-2.9],[3.3,4.2]),
+                       (leg,[side*3.8,4.25+.28*side,2.95],[3.0,3.7])]
     return result
 
 def model(mode,skin_geometry):
@@ -192,7 +248,7 @@ def model(mode,skin_geometry):
             if normal[2]:rotation[2]+=round(float(rng.uniform(-150,150)),3)
             # Body, head and a cutout with six legs/antennae; small wing cases
             # remain 3D pieces and animate independently of the abdomen.
-            k=float(rng.uniform(.78,1.12))*(1.10 if mode==1 else 1);pos=[round(v,4) for v in pos]
+            k=float(rng.uniform(.78,1.12))*(1.08 if tier==2 else 1.10);pos=[round(v,4) for v in pos]
             def shape(offset,size,rect):return cube([pos[j]+offset[j]*k for j in range(3)],[v*k for v in size],rect)
             core=[shape([0,0,0],[.30,.42,.18],[0,0,32,32]),shape([0,.28,0],[.20,.18,.16],[32,0,32,32]),
               shape([0,.05,.065],[.65,.80,.008],[0,36,64,80])]
@@ -209,28 +265,38 @@ def model(mode,skin_geometry):
         sites=swarm_sites(tier);counts['agrupamentos_vazados']=len(sites)
         for i,(parent,pos,size) in enumerate(sites):
             role='swarm_a' if i%2==0 else 'swarm_b';pos=[round(v+float(rng.uniform(-.23,.23)),4) for v in pos]
-            w,h=[v*(1.25 if tier==3 else 1) for v in size];cubes=[]
+            w,h=[v*(1.18 if tier==3 else 1) for v in size];cubes=[]
             for layer in range(3):
-                center=[pos[0],pos[1]+float(rng.uniform(-.3,.3)),pos[2]+(layer-1)*.55]
-                cubes.append(cube(center,[w,h,.008],tile_rect(1+(i*3+layer*5)%15),[round(float(rng.uniform(-13,13)),3),round(layer*60+float(rng.uniform(-12,12)),3),round(float(rng.uniform(-20,20)),3)],center,False))
+                # Offset and turn smaller clusters around the broadest layer.
+                # Each group has a dense centre, lateral depth and loose edges.
+                factor=(1,.84,.75)[layer]
+                center=[pos[0]+(layer-1)*.30,pos[1]+float(rng.uniform(-.34,.34)),pos[2]+(layer-1)*.64]
+                rotation=[round(float(rng.uniform(-13,13)),3),round((0,59,-57)[layer]+float(rng.uniform(-12,12)),3),round(float(rng.uniform(-23,23)),3)]
+                cubes.append(cube(center,[w*factor,h*factor,.008],tile_rect(1+(i*3+layer*5)%15),rotation,center,False))
             name=add_bone(f'{role}_grupo_{i:02d}',parent,pos,cubes)
             angle=float(rng.uniform(0,360));speed=float(rng.uniform(29,61));orbit=.23 if tier==1 else (.95 if tier==2 else 1.25)
-            vertical=(f'0.6+1.4*math.sin(q.life_time*{speed*.7:.3f}+{angle:.3f})' if tier>=2 and parent.endswith('Arm') else f'{orbit*.7:.4f}*math.cos(q.life_time*{speed*.83:.3f}+{angle:.3f})')
+            vertical=(f'0.45+1.3*math.sin(q.life_time*{speed*.7:.3f}+{angle:.3f})' if tier>=2 and parent.endswith('Arm') else f'{orbit*.7:.4f}*math.cos(q.life_time*{speed*.83:.3f}+{angle:.3f})')
             animations[name]={'position':[f'{orbit}*math.sin(q.life_time*{speed:.3f}+{angle:.3f})',vertical,f'{orbit*.8:.4f}*math.sin(q.life_time*{speed*.71:.3f}+{angle:.3f})'],
               'rotation':[f'3*math.sin(q.life_time*17+{angle:.3f})',f'5*math.cos(q.life_time*19+{angle:.3f})',f'4*math.sin(q.life_time*23+{angle:.3f})'],
               'scale':[f'1+0.09*math.sin(q.life_time*{speed*.55:.3f}+{angle:.3f})',f'1+0.08*math.cos(q.life_time*{speed*.61:.3f}+{angle:.3f})',1]}
     else:
         roles=['coat','crawl','micro'];reference={b['name']:b for b in skin_geometry['bones']}
         parts=['rightArm','leftArm']+(['body'] if tier>=2 else [])+(['rightLeg','leftLeg','head'] if tier==3 else [])
-        for i,parent in enumerate(parts):
+        for parent in parts:
             source=reference[parent]['cubes'][0];lo=np.array(source['origin'],dtype=float);hi=lo+np.array(source['size'])
-            if tier==1:hi[1]=19.0
+            if tier==1:hi[1]=21.8
             lo-=.30;hi+=.30
             c={'origin':[round(v,5) for v in lo],'size':[round(v,5) for v in hi-lo], 'uv':{}}
-            tile=i%4 if parent.endswith('Arm') else 4+i%3
-            for face in ['north','south','east','west']:c['uv'][face]={'uv':tile_rect(tile)[:2],'uv_size':tile_rect(tile)[2:]}
-            for face in ['up','down']:
-                rect=tile_rect(7) if face=='down' or tier==3 else [511,511,1,1]
+            tile={'rightArm':0,'leftArm':1,'rightLeg':2,'leftLeg':3,'body':4,'head':6}[parent]
+            face_tiles={face:tile for face in ['north','south','east','west']}
+            if parent=='head':
+                face_tiles.update(north=5,up=6,down=6)
+            elif parent=='body' and tier==2:
+                face_tiles.update(south=5,up=6,down=None)
+            else:
+                face_tiles.update(up={1:None,2:6,3:7}[tier],down=7)
+            for face,face_tile in face_tiles.items():
+                rect=tile_rect(face_tile) if face_tile is not None else [511,511,1,1]
                 c['uv'][face]={'uv':rect[:2],'uv_size':rect[2:]}
             add_bone(f'coat_{parent}',parent,list(reference[parent]['pivot']),[c])
         counts['superficies_aderidas']=len(parts)
@@ -240,7 +306,7 @@ def model(mode,skin_geometry):
             crawl_sites += [(arm,[side*6.0,14.5,-2.37],[3.7,3.8]),(arm,[side*8.28,17,0],[3.5,3.7])]
             if tier>=2:crawl_sites.append(('body',[side*3.0,21.0,-2.40],[3.5,3.8]))
             if tier==3:
-                crawl_sites += [('body',[side*2.0,16.0,2.30],[3.4,4.2]),('rightLeg' if side<0 else 'leftLeg',[side*2.0,6,-2.35],[3.5,4.1]),('head',[side*2.4,28,-4.35],[3.5,4.3])]
+                crawl_sites += [('body',[side*2.0,16.0,2.30],[3.4,4.2]),('rightLeg' if side<0 else 'leftLeg',[side*2.0,6,-2.35],[3.5,4.1]),('head',[side*2.35,26.1,-4.35],[2.35,2.5])]
         counts['regioes_micro_rastejantes']=len(crawl_sites)
         for i,(parent,pos,size) in enumerate(crawl_sites):
             rotation=[0,90,0] if abs(pos[0])>8 else [0,0,0]
@@ -334,8 +400,8 @@ def build(base):
             d['render_controllers'].append({controller:f'v.swbr_aburame_draw{i}'})
             material='solid' if role.startswith('solid') else 'translucent'
             alpha='v.swbr_aburame_fade'
-            if role.startswith('swarm'):alpha=f'(0.86+0.10*math.sin(q.life_time*29+{i*47+(0 if role.endswith("a") else 117)}))*v.swbr_aburame_fade'
-            if role=='coat':alpha=f'(0.93+0.025*math.sin(q.life_time*23+{i*53}))*v.swbr_aburame_fade'
+            if role.startswith('swarm'):alpha=f'({SWARM_OPACITY}+0.035*math.sin(q.life_time*29+{i*47+(0 if role.endswith("a") else 117)}))*v.swbr_aburame_fade'
+            if role=='coat':alpha=f'({COAT_OPACITY}+0.018*math.sin(q.life_time*23+{i*53}))*v.swbr_aburame_fade'
             rc[controller]={'geometry':'Geometry.'+alias,'materials':[{'*':'Material.swbr_aburame_'+material}],'textures':['Texture.swbr_aburame'+str(i)],'color':{'r':1,'g':1,'b':1,'a':alpha}}
         states[f'modo{i}']={'particle_effects':[{'effect':f'swbr_aburame{i}_insetos','locator':loc} for loc in locator_names(i)],'transitions':[{'default':f'!v.swbr_aburame_draw{i}'}]}
         put('RP',f'particles/swbr_aburame_{i}.json',particle(i));put('RP',f'textures/entity/swbr/aburame/particulas_{i}.png',png(particle_sheet(i)))
@@ -359,8 +425,8 @@ def build(base):
         put('RP',path,data)
     for pack,data in [('BP',bp),('RP',rp)]:
         manifest=json.loads(data['manifest.json']);manifest['header']['version']=VERSION
-        manifest['header']['name']=re.sub(r'18\.11\.\d+','18.11.70',manifest['header']['name']).split(' · ')[0]+' · Aburame'
-        manifest['header']['description']='SWBR 18.11.70 | Primeiro modo Aburame refinado após comparação com Shino; Iburi e sistemas preservados'
+        manifest['header']['name']=re.sub(r'18\.11\.\d+',VERSION_TEXT,manifest['header']['name']).split(' · ')[0]+' · Aburame'
+        manifest['header']['description']=f'SWBR {VERSION_TEXT} | Seis visuais Aburame revisados com base nas capturas e nas referências de Shino e Torune'
         for module in manifest['modules']:module['version']=VERSION
         for dep in manifest.get('dependencies',[]):
             if dep.get('uuid') in [json.loads(bp['manifest.json'])['header']['uuid'],json.loads(rp['manifest.json'])['header']['uuid']]:dep['version']=VERSION
@@ -368,7 +434,7 @@ def build(base):
     entries={}
     for pack in ['BP','RP']:
         files={p.relative_to(ROOT/'Integracao'/pack).as_posix():sha(p.read_bytes()) for p in sorted((ROOT/'Integracao'/pack).rglob('*')) if p.is_file()}
-        entries[pack]={'original_entry':packs[pack][0],'updated_entry':f'SWBR_{pack}_v18.11.70_ABURAME.mcpack','files':files}
+        entries[pack]={'original_entry':packs[pack][0],'updated_entry':f'SWBR_{pack}_v{VERSION_TEXT}_ABURAME.mcpack','files':files}
     original={}
     for i,spec in MODES.items():
         path=spec['path'] if spec['path'] in rp else MODES[3 if i==4 else 5]['path']

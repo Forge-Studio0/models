@@ -145,6 +145,19 @@ def validate(base,addon,previous=None):
                 assert all(abs(c['origin'][i]-src['origin'][i])<=.301 for i in range(3))
                 assert all(c['origin'][i]+c['size'][i]<=src['origin'][i]+src['size'][i]+.301 for i in range(3))
             check(True,'Revestimento aderido ao corpo, sem placas ou espinhos: '+str(mode))
+            def coat_alpha(part):
+                uv=bones[prefix+'_coat_'+part]['cubes'][0]['uv']['north']
+                u,v=uv['uv'];w,h=uv['uv_size']
+                return pixels[v:v+h,u:u+w,3]/255
+            if mode in (2,4):
+                for part in ('rightArm','leftArm'):
+                    mask=coat_alpha(part)
+                    check(mask[:20].mean()+.25<mask[-20:].mean() and mask[-20:].mean()>.7,
+                          'Violeta aumenta gradualmente em direção às mãos: '+str(mode)+'/'+part)
+            if mode==6:
+                face_alpha=coat_alpha('head')
+                check(face_alpha.min()>.38 and face_alpha.mean()<.60 and coat_alpha('body').min()>.70,
+                      'Sobreposição violeta mantém cobertura contínua com translucidez no rosto: '+str(mode))
         else:
             solids=[c for b in bones.values() if '_solid_' in b['name'] for c in b.get('cubes',[])]
             check(solids and max(max(c['size']) for c in solids)<1.0,'Besouros modelados pequenos, com corpo/cabeça/élitros e pernas em recorte: '+str(mode))
@@ -170,16 +183,18 @@ def validate(base,addon,previous=None):
     check(not (ROOT/'Previews').exists(),'Entrega sem prévias geradas')
     revision=None
     if previous:
-        prior=read_base(previous);revision={'anterior_sha256':sha(previous.read_bytes()),'arquivos_alterados':{}}
+        prior=read_base(previous)
+        revision={'anterior_sha256':sha(previous.read_bytes()),'arquivos_alterados':{}}
+        revised_rp={'manifest.json',DRAW_GEO,RC_FILE}
+        for mode,spec in MODES.items():
+            revised_rp.update((spec['path'],f'animations/swbr_aburame_{mode}.json',f'textures/entity/swbr/aburame/modo_{mode}.png'))
         for name in ['BP','RP']:
             before=prior[name][1];after=new[name]
-            permitted={'manifest.json'} if name=='BP' else {'manifest.json',MODES[1]['path'],'animations/swbr_aburame_1.json','textures/entity/swbr/aburame/modo_1.png',DRAW_GEO}
+            permitted={'manifest.json'} if name=='BP' else revised_rp
             altered={p for p in before if before[p]!=after.get(p)}
-            check(set(before)==set(after) and altered<=permitted,'Revisão altera somente o primeiro modo e manifests em relação à anterior: '+name)
+            check(set(before)==set(after) and altered<=permitted,'Revisão limitada à apresentação dos seis modos e aos manifests: '+name)
             revision['arquivos_alterados'][name]=sorted(altered)
-        before_draw=json.loads(prior['RP'][1][DRAW_GEO])['minecraft:geometry']
-        check([g for g in before_draw if not g['description']['identifier'].startswith('geometry.swbr.aburame1.')]==[g for g in draw_list if not g['description']['identifier'].startswith('geometry.swbr.aburame1.')],'Malhas derivadas dos modos 2–6 preservadas em relação à anterior')
-    report={'resultado':'APROVADO','versao':VERSION,'base_sha256':m['base_sha256'],'addon_sha256':sha(addon.read_bytes()),'minecraft_executado':False,'revisao_primeiro_modo':revision,
+    report={'resultado':'APROVADO','versao':VERSION,'base_sha256':m['base_sha256'],'addon_sha256':sha(addon.read_bytes()),'minecraft_executado':False,'revisao_visual':revision,
       'arquivos_preservados':preserved,'arquivos_alterados':changed,'arquivos_adicionados':added,'modelos':summary,'raridade_original':rarity,'verificacoes':CHECKS,'quantidade_verificacoes':len(CHECKS),
       'limites':'Validação de arquivos, geometria, estados e editor. Aparência real, movimento no motor, multiplayer, remoção final dos efeitos e desempenho em celular precisam de confirmação no Minecraft.'}
     (ROOT/'Validacao.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

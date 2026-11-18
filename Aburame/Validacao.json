@@ -3,23 +3,35 @@
   "versao": [
     18,
     11,
-    70
+    71
   ],
   "base_sha256": "fbcd94172035065c04d38d8060ebd132956cd66855eecbe494431108aab7fe40",
-  "addon_sha256": "dfa14819569d07a20e0f16d355a2e58b6285e5d7dd77bb180aa7b12fb1d8f06f",
+  "addon_sha256": "5021997172fdc9c09f5518e2d70085720a096ef18b207894cd2df1f810ebcecb",
   "minecraft_executado": false,
-  "revisao_primeiro_modo": {
-    "anterior_sha256": "36e80ecf62698235ce4dde83af3b4039a6f3a53afd9d909105184872cfaa7ce0",
+  "revisao_visual": {
+    "anterior_sha256": "dfa14819569d07a20e0f16d355a2e58b6285e5d7dd77bb180aa7b12fb1d8f06f",
     "arquivos_alterados": {
       "BP": [
         "manifest.json"
       ],
       "RP": [
-        "animations/swbr_aburame_1.json",
+        "animations/swbr_aburame_3.json",
+        "animations/swbr_aburame_5.json",
         "manifest.json",
+        "models/entity/nz_insetos_aburame_full.geo.json",
+        "models/entity/nz_insetos_aburame_full_poison.geo.json",
+        "models/entity/nz_insetos_aburame_half.geo.json",
+        "models/entity/nz_insetos_aburame_half_poison.geo.json",
         "models/entity/nz_insetos_aburame_m.json",
+        "models/entity/nz_insetos_aburame_m2.json",
         "models/entity/swbr_aburame_draw.geo.json",
-        "textures/entity/swbr/aburame/modo_1.png"
+        "render_controllers/swbr_aburame.json",
+        "textures/entity/swbr/aburame/modo_1.png",
+        "textures/entity/swbr/aburame/modo_2.png",
+        "textures/entity/swbr/aburame/modo_3.png",
+        "textures/entity/swbr/aburame/modo_4.png",
+        "textures/entity/swbr/aburame/modo_5.png",
+        "textures/entity/swbr/aburame/modo_6.png"
       ]
     }
   },
@@ -198,7 +210,7 @@
     "MCADDON íntegro sem falhas CRC ou entradas duplicadas",
     "Somente overlay aplicado, sem arquivos excluídos: BP",
     "Overlay e assinatura conferidos: BP/manifest.json",
-    "Versão 18.11.70 nos manifests: BP",
+    "Versão 18.11.71 nos manifests: BP",
     "UUIDs, APIs, engine, scripts e demais metadados preservados: BP",
     "Somente overlay aplicado, sem arquivos excluídos: RP",
     "Overlay e assinatura conferidos: RP/animation_controllers/swbr_aburame.json",
@@ -249,7 +261,7 @@
     "Overlay e assinatura conferidos: RP/textures/entity/swbr/aburame/particulas_4.png",
     "Overlay e assinatura conferidos: RP/textures/entity/swbr/aburame/particulas_5.png",
     "Overlay e assinatura conferidos: RP/textures/entity/swbr/aburame/particulas_6.png",
-    "Versão 18.11.70 nos manifests: RP",
+    "Versão 18.11.71 nos manifests: RP",
     "UUIDs, APIs, engine, scripts e demais metadados preservados: RP",
     "Entrada externa preservada byte a byte: SWBR_Desmaio_Nativo_BP_v1.0.9.mcpack",
     "Entrada externa preservada byte a byte: LEIA-ME_18.11.64.md",
@@ -420,6 +432,8 @@
     "Revestimento violeta escuro sem neon: 2",
     "Rinkaichū representados como colônias microscópicas, não insetos gigantes: 2",
     "Revestimento aderido ao corpo, sem placas ou espinhos: 2",
+    "Violeta aumenta gradualmente em direção às mãos: 2/rightArm",
+    "Violeta aumenta gradualmente em direção às mãos: 2/leftArm",
     "Proxy regular/especializado preserva o vínculo e não duplica o efeito: attachables/nz_insetos_aburame_m2.json",
     "Proxy regular/especializado preserva o vínculo e não duplica o efeito: attachables/nz_insetos_aburame_m2.player.json",
     "Partículas próprias sem material emissivo: 2",
@@ -484,6 +498,8 @@
     "Revestimento violeta escuro sem neon: 4",
     "Rinkaichū representados como colônias microscópicas, não insetos gigantes: 4",
     "Revestimento aderido ao corpo, sem placas ou espinhos: 4",
+    "Violeta aumenta gradualmente em direção às mãos: 4/rightArm",
+    "Violeta aumenta gradualmente em direção às mãos: 4/leftArm",
     "Proxy regular/especializado preserva o vínculo e não duplica o efeito: attachables/nz_insetos_aburame_half_poison.json",
     "Proxy regular/especializado preserva o vínculo e não duplica o efeito: attachables/nz_insetos_aburame_half_poison.player.json",
     "Partículas próprias sem material emissivo: 4",
@@ -547,6 +563,7 @@
     "Revestimento violeta escuro sem neon: 6",
     "Rinkaichū representados como colônias microscópicas, não insetos gigantes: 6",
     "Revestimento aderido ao corpo, sem placas ou espinhos: 6",
+    "Sobreposição violeta mantém cobertura contínua com translucidez no rosto: 6",
     "Proxy regular/especializado preserva o vínculo e não duplica o efeito: attachables/nz_insetos_aburame_full_poison.json",
     "Partículas próprias sem material emissivo: 6",
     "Emissores ligados aos bones e simulados em espaço local: 6",
@@ -596,10 +613,9 @@
     "Verificação ligada ao fonte atual: Validacao_Visual_Estatica.json/models/entity/nz_insetos_aburame_full_poison.geo.json",
     "Verificação ligada ao fonte atual: Validacao_Visual_Estatica.json/textures/entity/swbr/aburame/modo_6.png",
     "Entrega sem prévias geradas",
-    "Revisão altera somente o primeiro modo e manifests em relação à anterior: BP",
-    "Revisão altera somente o primeiro modo e manifests em relação à anterior: RP",
-    "Malhas derivadas dos modos 2–6 preservadas em relação à anterior"
+    "Revisão limitada à apresentação dos seis modos e aos manifests: BP",
+    "Revisão limitada à apresentação dos seis modos e aos manifests: RP"
   ],
-  "quantidade_verificacoes": 405,
+  "quantidade_verificacoes": 409,
   "limites": "Validação de arquivos, geometria, estados e editor. Aparência real, movimento no motor, multiplayer, remoção final dos efeitos e desempenho em celular precisam de confirmação no Minecraft."
 }
