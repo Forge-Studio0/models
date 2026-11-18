@@ -1,0 +1,3394 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "Kaguya_01_Despertar",
+  "model_identifier": "swbr.kaguya.despertar",
+  "visible_box": [
+    4,
+    4,
+    1.25
+  ],
+  "variable_placeholders": "",
+  "variable_placeholder_buttons": [],
+  "bedrock_animation_mode": "entity",
+  "timeline_setups": [],
+  "unhandled_root_fields": {},
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "elements": [
+    {
+      "name": "ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        5.7235700000000005,
+        23.33642,
+        0.21682
+      ],
+      "to": [
+        6.88977,
+        24.33044,
+        1.1635
+      ],
+      "autouv": 0,
+      "color": 8,
+      "rotation": [
+        18.7537,
+        0,
+        -22.56032
+      ],
+      "origin": [
+        6.30667,
+        23.45642,
+        0.69016
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            228,
+            28,
+            252
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            228,
+            92,
+            252
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            228,
+            60,
+            252
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            228,
+            124,
+            252
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            252,
+            132,
+            228
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            252,
+            164,
+            228
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "837ca718-78fe-325e-24cc-d60669d76c68"
+    },
+    {
+      "name": "ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        5.76,
+        23.026,
+        0.2284
+      ],
+      "to": [
+        6.74,
+        24.91403,
+        1.0516
+      ],
+      "autouv": 0,
+      "color": 8,
+      "rotation": [
+        18.7537,
+        0,
+        -22.56032
+      ],
+      "origin": [
+        6.25,
+        23.32,
+        0.64
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            4,
+            28,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            4,
+            92,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            4,
+            60,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            4,
+            124,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            28,
+            132,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            28,
+            164,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "91b8da74-a522-80d4-d2a3-322c393b3c11"
+    },
+    {
+      "name": "ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        6.349880000000001,
+        24.23337,
+        0.74514
+      ],
+      "to": [
+        7.09468,
+        25.83453,
+        1.37077
+      ],
+      "autouv": 0,
+      "color": 8,
+      "rotation": [
+        16.63712,
+        0,
+        -33.61403
+      ],
+      "origin": [
+        6.72228,
+        24.45681,
+        1.05796
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            68,
+            28,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            68,
+            60,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "c970bae5-43a1-bc5d-6b2b-f4d5ed209b92"
+    },
+    {
+      "name": "ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        7.065040000000001,
+        25.21613,
+        1.16206
+      ],
+      "to": [
+        7.60404,
+        26.407799999999998,
+        1.6148200000000001
+      ],
+      "autouv": 0,
+      "color": 8,
+      "rotation": [
+        13.62948,
+        0,
+        -45.54928
+      ],
+      "origin": [
+        7.33454,
+        25.37783,
+        1.38844
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            68,
+            28,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            68,
+            60,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "b6567d2f-2f77-77de-0987-54c741eb412f"
+    },
+    {
+      "name": "ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        7.775199999999999,
+        25.87173,
+        1.45721
+      ],
+      "to": [
+        8.0986,
+        26.67775,
+        1.72887
+      ],
+      "autouv": 0,
+      "color": 8,
+      "rotation": [
+        10.57569,
+        0,
+        -55.61171
+      ],
+      "origin": [
+        7.9369,
+        25.96875,
+        1.59304
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            68,
+            28,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            68,
+            60,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "d4ab10dd-c9b8-09ca-c342-1d2899b90287"
+    },
+    {
+      "name": "ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        8.36964,
+        26.27031,
+        1.65185
+      ],
+      "to": [
+        8.49704,
+        26.651889999999998,
+        1.75887
+      ],
+      "autouv": 0,
+      "color": 8,
+      "rotation": [
+        8.4121,
+        0,
+        -62.05221
+      ],
+      "origin": [
+        8.43334,
+        26.30853,
+        1.70536
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            164,
+            28,
+            188
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            164,
+            92,
+            188
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            164,
+            60,
+            188
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            164,
+            124,
+            188
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            188,
+            132,
+            164
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            188,
+            164,
+            164
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "cb94a6bc-b0f6-6a49-4fa9-53bf49817ca4"
+    },
+    {
+      "name": "cotovelo_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        5.894909999999999,
+        17.83028,
+        1.13549
+      ],
+      "to": [
+        6.94211,
+        18.91951,
+        1.9754500000000002
+      ],
+      "autouv": 0,
+      "color": 9,
+      "rotation": [
+        50.4461,
+        0,
+        -135.43643
+      ],
+      "origin": [
+        6.41851,
+        17.95028,
+        1.55547
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            228,
+            28,
+            252
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            228,
+            92,
+            252
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            228,
+            60,
+            252
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            228,
+            124,
+            252
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            252,
+            132,
+            228
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            252,
+            164,
+            228
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "f241e50d-38c1-b06b-e6c9-a9ddb1f8a1a1"
+    },
+    {
+      "name": "cotovelo_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        5.9,
+        17.766,
+        1.0548
+      ],
+      "to": [
+        6.78,
+        19.75818,
+        1.7852000000000001
+      ],
+      "autouv": 0,
+      "color": 9,
+      "rotation": [
+        50.4461,
+        0,
+        -135.43643
+      ],
+      "origin": [
+        6.34,
+        18.03,
+        1.42
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            4,
+            28,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            4,
+            92,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            4,
+            60,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            4,
+            124,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            28,
+            132,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            28,
+            164,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "dc47a47d-cc9c-a38f-3a66-7598e35f569d"
+    },
+    {
+      "name": "cotovelo_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        6.65986,
+        17.16505,
+        2.27137
+      ],
+      "to": [
+        7.32866,
+        18.71893,
+        2.82647
+      ],
+      "autouv": 0,
+      "color": 9,
+      "rotation": [
+        52.87339,
+        0,
+        -130.14495
+      ],
+      "origin": [
+        6.99426,
+        17.36569,
+        2.54892
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            132,
+            28,
+            156
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            132,
+            92,
+            156
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            132,
+            60,
+            156
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            132,
+            124,
+            156
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            156,
+            132,
+            132
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            156,
+            164,
+            132
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "bd5aa4a8-bdd3-350c-4239-1e71b36a09bf"
+    },
+    {
+      "name": "cotovelo_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        7.28406,
+        16.77197,
+        3.26704
+      ],
+      "to": [
+        7.76806,
+        17.77805,
+        3.6687600000000002
+      ],
+      "autouv": 0,
+      "color": 9,
+      "rotation": [
+        56.03332,
+        0,
+        -120.99619
+      ],
+      "origin": [
+        7.52606,
+        16.91717,
+        3.4679
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            132,
+            28,
+            156
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            132,
+            92,
+            156
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            132,
+            60,
+            156
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            132,
+            124,
+            156
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            156,
+            132,
+            132
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            156,
+            164,
+            132
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "8c5d404d-696d-537a-2b9f-c21573e17a73"
+    },
+    {
+      "name": "cotovelo_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        7.72362,
+        16.62413,
+        3.94094
+      ],
+      "to": [
+        8.01402,
+        17.19997,
+        4.18197
+      ],
+      "autouv": 0,
+      "color": 9,
+      "rotation": [
+        58.96911,
+        0,
+        -106.78237
+      ],
+      "origin": [
+        7.86882,
+        16.71125,
+        4.06146
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            132,
+            28,
+            156
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            132,
+            92,
+            156
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            132,
+            60,
+            156
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            132,
+            124,
+            156
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            156,
+            132,
+            132
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            156,
+            164,
+            132
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "34c86ff1-8a55-e4a8-f0a3-9be7d4cc72aa"
+    },
+    {
+      "name": "cotovelo_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        8.00982,
+        16.61715,
+        4.35811
+      ],
+      "to": [
+        8.12422,
+        16.852349999999998,
+        4.45306
+      ],
+      "autouv": 0,
+      "color": 9,
+      "rotation": [
+        60.11605,
+        0,
+        -91.01632
+      ],
+      "origin": [
+        8.06702,
+        16.65147,
+        4.40558
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            164,
+            28,
+            188
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            164,
+            92,
+            188
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            164,
+            60,
+            188
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            164,
+            124,
+            188
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            188,
+            132,
+            164
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            188,
+            164,
+            164
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "91c15193-54e8-7982-1d5a-f3e2ba03009e"
+    },
+    {
+      "name": "ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -6.87569,
+        23.32832,
+        0.21994
+      ],
+      "to": [
+        -5.75709,
+        24.28565,
+        1.12798
+      ],
+      "autouv": 0,
+      "color": 0,
+      "rotation": [
+        13.22578,
+        0,
+        27.35806
+      ],
+      "origin": [
+        -6.31639,
+        23.44832,
+        0.67396
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            228,
+            252,
+            252
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            228,
+            124,
+            252
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            228,
+            220,
+            252
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            228,
+            92,
+            252
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            252,
+            132,
+            228
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            252,
+            164,
+            228
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "38994747-61c0-770a-525d-4a7675c242dc"
+    },
+    {
+      "name": "ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -6.720000000000001,
+        23.038,
+        0.2452
+      ],
+      "to": [
+        -5.780000000000001,
+        24.83877,
+        1.0348
+      ],
+      "autouv": 0,
+      "color": 0,
+      "rotation": [
+        13.22578,
+        0,
+        27.35806
+      ],
+      "origin": [
+        -6.25,
+        23.32,
+        0.64
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            36,
+            252,
+            60
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            36,
+            124,
+            60
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            36,
+            220,
+            60
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            36,
+            92,
+            60
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            60,
+            132,
+            36
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            60,
+            164,
+            36
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "81bfec01-a117-1e92-2935-e6801b87818b"
+    },
+    {
+      "name": "ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.160480000000001,
+        24.17499,
+        0.62291
+      ],
+      "to": [
+        -6.44608,
+        25.720460000000003,
+        1.22301
+      ],
+      "autouv": 0,
+      "color": 0,
+      "rotation": [
+        10.08045,
+        0,
+        39.0843
+      ],
+      "origin": [
+        -6.80328,
+        24.38931,
+        0.92296
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            100,
+            252,
+            124
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            100,
+            124,
+            124
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            100,
+            220,
+            124
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            100,
+            92,
+            124
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            124,
+            132,
+            100
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            124,
+            164,
+            100
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "0bdbff76-5fea-999e-8da8-8b4a49bf8a18"
+    },
+    {
+      "name": "ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.75504,
+        25.08773,
+        0.9013
+      ],
+      "to": [
+        -7.23804,
+        26.25983,
+        1.33558
+      ],
+      "autouv": 0,
+      "color": 0,
+      "rotation": [
+        6.30137,
+        0,
+        51.27585
+      ],
+      "origin": [
+        -7.49654,
+        25.24283,
+        1.11844
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            100,
+            252,
+            124
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            100,
+            124,
+            124
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            100,
+            220,
+            124
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            100,
+            92,
+            124
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            124,
+            132,
+            100
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            124,
+            164,
+            100
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "daf6c01f-325d-583e-2f20-1a17d66651af"
+    },
+    {
+      "name": "ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -8.32,
+        25.68569,
+        1.08276
+      ],
+      "to": [
+        -8.0098,
+        26.49417,
+        1.34333
+      ],
+      "autouv": 0,
+      "color": 0,
+      "rotation": [
+        2.97678,
+        0,
+        61.16258
+      ],
+      "origin": [
+        -8.1649,
+        25.77875,
+        1.21304
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            100,
+            252,
+            124
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            100,
+            124,
+            124
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            100,
+            220,
+            124
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            100,
+            92,
+            124
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            124,
+            132,
+            100
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            124,
+            164,
+            100
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "1c546ecf-5986-e20b-4cc9-d7a3d1ae3c02"
+    },
+    {
+      "name": "ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -8.770439999999999,
+        26.04187,
+        1.19404
+      ],
+      "to": [
+        -8.64824,
+        26.430239999999998,
+        1.29669
+      ],
+      "autouv": 0,
+      "color": 0,
+      "rotation": [
+        0.84387,
+        0,
+        67.3188
+      ],
+      "origin": [
+        -8.70934,
+        26.07853,
+        1.24536
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            196,
+            252,
+            220
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            196,
+            124,
+            220
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            196,
+            220,
+            220
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            196,
+            92,
+            220
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            220,
+            132,
+            196
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            220,
+            164,
+            196
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "d7495774-1084-de6d-db3f-942c5fa8ad5d"
+    },
+    {
+      "name": "cotovelo_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -6.9551,
+        18.00503,
+        1.11469
+      ],
+      "to": [
+        -5.872199999999999,
+        19.04923,
+        1.98328
+      ],
+      "autouv": 0,
+      "color": 1,
+      "rotation": [
+        50.82783,
+        0,
+        135.50959
+      ],
+      "origin": [
+        -6.41365,
+        18.12503,
+        1.54899
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            228,
+            252,
+            252
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            228,
+            124,
+            252
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            228,
+            220,
+            252
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            228,
+            92,
+            252
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            252,
+            132,
+            228
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            252,
+            164,
+            228
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "287940d1-1c08-6775-9e77-81760f9495a4"
+    },
+    {
+      "name": "cotovelo_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -6.795,
+        17.927,
+        1.04235
+      ],
+      "to": [
+        -5.885,
+        19.85955,
+        1.79765
+      ],
+      "autouv": 0,
+      "color": 1,
+      "rotation": [
+        50.82783,
+        0,
+        135.50959
+      ],
+      "origin": [
+        -6.34,
+        18.2,
+        1.42
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            36,
+            252,
+            60
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            36,
+            124,
+            60
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            36,
+            220,
+            60
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            36,
+            92,
+            60
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            60,
+            132,
+            36
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            60,
+            164,
+            36
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "d94acd67-5c00-3be6-6c3e-47a35d40eeed"
+    },
+    {
+      "name": "cotovelo_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.2995600000000005,
+        17.36774,
+        2.20791
+      ],
+      "to": [
+        -6.60796,
+        18.84139,
+        2.78194
+      ],
+      "autouv": 0,
+      "color": 1,
+      "rotation": [
+        54.78732,
+        0,
+        126.40969
+      ],
+      "origin": [
+        -6.95376,
+        17.57522,
+        2.49492
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            68,
+            252,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            68,
+            220,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "a2f8c18a-afb2-1cb3-0eeb-51771159505b"
+    },
+    {
+      "name": "cotovelo_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.69531,
+        17.06273,
+        3.15219
+      ],
+      "to": [
+        -7.19481,
+        18.001939999999998,
+        3.56761
+      ],
+      "autouv": 0,
+      "color": 1,
+      "rotation": [
+        59.33336,
+        0,
+        108.09245
+      ],
+      "origin": [
+        -7.44506,
+        17.21288,
+        3.3599
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            68,
+            252,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            68,
+            220,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "065fee71-d095-1960-2f7b-99b68615c0b9"
+    },
+    {
+      "name": "cotovelo_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.90497,
+        17.02159,
+        3.78483
+      ],
+      "to": [
+        -7.60467,
+        17.56101,
+        4.03408
+      ],
+      "autouv": 0,
+      "color": 1,
+      "rotation": [
+        60.32468,
+        0,
+        78.37468
+      ],
+      "origin": [
+        -7.75482,
+        17.11168,
+        3.90946
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            68,
+            252,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            68,
+            220,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "4b0239ca-8590-aba4-f0bb-576a0514ca9c"
+    },
+    {
+      "name": "cotovelo_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.988169999999999,
+        17.11203,
+        4.17249
+      ],
+      "to": [
+        -7.86987,
+        17.33884,
+        4.27068
+      ],
+      "autouv": 0,
+      "color": 1,
+      "rotation": [
+        55.49607,
+        0,
+        53.5206
+      ],
+      "origin": [
+        -7.92902,
+        17.14752,
+        4.22158
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            196,
+            252,
+            220
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            196,
+            124,
+            220
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            196,
+            220,
+            220
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            196,
+            92,
+            220
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            220,
+            132,
+            196
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            220,
+            164,
+            196
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "bb8b537b-a01f-3e78-1341-ae5d18b15e6d"
+    },
+    {
+      "name": "osso_curto_ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        6.58,
+        22.758,
+        -0.6228
+      ],
+      "to": [
+        7.22,
+        23.90614,
+        -0.11719999999999997
+      ],
+      "autouv": 0,
+      "color": 2,
+      "rotation": [
+        -29.36901,
+        0,
+        -41.73926
+      ],
+      "origin": [
+        6.9,
+        22.95,
+        -0.37
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            36,
+            252,
+            60
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            36,
+            124,
+            60
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            36,
+            220,
+            60
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            36,
+            92,
+            60
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            60,
+            132,
+            36
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            60,
+            164,
+            36
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "7ece806a-842d-ee25-4ba8-960ebf831249"
+    },
+    {
+      "name": "osso_curto_ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        7.100140000000001,
+        23.30099,
+        -0.93689
+      ],
+      "to": [
+        7.58654,
+        24.235509999999998,
+        -0.55263
+      ],
+      "autouv": 0,
+      "color": 2,
+      "rotation": [
+        -26.55169,
+        0,
+        -42.04562
+      ],
+      "origin": [
+        7.34334,
+        23.44691,
+        -0.74476
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            132,
+            252,
+            156
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            132,
+            124,
+            156
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            132,
+            220,
+            156
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            132,
+            92,
+            156
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            156,
+            132,
+            132
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            156,
+            164,
+            132
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "da6c5d47-8e28-05e7-b6a3-9c147192f8cc"
+    },
+    {
+      "name": "osso_curto_ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        7.552359999999999,
+        23.76823,
+        -1.17108
+      ],
+      "to": [
+        7.90436,
+        24.41487,
+        -0.8929999999999999
+      ],
+      "autouv": 0,
+      "color": 2,
+      "rotation": [
+        -22.89428,
+        0,
+        -42.42165
+      ],
+      "origin": [
+        7.72836,
+        23.87383,
+        -1.03204
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            132,
+            252,
+            156
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            132,
+            124,
+            156
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            132,
+            220,
+            156
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            132,
+            92,
+            156
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            156,
+            132,
+            132
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            156,
+            164,
+            132
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "96470af9-3fcf-e160-bfb7-27bd8e8ada5b"
+    },
+    {
+      "name": "osso_curto_ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        7.8933599999999995,
+        24.10659,
+        -1.28486
+      ],
+      "to": [
+        8.10456,
+        24.50151,
+        -1.11801
+      ],
+      "autouv": 0,
+      "color": 2,
+      "rotation": [
+        -18.86509,
+        0,
+        -42.81311
+      ],
+      "origin": [
+        7.99896,
+        24.16995,
+        -1.20144
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            132,
+            252,
+            156
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            132,
+            124,
+            156
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            132,
+            220,
+            156
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            132,
+            92,
+            156
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            156,
+            132,
+            132
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            156,
+            164,
+            132
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "84bb1818-9d7a-3577-ed0b-dd5a71ffcecb"
+    },
+    {
+      "name": "osso_curto_ombro_d",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        8.12984,
+        24.33117,
+        -1.32102
+      ],
+      "to": [
+        8.21304,
+        24.50034,
+        -1.25529
+      ],
+      "autouv": 0,
+      "color": 2,
+      "rotation": [
+        -15.48628,
+        0,
+        -43.12693
+      ],
+      "origin": [
+        8.17144,
+        24.35613,
+        -1.28816
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            196,
+            252,
+            220
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            196,
+            124,
+            220
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            196,
+            220,
+            220
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            68,
+            196,
+            92,
+            220
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            220,
+            132,
+            196
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            220,
+            164,
+            196
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "68a0e2fa-dc26-51d7-b9c8-f3e5274e15c3"
+    },
+    {
+      "name": "osso_curto_ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.045,
+        22.85843,
+        1.02745
+      ],
+      "to": [
+        -6.355,
+        23.97836,
+        1.5725500000000001
+      ],
+      "autouv": 0,
+      "color": 3,
+      "rotation": [
+        29.25528,
+        0,
+        37.5322
+      ],
+      "origin": [
+        -6.7,
+        23.05,
+        1.3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            4,
+            28,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            4,
+            92,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            4,
+            60,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            4,
+            124,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            28,
+            132,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            28,
+            164,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "b7814da1-c4c4-c12c-692a-8d3ba1e0ff94"
+    },
+    {
+      "name": "osso_curto_ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.35381,
+        23.40244,
+        1.45293
+      ],
+      "to": [
+        -6.82941,
+        24.333509999999997,
+        1.86721
+      ],
+      "autouv": 0,
+      "color": 3,
+      "rotation": [
+        30.55953,
+        0,
+        37.29423
+      ],
+      "origin": [
+        -7.09161,
+        23.55976,
+        1.66007
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            68,
+            28,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            68,
+            60,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "4a934126-2c3d-193e-bbb0-41a22d0d8cfc"
+    },
+    {
+      "name": "osso_curto_ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.6029800000000005,
+        23.8745,
+        1.82359
+      ],
+      "to": [
+        -7.22348,
+        24.503210000000003,
+        2.1234
+      ],
+      "autouv": 0,
+      "color": 3,
+      "rotation": [
+        32.27669,
+        0,
+        36.97082
+      ],
+      "origin": [
+        -7.41323,
+        23.98204,
+        1.97349
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            68,
+            28,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            68,
+            60,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "796ce512-0cca-35bf-76eb-837d827ebe04"
+    },
+    {
+      "name": "osso_curto_ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.737399999999999,
+        24.19616,
+        2.10443
+      ],
+      "to": [
+        -7.509699999999999,
+        24.57783,
+        2.2843099999999996
+      ],
+      "autouv": 0,
+      "color": 3,
+      "rotation": [
+        34.21307,
+        0,
+        36.59087
+      ],
+      "origin": [
+        -7.62355,
+        24.26144,
+        2.19437
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            68,
+            28,
+            92
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            68,
+            92,
+            92
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            68,
+            60,
+            92
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            68,
+            124,
+            92
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            92,
+            132,
+            68
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            92,
+            164,
+            68
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "459d7989-e06d-b876-a1b2-653ea33eec99"
+    },
+    {
+      "name": "osso_curto_ombro_e",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "light_emission": 0,
+      "render_order": "default",
+      "allow_mirror_modeling": true,
+      "from": [
+        -7.79218,
+        24.40125,
+        2.30012
+      ],
+      "to": [
+        -7.70248,
+        24.56502,
+        2.3709800000000003
+      ],
+      "autouv": 0,
+      "color": 3,
+      "rotation": [
+        35.88502,
+        0,
+        36.24831
+      ],
+      "origin": [
+        -7.74733,
+        24.42816,
+        2.33555
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            164,
+            28,
+            188
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            68,
+            164,
+            92,
+            188
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            164,
+            60,
+            188
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            164,
+            124,
+            188
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            188,
+            132,
+            164
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            188,
+            188,
+            164,
+            164
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "04781948-560b-d72d-216d-684fa08b3495"
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "bedrock_binding": "",
+      "color": 0,
+      "uuid": "b6ee1841-b5e0-a7e6-54b4-a92723e42791",
+      "export": true,
+      "mirror_uv": false,
+      "isOpen": false,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "selected": false,
+      "children": [
+        {
+          "name": "waist",
+          "origin": [
+            0,
+            12,
+            0
+          ],
+          "bedrock_binding": "",
+          "color": 1,
+          "uuid": "bb325a19-cc80-d27a-c38f-cc9064904350",
+          "export": true,
+          "mirror_uv": false,
+          "isOpen": false,
+          "locked": false,
+          "visibility": true,
+          "autouv": 0,
+          "selected": false,
+          "children": [
+            {
+              "name": "body",
+              "origin": [
+                0,
+                24,
+                0
+              ],
+              "bedrock_binding": "",
+              "color": 2,
+              "uuid": "2171c0b0-bedf-7e39-c5cd-36fbe1f5bc7c",
+              "export": true,
+              "mirror_uv": false,
+              "isOpen": false,
+              "locked": false,
+              "visibility": true,
+              "autouv": 0,
+              "selected": false,
+              "children": [
+                {
+                  "name": "head",
+                  "origin": [
+                    0,
+                    24,
+                    0
+                  ],
+                  "bedrock_binding": "",
+                  "color": 3,
+                  "uuid": "4db4183b-5b1e-0078-f398-385292b7d8ae",
+                  "export": true,
+                  "mirror_uv": false,
+                  "isOpen": false,
+                  "locked": false,
+                  "visibility": true,
+                  "autouv": 0,
+                  "selected": false,
+                  "children": []
+                },
+                {
+                  "name": "rightArm",
+                  "origin": [
+                    5,
+                    22,
+                    0
+                  ],
+                  "bedrock_binding": "",
+                  "color": 4,
+                  "uuid": "036056fc-2556-d0e0-8dd8-41fb94fabc1f",
+                  "export": true,
+                  "mirror_uv": false,
+                  "isOpen": false,
+                  "locked": false,
+                  "visibility": true,
+                  "autouv": 0,
+                  "selected": false,
+                  "children": [
+                    {
+                      "name": "ombro_d",
+                      "origin": [
+                        6.25,
+                        23.32,
+                        0.64
+                      ],
+                      "bedrock_binding": "",
+                      "color": 8,
+                      "uuid": "313b571b-0670-56bd-85c0-8bb54c3bab6d",
+                      "export": true,
+                      "mirror_uv": false,
+                      "isOpen": false,
+                      "locked": false,
+                      "visibility": true,
+                      "autouv": 0,
+                      "selected": false,
+                      "children": [
+                        "837ca718-78fe-325e-24cc-d60669d76c68",
+                        "91b8da74-a522-80d4-d2a3-322c393b3c11",
+                        "c970bae5-43a1-bc5d-6b2b-f4d5ed209b92",
+                        "b6567d2f-2f77-77de-0987-54c741eb412f",
+                        "d4ab10dd-c9b8-09ca-c342-1d2899b90287",
+                        "cb94a6bc-b0f6-6a49-4fa9-53bf49817ca4"
+                      ]
+                    },
+                    {
+                      "name": "cotovelo_d",
+                      "origin": [
+                        6.34,
+                        18.03,
+                        1.42
+                      ],
+                      "bedrock_binding": "",
+                      "color": 9,
+                      "uuid": "ec5e6c3f-05cd-aa04-d252-d639c341d8f1",
+                      "export": true,
+                      "mirror_uv": false,
+                      "isOpen": false,
+                      "locked": false,
+                      "visibility": true,
+                      "autouv": 0,
+                      "selected": false,
+                      "children": [
+                        "f241e50d-38c1-b06b-e6c9-a9ddb1f8a1a1",
+                        "dc47a47d-cc9c-a38f-3a66-7598e35f569d",
+                        "bd5aa4a8-bdd3-350c-4239-1e71b36a09bf",
+                        "8c5d404d-696d-537a-2b9f-c21573e17a73",
+                        "34c86ff1-8a55-e4a8-f0a3-9be7d4cc72aa",
+                        "91c15193-54e8-7982-1d5a-f3e2ba03009e"
+                      ]
+                    },
+                    {
+                      "name": "osso_curto_ombro_d",
+                      "origin": [
+                        6.9,
+                        22.95,
+                        -0.37
+                      ],
+                      "bedrock_binding": "",
+                      "color": 2,
+                      "uuid": "7c87d6f3-8332-1094-9a86-8524be21fc5e",
+                      "export": true,
+                      "mirror_uv": false,
+                      "isOpen": false,
+                      "locked": false,
+                      "visibility": true,
+                      "autouv": 0,
+                      "selected": false,
+                      "children": [
+                        "7ece806a-842d-ee25-4ba8-960ebf831249",
+                        "da6c5d47-8e28-05e7-b6a3-9c147192f8cc",
+                        "96470af9-3fcf-e160-bfb7-27bd8e8ada5b",
+                        "84bb1818-9d7a-3577-ed0b-dd5a71ffcecb",
+                        "68a0e2fa-dc26-51d7-b9c8-f3e5274e15c3"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "leftArm",
+                  "origin": [
+                    -5,
+                    22,
+                    0
+                  ],
+                  "bedrock_binding": "",
+                  "color": 5,
+                  "uuid": "38ea1363-1025-a828-bd02-031741e0f8a4",
+                  "export": true,
+                  "mirror_uv": false,
+                  "isOpen": false,
+                  "locked": false,
+                  "visibility": true,
+                  "autouv": 0,
+                  "selected": false,
+                  "children": [
+                    {
+                      "name": "ombro_e",
+                      "origin": [
+                        -6.25,
+                        23.32,
+                        0.64
+                      ],
+                      "bedrock_binding": "",
+                      "color": 0,
+                      "uuid": "788a2d7a-5200-5878-c695-8cee6cc2ab3d",
+                      "export": true,
+                      "mirror_uv": false,
+                      "isOpen": false,
+                      "locked": false,
+                      "visibility": true,
+                      "autouv": 0,
+                      "selected": false,
+                      "children": [
+                        "38994747-61c0-770a-525d-4a7675c242dc",
+                        "81bfec01-a117-1e92-2935-e6801b87818b",
+                        "0bdbff76-5fea-999e-8da8-8b4a49bf8a18",
+                        "daf6c01f-325d-583e-2f20-1a17d66651af",
+                        "1c546ecf-5986-e20b-4cc9-d7a3d1ae3c02",
+                        "d7495774-1084-de6d-db3f-942c5fa8ad5d"
+                      ]
+                    },
+                    {
+                      "name": "cotovelo_e",
+                      "origin": [
+                        -6.34,
+                        18.2,
+                        1.42
+                      ],
+                      "bedrock_binding": "",
+                      "color": 1,
+                      "uuid": "70c778fc-58a2-d895-7be5-6e03fd69f834",
+                      "export": true,
+                      "mirror_uv": false,
+                      "isOpen": false,
+                      "locked": false,
+                      "visibility": true,
+                      "autouv": 0,
+                      "selected": false,
+                      "children": [
+                        "287940d1-1c08-6775-9e77-81760f9495a4",
+                        "d94acd67-5c00-3be6-6c3e-47a35d40eeed",
+                        "a2f8c18a-afb2-1cb3-0eeb-51771159505b",
+                        "065fee71-d095-1960-2f7b-99b68615c0b9",
+                        "4b0239ca-8590-aba4-f0bb-576a0514ca9c",
+                        "bb8b537b-a01f-3e78-1341-ae5d18b15e6d"
+                      ]
+                    },
+                    {
+                      "name": "osso_curto_ombro_e",
+                      "origin": [
+                        -6.7,
+                        23.05,
+                        1.3
+                      ],
+                      "bedrock_binding": "",
+                      "color": 3,
+                      "uuid": "dbcf3762-d91b-2641-e9bb-0c0b1172b3ae",
+                      "export": true,
+                      "mirror_uv": false,
+                      "isOpen": false,
+                      "locked": false,
+                      "visibility": true,
+                      "autouv": 0,
+                      "selected": false,
+                      "children": [
+                        "b7814da1-c4c4-c12c-692a-8d3ba1e0ff94",
+                        "4a934126-2c3d-193e-bbb0-41a22d0d8cfc",
+                        "796ce512-0cca-35bf-76eb-837d827ebe04",
+                        "459d7989-e06d-b876-a1b2-653ea33eec99",
+                        "04781948-560b-d72d-216d-684fa08b3495"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightLeg",
+          "origin": [
+            1.9,
+            12,
+            0
+          ],
+          "bedrock_binding": "",
+          "color": 6,
+          "uuid": "e5d57c2d-a8a8-c296-a026-da443882b50c",
+          "export": true,
+          "mirror_uv": false,
+          "isOpen": false,
+          "locked": false,
+          "visibility": true,
+          "autouv": 0,
+          "selected": false,
+          "children": []
+        },
+        {
+          "name": "leftLeg",
+          "origin": [
+            -1.9,
+            12,
+            0
+          ],
+          "bedrock_binding": "",
+          "color": 7,
+          "uuid": "3f1f1740-c2fb-1a12-ff5a-efafc74406ce",
+          "export": true,
+          "mirror_uv": false,
+          "isOpen": false,
+          "locked": false,
+          "visibility": true,
+          "autouv": 0,
+          "selected": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "Kaguya_01_Despertar.png",
+      "folder": "",
+      "namespace": "",
+      "id": "0",
+      "group": "",
+      "width": 256,
+      "height": 256,
+      "uv_width": 256,
+      "uv_height": 256,
+      "particle": false,
+      "use_as_default": false,
+      "layers_enabled": false,
+      "sync_to_project": "",
+      "render_mode": "default",
+      "render_sides": "auto",
+      "pbr_channel": "color",
+      "frame_time": 1,
+      "frame_order_type": "loop",
+      "frame_order": "",
+      "frame_interpolate": false,
+      "visible": true,
+      "internal": true,
+      "saved": false,
+      "uuid": "25393bce-3cdb-65ad-902a-4fa53c020fdf",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAnTklEQVR42u19XW/rvI6urLhNmvRjte8aDPbF/v8/YoDzEwZzc4BzPRhggL3b3dWVNGlWa+tctHRpmbJlWZJlmwSK911xYpEUSVFffLL/91//oYRGWZaJsiyFEEJIKYWUUmRZJpRS1X/Lsqz+nWVZ7bdCCFEUhSiKovq3Uo1mhBBCvL6+Nj6D9vAftAltwPtWq1XFL/AkhKjxj5/rRPElpazeAfzr+tB/WxRFQx9YX6APnX7+/ClM+offQ3tYH0VR1PijeId34D+drq+vyfaBVquVkFLW9E/pA78f5MX6MPX/4+Nj4zPoU/g9tKfrQ7c3rA9oD74Lz3X68eMHKb9ubxRv8Bzrl3pelmWlD5222y2pF8z/arVq2JuuD3iG7Y3SR8PWBRMT02KJAwATEwcAJiYmDgBMTEwcAHySafHBB+kLYFPjPwVZ9UVCW3n78hOjr8boL9weJWMsflz1m9soEb/cRqBUnGYMIxij7VjONcQ4Y+sohDMO0fMYOrCxj3wIw9S2VyxhYht9nw4cq7P7BPK5Z0xTHjy6tk6TmQKEMij9bIGtgYVSGBt1ty5CTlFCy2MzBRozvQ85RZCuc8ClGmQKBpz6vHLpvE3J3uTSHNK38aXg4G0Z0xKNmjO/EQPAUqjL4VLKQFx4sfmNyzRtilOEOQfD2QUA3wry8b6udQvXOWjKGVjM9sZY7LRdI9C3CfW/GAG2rR05toMxTc/ppmADQ3TRZ6E5lfUYV3llasaVMj8p6GCsvWROmRe4BtAnBfHtHH3et4SFx6VlJ7HOlqQQoHzvwvXxz3xJRjhVYwoZyGwPe2FjNR1USVW/PviKvaYRoj3qnTKGo7huU3WNAn3eGfqgyhyzDc6g5j9FzH2k81B1BzOBq5RQFXT6CKRXRNHbgwo5ugw27eHqMtRnEI2pajI2SneV2SXFo/SNqxL5Cux6hSi9PSEEWf2oj/7xOzH/ens+ZDGl5d7m2R757fI/U4Urk/3mQ4SBDjkcDg3FQRkk/Buq/JSNARwOh1oZMlyGCrKL3W5X48nWCPf7vVGhuKzVzc1N5Wi47FYfA2srP0aRTVDTS7aBTLgMVZtxrNfr1tFM7wvoD/w9quzW9fV17R0mfeF3AeGyWphnXAbu9va28Tub/rDp/9vb21q7oAPb/sa8K6XEfr83BpX7+/tevgdlvnT/w2XksP+Bf9zc3JDt55QB4pQdOhj+/fv370aHvL+/NxiAumRdEdBkAKvVqvr++Xyu1Vh7e3urZQC73Y40eDBCUBgl6/l8NjolVfcQG/xutyN1h9uBzjfVJLy8vDQ63263a+gf6xfer2dE5/O5UYfOlBGZ+h8+PxwOtZqASinx/Pxcaw8Cu173DowVfk/py6R/MHY9AGRZVvW/XocQ6uvhOpBdmRPVPgQFve4hyIltSp+vQ3/gunxvb2/GANXH/15eXkh9/PnzhwwAVF3MRgCgHNDEgFJKnM9ncTwea8Jvt9uqgaurqxoD4HhZlonT6WTVAVCIEoTcbDY1h7y6uqqeH49HURSFOJ/PjQCgj5xURkCNgFQGAEEI/h/LaEpR9c6n2qfkp0Y8XHgTF518fn6uAh18f7PZWGcAVP/jrOLt7a02wiulxMPDQ9Xe6XSqFb+Evnp7e2tMSSgDpPSvF9bU+d9ut+L5+bl6vt1uGwOOHiBM+qeKgkKfwe9xFqTbkz5AnM/nRmHOzWZjzADaMlDd/yCwH4/HWgDQ/Q/awkVNcX/UAgAI2xYAcOXd9XpddZpSShyPR3F/fy+yLBOvr6+VkpVS1ffaDOD9/b0zAwAF6hENDCjLMvH09CSKohBXV1cV/6fTqRatPz4+Gm3d3d0Z5ccOjvUBI83T01NlgNQaBehLj8i2KTjwrwcACMDw/qIoqudXV1eVYUIgaLteSvU/rkS72WxqlXmhTfhss9lU/bvf76u0E7eNg7VOEDD6ZACr1Urc398LpZR4fX2tvgfBtE8AoNrXKxGD/kFXMJCBniFTA53rlYqxDdjoX68EDfKs1+vagAgBGPzvcDhUMuJg3JoBUAZoYkApJS4uLqrPoREIEDc3N1Ujr6+vlRHBuyhlU06pZwAQDPR5KU5vHx4eagYIRogjdp7nZFumAID/MO+gj/v7+5rSwRhwwLu8vKwM0TYD0Uc8PQBgg1qv1xU/4Aw3NzeV/vXS6n0cEIxOzwDgvXoai/t/v99X2SD+vc2CJrWuofcZDAowhVJKiaenpyo7tA0AVP/jAY7KAGCULYqiGvRw0IC21+u1KMuy4Qc2/U/53+XlZaM0vu5/IO/hcKi1CwG5EQBMERCPejgDoObCFG2324bCKWWbPqNWlttotVpVBgijJyi3LQOwJcwndMhms6nN4cEYIFjBaNAmgykAYefUAwDoBYwL+MGLV5T+KTJNgYAv3BeUw5p2jCCL6xoAqBHQtj/06Q04HPAFjtoWANr6RA8A2J4goF1eXtYC8M3NTfX/eqCkyOR/VADQM1GTTcF6CHZ4Ey+5yQBxp+ORxGWltc+2nK93YsAF39tgJqXCToGUUpxOJ7FarWr66nOhB1LdtgDgY9+Z6n8IAEP6DOblOqiGy5aorZyU/qmFOldby/O8tgajOyjembANwF3+h9/f5Xsu/SVtBHfptDldCXXRh74u4FPWMQtfToVMiDsmfU61IM5QmtR1YNeTfyE7NhWjCVmezZT6x6qJMJUjxylQV5XiSQcAJiamBWcATExMHACYmJg4ADAxMQ2lfHfdvIygH/KA7ZQQ+PBKXDQ+w1sjFD68vh8Kz/GBDFt8eGqhpA0fHstL4cObnpvaN+lf1y++fYfP5euLcXiPmtKHTnBYpzYqoJOW+FSefggF+gqfmoS2qHPopPxn8/l4/V4B5kd/Th3LxfoCffTRv360G9uebm867/gofNsOQ9tJRNCvbk8+/Y8zACYmngIwMTFxAGBiYuIAwMTExAGglcasf9bWNp8S86/nscqCp3Q0N2RNSZejyL74kakb3xyorxH7rDEY0oG4aOh0BhxjWfAYNf6n1oE+MAl8dJhtxWF9myeGUY4BNdZ2/ZWDg5vuZEwmlphBTBXK2wbrLpZ8PrHwxnbEPtiAfXThCqQi5+ZwTGkEO4Yrn4ZP5S7C2yzC+SoA4hMlZWi6H+L6a6wpWJ/+mJLzumAozGVe74OiTAF8GlSfzvHZ7lScYgnGG7MWwVD7cO0PG/59yCinavSxwCN5W3FcfU1hgU8vPuPTj1wzGNs2c57TMy05KNk67NApbYiamMGmALYrvbGCxBDFzWXBZilw2alnpG36Dw1AG8KmZQinSqFoZQxjsTm5NXTUSDUt7kp7mcbpr76DdbLnAMaM9iEP9wzdB46lLx/vo+oUMPmxTV/6zKfiPEvr5BAO7do3vqaAoY8lT9H2xubZ+SgwRmYxYay7gojoUEx6uo3BOwfPgQzorK68t7VD6drH9EVHB6ZGCxeZdHhvXf/4ezZQ5rb615GI2nhP5RwAlteEamX7XqrSE9Xfuv9hBGxb38j7OglAbwGqqY4Pj6GYMLx1HwMAvPM2fPgsy2pw0zoiqm2HmtBZAQoal/mydSDK2X///k3+nsK5t+kLHR9eNzgdnVmIbxhvGwfE7RwOh1oZMlyGCgx1t9s1UHhsjLANHReDswLqj46+3Md2beHRgYB/HY4Lv4fCMdzv99bozBQ4bVtfSClriM66/4FOADEay0hiA7YZALwAGsQCATxzlmWVYel14WzgoSnE2Pf391odNB1+GyCrKaw8EJwagWzx4fW6e6APDD2Fr2/qkRocBneICZ65Dz48BBJdnvf39wY+vA6XbZLfhM6M+QJodCwLlnm321V9j/Ej9b6gZKX0j+1FHw2xweMBgHKILMvE79+/K94p+2vDZsQDmO7E2Nn1jAhgvPGA2DcDAr4Oh0PNF5RS4vn5udYe+B9uT4erB+DaRgBow4cHZfz586fm4KfTSTw8PAghRA0fviiKWpFDgFFuCwAUOCSGW6YyAMBD/9e//lUBIeJCiBSybFmWJDioCZ0VOlFHh8XGCA6OjRz0hfnBUN1UtmMbAAACG+DBTfjwVAYAgKk20w0dnBX6FN4HCLwQwIuiEOfzuTHi6QHVFh2ZygAgCMH/Y370AQecpyzLyr76wINTGScO+niAeH5+rgIdhrO3zQC6/O98PjcybPA93f8wJDgecFozABM+PI5qV1dX1TwPDALgmTE+/OFwqGUAgCPfNi8xGQVVCRVHNCmluL+/ryHylmUpzuczmQGYDODHjx9Gp9ADABgehQ+PCZwQZwAYubYrAOoBAFfeXa/XNfjq4/FY4cODLrD+uwyAckBA9sUGTVX6hd9nWSaenp5EURSVreBMoQ2d2QRPjoOYrg/A/Xt6ehJlWTZwGHEAwVDqtvJDO6fTqaZ/rHPQx3q9FkVRVPZ6dXVV8xN9gNDp9fW1NQMAhGksA+gcnoO+YOqBgxD2Pyrbzv7vf/4f1ZUB6KMKIKWaOgwEA+jsNgOkFACQy10B4OPjoxZwIF3S8eHBGCgDpObFEOxMAQCPALBeAZ/huTB2eh0pGMvalhrqGcDFxUUDix4+w/p6fX1tBABbB9QzAEDFpUpRA48fHx+VAYI+sAymDACySyoAYnvT591Zlonj8VgbQUH/2N4uLy+r/qDap+bgOIBRGQAeVGCwggAsxCdKMei/KwBQ8mMbhvfjASfP80apen3A2e/3ld+2BYC8Cx8ep1R99q8hLdeN2WYOZkt6ZL65uRH7/b5yWh0fHgetrlVYDI/dhQ8POoER+O7uzhof3jQFwXrGGQA1FzbpXzd4Stemz9rWDUx9cXNzU/F4Op1q+jJlAJQDmN6vB4DNZlMLoDgbhOdd0PBtawAQHE3w7GVZVs8AHhxPU20WQbv8T1+P6dMf8A74PRXs8zZ8+NT2Nm0Cz83NTbVQiNNYH3vWOBBSWzawSNjHAEwGSAWAENuTofoTw3N3OaGPAQD6Huz3dDo1sq6+NqA7oR4AfJzVaPO/IWcb8ADc2tbYxhLidByeJ6bkIH1k9X2DLFSNgZABfwgN6f8pHHW37deu55O9DjwGtR22Ce1kqcofOyPUeYjtrGNfjPNNjAvAxLRg4gDAxMQBgImJiQMAExPToij/t3//t2ZU6IEPTz3Xz9G3bQNRhxNgu8IGHx4fMqHw0PFzagvNtJeO7yHg75jw7qljqFgfpi3B+3sanx63Rx2k8oUPD4dFKP1jXkzn8vVTaro+qEMqmC7WF6T8+OARpQ/8HN/LwPao64Nq33QSVNcvPuoN8lC39vDzoig6d0ouLi4G+R8+I6L7X5u9cgbAxMTEAYCJiQMAExMTBwAmJiYOAMHIFQu9652pUNdJQZ/vHfvkWShZQ/Ln045ToaElwyeTAYSqKuwrKHWt9k7tqKjrPYW++gsxKISU30W+oTyE1EmUqsCpVGwNAQ4aooIv07gjtv79lOHGk54C+GAw5RHB1xQmxgg41yCVws09/SxAyDZ94wJY3QbkWv/TS9lTXCNgGn/AGZQBQGHGMTuYqiI7dx76tBfq+ivwMOZgEELvfTOwlO3P5Wq6HBLBQxW08JnmzS17cQWtSIV31+mOTbGYlMFDU82IJnsOIFbK6wOZeI5TqKEDxFgZzVx0O7kA4CKUTeebVvZ9l9SyadO3AU9hHp1a+aylU19956yy9CK7jqIzthNNwYlDbzWHKmw6uylArBpsU3OGmPUClzTqLjUD6bvtaAQa7dtw2ypoLGX7XIm1XZjSFTjmTkCsvW1bvfuuQtwmX0w9mGQwoTnFzBZ92V/uy4lSXhxJnb85pMhzmoLNRR4beXtlABjFZCxlmrDcYnZ4Hx5CtRcj/cdtxJZ5TL236dCVBxdbNB3Ec+WBynbzkM7Dp8HcjK3rsk1MvfpoL9SNyDH0P0Re150w1+Bho3fpIlDXacCUr0tOKaClHkA5wNs5Xcp6kqEcKJbQIbZmpnzabsnOz7si/eXN2ZDalZh64YsYug0NfxYrQPvOBmPaQai2em8DxliI6apyYsNDaEO11YPuPK5AqH0WAseWOSR/fXgIlR2mvCDKFYESaNPHPHAqUwrT+YmQR7F5ShGpHkBqnee67xmCp5SnAXMoKuICMz/XQSnkOlzydwF8bnuF7rAUDttMwXFStpGUbUN/h4/7CdbbgC4p3pwqCvGWV5p94FJTwGYNBsOfTT07bOOHcQGYmBZMHACYmDgAMDExcQBgYmJaFOUf703ceimVKD6+scgxvjj8G34H+OM6/rqOD1+WpSiKZlvvfz6I9iWx8PjdnpSqhoEO74dKOllW1n7fhg+PK+9ggt9nWSZWq1UlLywK6foA/jA+vM4fRR+bdv2DvCZ8eOo56Makj5r+86b+V6uVEKKofR/jzUupqufAS1F8//vzs48aryb9U/aHZciyrGoP25uOdw/tgby6PijbE0KIj3Xzc+D/s21Zs2GTPih7+9ZHaV6IU8TCZilq9gT+hd+Hn2F7NPmf0f45BjIx8RSAiYmJAwATExMHACYmpkVQ7gvgMgSNDUPGtFyyuXcS68Sf7eUylyPRcqkdiJXmUhXYNvilFMSGQnP1kd+3/m34azsqPET/U7+J6jUAYIVOuVgG0zyCeqr2FjJo+Hx3bpPiTM2pUymB7fOOvEub+EKLqz583rTzDZMWavoaCsQlRT+SIQ0+VvCYQ2mmNqPnrGo+U85Y9jcIHrztx6nho8co9qHLPIZDAg9jrimk1vdL4cFHe96gwVKLiKmM2LGhobq+M5cS5lPDhpwaNiafA5i5wcY2+q6Crjw9GO+d1I6LEy7A1OqvtRmhr22oFHUWI0MZw8Ft2/SxtTjl4Gyz8Jj7gEEKqSj8/jkXfpzjiDdk58Glza7f9TmbgG+JzjmLkVOZY6bsrCnpYu4pd0qjeepVgYOtAdiuSuoK8plu6zyE7ow/f/6MbvxjrIB37Yj4eH/fk5hj7wQopVp5COGwfdsbtA24tFFlaiNsrIU2XweZproTMyZvfZGjXPtgEtBgbTyE3JaBDkgRimyMY7FTgwYbQw8h+iCkzFZHgV0cNtWjjzzPZvKRPs9lcXhRtwFtgSFCLDQNSQFdbyjObddkqsjEodrrs6sRJADwbcB0DS7mCnXXOYupZlhzWlPoPQVIMWpOCTF3zmljqml7aoNPCrcoB08BqMbHWIjByjRhtLuk4LbbULYyh+ysEHqnpkVtuwy2PPg4YGZ6T6xF4Nh9YdOe70Ekt+0MveEpLfLxtMRPoIitR5/bjlM+CDRE3q4+m8UiIDt4Gg45pynO1Keb3qYAQxpK4eCIzyo0UyjQkSJvehk5G3juVEb5lPqgTT7XNvO+DNhW/ZnrOQCq5FbqafuQfgh92WtuI3VfXY/NP9cDYGJaMHEAYGLiAMDExMQBgImJaVGUf5TEcd4sE6KExaPvlW9YEPqEL8dY9YBPLkSWSVEU9edCCPHxUQgCnlxQ7WdZJsqiFGX5hYeuhMjKb7zzb3z4On/V8y9+lBJCKdmKD68U3f7n+5RYrVZCCqyPL6z4oqz0IZUQQoB+oD3QB7yfXox7J9haiUwU2so5yFutnmv6gPaEkEIoDR8e9Y9N+1LC4iF6X1F+yiqlkOL7OejvU9+q0r9SZWU/Sokv/pRV/+v2thLf8oI+y1JV+sX6gOdYH6pUQqmSbOeSaF8i/YO82N7wAnfz+Wf/N/UB+tRszdD/uv+VX50H7cFzbG9KfetD1fxTiaJQZP9zBsDExFMAJiYmDgBMTEwcAJiYmDgAtNIUKgbHqpU3RFex9eETHnwqJz3ncEchlAzSNzNzKeaQegFM2zaHHgMOXZDEpSrwFIPQ0ADct39t9Z+noJQY0c7lboLvUc+HXF1n81M/uz+GfZnqHDB5WAOIgc4bChYsVLYRq81UHX1pwLBjDGi+2shDMgTKCNkRc43wsfQ3tXnzkAxniojJPjM6yo6CIgP5Yjpke7bzsvP57KVC6xDq0kOMQEHxEDtAvb29RXVg3N5YFZdtfaBvX0jfLxwz5Z3LvfUplb8OUZMvZvGZpWVQ0aYAKQeTJdBSF718pcwpgYMM3ckZlAGw048r7xz0lxKYxlwyAr1KtivJVASaisGmZlxTB94MsTe+JHsdeg5Aho4wSxyBQhttzC3APjUQ+fxBGrbWpx+cMwBYlTRFbd/G4Nqer4M7WZaRK7E+Thz2qZTbZ0cklEOG0ENfWTAPsXdgYjo5bivEbliSl4F8rUAPMVAezdLMglIuez5FcgoAseCh+rbne7Q18RB7LxjaG6oH2/l2m0HrPIQ0fpN+x4LlGpPW67XzIDYIHTh0dBt6GWQKGYzLnL3P91MEyQgJopKCvHPJEPM5Cc1pe9qXgfrcEHSRwefZB5dFcP3o9hTsUcYyyjk4lo0xx5SVA964upqC/rvsMZ+S0Cbo6iHOmDLGXGoBeOqAmS78j5mNuNhvX16la8O2CyO+jI9qL/bW03q9Hv1UWwoLUpeXl96Ch+tBoDkvBFKDXCgepA8n5uOv8UfMFBe9Qk+LbHiYmu34REx2sQ85VJFjbAMtIW2fklHzJa+0A7DXNYAhc6Axjq/iOVzICxmpGs2UnXOKQT3kLszQOpXU7+VcO2ys4DOGYYWegoW8jurboDlDCrAGwMTENE/iAMDExAGAiYmJAwATE9OiKH94uGt8mMnPuKAQoHiFh75aCSGl+AKHh4cVHjpgyGN897IsRVEUFcY5pvf3DclYDR9+tfrmLfvGSy/LslESXH7xDm3id1EE36lFxa93gCxSyko+4Am3B//GfzV8ePRcp7u7pv5BXn03A+tX1wfoV18Yw88pWXdE+0JkQqhSiLIUIsu+/6oxIxNClJ/f+WYQlPf9e7ARpci2v3qg2TrS72q1quTF+tDtDZ7Dbyl9UPrf7Xak/vHOEdgwtjdsK1mWNewbL1Ti3+u02WxI+9PtRdeHfnCqzd6wPjgDYGJi4gDAxMTEAYCJiQMAExMTB4BJkktZKxdK+Vit6ehzAowlwUZKYKW2Nx+pxdwQ9RHlYCVGvimYYkeHLH+VulG3MBhMvinhNoQa4HzZx2ymAG0CuxZ0mKKsTqO0/pcIz9RvxnZwqv1QPMWQtVdR0KkBXM5xRIgj3/Tu1KfS5tTsLU/RgCnlDp2DpzCHjz1F0ItUBknnlfo+KES1M4LOfZQEs9FfysVXbftcDtS0YJrInJz7mLPAOawBLK06jq/3pbyD4QMcNAXcQpVQthM+ACyoJDV1Jn95GUH29TeeTUxpfj2VNbB8bp2C98GH8ta1s2D7/jGNgbpQsrT0eAgqU8pAKz4ozBRgILS4SxVi26KJISqwhnD8JUNxD9nnH7tse4q25IwNuORqr6GqsM499Q3Ff0pbfTH4oXYgQrSZ91HG1CvMDjnEMYVjwHH6S0V3fqbuAOQaHHKbDrQdDV3O5Yeo8c9GNziquE37POp9DicxpzBN84oOHBoJhy/jTHvESnFLc45oQ8ECQC+FBkJjXdroPiSgpKavEMAstvcFpnQStA+fJvuw3QnLjSlgAqOYqXOXOsIGkZsyELKdTEztjkCswYbKAEMHHJd3B0EGst2WieG0qdweS/FsRCSvGT0YLg03cihJm5HBJ7qrzT58qHMAPkfckEaV7jQns8sg5p41zSiw5ILJ2SHHWBSd22hmG8zxvvjUdBATHr3vlEY6SjS5CE5lHzYjfOiKLD6nWd6Mj0t5JZeNZRana10yatmTi9nNeWMfD56U4Rl1oSYRSHz1ZerrCkNsJY+h8KUfzBljNZhK+cIaLd4l4HMRbWl3SvYjB3CVvLMtzfBSl9d3thVb3lgDnM/3db2LcQGYmBZMHACYmDgAMDExcQBgYmJaFOXvH80PP292KlGWqvq3EGWFxY6fwxqD+sKK/3yuas+V+sSnpxYkqPb1961Wn+2b8eG/n3/jw3/juYtCVe/T6eOjydNqJcRHUX7JnoksExo+/Gd73/J+Pi+KEvFXNJ6DPrvk/5RHaXjz5RdvKyHl578/9ZF96bquD6WK6t/AG4lPT/Z/Vn9fqUSWfesD9F/po/xsD+SF50XxzZ9pMcos/7e9fcoD9phV+lBKidVqVdnb55+o6QPbI8XDJdF+8SUvPsaO9VGUSghRIH1koigKUZaqsjfYCQF9FQXoo04XLfrH9vb+UdT8D55T/pJl3/IrBf5QcAbAxMTEAYCJiYkDABMTEwcAJiYOAG7EtffmSX2OEI9ZhjvUSUD9vX0r9MTgydf3Ry8L7gsayrcCUyMuaiGSLW8W986FX33JWAYYKoLFNprU0IBSAcpoO9vvogsXKHrOSPvrM59bCaW5GYHrbbpUCoLO8TZgNhD5qsteY+orj+mMYxlCTGdoM/iQWIWhDXCoDkP3QWpBZoi8rgU/XYBvvAGD8AjP83bODv232+V/Q/1TDmW6q+rv0FFjCWnglAw69QA8x3WAkH4g56LEEKATKQeoJWUXuj3a2Geqi8hD+jtEEVqZQufabAP2ES7lCi2cZvt5/1i7SnOznUWhA4fq4DFH4xDbgK64DL7tw9fWswtvIeRJ0X+kT6WESLvGTsVTKAs+xekBlc25lGVPNauZyxRsdsAgvpFjOf1Pt7+WuMvSN+OcXVHQJaID2xi7qzOEOIq9JHw+k85iZ6Wu7Ul2Wj+jTwgZfR2kmoP+bdGP5i6r72wpD80gp3jjBCXvusuyT+gPnhI5TSFT0Js1PLgv7PEhzpzSFVQOYLxGEXoK4XMbPMoUINWINrYRjA0FFfpGXl/e5nRacQrIS0muAWAGYwBxprAoM8b81xdvrucAYp7GnFJ/hoQHH/pu2ZaC2Mwpx8oEQkfjoecPhvIXaiEoRSTkKWSbcyXp0ymmOOedolMs6a7GkINnIfqy7ztncxR4KpSiwkOmgFPKtFyq/Axpy5feba7k+pQJ2nO94z+bAJCSEaQe9KZasyEG3yHWQVIbcFxt3WkbMNXijEsnU228mP0Vo2rvFAasVC6I6f2h/zEuABPTgokDABMTBwAmJiYOAExMTIui/H//578bHzbw4aWsVVfJMsBDLxuLHRgf/huj3HzO+XQ6NaOS/I5Lq9VKSCkrzHcg+P9P/HhZez/goXdtpwghxMdHE6D9E3M+q62u6/rAuhJCNPSB28bPdTofD6T+sbxY99AX8Fy/bEI9x/rQ6fb2ltQLft9qtap9ZtIH/Bva0/VB0ePjI6l/bGtgj/A+bHMgb1mWoigK0j7w723kxzZs0odub7o+4Dno4+Pjg2x/t9v19j/sX23+B/pou2PAGQATE08BmJiYOAAwMTFxAGBiYloGDT4K3AcLz/e58r5nsGPBnZsuFfGttn79OxcKWUNBKVUtOo4SAJimY1i27/DpfHNBBx7zXkl0aLAYhucqeOx7CmOO2j7P1Y+NpBMbqiuValFj+kq0NYAUInxsHnwatO+y3FPPSngK47fNNl6iFQWdshGyUfM0K+T7QxYF7eI/j6FAV2y2KQSd0Dh5Q+bQIRZhXfiJOX/G/PnGbpjyWoapD+TYZYmZ0k05U6sDmZI9zsUfpE9hpwL2mLqB+CxDPtXpy5hw8LZ8zaHkufTNQEildKGsLLkazdgOOUaZbgZvHe5/cm5C+ZrC+Do85Pp7myDnS7cMDjpcf1PNOPMpKrzrim9q6bCPdmM6UKjDOzFlSCU7iAXM4qr/PGUFpTpqMF9xnZinc+GCj7eqwFPtJFdgkKUYZd/t2LnOyfusgaRoG17hwfs4FW7cBzAE9W7q/bYjB/UdKhi4yJBCIPE9iurvMunfF8qSyY58yWPqf5/TiL7YjkNk6/KLRgDos9dLKYRylpeXl6okETYY8iCClL0Cya9fv8iyUEKIWtkrXOqpTQEvLy8kT1LKWsktbPwPDw+dRmhrPFT7P378aA06bQudur6en5+r31C/2263zoEd+IcSXlhfuATX/f29UwAWQlT9jUuk4TJwJn3ZOq6p/7EM9/f3jSyxy3GpAaQt2Nj4md73lLODPLgkWJv/5ZQChBDi7u7O2OmYgZeXl1odOiGEOB6Pjbp8JgZubm6MBvDy8tKoq3c8HsXpdKoJD3XVcADABg8den193WjreDz2DgBQMxA/v729bXSIjQFQ7QNhg8dOZBoRcXAE/eP3UzXpujIg/Pfr16+qDh3o9+npqepDUwDANQNtHBDqQIJ+9ADw9vZWCwC45h/0EWW/tvrXA4Bek09KKe7u7jrP3r+8vNR2V3DNQqA/f/6Qv7fxv1+/flX8go5AHusA8Pr6ahQAGzxVeLMsS/H4+Ciur69rAWC73dYKQ7oaAHQ+DgDb7VbsdrvqM72o6NXVlciyTLy+vpKFOW1GwK4A8Pj4WDNKkFcvRIn1pRetBPrrr7+MRqmPeHr/6IVPsb5A/1g+KgBQ+seFPnFRyuPxKMqyrPhTSjWKWkJ7OADg79s4IA4AFP/X19eVPR6Px4ov7LC6PCb9g6NRARDeB3qFZ29vb40BB8sHGREMhG0BwGYKYPI/KKiK/Q/rH/hr87+ccgDobBMDIBgYv8mhttttZwD4xz/+YTSA7XbbcGBwcPgMB4P9fl8ZCTgl/u5+v2+09fDw4JwBKKXE4XCoOtslAPz973+3ygBwf0DQgw7GOgCdgcFtNptWY6Mc0BQAoD/1PgaDPxwOtTbge7gyr00AxgHg6uqK1AfY43a7FU9PT7X36fpqCwB/+9vfOgOAro/r62vx+PhYDXAQBPUAAPqCZ1T7WD4b/yvLUpxOJ6GUEj9//mzIqevWOQC0RSA84oHCgWmllLi9vRWvr68iz/POANBmANiAwODB+aj5z+3tbaXw379/kwGkoYA8tw4AmD9wMnCwf/7znzUDtA0AVPsgN/xezwB2u12lfwhAlC6Bl7YAYOp/KgBsNptaqXKllMjzvDL429vbimfofxyU+gQAKL0N7zZlREop8ddff1XBGL4DOuoKAJT+9QCA9Qj6+PnzpyiKoqZ/aBe+u16vawGAkh8HaBPpAQB0ttlsKt6klOL19bWajh0OB5HneXcAMCkAd4zOAE5/8zyvDAQMADqWUnifAHBxcVEToM/iTp7nIs/zWgDos+DVtpsA78Wd+vPnz4YxQKDsmwJCn+AAgEcZ3PZms6n0D7+DKRAE4L76NwUACIo2fYFHP9AXxQtlfzgA2PQ3GDoMAFJKsd/vK9naAoDN6jzYOA4OYN+bzaayD306jfVvCgCU/Hq/mLAxgCcIAC7+l5uEx4x1gXMMIZMBdI1cNoFF/x3Vlg8Z4N2w8yClFKfTqTJMDBIxVE96ANAXqbD8VgZgGACoAGCjqxDXvl31hWWjdDT0/aATnIGCvtoWd/v6hQ//M8nu7S6A7zpyffaHYxuXbQBiErPSv+2WOV6MG8Ov8NTHKQMIRS7CpFL0o42Pvgc9hraXcn/pv1/Sbb2U6yeYiHEBmJgWTBwAmJg4ADAxMXEAYGJiWhT9f8Xst4dMeTOjAAAAAElFTkSuQmCC"
+    }
+  ]
+}
