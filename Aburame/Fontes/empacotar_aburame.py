@@ -4,7 +4,7 @@ from pathlib import Path
 import hashlib,json,zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-DOCS=['README.md','Referencias.md','Relatorio_Tecnico.md','Comparativo_dos_Modos.md','Comparativo_Primeiro_Modo.md','Integracao_Manifesto.json','Validacao.json','Validacao_Blockbench.json','Validacao_Molang.json','Validacao_Visual_Estatica.json']
+DOCS=['README.md','Referencias.md','Relatorio_Tecnico.md','Correcao_Visual.md','Comparativo_dos_Modos.md','Comparativo_Primeiro_Modo.md','Integracao_Manifesto.json','Validacao.json','Validacao_Blockbench.json','Validacao_Molang.json','Validacao_Visual_Estatica.json']
 
 def files(folder):
     return [p for p in sorted((ROOT/folder).rglob('*')) if p.is_file() and '__pycache__' not in p.parts and 'node_modules' not in p.parts and p.suffix!='.pyc']

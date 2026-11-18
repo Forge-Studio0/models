@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "description": "SWBR 18.11.71 | Seis visuais Aburame revisados com base nas capturas e nas referências de Shino e Torune",
-    "name": "Shinobi World BR 18.11.71 · Aburame",
+    "description": "SWBR 18.11.72 | Aburame com enxames recortados, cor na pele SWBR e rastreio discreto",
+    "name": "Shinobi World BR 18.11.72 · Aburame",
     "uuid": "ef513a51-2cb2-4cc5-b300-5ef44201c3f5",
     "version": [
       18,
       11,
-      71
+      72
     ],
     "min_engine_version": [
       1,
@@ -23,7 +23,7 @@
       "version": [
         18,
         11,
-        71
+        72
       ]
     }
   ],
@@ -33,7 +33,7 @@
       "version": [
         18,
         11,
-        71
+        72
       ]
     }
   ]

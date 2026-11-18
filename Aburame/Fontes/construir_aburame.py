@@ -5,11 +5,12 @@ import argparse,copy,hashlib,io,json,math,re,zipfile
 import numpy as np
 from PIL import Image,ImageDraw
 from scipy.ndimage import gaussian_filter
+from pele_aburame import SKIN_CONTROLLER_FILE,VENOM_MODES,apply_skin_binding,coating_mask,painted_alias,tint_skin
+from rastreio_aburame import TRACK_PARTICLE,TRACK_SCRIPT,TRACK_TEXTURE,patch_tracking,patch_tracking_particle
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=[18,11,71];TEX=512;TILE=128
+VERSION=[18,11,72];TEX=512;TILE=128
 VERSION_TEXT='.'.join(map(str,VERSION))
-SWARM_OPACITY=.94
 COAT_OPACITY=.97
 MODES={
  1:dict(id='nz:insetos_aburame_m',level=10,kind='comum',tier=1,name='Aburame_01_Insetos',path='models/entity/nz_insetos_aburame_m.json',gid='geometry.nz_insetos_aburame_m'),
@@ -97,6 +98,15 @@ def swarm_tile(seed,tier,poison=False):
         image.alpha_composite(bug,(x-bug.width//2,y-bug.height//2))
     # Gutters keep adjacent UV cells clean under filtering.
     pixels=np.array(image)
+    if not poison:
+        # Keep the densest part of the colony readable after atlas mipmapping.
+        # Close small gaps between neighbouring insects while preserving the
+        # wider channels and the isolated insects around the edge.
+        occupancy = gaussian_filter(pixels[:, :, 3].astype(float) / 255, 2.8)
+        threshold = {1: .26, 2: .21, 3: .18}[tier]
+        core = (occupancy >= threshold) & (pixels[:, :, 3] == 0)
+        tone = rng.integers(14, 27, size=core.sum(), dtype=np.uint8)
+        pixels[core] = np.stack([tone, tone+1, tone+3, np.full_like(tone, 255)], axis=1)
     pixels[:4]=pixels[-4:]=0
     pixels[:,:4]=pixels[:,-4:]=0
     return Image.fromarray(pixels,'RGBA')
@@ -209,14 +219,15 @@ def swarm_sites(tier):
     for side in [-1,1]:
         arm='rightArm' if side<0 else 'leftArm'
         if tier==1:
-            result += [(arm,[side*8.8,14.2,-3.5],[2.2,2.5]),(arm,[side*9.4,19.6,2.5],[2.5,2.9])]
+            result += [(arm,[side*6.1,14.15+.45*side,2.85],[3.4,4.2]),
+                       (arm,[side*8.2,19.25-.42*side,-1.1],[2.6,3.6])]
         else:
-            result += [(arm,[side*6.5,14.8+.4*side,-3.45],[3.8,4.9]),
-                       (arm,[side*8.85,19.1-.4*side,1.2],[3.7,4.8])]
+            result += [(arm,[side*6.15,14.9+.55*side,-3.15],[4.55,5.7]),
+                       (arm,[side*7.35,18.5-.4*side,2.6],[4.3,5.5])]
     if tier==1:
         for side in [-1,1]:
             # Compact, porous sleeve-to-forearm colonies; head/torso stay free.
-            result.append(('rightArm' if side<0 else 'leftArm',[side*6.0,15.3,-2.8],[3.2,4.1]))
+            result.append(('rightArm' if side<0 else 'leftArm',[side*6.05,14.95-.5*side,-2.84],[3.8,4.65]))
     if tier>=2:
         for side in [-1,1]:
             result += [('body',[side*8.25,23.1+.65*side,.8],[4.0,4.5]),
@@ -227,7 +238,7 @@ def swarm_sites(tier):
             arm='rightArm' if side<0 else 'leftArm';leg='rightLeg' if side<0 else 'leftLeg'
             result += [(arm,[side*(10.25+.4*side),16.7-1.1*side,-2.25],[6.1,6.65]),
                        ('body',[side*5.2,15.6+.6*side,3.65],[4.6,5.3]),
-                       ('body',[side*(9.9-.47*side),22.4+1.15*side,-3.15],[4.9,5.15]),
+                       ('body',[side*(9.9-.47*side),21.8+.9*side,-3.15],[4.9,5.15]),
                        (leg,[side*4.55,8.65-.52*side,-2.9],[3.3,4.2]),
                        (leg,[side*3.8,4.25+.28*side,2.95],[3.0,3.7])]
     return result
@@ -271,7 +282,12 @@ def model(mode,skin_geometry):
                 # Each group has a dense centre, lateral depth and loose edges.
                 factor=(1,.84,.75)[layer]
                 center=[pos[0]+(layer-1)*.30,pos[1]+float(rng.uniform(-.34,.34)),pos[2]+(layer-1)*.64]
-                rotation=[round(float(rng.uniform(-13,13)),3),round((0,59,-57)[layer]+float(rng.uniform(-12,12)),3),round(float(rng.uniform(-23,23)),3)]
+                # The main sheet lies just outside the appropriate limb face.
+                # Pair it with angled layers so that it remains visible from the side.
+                yaw = (0, 59, -57)[layer]
+                if abs(pos[0])>7.9 and abs(pos[2])<1.75:
+                    yaw += 42 if pos[0]<0 else -42
+                rotation=[round(float(rng.uniform(-13,13)),3),round(yaw+float(rng.uniform(-12,12)),3),round(float(rng.uniform(-23,23)),3)]
                 cubes.append(cube(center,[w*factor,h*factor,.008],tile_rect(1+(i*3+layer*5)%15),rotation,center,False))
             name=add_bone(f'{role}_grupo_{i:02d}',parent,pos,cubes)
             angle=float(rng.uniform(0,360));speed=float(rng.uniform(29,61));orbit=.23 if tier==1 else (.95 if tier==2 else 1.25)
@@ -340,9 +356,21 @@ def layer_geometry(master,mode,role):
 def camera_program():
     stage='0'
     for i,spec in reversed(list(MODES.items())):stage=f"q.is_item_name_any('slot.armor.head',0,'{spec['id']}') ? {i} : ({stage})"
-    return ["v.swbr_aburame_camera_ok = !v.swbr_view_first_person && !v.swbr39_ui && !v.swbr_view_map_face && !q.is_spectator && q.distance_from_camera > 2.8;",
+    return ["v.swbr_aburame_world_view = !v.swbr_view_first_person && !v.swbr39_ui && !v.swbr_view_map_face && !q.is_spectator;",
+      "v.swbr_aburame_camera_ok = v.swbr_aburame_world_view && q.distance_from_camera > 2.8;",
       'v.swbr_aburame_fade = math.clamp((q.distance_from_camera - 2.8) / 0.2,0,1);',f'v.swbr_aburame_stage = {stage};',
+      "v.swbr_aburame_external_skin = q.property('test:custom') < 1 || q.property('test:custom') > 44;",
+      'v.swbr_aburame_skin_stage = v.swbr_aburame_world_view && !(v.swbr_v18735_poison ?? 0) ? v.swbr_aburame_stage : 0;',
       *[f'v.swbr_aburame_draw{i} = v.swbr_aburame_camera_ok && v.swbr_aburame_stage == {i};' for i in MODES]]
+
+def render_gate(mode, role):
+    gate = f'v.swbr_aburame_draw{mode}'
+    if role == 'coat':
+        gate += f' && v.swbr_aburame_external_skin && v.swbr_aburame_skin_stage == {mode}'
+    return gate
+
+def render_material(role):
+    return 'solid' if role.startswith(('solid','swarm')) else 'translucent'
 def locator_names(mode):
     tier=MODES[mode]['tier'];names=['mao_d','mao_e','antebraco_d','antebraco_e']
     if tier>=2:names+=['ombro_d','ombro_e','peito','costas']
@@ -386,21 +414,36 @@ def build(base):
     player=json.loads(rp[PLAYER_FILE]);d=player['minecraft:client_entity']['description']
     assert not any(k.startswith('swbr_aburame') for k in d['geometry'])
     d['materials'].update(swbr_aburame_solid='entity_alphatest',swbr_aburame_translucent='entity_alphablend')
+    skin_render = json.loads(rp[SKIN_CONTROLLER_FILE])
+    skin_aliases = apply_skin_binding(skin_render, d['textures'])
+    put('RP',SKIN_CONTROLLER_FILE,skin_render)
+    put('BP',TRACK_SCRIPT,patch_tracking(bp[TRACK_SCRIPT]))
+    put('RP',TRACK_PARTICLE,patch_tracking_particle(json.loads(rp[TRACK_PARTICLE])))
+    tracker = Image.new('RGBA',(32,32))
+    tracker.alpha_composite(insect_stamp(25,30,(26,26,30,255)),(3,1))
+    put('RP',TRACK_TEXTURE,png(tracker))
     rc={};draw=[];stats={};states={'default':{'transitions':[{f'modo{i}':f'v.swbr_aburame_draw{i}'} for i in MODES]}}
     for i,spec in MODES.items():
         geo,anim,counts=model(i,skin);stats[str(i)]=counts
         put('RP',spec['path'],geo);put('RP',f'animations/swbr_aburame_{i}.json',anim)
-        tex=f'textures/entity/swbr/aburame/modo_{i}';put('RP',tex+'.png',png(atlas(i)))
+        tex=f'textures/entity/swbr/aburame/modo_{i}'
+        image = atlas(i)
+        put('RP',tex+'.png',png(image))
+        if i in VENOM_MODES:
+            opacity = coating_mask(skin, geo['minecraft:geometry'][0], image, (128,128))
+            for alias in skin_aliases:
+                original = rp[d['textures'][alias]+'.png']
+                output = d['textures'][painted_alias(i, alias)]+'.png'
+                put('RP',output,png(tint_skin(original, opacity)))
         d['textures'][f'swbr_aburame{i}']=tex;d['animations'][f'swbr_aburame{i}_idle']=f'animation.swbr.aburame{i}.idle'
         d['scripts']['animate'].append({f'swbr_aburame{i}_idle':f'v.swbr_aburame_draw{i}'})
         d['particle_effects'][f'swbr_aburame{i}_insetos']=f'swbr:aburame_{i}'
         for role in counts['roles']:
             part=layer_geometry(geo,i,role);draw.append(part);alias=f'swbr_aburame{i}_{role}'
             d['geometry'][alias]=part['description']['identifier'];controller=f'controller.render.swbr.aburame{i}.{role}'
-            d['render_controllers'].append({controller:f'v.swbr_aburame_draw{i}'})
-            material='solid' if role.startswith('solid') else 'translucent'
+            d['render_controllers'].append({controller:render_gate(i,role)})
+            material=render_material(role)
             alpha='v.swbr_aburame_fade'
-            if role.startswith('swarm'):alpha=f'({SWARM_OPACITY}+0.035*math.sin(q.life_time*29+{i*47+(0 if role.endswith("a") else 117)}))*v.swbr_aburame_fade'
             if role=='coat':alpha=f'({COAT_OPACITY}+0.018*math.sin(q.life_time*23+{i*53}))*v.swbr_aburame_fade'
             rc[controller]={'geometry':'Geometry.'+alias,'materials':[{'*':'Material.swbr_aburame_'+material}],'textures':['Texture.swbr_aburame'+str(i)],'color':{'r':1,'g':1,'b':1,'a':alpha}}
         states[f'modo{i}']={'particle_effects':[{'effect':f'swbr_aburame{i}_insetos','locator':loc} for loc in locator_names(i)],'transitions':[{'default':f'!v.swbr_aburame_draw{i}'}]}
@@ -426,7 +469,7 @@ def build(base):
     for pack,data in [('BP',bp),('RP',rp)]:
         manifest=json.loads(data['manifest.json']);manifest['header']['version']=VERSION
         manifest['header']['name']=re.sub(r'18\.11\.\d+',VERSION_TEXT,manifest['header']['name']).split(' · ')[0]+' · Aburame'
-        manifest['header']['description']=f'SWBR {VERSION_TEXT} | Seis visuais Aburame revisados com base nas capturas e nas referências de Shino e Torune'
+        manifest['header']['description']=f'SWBR {VERSION_TEXT} | Aburame com enxames recortados, cor na pele SWBR e rastreio discreto'
         for module in manifest['modules']:module['version']=VERSION
         for dep in manifest.get('dependencies',[]):
             if dep.get('uuid') in [json.loads(bp['manifest.json'])['header']['uuid'],json.loads(rp['manifest.json'])['header']['uuid']]:dep['version']=VERSION
@@ -441,7 +484,8 @@ def build(base):
         g=json.loads(rp[path])['minecraft:geometry'][0]
         original[str(i)]={'bones':len(g['bones']),'cubos':sum(len(b.get('cubes',[])) for b in g['bones'])}
     manifest={'clan':'Aburame','base_filename':base.name,'base_sha256':sha(base.read_bytes()),'base_version':[18,11,68],'version':VERSION,'packs':entries,'removed_files':[],
-      'modes':{str(i):spec for i,spec in MODES.items()},'modelos_anteriores':original,'modelos_novos':stats}
+      'modes':{str(i):spec for i,spec in MODES.items()},'modelos_anteriores':original,'modelos_novos':stats,
+      'peles_swbr':{'apelidos':skin_aliases,'modos_venenosos':list(VENOM_MODES)}}
     (ROOT/'Integracao_Manifesto.json').write_bytes(dump(manifest));print(json.dumps({'version':VERSION,'models':stats,'overlay':{k:len(v['files']) for k,v in entries.items()}},ensure_ascii=False,indent=2))
 
 if __name__=='__main__':

@@ -2,14 +2,14 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Aburame — seis modos revisados 18.11.71
+## Clã Aburame — correção visual 18.11.72
 
-Enxames com concentrações visíveis nos braços e revestimento violeta com transições suaves. Os seis itens são equipáveis no slot da cabeça.
+Enxames pretos com recortes mais nítidos, violeta aplicado à textura das peles SWBR e marcadores pequenos quando o rastreio encontra um alvo. Os seis itens são equipáveis no slot da cabeça.
 
 - [Aburame.zip — addon, integração e seis modelos editáveis](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.zip)
 - [Aburame.mcaddon — addon atualizada](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Aburame/Aburame.mcaddon)
 - [Pasta do clã, instruções e validações](Aburame)
-- [Comparativo dos seis modos](Aburame/Comparativo_dos_Modos.md)
+- [Diagnóstico e correção dos efeitos](Aburame/Correcao_Visual.md)
 
 Os seis projetos foram conferidos no Blockbench e os arquivos passaram por validação estática. Os testes dentro do Minecraft ainda precisam ser feitos.
 

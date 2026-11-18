@@ -21,7 +21,7 @@ node Fontes/exportar_blockbench.cjs
 
 O script abre os recursos nativos, compara as exportações e salva/reabre os seis `.bbmodel`, com texturas e animações embutidas. Não produz screenshots. A geometria humana de referência não é copiada para dentro dos modelos de insetos.
 
-`ABURAME_MODES=1` seleciona apenas o primeiro projeto em uma exportação parcial. O argumento opcional `--anterior caminho/Aburame_18.11.70.mcaddon` do validador confere se as mudanças da revisão 18.11.71 se limitam aos recursos dos seis visuais e aos manifests.
+`ABURAME_MODES=1` seleciona apenas o primeiro projeto em uma exportação parcial. O argumento opcional `--anterior caminho/Aburame_18.11.71.mcaddon` compara o escopo da correção com a versão anterior.
 
 O teste numérico usa o parser Molang distribuído com essa versão do Blockbench. Defina `ABURAME_MOLANG_MODULE` para o caminho absoluto de `lib/molang.umd.js` no código do Blockbench e execute:
 
@@ -36,6 +36,9 @@ Depois de qualquer alteração nos recursos nativos, repita as exportações e v
 ## Arquivos
 
 - `construir_aburame.py`: gera os seis modelos mestres, atlas, animações, partículas, subdivisões de renderização e overlay do jogador.
+- `pele_aburame.py` cria as variantes venenosas a partir das peles originais e dos UVs do corpo.
+- `rastreio_aburame.py` troca o visual e as condições de emissão dos marcadores.
+- `validar_rastreio.cjs` exercita o código do rastreio entregue com serviços de jogo simulados.
 - `exportar_blockbench.cjs`: confere o ciclo de edição e exporta os projetos.
 - `validar_molang.cjs`: testa expressões de câmera, estados e limites numéricos de geometria/partículas.
 - `validar_visual.py`: mede exposição e progressão de densidade em quatro direções, sem gerar imagens.

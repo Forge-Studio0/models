@@ -13,6 +13,8 @@ const check=(v,label)=>{if(!v)throw Error(label);count++};
 const value=(expr,data)=>typeof expr==='number'?expr:parser.parse(expr,data);
 const player=read('entity/player.entity.json')['minecraft:client_entity'].description;
 const rc=read('render_controllers/swbr_aburame.json').render_controllers;
+const skinFile='render_controllers/nzs_body_v1875.render_controllers.json';
+const skinControllers=read(skinFile).render_controllers;
 const controller=read('animation_controllers/swbr_aburame.json').animation_controllers[player.animations.swbr_aburame_fx];
 const gates=Object.fromEntries(player.render_controllers.filter(c=>typeof c==='object').flatMap(c=>Object.entries(c)).filter(([id])=>id.startsWith('controller.render.swbr.aburame')));
 const native=player.scripts.pre_animation.filter(s=>['v.swbr39_ui =','v.swbr_view_first_person =','v.swbr_view_map_face ='].some(p=>s.startsWith(p)));
@@ -24,23 +26,43 @@ const cases=[{name:'terceira_pessoa',distance:4},{name:'primeira_pessoa_item_con
  {name:'sobre_cabeça',distance:2.0},{name:'limite',distance:2.8},{name:'início_fade',distance:2.85},{name:'meio_fade',distance:2.9},{name:'fade_completo',distance:3.0},
  {name:'inventário',ui:1,distance:4},{name:'paperdoll',paper:1,distance:4},{name:'mapa',map:1,distance:4},{name:'espectador',spectator:1,distance:4}];
 const camera=[];
-for(const test of cases)for(const head of [...Object.values(modes).map(s=>s.id),'nenhum'])for(const contextFirst of [0,1]){
+for(const test of cases)for(const head of [...Object.values(modes).map(s=>s.id),'nenhum'])for(const contextFirst of [0,1])for(const skin of [0,1,42]){
  const spec=Object.entries(modes).find(([i,s])=>s.id===head),mode=spec?Number(spec[0]):0;
- const allowed=Boolean(mode&&!test.first&&!test.ui&&!test.paper&&!test.map&&!test.spectator&&test.distance>2.8);
+ const worldView=!test.first&&!test.ui&&!test.paper&&!test.map&&!test.spectator;
+ const allowed=Boolean(mode&&worldView&&test.distance>2.8);
+ const bakedCoating=skin>0&&[2,4,6].includes(mode);
  const data={'variable.is_first_person':test.first||0,'variable.is_paperdoll':test.paper||0,'variable.map_face_icon':test.map||0,
   'query.is_in_ui':test.ui||0,'query.is_spectator':test.spectator||0,'query.distance_from_camera':test.distance,'context.is_first_person':contextFirst,
+  'query.property':key=>key==='test:custom'?skin:0,
   'query.is_item_name_any':(slot,index,...ids)=>slot==='slot.armor.head'&&ids.includes(head)?1:0};
  let passes=0;
  for(const [id,gate] of Object.entries(gates)){
   const belongs=id.startsWith(`controller.render.swbr.aburame${mode}.`),active=Boolean(evaluate(gate,data));
-  check(active===(allowed&&belongs),'Geometria indevida em '+test.name+'/'+head);passes+=Number(active);
+  check(active===(allowed&&belongs&&!(bakedCoating&&id.endsWith('.coat'))),'Geometria indevida em '+test.name+'/'+head);passes+=Number(active);
  }
- check(passes===(allowed?manifest.modelos_novos[String(mode)].passes:0),'Número incorreto de camadas ativas');
+ check(passes===(allowed?manifest.modelos_novos[String(mode)].passes-Number(bakedCoating):0),'Número incorreto de camadas ativas');
+ check(evaluate('v.swbr_aburame_skin_stage',data)===(worldView?mode:0),'Seleção de pele indevida');
  for(let i=1;i<=6;i++){
   check(Boolean(evaluate(controller.states.default.transitions[i-1][`modo${i}`],data))===(allowed&&mode===i),'Emissor ativado no item ou na câmera incorretos');
   check(Boolean(evaluate(controller.states[`modo${i}`].transitions[0].default,data))===!(allowed&&mode===i),'Emissor não encerra após troca/desequipamento');
  }
- camera.push({caso:test.name,modo:mode,contexto_item_primeira_pessoa:contextFirst,passes});
+ camera.push({caso:test.name,modo:mode,contexto_item_primeira_pessoa:contextFirst,pele_swbr:skin,passes});
+}
+
+// Evaluate the native expressions for every appearance in all body profiles.
+// Texture aliases are unique numeric values in the Molang parser fixture.
+const textureAliases=Object.fromEntries(Object.keys(player.textures).map((key,i)=>['texture.'+key,i+1]));
+let skinCases=0;
+for(let index=1;index<=44;index++){
+ const controller=skinControllers['controller.render.swbr_v1875_custom'+index];
+ for(const [build,age,feminine] of [[0,0,0],[1,0,0],[0,0,1],[2,0,1],[3,0,0],[0,1,0]])for(const stage of [0,1,2,3,4,5,6]){
+  const prefix=[16,42].includes(index)?'pele':(age>0||build===3?'nzs_soft':(build===1||(build===0&&feminine===1)?'nzs_slim':'pele'));
+  const oldAlias=prefix+index;
+  const alias=[2,4,6].includes(stage)?`swbr_aburame_pele${stage}_${oldAlias}`:oldAlias;
+  const data={...textureAliases,'variable.swbr_aburame_skin_stage':stage,'query.property':key=>({'nzs:body_build':build,'nzs:body_age':age,'nzs:body_feminine':feminine}[key]||0)};
+  check(value(controller.textures[0],data)===textureAliases['texture.'+alias],'Variante de pele incorreta: '+index+'/'+stage);
+  skinCases++;
+ }
 }
 
 // Model-space affine transforms: each bone's bind rotation plus its own
@@ -80,7 +102,7 @@ function transformGeometry(geometry,animation,time){
 const nativeRig=read('models/entity/swbr39/custom.geo.json')['minecraft:geometry'][0].bones;
 const locators=Object.assign({},...nativeRig.map(b=>b.locators||{}));
 const boxes=nativeRig.flatMap(b=>b.cubes||[]).map(c=>({min:c.origin.map(v=>v-(c.inflate||0)-.31),max:c.origin.map((v,i)=>v+c.size[i]+(c.inflate||0)+.31)}));
-const files=['entity/player.entity.json','render_controllers/swbr_aburame.json','animation_controllers/swbr_aburame.json','models/entity/swbr_aburame_draw.geo.json','models/entity/swbr39/custom.geo.json'];
+const files=['entity/player.entity.json','render_controllers/swbr_aburame.json',skinFile,'animation_controllers/swbr_aburame.json','models/entity/swbr_aburame_draw.geo.json','models/entity/swbr39/custom.geo.json'];
 const results=[];
 for(const [key,spec] of Object.entries(modes)){
  const mode=Number(key),animPath=`animations/swbr_aburame_${mode}.json`,particlePath=`particles/swbr_aburame_${mode}.json`;
@@ -126,7 +148,7 @@ for(const target of sequence){
  check(state===(target?'modo'+target:'default'),'Troca de modo não encerra/inicia o estado esperado');swaps.push({target,state});
 }
 const fontes_sha256=Object.fromEntries(files.map(file=>[file,sha(file)]));
-const report={resultado:'APROVADO',minecraft_executado:false,parser:'Molang do Blockbench 4.12.6',avaliacoes:count,camera,modelos:results,trocas:swaps,fontes_sha256,
+const report={resultado:'APROVADO',minecraft_executado:false,parser:'Molang do Blockbench 4.12.6',avaliacoes:count,camera,pele_cenarios:skinCases,modelos:results,trocas:swaps,fontes_sha256,
  limites:'Transformações dos efeitos sobre o rig em pose base, projeções numéricas e condições de estado. Não é teste do renderizador, de multiplayer ou do desempenho no Minecraft.'};
 fs.writeFileSync(path.join(root,'Validacao_Molang.json'),JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify({resultado:report.resultado,avaliacoes:count,cenarios_camera:camera.length,modelos:results}));
+console.log(JSON.stringify({resultado:report.resultado,avaliacoes:count,cenarios_camera:camera.length,cenarios_pele:skinCases,modelos:results}));

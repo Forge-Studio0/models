@@ -3,72 +3,76 @@
   "minecraft_executado": false,
   "previas_criadas": false,
   "metodo": "Amostragem das faces, alfa real dos atlas, rotações dos cubos e hierarquia de bones. Quatro projeções ortográficas, pose base, ocultação pelas caixas nativas com margem de roupa de 0,25 unidade. Distância com opacidade plena; pulsação média.",
-  "limites": "Não simula cabelo, acessórios, poses em movimento, iluminação, ordenação dos materiais do Bedrock nem partículas temporárias. Não é render nem teste dentro do Minecraft.",
+  "limites": "Compara as malhas e a camada de compatibilidade. A cor integrada às peles da SWBR é conferida separadamente em Validacao.json. Não simula cabelo, acessórios, poses em movimento, iluminação nem o renderizador Bedrock.",
   "modelos": {
     "1": {
       "frente": {
-        "pixels_visiveis": 1116,
-        "pixels_fora_skin": 536,
-        "fracao_amostras_expostas": 0.7276485788113695,
-        "cobertura_skin": 0.024154589371980676,
+        "pixels_visiveis": 998,
+        "pixels_fora_skin": 192,
+        "fracao_amostras_expostas": 0.5337585668724978,
+        "cobertura_skin": 0.03356655005830418,
         "cobertura_regioes": {
-          "body": 0.0,
-          "rightArm": 0.07944444444444444,
-          "leftArm": 0.08166666666666667,
+          "body": 0.00014705882352941175,
+          "rightArm": 0.11472222222222223,
+          "leftArm": 0.10916666666666666,
           "head": 0.0,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         },
-        "alfa_medio_sobre_skin": 0.02327510411460936,
-        "massa_alfa": 1074.742296
+        "alfa_medio_sobre_skin": 0.03356655005830418,
+        "massa_alfa": 998.0,
+        "pixels_opacos": 998
       },
       "costas": {
-        "pixels_visiveis": 689,
-        "pixels_fora_skin": 564,
-        "fracao_amostras_expostas": 0.5670284237726099,
-        "cobertura_skin": 0.005205730468099284,
+        "pixels_visiveis": 804,
+        "pixels_fora_skin": 183,
+        "fracao_amostras_expostas": 0.46712356653321574,
+        "cobertura_skin": 0.02586206896551724,
         "cobertura_regioes": {
           "body": 0.0058823529411764705,
-          "rightArm": 0.012222222222222223,
-          "leftArm": 0.01138888888888889,
+          "rightArm": 0.0925,
+          "leftArm": 0.06888888888888889,
           "head": 0.0,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         },
-        "alfa_medio_sobre_skin": 0.005190438114276196,
-        "massa_alfa": 664.997216
+        "alfa_medio_sobre_skin": 0.02586206896551724,
+        "massa_alfa": 804.0,
+        "pixels_opacos": 804
       },
       "direita": {
-        "pixels_visiveis": 596,
-        "pixels_fora_skin": 521,
-        "fracao_amostras_expostas": 0.9274398868458275,
-        "cobertura_skin": 0.006521739130434782,
+        "pixels_visiveis": 958,
+        "pixels_fora_skin": 781,
+        "fracao_amostras_expostas": 0.8353658536585366,
+        "cobertura_skin": 0.015391304347826087,
         "cobertura_regioes": {
-          "body": 0.018055555555555554,
-          "rightArm": 0.018055555555555554,
-          "leftArm": 0.018055555555555554,
+          "body": 0.04638888888888889,
+          "rightArm": 0.04638888888888889,
+          "leftArm": 0.04638888888888889,
           "head": 0.0021626297577854673,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         },
-        "alfa_medio_sobre_skin": 0.006335668173913044,
-        "massa_alfa": 584.463054417344
+        "alfa_medio_sobre_skin": 0.015391304347826087,
+        "massa_alfa": 958.0,
+        "pixels_opacos": 958
       },
       "esquerda": {
-        "pixels_visiveis": 565,
-        "pixels_fora_skin": 522,
-        "fracao_amostras_expostas": 0.9113154172560113,
-        "cobertura_skin": 0.0037391304347826086,
+        "pixels_visiveis": 910,
+        "pixels_fora_skin": 744,
+        "fracao_amostras_expostas": 0.8293743372216331,
+        "cobertura_skin": 0.014434782608695651,
         "cobertura_regioes": {
-          "body": 0.009166666666666667,
-          "rightArm": 0.009166666666666667,
-          "leftArm": 0.009166666666666667,
+          "body": 0.043333333333333335,
+          "rightArm": 0.043333333333333335,
+          "leftArm": 0.043333333333333335,
           "head": 0.0021626297577854673,
-          "rightLeg": 0.0,
-          "leftLeg": 0.0
+          "rightLeg": 0.0002777777777777778,
+          "leftLeg": 0.0002777777777777778
         },
-        "alfa_medio_sobre_skin": 0.00364,
-        "massa_alfa": 553.8542061472
+        "alfa_medio_sobre_skin": 0.014434782608695651,
+        "massa_alfa": 910.0,
+        "pixels_opacos": 910
       }
     },
     "2": {
@@ -86,7 +90,8 @@
           "leftLeg": 0.0
         },
         "alfa_medio_sobre_skin": 0.1034661620298399,
-        "massa_alfa": 2560.7872473663974
+        "massa_alfa": 2560.7872473663974,
+        "pixels_opacos": 149
       },
       "costas": {
         "pixels_visiveis": 3994,
@@ -102,7 +107,8 @@
           "leftLeg": 0.006944444444444444
         },
         "alfa_medio_sobre_skin": 0.11576233778535569,
-        "massa_alfa": 2855.6017647058825
+        "massa_alfa": 2855.6017647058825,
+        "pixels_opacos": 3
       },
       "direita": {
         "pixels_visiveis": 2110,
@@ -118,7 +124,8 @@
           "leftLeg": 0.05
         },
         "alfa_medio_sobre_skin": 0.1254950500242382,
-        "massa_alfa": 1548.552195820395
+        "massa_alfa": 1548.552195820395,
+        "pixels_opacos": 119
       },
       "esquerda": {
         "pixels_visiveis": 2044,
@@ -134,73 +141,78 @@
           "leftLeg": 0.05
         },
         "alfa_medio_sobre_skin": 0.11926449634421543,
-        "massa_alfa": 1483.6904340084584
+        "massa_alfa": 1483.6904340084584,
+        "pixels_opacos": 87
       }
     },
     "3": {
       "frente": {
-        "pixels_visiveis": 2953,
-        "pixels_fora_skin": 1189,
-        "fracao_amostras_expostas": 0.6961452172139506,
-        "cobertura_skin": 0.0734632683658171,
+        "pixels_visiveis": 3155,
+        "pixels_fora_skin": 811,
+        "fracao_amostras_expostas": 0.5540860215053763,
+        "cobertura_skin": 0.09761785773779777,
         "cobertura_regioes": {
-          "body": 0.05235294117647059,
-          "rightArm": 0.2361111111111111,
-          "leftArm": 0.19916666666666666,
+          "body": 0.06367647058823529,
+          "rightArm": 0.3211111111111111,
+          "leftArm": 0.26222222222222225,
           "head": 0.0,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         },
-        "alfa_medio_sobre_skin": 0.0708055532233883,
-        "massa_alfa": 2848.873456
+        "alfa_medio_sobre_skin": 0.09761785773779777,
+        "massa_alfa": 3155.0,
+        "pixels_opacos": 3155
       },
       "costas": {
-        "pixels_visiveis": 2116,
-        "pixels_fora_skin": 1138,
-        "fracao_amostras_expostas": 0.48647766673465226,
-        "cobertura_skin": 0.0407296351824088,
+        "pixels_visiveis": 2407,
+        "pixels_fora_skin": 770,
+        "fracao_amostras_expostas": 0.4135215053763441,
+        "cobertura_skin": 0.06817424621022822,
         "cobertura_regioes": {
-          "body": 0.11661764705882353,
-          "rightArm": 0.049166666666666664,
-          "leftArm": 0.02277777777777778,
+          "body": 0.14,
+          "rightArm": 0.12916666666666668,
+          "leftArm": 0.08944444444444444,
           "head": 0.0,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         },
-        "alfa_medio_sobre_skin": 0.03934556821589206,
-        "massa_alfa": 2045.17564
+        "alfa_medio_sobre_skin": 0.06817424621022822,
+        "massa_alfa": 2407.0,
+        "pixels_opacos": 2407
       },
       "direita": {
-        "pixels_visiveis": 2166,
-        "pixels_fora_skin": 1544,
-        "fracao_amostras_expostas": 0.8181261702434106,
-        "cobertura_skin": 0.05408695652173913,
+        "pixels_visiveis": 2336,
+        "pixels_fora_skin": 1939,
+        "fracao_amostras_expostas": 0.819445874961376,
+        "cobertura_skin": 0.034521739130434784,
         "cobertura_regioes": {
-          "body": 0.14027777777777778,
-          "rightArm": 0.145,
-          "leftArm": 0.145,
-          "head": 0.03914359861591696,
+          "body": 0.07305555555555555,
+          "rightArm": 0.07916666666666666,
+          "leftArm": 0.07916666666666666,
+          "head": 0.044550173010380625,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         },
-        "alfa_medio_sobre_skin": 0.05176104347826087,
-        "massa_alfa": 2099.4405421248002
+        "alfa_medio_sobre_skin": 0.034521739130434784,
+        "massa_alfa": 2336.0,
+        "pixels_opacos": 2336
       },
       "esquerda": {
-        "pixels_visiveis": 1987,
-        "pixels_fora_skin": 1521,
-        "fracao_amostras_expostas": 0.7987901483508569,
-        "cobertura_skin": 0.04052173913043478,
+        "pixels_visiveis": 2302,
+        "pixels_fora_skin": 1928,
+        "fracao_amostras_expostas": 0.7979194561746833,
+        "cobertura_skin": 0.03252173913043478,
         "cobertura_regioes": {
-          "body": 0.11972222222222222,
-          "rightArm": 0.12166666666666667,
-          "leftArm": 0.12166666666666667,
-          "head": 0.014057093425605537,
+          "body": 0.085,
+          "rightArm": 0.09055555555555556,
+          "leftArm": 0.09055555555555556,
+          "head": 0.029411764705882353,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         },
-        "alfa_medio_sobre_skin": 0.0387688,
-        "massa_alfa": 1929.88336288
+        "alfa_medio_sobre_skin": 0.03252173913043478,
+        "massa_alfa": 2302.0,
+        "pixels_opacos": 2302
       }
     },
     "4": {
@@ -218,7 +230,8 @@
           "leftLeg": 0.0
         },
         "alfa_medio_sobre_skin": 0.2598401819893346,
-        "massa_alfa": 6360.641077378885
+        "massa_alfa": 6360.641077378885,
+        "pixels_opacos": 450
       },
       "costas": {
         "pixels_visiveis": 9382,
@@ -234,7 +247,8 @@
           "leftLeg": 0.006944444444444444
         },
         "alfa_medio_sobre_skin": 0.2648605107821586,
-        "massa_alfa": 6479.202702548251
+        "massa_alfa": 6479.202702548251,
+        "pixels_opacos": 134
       },
       "direita": {
         "pixels_visiveis": 3791,
@@ -250,7 +264,8 @@
           "leftLeg": 0.05
         },
         "alfa_medio_sobre_skin": 0.22499172006673016,
-        "massa_alfa": 2865.072221570539
+        "massa_alfa": 2865.072221570539,
+        "pixels_opacos": 244
       },
       "esquerda": {
         "pixels_visiveis": 3798,
@@ -266,73 +281,78 @@
           "leftLeg": 0.05
         },
         "alfa_medio_sobre_skin": 0.22184086724183005,
-        "massa_alfa": 2831.1373510449157
+        "massa_alfa": 2831.1373510449157,
+        "pixels_opacos": 241
       }
     },
     "5": {
       "frente": {
-        "pixels_visiveis": 8739,
-        "pixels_fora_skin": 5472,
-        "fracao_amostras_expostas": 0.6852311948536818,
-        "cobertura_skin": 0.13605697151424287,
+        "pixels_visiveis": 10498,
+        "pixels_fora_skin": 6091,
+        "fracao_amostras_expostas": 0.6125111879398396,
+        "cobertura_skin": 0.18353323338330835,
         "cobertura_regioes": {
-          "body": 0.06970588235294117,
-          "rightArm": 0.3486111111111111,
-          "leftArm": 0.36916666666666664,
+          "body": 0.09897058823529412,
+          "rightArm": 0.45805555555555555,
+          "leftArm": 0.5208333333333334,
           "head": 0.0,
-          "rightLeg": 0.049166666666666664,
-          "leftLeg": 0.06555555555555556
+          "rightLeg": 0.06222222222222222,
+          "leftLeg": 0.08388888888888889
         },
-        "alfa_medio_sobre_skin": 0.13117659492253875,
-        "massa_alfa": 8467.3144687913
+        "alfa_medio_sobre_skin": 0.18353323338330835,
+        "massa_alfa": 10498.0,
+        "pixels_opacos": 10498
       },
       "costas": {
-        "pixels_visiveis": 8624,
-        "pixels_fora_skin": 5048,
-        "fracao_amostras_expostas": 0.6905494151300681,
-        "cobertura_skin": 0.1489255372313843,
+        "pixels_visiveis": 10819,
+        "pixels_fora_skin": 5685,
+        "fracao_amostras_expostas": 0.6601586493743529,
+        "cobertura_skin": 0.21380976178577377,
         "cobertura_regioes": {
-          "body": 0.2122058823529412,
-          "rightArm": 0.2861111111111111,
-          "leftArm": 0.2561111111111111,
-          "head": 0.0010813148788927337,
-          "rightLeg": 0.08416666666666667,
-          "leftLeg": 0.06638888888888889
+          "body": 0.25573529411764706,
+          "rightArm": 0.4891666666666667,
+          "leftArm": 0.4125,
+          "head": 0.0019463667820069203,
+          "rightLeg": 0.095,
+          "leftLeg": 0.07527777777777778
         },
-        "alfa_medio_sobre_skin": 0.14410410486756622,
-        "massa_alfa": 8385.39547841984
+        "alfa_medio_sobre_skin": 0.21380976178577377,
+        "massa_alfa": 10819.0,
+        "pixels_opacos": 10819
       },
       "direita": {
-        "pixels_visiveis": 6134,
-        "pixels_fora_skin": 4307,
-        "fracao_amostras_expostas": 0.8205875334396704,
-        "cobertura_skin": 0.15886956521739132,
+        "pixels_visiveis": 6570,
+        "pixels_fora_skin": 4795,
+        "fracao_amostras_expostas": 0.8105102040816327,
+        "cobertura_skin": 0.15434782608695652,
         "cobertura_regioes": {
-          "body": 0.3566666666666667,
-          "rightArm": 0.36444444444444446,
-          "leftArm": 0.36444444444444446,
-          "head": 0.11548442906574395,
-          "rightLeg": 0.02666666666666667,
-          "leftLeg": 0.02666666666666667
+          "body": 0.3372222222222222,
+          "rightArm": 0.34444444444444444,
+          "leftArm": 0.34444444444444444,
+          "head": 0.11418685121107267,
+          "rightLeg": 0.035277777777777776,
+          "leftLeg": 0.035277777777777776
         },
-        "alfa_medio_sobre_skin": 0.15265985835130433,
-        "massa_alfa": 5982.483171453157
+        "alfa_medio_sobre_skin": 0.15434782608695652,
+        "massa_alfa": 6570.0,
+        "pixels_opacos": 6570
       },
       "esquerda": {
-        "pixels_visiveis": 5863,
-        "pixels_fora_skin": 4272,
-        "fracao_amostras_expostas": 0.8230491955639844,
-        "cobertura_skin": 0.13834782608695653,
+        "pixels_visiveis": 6443,
+        "pixels_fora_skin": 4765,
+        "fracao_amostras_expostas": 0.8252891156462585,
+        "cobertura_skin": 0.14591304347826087,
         "cobertura_regioes": {
-          "body": 0.40805555555555556,
-          "rightArm": 0.4111111111111111,
-          "leftArm": 0.4111111111111111,
-          "head": 0.02616782006920415,
-          "rightLeg": 0.01361111111111111,
-          "leftLeg": 0.01361111111111111
+          "body": 0.4186111111111111,
+          "rightArm": 0.4255555555555556,
+          "leftArm": 0.4255555555555556,
+          "head": 0.04325259515570934,
+          "rightLeg": 0.017222222222222222,
+          "leftLeg": 0.017222222222222222
         },
-        "alfa_medio_sobre_skin": 0.13385909723826084,
-        "massa_alfa": 5738.0816563752105
+        "alfa_medio_sobre_skin": 0.14591304347826087,
+        "massa_alfa": 6443.0,
+        "pixels_opacos": 6443
       }
     },
     "6": {
@@ -350,7 +370,8 @@
           "leftLeg": 0.9508333333333333
         },
         "alfa_medio_sobre_skin": 0.7206189067613802,
-        "massa_alfa": 17716.87732953719
+        "massa_alfa": 17716.87732953719,
+        "pixels_opacos": 1758
       },
       "costas": {
         "pixels_visiveis": 23675,
@@ -366,7 +387,8 @@
           "leftLeg": 0.95
         },
         "alfa_medio_sobre_skin": 0.7452930629035092,
-        "massa_alfa": 18326.32420767039
+        "massa_alfa": 18326.32420767039,
+        "pixels_opacos": 1182
       },
       "direita": {
         "pixels_visiveis": 12080,
@@ -382,7 +404,8 @@
           "leftLeg": 0.95
         },
         "alfa_medio_sobre_skin": 0.7212964342946621,
-        "massa_alfa": 9084.819766264913
+        "massa_alfa": 9084.819766264913,
+        "pixels_opacos": 631
       },
       "esquerda": {
         "pixels_visiveis": 12071,
@@ -398,23 +421,24 @@
           "leftLeg": 0.95
         },
         "alfa_medio_sobre_skin": 0.7261545665531373,
-        "massa_alfa": 9135.749432449928
+        "massa_alfa": 9135.749432449928,
+        "pixels_opacos": 644
       }
     }
   },
   "fontes_sha256": {
     "models/entity/swbr39/custom.geo.json": "7475d54119ac416692e30cb5ecfd268a53889dbedb88af864e06a80fc25e0a2b",
-    "render_controllers/swbr_aburame.json": "46e6662d53516a0a268d494d2a476afd50c79fe6dcca92abe703c003306601b8",
-    "models/entity/nz_insetos_aburame_m.json": "a6f69d663a7dc7a0ee20b749944e91bfef9c37460b425235f06fc064ef89062b",
-    "textures/entity/swbr/aburame/modo_1.png": "8dec4a05dde8c7b23e20d66c2d6db3d48501b57266b69c3a2898780547b5599c",
+    "render_controllers/swbr_aburame.json": "749c57f6aa8827e266dda69862409f06df7124c65e20c1c368d3933c714f4563",
+    "models/entity/nz_insetos_aburame_m.json": "9c437c9745769b0025a2297a8dbcfa18a6690ace531c5e4c4645be1d12d616c5",
+    "textures/entity/swbr/aburame/modo_1.png": "5ad114cc523f37c364b5ccd25d66d1b0290fbc6347239072751a3a9330247061",
     "models/entity/nz_insetos_aburame_m2.json": "757e89ce5c45fc9670735f747d3460cf38d5c6f54c2013aa3e71fb662cf9f607",
     "textures/entity/swbr/aburame/modo_2.png": "1410787bc708ba79e9492f0033900c165e1572fdab4428fb016f59ac468cda8e",
-    "models/entity/nz_insetos_aburame_half.geo.json": "17b34da873845804ecb0fd434ce4dee8b76bd848a5d58a501e3feda6b6d7b2b1",
-    "textures/entity/swbr/aburame/modo_3.png": "6cc2173c192c4ecf426d6095c2443cad70aa753884773920114f3e59e6482083",
+    "models/entity/nz_insetos_aburame_half.geo.json": "68493d2a4312c8334c31c10df4d1d7b6ed5a378337565398461de8d6a31f253b",
+    "textures/entity/swbr/aburame/modo_3.png": "f3de116c10013fb02f95c7d91b0d2ef7db53be7546376e57adb43396a7dda809",
     "models/entity/nz_insetos_aburame_half_poison.geo.json": "35585e2b03aa186e28517863f7e488df0fed648175861119684d995771b11b2a",
     "textures/entity/swbr/aburame/modo_4.png": "3224ce143dca7f8fdb10cb0bf5110588afa97f0ea532679b5b9a6ffaea4f21fb",
-    "models/entity/nz_insetos_aburame_full.geo.json": "7460f1080d10544e9df95f5b3f11860dc686f34cfaf85103675a5b72bb1235f8",
-    "textures/entity/swbr/aburame/modo_5.png": "8203da2161f38caa6cf91c2abd2384433e2d9d6df30534354930492b5b31dd6c",
+    "models/entity/nz_insetos_aburame_full.geo.json": "b9ed93f27f57156be0d1a5efa65dc9efa0602cefce5c4c8f2862f3ee86298157",
+    "textures/entity/swbr/aburame/modo_5.png": "35d42f545fa28d074c2f89e6ed89b1d34856e81c8f0a42a36351877ef22ab03d",
     "models/entity/nz_insetos_aburame_full_poison.geo.json": "e06eca9f0690013012a7cfdabd3a35734b6589729af506cd47a54639d09d3a77",
     "textures/entity/swbr/aburame/modo_6.png": "b83e7daed5f7ef92837a441ce47e5f42a289c01c7980ebd3cda3425e48f7581b"
   }

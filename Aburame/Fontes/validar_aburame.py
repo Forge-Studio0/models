@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Audit six Aburame models, integration and preservation of the approved base."""
 from pathlib import Path
-import argparse,base64,copy,hashlib,io,json,re,zipfile
+import argparse,base64,copy,hashlib,io,json,re,subprocess,zipfile
 import numpy as np
 from PIL import Image
 import jsonschema
-from construir_aburame import MODES,VERSION,NATIVE_GEOS,DRAW_GEO,SLOT_GEO,RC_FILE,FX_FILE,PLAYER_FILE,camera_program,read_base
+from construir_aburame import MODES,VERSION,NATIVE_GEOS,DRAW_GEO,SLOT_GEO,RC_FILE,FX_FILE,PLAYER_FILE,camera_program,read_base,render_gate,render_material
+from pele_aburame import SKIN_CONTROLLER_FILE,apply_skin_binding,coating_mask,painted_alias
+from rastreio_aburame import TRACK_PARTICLE,TRACK_SCRIPT,TRACK_TEXTURE,patch_tracking,patch_tracking_particle
 
 ROOT=Path(__file__).resolve().parents[1];CHECKS=[]
 def check(value,label):
@@ -60,7 +62,15 @@ def validate(base,addon,previous=None):
     for name,data in outer_old.items():
         if name not in source_entries:check(outer_new[name]==data,'Entrada externa preservada byte a byte: '+name)
     bp,rp=new['BP'],new['RP'];bp_old,rp_old=old['BP'],old['RP']
-    check(all(bp[n]==data for n,data in bp_old.items() if n!='manifest.json'),'Behavior Pack inteiro preservado exceto a versão: itens, atributos, raridade, jutsus, câmera e administração')
+    check(all(bp[n]==data for n,data in bp_old.items() if n not in {'manifest.json',TRACK_SCRIPT}),'Itens, atributos, raridade, jutsus, câmera e administração preservados')
+    check(bp[TRACK_SCRIPT]==patch_tracking(bp_old[TRACK_SCRIPT]),'Script de rastreio alterado somente no bloco de marcadores')
+    check(json.loads(rp[TRACK_PARTICLE])==patch_tracking_particle(json.loads(rp_old[TRACK_PARTICLE])),
+          'Marcadores usam o mesmo efeito privado com tamanho e duração limitados')
+    track_sprite=np.asarray(Image.open(io.BytesIO(rp[TRACK_TEXTURE])).convert('RGBA'))
+    track_rgb=track_sprite[:,:,:3][track_sprite[:,:,3]>0]
+    check(track_sprite.shape==(32,32,4) and 0<len(track_rgb)<350 and track_rgb.max()<65,'Marcador discreto em carvão com fundo transparente')
+    tracking_test=subprocess.run(['node',str(ROOT/'Fontes/validar_rastreio.cjs')],capture_output=True,text=True)
+    check(tracking_test.returncode==0,tracking_test.stdout.strip() if tracking_test.returncode==0 else tracking_test.stderr)
     menu=bp['scripts/menu/config.js'].decode();rarity=[]
     for mode,spec in MODES.items():
         path='items/'+spec['id'].replace(':','_')+'.json';item=json.loads(bp[path])['minecraft:item']
@@ -73,18 +83,26 @@ def validate(base,addon,previous=None):
     for path in rp_old:
         if 'iburi' in path.lower():check(rp[path]==rp_old[path],'Recurso Iburi aprovado preservado: '+path)
     for path in changed['RP']:
-        allowed=(path in [PLAYER_FILE,*NATIVE_GEOS,'manifest.json'] or path in [s['path'] for s in MODES.values()] or path.startswith('attachables/nz_insetos_aburame_'))
+        allowed=(path in [PLAYER_FILE,*NATIVE_GEOS,'manifest.json',SKIN_CONTROLLER_FILE,TRACK_PARTICLE,TRACK_TEXTURE] or path in [s['path'] for s in MODES.values()] or path.startswith('attachables/nz_insetos_aburame_'))
         check(allowed,'Nenhum recurso antigo fora do escopo foi alterado: '+path)
     player=json.loads(rp[PLAYER_FILE]);d=player['minecraft:client_entity']['description']
     check(clean_player(player)==json.loads(rp_old[PLAYER_FILE]),'Jogador, Iburi e outros clãs preservados fora dos vínculos exclusivos Aburame')
     check(d['scripts']['pre_animation'][-len(camera_program()):]==camera_program(),'Programa visual usa indicadores de câmera nativos e apenas o item da cabeça')
     check(d['scripts']['animate'].count('swbr_aburame_fx')==1,'Uma instância do controlador de efeitos por jogador')
     check(d['materials']['swbr_aburame_solid']=='entity_alphatest' and d['materials']['swbr_aburame_translucent']=='entity_alphablend','Materiais nativos, sem brilho emissivo ou aditivo')
+    original_appearance=json.loads(rp_old[SKIN_CONTROLLER_FILE])
+    expected_textures={}
+    skin_aliases=apply_skin_binding(original_appearance,expected_textures)
+    check(len(skin_aliases)==128 and skin_aliases==m['peles_swbr']['apelidos'], 'Todos os tons e tipos de corpo da SWBR têm variantes para os três estágios venenosos')
+    check(json.loads(rp[SKIN_CONTROLLER_FILE])==original_appearance and all(d['textures'][key]==path for key,path in expected_textures.items()),
+          'Controladores de pele mantêm os materiais e as condições nativas com seleção condicional de textura')
     reference=None;locators={}
     for path in NATIVE_GEOS:
         data=json.loads(rp[path]);check(clean_locators(data)==json.loads(rp_old[path]),'Geometria humana e locators Iburi preservados, somente âncoras Aburame acrescentadas: '+path)
         bones={b['name']:b for b in data['minecraft:geometry'][0]['bones']}
-        if reference is None:reference=bones
+        if reference is None:
+            reference=bones
+            native_skin=data['minecraft:geometry'][0]
         for bone in bones.values():locators.update(bone.get('locators',{}))
     for pattern,schema in [('*/manifest.json','manifest'),('RP/models/entity/**/*.json','geometry'),('RP/attachables/*.json','attachable'),('RP/animations/*.json','animation'),('RP/animation_controllers/*.json','animation_controller'),('RP/particles/*.json','particle'),('RP/render_controllers/*.json','render')]:
         validator=jsonschema.Draft7Validator(read(ROOT/'Fontes/Schemas'/(schema+'.json')))
@@ -124,8 +142,8 @@ def validate(base,addon,previous=None):
             check(own==expected and own and not rendered&own and all(part_bones[n]==bones[n] for n in own),'Subconjunto de renderização corresponde ao modelo editável: '+alias);rendered|=own
             check(len(part_bones)<=64 and all(not b.get('parent') or b['parent'] in part_bones for b in part_bones.values()),'Até 64 bones por malha e cadeia de pais completa: '+alias)
             identifier=f'controller.render.swbr.aburame{mode}.{role}';rc=rcs[identifier]
-            material='solid' if role.startswith('solid') else 'translucent'
-            check(own_rc[identifier]==f'v.swbr_aburame_draw{mode}' and 'part_visibility' not in rc and rc['geometry']=='Geometry.'+alias and rc['textures']==['Texture.'+prefix] and rc['materials']==[{'*':'Material.swbr_aburame_'+material}],'Vínculos e proteção do controlador completo: '+identifier)
+            material=render_material(role)
+            check(own_rc[identifier]==render_gate(mode,role) and 'part_visibility' not in rc and rc['geometry']=='Geometry.'+alias and rc['textures']==['Texture.'+prefix] and rc['materials']==[{'*':'Material.swbr_aburame_'+material}],'Vínculos e proteção do controlador completo: '+identifier)
         check(rendered==leaves,'Todas as peças desenhadas uma única vez: '+str(mode))
         texture=d['textures'][prefix]+'.png';pixels=np.array(Image.open(io.BytesIO(rp[texture])).convert('RGBA'));texture_hashes.append(sha(rp[texture]))
         check(pixels.shape==(512,512,4) and pixels[511,511,3]==0,'Atlas 512×512 e amostra de borda totalmente transparente: '+str(mode))
@@ -133,7 +151,7 @@ def validate(base,addon,previous=None):
         for tile in tiles:
             cell=pixels[tile//4*128:(tile//4+1)*128,tile%4*128:(tile%4+1)*128]
             assert not cell[[0,-1],:,3].any() and not cell[:,[0,-1],3].any()
-            assert 0<np.mean(cell[:,:,3]>128)<.34
+            assert 0<np.mean(cell[:,:,3]>128)<(.48 if spec['kind']=='comum' else .34)
         check(True,'Enxames com espaços e bordas dispersas, sem retângulos ou preenchimento sólido: '+str(mode))
         if spec['kind']=='venenoso':
             opaque=pixels[:256,:,:3][pixels[:256,:,3]>128]
@@ -158,6 +176,16 @@ def validate(base,addon,previous=None):
                 face_alpha=coat_alpha('head')
                 check(face_alpha.min()>.38 and face_alpha.mean()<.60 and coat_alpha('body').min()>.70,
                       'Sobreposição violeta mantém cobertura contínua com translucidez no rosto: '+str(mode))
+            opacity=coating_mask(native_skin,geo,Image.fromarray(pixels),(128,128))
+            for skin_alias in skin_aliases:
+                original_pixels=np.asarray(Image.open(io.BytesIO(rp_old[d['textures'][skin_alias]+'.png'])).convert('RGBA'))
+                key=painted_alias(mode,skin_alias)
+                painted_pixels=np.asarray(Image.open(io.BytesIO(rp[expected_textures[key]+'.png'])).convert('RGBA'))
+                if (painted_pixels.shape!=original_pixels.shape or not np.array_equal(painted_pixels[:,:,3],original_pixels[:,:,3])
+                    or not np.array_equal(painted_pixels[opacity==0],original_pixels[opacity==0])
+                    or not np.any(painted_pixels[opacity>.55,:3]!=original_pixels[opacity>.55,:3])):
+                    raise AssertionError('Variante de pele inválida: '+key)
+            check(True,'128 peles recoloridas com tamanho, recortes e regiões sem veneno preservados: '+str(mode))
         else:
             solids=[c for b in bones.values() if '_solid_' in b['name'] for c in b.get('cubes',[])]
             check(solids and max(max(c['size']) for c in solids)<1.0,'Besouros modelados pequenos, com corpo/cabeça/élitros e pernas em recorte: '+str(mode))
@@ -185,14 +213,18 @@ def validate(base,addon,previous=None):
     if previous:
         prior=read_base(previous)
         revision={'anterior_sha256':sha(previous.read_bytes()),'arquivos_alterados':{}}
-        revised_rp={'manifest.json',DRAW_GEO,RC_FILE}
+        revised_rp={'manifest.json',DRAW_GEO,RC_FILE,PLAYER_FILE,SKIN_CONTROLLER_FILE,TRACK_PARTICLE,TRACK_TEXTURE}
         for mode,spec in MODES.items():
             revised_rp.update((spec['path'],f'animations/swbr_aburame_{mode}.json',f'textures/entity/swbr/aburame/modo_{mode}.png'))
         for name in ['BP','RP']:
             before=prior[name][1];after=new[name]
-            permitted={'manifest.json'} if name=='BP' else revised_rp
+            permitted={'manifest.json',TRACK_SCRIPT} if name=='BP' else revised_rp
             altered={p for p in before if before[p]!=after.get(p)}
-            check(set(before)==set(after) and altered<=permitted,'Revisão limitada à apresentação dos seis modos e aos manifests: '+name)
+            additions=set(after)-set(before)
+            allowed_additions={path+'.png' for path in expected_textures.values()} if name=='RP' else set()
+            check(set(before)<=set(after) and altered<=permitted and additions==allowed_additions,
+                  'Revisão limitada aos visuais dos seis modos, aos marcadores de rastreio e aos manifests: '+name)
+            revision.setdefault('arquivos_adicionados',{})[name]=sorted(additions)
             revision['arquivos_alterados'][name]=sorted(altered)
     report={'resultado':'APROVADO','versao':VERSION,'base_sha256':m['base_sha256'],'addon_sha256':sha(addon.read_bytes()),'minecraft_executado':False,'revisao_visual':revision,
       'arquivos_preservados':preserved,'arquivos_alterados':changed,'arquivos_adicionados':added,'modelos':summary,'raridade_original':rarity,'verificacoes':CHECKS,'quantidade_verificacoes':len(CHECKS),

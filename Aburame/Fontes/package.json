@@ -1,7 +1,7 @@
 {
   "name": "swbr-aburame-tools",
   "private": true,
-  "version": "18.11.71",
+  "version": "18.11.72",
   "description": "Local Blockbench roundtrip checker for the six Aburame projects",
   "devDependencies": { "playwright": "1.57.0" }
 }

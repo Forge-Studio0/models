@@ -1,8 +1,8 @@
-# Clã Aburame — SWBR 18.11.71
+# Clã Aburame — SWBR 18.11.72
 
 Reconstrução dos seis modos sobre a **18.11.68 com o Iburi aprovado**. Os seis itens continuam no **slot da cabeça**, com os mesmos identificadores, níveis, atributos, desbloqueios e regras de raridade.
 
-A **18.11.71** revisa os seis visuais a partir das capturas no jogo. Os enxames formam concentrações mais nítidas e ganham volume entre os estágios. O violeta se espalha gradualmente pela pele, com menos granulação e o rosto legível no estágio final. [Comparativo dos seis modos](Comparativo_dos_Modos.md)
+A **18.11.72** corrige três pontos das capturas. Os enxames usam recortes opacos para sustentar o contraste. O violeta é aplicado à textura das peles SWBR para evitar sobreposição no corpo. O rastreio desenha pequenos marcadores escuros só quando encontra um alvo. [Diagnóstico e correção](Correcao_Visual.md)
 
 ## Downloads
 
@@ -22,15 +22,15 @@ A **18.11.71** revisa os seis visuais a partir das capturas no jogo. Os enxames 
 | 5 — Totalmente imbuído | `nz:insetos_aburame_full` | 40 | Colônia densa e assimétrica, com vários planos ao redor dos braços e focos menores perto das pernas. |
 | 6 — Venenoso totalmente imbuído | `nz:insetos_aburame_full_poison` | 50 | Revestimento violeta contínuo com manchas suaves e maior translucidez na frente do rosto. |
 
-Os estágios são a progressão do sistema SWBR; não representam seis transformações oficiais do anime. Os modos comuns usam besouros modelados, recortes transparentes em diferentes profundidades e partículas. Os venenosos usam revestimentos aderidos à geometria humana, textura de colônias microscópicas e pontos escuros. Nenhum modo usa asas, carapaça de inseto gigante ou brilho emissivo.
+Os estágios seguem a progressão da SWBR. Os modos comuns usam besouros modelados, recortes vazados em profundidades diferentes e partículas. Os venenosos tingem a pele e acrescentam pontos microscópicos. O modelo inclui uma sobreposição de compatibilidade para quem usa uma skin fora do seletor da SWBR.
 
 ## Instalação da addon
 
-Importe `Aburame.mcaddon` no Minecraft Bedrock e selecione o Behavior Pack e o Resource Pack **18.11.71** no mundo. Esta é a addon completa, incluindo os sistemas da base e o Iburi aprovado.
+Importe `Aburame.mcaddon` no Minecraft Bedrock e selecione o Behavior Pack e o Resource Pack **18.11.72** no mundo. Esta é a addon completa, incluindo os sistemas da base e o Iburi aprovado.
 
 O requisito de motor da base, **1.26.10**, e suas dependências de Script API foram mantidos. Equipar continua sendo pelo sistema original da addon. Para conferir cada item separadamente com comandos habilitados, use `/give @s` seguido do identificador da tabela e equipe na cabeça.
 
-Os efeitos acompanham os bones do jogador. A representação fica oculta em primeira pessoa, inventário, paperdoll, mapa e espectador. Há também uma proteção de proximidade: os efeitos ficam ocultos quando a distância da câmera ao jogador é de até **2,8 blocos**, com entrada gradual até 3,0. Isso pode ocultá-los em terceira pessoa quando uma parede aproxima a câmera.
+Os efeitos acompanham os bones do jogador. A representação fica oculta em primeira pessoa, inventário, paperdoll, mapa e espectador. As malhas do enxame e as partículas ficam ocultas quando a câmera chega a **2,8 blocos** do jogador. Já o violeta integrado à pele SWBR continua visível em terceira pessoa de perto, pois faz parte da própria textura do corpo.
 
 As malhas deixam de ser desenhadas ao desequipar ou trocar de modo; o controlador sai do estado de emissão. As partículas têm vida curta, de no máximo **0,45 segundo**, e espaço local ligado ao jogador. A confirmação do descarte final no motor depende de teste dentro do Minecraft.
 
@@ -52,7 +52,7 @@ O aplicador não sobrescreve a entrada. Os arquivos `entity/player.entity.json` 
 
 ## Preservação e validação
 
-O Behavior Pack permanece byte a byte igual à base, exceto pelo manifesto de versão. Isso mantém itens, atributos, jutsus, níveis, câmera e regras de raridade. `AburameRaro` continua com a atribuição e as verificações originais: a entrada venenosa inicial do menu exige essa tag; as entradas posteriores mantêm as condições que já existiam, sem novos bloqueios.
+O Behavior Pack atualiza o manifesto e o desenho dos marcadores de rastreio. O sensor mantém a busca, o alcance e o indicador de alvo. Itens, atributos, jutsus, níveis, câmera e as regras de `AburameRaro` foram conferidos contra a base.
 
 Os recursos do Iburi e os demais sistemas foram preservados. Apenas vínculos exclusivos Aburame foram acrescentados ao jogador, com locators novos nos bones existentes.
 
@@ -60,4 +60,4 @@ Foram verificados os arquivos dos packs, referências, UVs, transparência, hier
 
 **Não houve execução no Minecraft.** A aparência final, andar/correr/pular/agachar, multiplayer, descarte de partículas no motor e desempenho em celulares ainda precisam de confirmação no jogo. Os limites e resultados estão em [Relatorio_Tecnico.md](Relatorio_Tecnico.md), `Validacao.json`, `Validacao_Blockbench.json`, `Validacao_Molang.json` e `Validacao_Visual_Estatica.json`.
 
-Texturas e recursos nativos ficam em `Integracao/RP`. Para editar, abra o `.bbmodel` correspondente em `Modelos_Blockbench`. As malhas de desenho são subconjuntos do modelo mestre, separados por material e pelo limite de bones; ao alterar peças, regenere também esses subconjuntos e os relatórios conforme [Fontes/README.md](Fontes/README.md).
+Texturas e recursos nativos ficam em `Integracao/RP`. Abra o `.bbmodel` correspondente em `Modelos_Blockbench` para editar as peças e o atlas. Nos modos venenosos, o gerador também usa o atlas para compor as variantes de pele que aparecem no jogo. [Fontes de construção](Fontes/README.md)

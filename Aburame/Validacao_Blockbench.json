@@ -25,10 +25,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "28542e06f4ad27a30cd2d7d23b138b6642407fdf0802b624a03e86c61429ff1d",
-      "native_geometry_sha256": "a6f69d663a7dc7a0ee20b749944e91bfef9c37460b425235f06fc064ef89062b",
+      "source_sha256": "04028e52698c50c1251f6fe51da5f4b473955ca815092f6ed8eab0dc7a8b9bc8",
+      "native_geometry_sha256": "9c437c9745769b0025a2297a8dbcfa18a6690ace531c5e4c4645be1d12d616c5",
       "native_animation_sha256": "3290a9d47555706feb7fb0e289fa39c847cafa105b4cb5592ba438117ecef124",
-      "texture_sha256": "8dec4a05dde8c7b23e20d66c2d6db3d48501b57266b69c3a2898780547b5599c"
+      "texture_sha256": "5ad114cc523f37c364b5ccd25d66d1b0290fbc6347239072751a3a9330247061"
     },
     {
       "mode": 2,
@@ -53,7 +53,7 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "79ee141f84e11f6a45972660dc2be300de34dc9c6903b174c962725e11feef7d",
+      "source_sha256": "cbbfa60047bdb5023f960fedcf4c835d0a9379ea8e3470ab394343458e1ad047",
       "native_geometry_sha256": "757e89ce5c45fc9670735f747d3460cf38d5c6f54c2013aa3e71fb662cf9f607",
       "native_animation_sha256": "5187edd809ee288b0aab8de3449c124489d5ee8493675ee36076ab80f6836de5",
       "texture_sha256": "1410787bc708ba79e9492f0033900c165e1572fdab4428fb016f59ac468cda8e"
@@ -81,10 +81,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "1e7bfbff07718c83399260b6b5ba8a7d9520275fd999e690cd8cffc7ddb1d4af",
-      "native_geometry_sha256": "17b34da873845804ecb0fd434ce4dee8b76bd848a5d58a501e3feda6b6d7b2b1",
+      "source_sha256": "1346fe7fc506221c3468ab2b965927f268b5fe1184336a865b95ebced06013d9",
+      "native_geometry_sha256": "68493d2a4312c8334c31c10df4d1d7b6ed5a378337565398461de8d6a31f253b",
       "native_animation_sha256": "f16f4d7709cfd9462ee03c4876fa0520043120322192e52a73e860e09911be4c",
-      "texture_sha256": "6cc2173c192c4ecf426d6095c2443cad70aa753884773920114f3e59e6482083"
+      "texture_sha256": "f3de116c10013fb02f95c7d91b0d2ef7db53be7546376e57adb43396a7dda809"
     },
     {
       "mode": 4,
@@ -109,7 +109,7 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "f567d14a02c1b00272115c4b6b53dbc1ec08f22132e03b534c87cc2669b771d5",
+      "source_sha256": "af476e7dc0a24c589cf416bd291f790678580a0073146afa5a6efc9626c826c3",
       "native_geometry_sha256": "35585e2b03aa186e28517863f7e488df0fed648175861119684d995771b11b2a",
       "native_animation_sha256": "9ed3801fb7dd1f3d931ca686dd777a89721f499b2c53a372af71603005bfafc5",
       "texture_sha256": "3224ce143dca7f8fdb10cb0bf5110588afa97f0ea532679b5b9a6ffaea4f21fb"
@@ -137,10 +137,10 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "5b620ba14ab6606a696d0f4fedbfacca8fc1c72839166b1933d061e6109c8f52",
-      "native_geometry_sha256": "7460f1080d10544e9df95f5b3f11860dc686f34cfaf85103675a5b72bb1235f8",
+      "source_sha256": "3b5e5bbcec9fbc41dcf64f139246cafa6af283972cba2758565e585b1653978f",
+      "native_geometry_sha256": "b9ed93f27f57156be0d1a5efa65dc9efa0602cefce5c4c8f2862f3ee86298157",
       "native_animation_sha256": "d801704f23cbae436c183422eeb7b65b736bad14f9f85216f3b759bf527fea34",
-      "texture_sha256": "8203da2161f38caa6cf91c2abd2384433e2d9d6df30534354930492b5b31dd6c"
+      "texture_sha256": "35d42f545fa28d074c2f89e6ed89b1d34856e81c8f0a42a36351877ef22ab03d"
     },
     {
       "mode": 6,
@@ -165,7 +165,7 @@
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "d0ca61a042ef0c1cf499d193c579f1c4a2e110526eb7cdc22d8b38f8805214e2",
+      "source_sha256": "a28e2b1cd2175cff11bad5e15907d790d62ddb83a6596398473e00df431f003a",
       "native_geometry_sha256": "e06eca9f0690013012a7cfdabd3a35734b6589729af506cd47a54639d09d3a77",
       "native_animation_sha256": "20045aa8e15a1a3463e3b8ef2a63544f0b0681fff37b1721a094602ebaffb74d",
       "texture_sha256": "b83e7daed5f7ef92837a441ce47e5f42a289c01c7980ebd3cda3425e48f7581b"

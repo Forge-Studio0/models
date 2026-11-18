@@ -7,7 +7,7 @@ from pathlib import Path
 import hashlib,json,math
 import numpy as np
 from PIL import Image
-from construir_aburame import COAT_OPACITY,MODES,NATIVE_GEOS,RC_FILE,SWARM_OPACITY
+from construir_aburame import COAT_OPACITY,MODES,NATIVE_GEOS,RC_FILE
 
 ROOT=Path(__file__).resolve().parents[1];RP=ROOT/'Integracao/RP'
 VIEWS={'frente':(0,1,2,1),'costas':(0,-1,2,-1),'direita':(2,-1,0,-1),'esquerda':(2,1,0,1)}
@@ -50,13 +50,13 @@ def measure(geometry,pixels,boxes):
     for label,view in VIEWS.items():
         image=np.zeros((HEIGHT,WIDTH));eligible=exposed_total=0
         for bone in bones.values():
-            opacity=COAT_OPACITY if '_coat_' in bone['name'] else (SWARM_OPACITY if '_swarm_' in bone['name'] else 1)
+            opacity=COAT_OPACITY if '_coat_' in bone['name'] else 1
             for cube in bone.get('cubes',[]):
                 layer=np.zeros_like(image)
                 for face in cube['uv']:
                     points,normal,alpha=sample(cube,face,pixels,bone,bones)
                     if normal[view[2]]*view[3]>=-.02:continue
-                    if '_solid_' in bone['name']:alpha=(alpha>=.5).astype(float)
+                    if '_solid_' in bone['name'] or '_swarm_' in bone['name']:alpha=(alpha>=.5).astype(float)
                     px=points[:,view[0]]*view[1];py=points[:,1];depth=points[:,view[2]]*view[3]
                     nearest=np.full(len(points),np.inf)
                     for _,lo,hi in boxes:
@@ -76,7 +76,8 @@ def measure(geometry,pixels,boxes):
             skin|=mask;regions[name]=float(footprint[mask].mean())
         result[label]={'pixels_visiveis':int(footprint.sum()),'pixels_fora_skin':int((footprint&~skin).sum()),'fracao_amostras_expostas':exposed_total/max(1,eligible),
           'cobertura_skin':float(footprint[skin].mean()),'cobertura_regioes':regions,
-          'alfa_medio_sobre_skin':float(image[skin].mean()),'massa_alfa':float(image.sum())}
+          'alfa_medio_sobre_skin':float(image[skin].mean()),'massa_alfa':float(image.sum()),
+          'pixels_opacos':int((image>=.9).sum())}
     return result
 
 def validate():
@@ -98,7 +99,7 @@ def validate():
     # Persist diagnostics before assertions as well, so a failure is reviewable.
     report={'resultado':'EM_VERIFICACAO','minecraft_executado':False,'previas_criadas':False,
       'metodo':'Amostragem das faces, alfa real dos atlas, rotações dos cubos e hierarquia de bones. Quatro projeções ortográficas, pose base, ocultação pelas caixas nativas com margem de roupa de 0,25 unidade. Distância com opacidade plena; pulsação média.',
-      'limites':'Não simula cabelo, acessórios, poses em movimento, iluminação, ordenação dos materiais do Bedrock nem partículas temporárias. Não é render nem teste dentro do Minecraft.',
+      'limites':'Compara as malhas e a camada de compatibilidade. A cor integrada às peles da SWBR é conferida separadamente em Validacao.json. Não simula cabelo, acessórios, poses em movimento, iluminação nem o renderizador Bedrock.',
       'modelos':results,'fontes_sha256':sources}
     target=ROOT/'Validacao_Visual_Estatica.json'
     target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
