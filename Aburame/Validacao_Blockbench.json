@@ -6,29 +6,29 @@
       "mode": 1,
       "editor": "4.12.6",
       "format": "bedrock",
-      "cubes": 72,
-      "bones": 48,
+      "cubes": 98,
+      "bones": 62,
       "animations": [
         {
           "name": "animation.swbr.aburame1.idle",
           "length": 7.2,
-          "animators": 40
+          "animators": 54
         }
       ],
       "texture_error": 0,
       "reopened": {
-        "cubes": 72,
-        "bones": 48,
+        "cubes": 98,
+        "bones": 62,
         "animations": 1,
         "texture_error": 0
       },
       "errors": [],
       "geometry_roundtrip": true,
       "animation_roundtrip": true,
-      "source_sha256": "364e1386a071cbd987febe6e25183c805609b9cb2b2ca346a541dec1c3950d6f",
-      "native_geometry_sha256": "a162458d73bcf598dfb2c89abe3ea9e2347c7c46d67b544939ec5e3b5a96af18",
-      "native_animation_sha256": "1567dfcdd2e8bed786207ac89495f6b9cca93dd31c31c8657300b1fcb3914f4f",
-      "texture_sha256": "941338511c7d576f51cb9e96ddae2b5aa7cd16dfccfde882a1a51f6382c9a27e"
+      "source_sha256": "6d97afaddc59289d8c1c56e4eec674882097addfb14e07888f0a10b3e66bdf48",
+      "native_geometry_sha256": "a1fa553f518487d8ebc8457a972287c3b3b2491f8410d2bbfa2523b4cc82dbb8",
+      "native_animation_sha256": "3290a9d47555706feb7fb0e289fa39c847cafa105b4cb5592ba438117ecef124",
+      "texture_sha256": "42f3be4376379d3ed5bec5f1aec04ee9c1fb9d25c7a017438e9e65bbf9a8e60d"
     },
     {
       "mode": 2,

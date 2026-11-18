@@ -2,7 +2,7 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Aburame — seis modos reconstruídos 18.11.69
+## Clã Aburame — seis modos reconstruídos 18.11.70
 
 Besouros e enxames nos modos comuns; revestimento violeta microscópico nos venenosos. Mantidos os itens no slot da cabeça, atributos, níveis, `AburameRaro`, jutsus e o Iburi aprovado. Sem prévias.
 

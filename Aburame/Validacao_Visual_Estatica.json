@@ -7,57 +7,57 @@
   "modelos": {
     "1": {
       "frente": {
-        "pixels_visiveis": 369,
-        "pixels_fora_skin": 299,
-        "fracao_amostras_expostas": 0.696097006441834,
-        "cobertura_skin": 0.002915209062135599,
+        "pixels_visiveis": 771,
+        "pixels_fora_skin": 397,
+        "fracao_amostras_expostas": 0.677349885989359,
+        "cobertura_skin": 0.015575545560553057,
         "cobertura_regioes": {
           "body": 0.0,
-          "rightArm": 0.010833333333333334,
-          "leftArm": 0.008611111111111111,
+          "rightArm": 0.052222222222222225,
+          "leftArm": 0.051666666666666666,
           "head": 0.0,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         }
       },
       "costas": {
-        "pixels_visiveis": 377,
-        "pixels_fora_skin": 301,
-        "fracao_amostras_expostas": 0.6949602122015915,
-        "cobertura_skin": 0.0031650841246043645,
+        "pixels_visiveis": 513,
+        "pixels_fora_skin": 387,
+        "fracao_amostras_expostas": 0.5913351912845198,
+        "cobertura_skin": 0.005247376311844078,
         "cobertura_regioes": {
-          "body": 0.005147058823529412,
-          "rightArm": 0.005555555555555556,
-          "leftArm": 0.005833333333333334,
+          "body": 0.0058823529411764705,
+          "rightArm": 0.0125,
+          "leftArm": 0.01138888888888889,
           "head": 0.0,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         }
       },
       "direita": {
-        "pixels_visiveis": 313,
-        "pixels_fora_skin": 258,
-        "fracao_amostras_expostas": 0.8980674051378742,
-        "cobertura_skin": 0.004782608695652174,
+        "pixels_visiveis": 569,
+        "pixels_fora_skin": 504,
+        "fracao_amostras_expostas": 0.9187332175011846,
+        "cobertura_skin": 0.005652173913043478,
         "cobertura_regioes": {
-          "body": 0.013055555555555556,
-          "rightArm": 0.013055555555555556,
-          "leftArm": 0.013055555555555556,
-          "head": 0.0017301038062283738,
+          "body": 0.015277777777777777,
+          "rightArm": 0.015277777777777777,
+          "leftArm": 0.015277777777777777,
+          "head": 0.0021626297577854673,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         }
       },
       "esquerda": {
-        "pixels_visiveis": 312,
-        "pixels_fora_skin": 258,
-        "fracao_amostras_expostas": 0.8988922931887815,
-        "cobertura_skin": 0.0046956521739130435,
+        "pixels_visiveis": 553,
+        "pixels_fora_skin": 495,
+        "fracao_amostras_expostas": 0.9183383351761175,
+        "cobertura_skin": 0.005043478260869565,
         "cobertura_regioes": {
-          "body": 0.012777777777777779,
-          "rightArm": 0.012777777777777779,
-          "leftArm": 0.012777777777777779,
-          "head": 0.0017301038062283738,
+          "body": 0.013333333333333334,
+          "rightArm": 0.013333333333333334,
+          "leftArm": 0.013333333333333334,
+          "head": 0.0021626297577854673,
           "rightLeg": 0.0,
           "leftLeg": 0.0
         }
@@ -357,8 +357,8 @@
   "fontes_sha256": {
     "models/entity/swbr39/custom.geo.json": "7475d54119ac416692e30cb5ecfd268a53889dbedb88af864e06a80fc25e0a2b",
     "render_controllers/swbr_aburame.json": "7ef772243bff7c0ae3c060551d582626886bda8b426640b70c2d3a74e55367bf",
-    "models/entity/nz_insetos_aburame_m.json": "a162458d73bcf598dfb2c89abe3ea9e2347c7c46d67b544939ec5e3b5a96af18",
-    "textures/entity/swbr/aburame/modo_1.png": "941338511c7d576f51cb9e96ddae2b5aa7cd16dfccfde882a1a51f6382c9a27e",
+    "models/entity/nz_insetos_aburame_m.json": "a1fa553f518487d8ebc8457a972287c3b3b2491f8410d2bbfa2523b4cc82dbb8",
+    "textures/entity/swbr/aburame/modo_1.png": "42f3be4376379d3ed5bec5f1aec04ee9c1fb9d25c7a017438e9e65bbf9a8e60d",
     "models/entity/nz_insetos_aburame_m2.json": "443fe168b0ab26d1dc9c6e983114deb709fc7e72b8ed02d46ba39de3263d7d7e",
     "textures/entity/swbr/aburame/modo_2.png": "67ce94605df4c69276f7213165857141b51256129920d1487f85dddb67c70855",
     "models/entity/nz_insetos_aburame_half.geo.json": "9f1050e861c7cefddb07833cfcc389158914382f563f26f57fb88d64515494e1",

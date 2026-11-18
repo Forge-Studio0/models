@@ -34,10 +34,14 @@ function canonicalGeometry(bones){
  await page.route('https://**/*',r=>r.abort());
  await page.goto(process.env.ABURAME_BLOCKBENCH_URL||'http://127.0.0.1:8876/',{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>typeof Blockbench!=='undefined'&&Blockbench.setup_successful);
- const results=[];fs.mkdirSync(path.join(root,'Modelos_Blockbench'),{recursive:true});
+ const selected=process.env.ABURAME_MODES?new Set(process.env.ABURAME_MODES.split(',').map(Number)):null;
+ const reportPath=path.join(root,'Validacao_Blockbench.json');
+ const results=selected&&fs.existsSync(reportPath)?JSON.parse(fs.readFileSync(reportPath)).results.filter(r=>!selected.has(r.mode)):[];
+ fs.mkdirSync(path.join(root,'Modelos_Blockbench'),{recursive:true});
  const scratch=process.env.ABURAME_CHECK_DIR||path.join(require('os').tmpdir(),'swbr-aburame-checks');fs.mkdirSync(scratch,{recursive:true});
  for(const [key,spec] of Object.entries(modes)){
   const mode=Number(key),geometry=JSON.parse(fs.readFileSync(path.join(rp,spec.path)));
+  if(selected&&!selected.has(mode))continue;
   const animPath=path.join(rp,`animations/swbr_aburame_${mode}.json`),animation=JSON.parse(fs.readFileSync(animPath));
   const texPath=path.join(rp,`textures/entity/swbr/aburame/modo_${mode}.png`),texture='data:image/png;base64,'+fs.readFileSync(texPath).toString('base64');
   const baseline=await page.evaluate(()=>ErrorLog.length);
@@ -75,6 +79,7 @@ function canonicalGeometry(bones){
    geometry_roundtrip:true,animation_roundtrip:true,source_sha256:sha(target),native_geometry_sha256:sha(path.join(rp,spec.path)),native_animation_sha256:sha(animPath),texture_sha256:sha(texPath)};
   results.push(result);console.log(JSON.stringify(result));
  }
- fs.writeFileSync(path.join(root,'Validacao_Blockbench.json'),JSON.stringify({screenshots_created:false,minecraft_executado:false,results},null,2)+'\n');
+ results.sort((a,b)=>a.mode-b.mode);
+ fs.writeFileSync(reportPath,JSON.stringify({screenshots_created:false,minecraft_executado:false,results},null,2)+'\n');
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

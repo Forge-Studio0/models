@@ -10,7 +10,7 @@ Há seis atlas diferentes de 512 × 512, além de seis flipbooks de partículas.
 
 | Modo | Bones antes → agora | Cubos antes → agora | Organização |
 | --- | ---: | ---: | --- |
-| 1 | 714 → 48 | 707 → 72 | 12 besouros modelados e 4 grupos com profundidade |
+| 1 | 714 → 62 | 707 → 98 | 16 besouros modelados e 6 grupos com profundidade |
 | 2 | 714 → 18 | 707 → 14 | 2 revestimentos, 4 camadas de rastejo, 4 pequenos grupos |
 | 3 | 714 → 78 | 707 → 130 | 20 besouros modelados e 10 grupos com profundidade |
 | 4 | 714 → 25 | 707 → 25 | 3 revestimentos, 6 camadas de rastejo, 8 pequenos grupos |
@@ -37,7 +37,7 @@ Os emissores usam locators novos nos dois rigs nativos e simulação em espaço 
 
 ## Preservação da addon
 
-A integração usa exclusivamente a base aprovada 18.11.68, identificada por SHA-256. O BP mudou apenas o manifesto para 18.11.69. Itens, atributos, níveis, proteção, multiplicadores, scripts de combate, seleção do clã e jutsus continuam idênticos aos originais.
+A integração usa exclusivamente a base aprovada 18.11.68, identificada por SHA-256. O BP mudou apenas o manifesto para 18.11.70. Itens, atributos, níveis, proteção, multiplicadores, scripts de combate, seleção do clã e jutsus continuam idênticos aos originais.
 
 O sorteio e a tag `AburameRaro` não foram reescritos. A exigência explícita na primeira entrada venenosa do menu continua igual; os demais modos mantêm as verificações da base. Não foram acrescentadas novas condições de raridade.
 

@@ -7,7 +7,7 @@ from PIL import Image,ImageDraw
 from scipy.ndimage import gaussian_filter
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=[18,11,69];TEX=512;TILE=128
+VERSION=[18,11,70];TEX=512;TILE=128
 MODES={
  1:dict(id='nz:insetos_aburame_m',level=10,kind='comum',tier=1,name='Aburame_01_Insetos',path='models/entity/nz_insetos_aburame_m.json',gid='geometry.nz_insetos_aburame_m'),
  2:dict(id='nz:insetos_aburame_m2',level=10,kind='venenoso',tier=1,name='Aburame_02_Venenosos',path='models/entity/nz_insetos_aburame_m2.json',gid='geometry.nz_insetos_aburame_m2'),
@@ -66,7 +66,7 @@ def insect_stamp(width=11,height=15,color=(16,19,24,255)):
 
 def swarm_tile(seed,tier,poison=False):
     rng=np.random.default_rng(seed);im=Image.new('RGBA',(TILE,TILE))
-    count=({1:22,2:62,3:128} if not poison else {1:90,2:150,3:210})[tier]
+    count=({1:32,2:62,3:128} if not poison else {1:90,2:150,3:210})[tier]
     for i in range(count):
         # Empty gaps between actual organisms, never a filled smoke background.
         x,y=rng.normal(64,[23,26]);x=int(x);y=int(y)
@@ -140,6 +140,12 @@ def bug_sites(tier):
         result += [(arm,[side*6.1,14.0,-2.43],[0,0,-1]),(arm,[side*6.6,17.2,-2.43],[0,0,-1]),
           (arm,[side*6.1,20.5,2.42],[0,0,1]),(arm,[side*8.37,16.0,0],[side,0,0]),
           (arm,[side*6.0,24.38,.3],[0,1,0]),('body',[side*2.4,22.0,2.42],[0,0,1])]
+    if tier==1:
+        # The first in-game recording read as scattered dust. Anchor extra
+        # small beetles to front/back forearms, rather than enlarging the halo.
+        for side in [-1,1]:
+            arm='rightArm' if side<0 else 'leftArm'
+            result += [(arm,[side*5.3,15.5,-2.46],[0,0,-1]),(arm,[side*6.7,14.7,2.46],[0,0,1])]
     if tier>=2:
         for side in [-1,1]:
             arm='rightArm' if side<0 else 'leftArm'
@@ -156,6 +162,10 @@ def swarm_sites(tier):
     for side in [-1,1]:
         arm='rightArm' if side<0 else 'leftArm'
         result += [(arm,[side*8.8,14.2,-3.5],[2.2,2.5]),(arm,[side*9.4,19.6,2.5],[2.5,2.9])]
+    if tier==1:
+        for side in [-1,1]:
+            # Compact, porous sleeve-to-forearm colonies; head/torso stay free.
+            result.append(('rightArm' if side<0 else 'leftArm',[side*6.0,15.3,-2.8],[3.2,4.1]))
     if tier>=2:
         for side in [-1,1]:
             result += [('body',[side*8.6,23.4,.6],[3.4,3.5]),('body',[side*4.7,18.6,-3.5],[3.5,4.1]),('body',[side*2.6,21,3.8],[3.2,3.4])]
@@ -182,7 +192,7 @@ def model(mode,skin_geometry):
             if normal[2]:rotation[2]+=round(float(rng.uniform(-150,150)),3)
             # Body, head and a cutout with six legs/antennae; small wing cases
             # remain 3D pieces and animate independently of the abdomen.
-            k=float(rng.uniform(.78,1.12));pos=[round(v,4) for v in pos]
+            k=float(rng.uniform(.78,1.12))*(1.10 if mode==1 else 1);pos=[round(v,4) for v in pos]
             def shape(offset,size,rect):return cube([pos[j]+offset[j]*k for j in range(3)],[v*k for v in size],rect)
             core=[shape([0,0,0],[.30,.42,.18],[0,0,32,32]),shape([0,.28,0],[.20,.18,.16],[32,0,32,32]),
               shape([0,.05,.065],[.65,.80,.008],[0,36,64,80])]
@@ -349,8 +359,8 @@ def build(base):
         put('RP',path,data)
     for pack,data in [('BP',bp),('RP',rp)]:
         manifest=json.loads(data['manifest.json']);manifest['header']['version']=VERSION
-        manifest['header']['name']=re.sub(r'18\.11\.\d+','18.11.69',manifest['header']['name']).split(' · ')[0]+' · Aburame'
-        manifest['header']['description']='SWBR 18.11.69 | Seis modos Aburame reconstruídos; base 18.11.68, Iburi e sistemas preservados'
+        manifest['header']['name']=re.sub(r'18\.11\.\d+','18.11.70',manifest['header']['name']).split(' · ')[0]+' · Aburame'
+        manifest['header']['description']='SWBR 18.11.70 | Primeiro modo Aburame refinado após comparação com Shino; Iburi e sistemas preservados'
         for module in manifest['modules']:module['version']=VERSION
         for dep in manifest.get('dependencies',[]):
             if dep.get('uuid') in [json.loads(bp['manifest.json'])['header']['uuid'],json.loads(rp['manifest.json'])['header']['uuid']]:dep['version']=VERSION
@@ -358,7 +368,7 @@ def build(base):
     entries={}
     for pack in ['BP','RP']:
         files={p.relative_to(ROOT/'Integracao'/pack).as_posix():sha(p.read_bytes()) for p in sorted((ROOT/'Integracao'/pack).rglob('*')) if p.is_file()}
-        entries[pack]={'original_entry':packs[pack][0],'updated_entry':f'SWBR_{pack}_v18.11.69_ABURAME.mcpack','files':files}
+        entries[pack]={'original_entry':packs[pack][0],'updated_entry':f'SWBR_{pack}_v18.11.70_ABURAME.mcpack','files':files}
     original={}
     for i,spec in MODES.items():
         path=spec['path'] if spec['path'] in rp else MODES[3 if i==4 else 5]['path']

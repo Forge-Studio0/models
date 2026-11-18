@@ -1,6 +1,8 @@
-# Clã Aburame — SWBR 18.11.69
+# Clã Aburame — SWBR 18.11.70
 
 Reconstrução dos seis modos sobre a **18.11.68 com o Iburi aprovado**. Os seis itens continuam no **slot da cabeça**, com os mesmos identificadores, níveis, atributos, desbloqueios e regras de raridade.
+
+A **18.11.70** refina o primeiro modo após comparar a gravação do usuário com Shino: concentra mais insetos nas mangas e antebraços e melhora a leitura dos besouros, mantendo a progressão dos estágios. Veja o [comparativo e as alterações](Comparativo_Primeiro_Modo.md).
 
 ## Downloads
 
@@ -26,7 +28,7 @@ Os estágios são a progressão do sistema SWBR; não representam seis transform
 
 ## Instalação da addon
 
-Importe `Aburame.mcaddon` no Minecraft Bedrock e selecione o Behavior Pack e o Resource Pack **18.11.69** no mundo. Esta é a addon completa, incluindo os sistemas da base e o Iburi aprovado. Confira se o mundo está usando os dois packs atualizados, sem outra versão dos mesmos packs ativa por cima.
+Importe `Aburame.mcaddon` no Minecraft Bedrock e selecione o Behavior Pack e o Resource Pack **18.11.70** no mundo. Esta é a addon completa, incluindo os sistemas da base e o Iburi aprovado. Confira se o mundo está usando os dois packs atualizados, sem outra versão dos mesmos packs ativa por cima.
 
 O requisito de motor da base, **1.26.10**, e suas dependências de Script API foram mantidos. Equipar continua sendo pelo sistema original da addon. Para conferir cada item separadamente com comandos habilitados, use `/give @s` seguido do identificador da tabela e equipe na cabeça.
 

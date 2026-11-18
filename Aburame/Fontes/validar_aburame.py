@@ -34,7 +34,7 @@ def clean_locators(geo):
                 if not bone['locators']:bone.pop('locators')
     return geo
 
-def validate(base,addon):
+def validate(base,addon,previous=None):
     CHECKS.clear();m=read(ROOT/'Integracao_Manifesto.json')
     check(sha(base.read_bytes())==m['base_sha256'],'Base 18.11.68 aprovada identificada por SHA-256')
     with zipfile.ZipFile(base) as z:outer_old={n:z.read(n) for n in z.namelist()}
@@ -49,7 +49,7 @@ def validate(base,addon):
         for file,digest in cfg['files'].items():
             source=(ROOT/'Integracao'/name/file).read_bytes();check(b[file]==source and sha(source)==digest,'Overlay e assinatura conferidos: '+name+'/'+file)
         before=json.loads(a['manifest.json']);after=json.loads(b['manifest.json']);normalize=copy.deepcopy(after)
-        check(after['header']['version']==VERSION and all(module['version']==VERSION for module in after['modules']),'Versão 18.11.69 nos manifests: '+name)
+        check(after['header']['version']==VERSION and all(module['version']==VERSION for module in after['modules']),'Versão '+'.'.join(map(str,VERSION))+' nos manifests: '+name)
         for key in ['name','description','version']:normalize['header'][key]=before['header'][key]
         for module,o in zip(normalize['modules'],before['modules']):module['version']=o['version']
         for dep,o in zip(normalize.get('dependencies',[]),before.get('dependencies',[])):
@@ -168,11 +168,22 @@ def validate(base,addon):
         report=read(ROOT/filename);check(report['resultado']=='APROVADO' and report['minecraft_executado'] is False,'Verificação estática concluída, sem alegar Minecraft executado: '+filename)
         for path,digest in report['fontes_sha256'].items():check(sha(rp[path])==digest,'Verificação ligada ao fonte atual: '+filename+'/'+path)
     check(not (ROOT/'Previews').exists(),'Entrega sem prévias geradas')
-    report={'resultado':'APROVADO','versao':VERSION,'base_sha256':m['base_sha256'],'addon_sha256':sha(addon.read_bytes()),'minecraft_executado':False,
+    revision=None
+    if previous:
+        prior=read_base(previous);revision={'anterior_sha256':sha(previous.read_bytes()),'arquivos_alterados':{}}
+        for name in ['BP','RP']:
+            before=prior[name][1];after=new[name]
+            permitted={'manifest.json'} if name=='BP' else {'manifest.json',MODES[1]['path'],'animations/swbr_aburame_1.json','textures/entity/swbr/aburame/modo_1.png',DRAW_GEO}
+            altered={p for p in before if before[p]!=after.get(p)}
+            check(set(before)==set(after) and altered<=permitted,'Revisão altera somente o primeiro modo e manifests em relação à anterior: '+name)
+            revision['arquivos_alterados'][name]=sorted(altered)
+        before_draw=json.loads(prior['RP'][1][DRAW_GEO])['minecraft:geometry']
+        check([g for g in before_draw if not g['description']['identifier'].startswith('geometry.swbr.aburame1.')]==[g for g in draw_list if not g['description']['identifier'].startswith('geometry.swbr.aburame1.')],'Malhas derivadas dos modos 2–6 preservadas em relação à anterior')
+    report={'resultado':'APROVADO','versao':VERSION,'base_sha256':m['base_sha256'],'addon_sha256':sha(addon.read_bytes()),'minecraft_executado':False,'revisao_primeiro_modo':revision,
       'arquivos_preservados':preserved,'arquivos_alterados':changed,'arquivos_adicionados':added,'modelos':summary,'raridade_original':rarity,'verificacoes':CHECKS,'quantidade_verificacoes':len(CHECKS),
       'limites':'Validação de arquivos, geometria, estados e editor. Aparência real, movimento no motor, multiplayer, remoção final dos efeitos e desempenho em celular precisam de confirmação no Minecraft.'}
     (ROOT/'Validacao.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:report[k] for k in ['resultado','versao','arquivos_preservados','quantidade_verificacoes','modelos']},ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('base',type=Path);p.add_argument('addon',type=Path);args=p.parse_args();validate(args.base,args.addon)
+    p=argparse.ArgumentParser();p.add_argument('base',type=Path);p.add_argument('addon',type=Path);p.add_argument('--anterior',type=Path);args=p.parse_args();validate(args.base,args.addon,args.anterior)

@@ -3,11 +3,26 @@
   "versao": [
     18,
     11,
-    69
+    70
   ],
   "base_sha256": "fbcd94172035065c04d38d8060ebd132956cd66855eecbe494431108aab7fe40",
-  "addon_sha256": "36e80ecf62698235ce4dde83af3b4039a6f3a53afd9d909105184872cfaa7ce0",
+  "addon_sha256": "dfa14819569d07a20e0f16d355a2e58b6285e5d7dd77bb180aa7b12fb1d8f06f",
   "minecraft_executado": false,
+  "revisao_primeiro_modo": {
+    "anterior_sha256": "36e80ecf62698235ce4dde83af3b4039a6f3a53afd9d909105184872cfaa7ce0",
+    "arquivos_alterados": {
+      "BP": [
+        "manifest.json"
+      ],
+      "RP": [
+        "animations/swbr_aburame_1.json",
+        "manifest.json",
+        "models/entity/nz_insetos_aburame_m.json",
+        "models/entity/swbr_aburame_draw.geo.json",
+        "textures/entity/swbr/aburame/modo_1.png"
+      ]
+    }
+  },
   "arquivos_preservados": {
     "BP": 2991,
     "RP": 7553
@@ -77,13 +92,13 @@
       "id": "nz:insetos_aburame_m",
       "nivel": 10,
       "tipo": "comum",
-      "bones": 48,
-      "cubos": 72,
+      "bones": 62,
+      "cubos": 98,
       "antes": {
         "bones": 714,
         "cubos": 707
       },
-      "redução_cubos_pct": 89.8
+      "redução_cubos_pct": 86.1
     },
     "2": {
       "id": "nz:insetos_aburame_m2",
@@ -183,7 +198,7 @@
     "MCADDON íntegro sem falhas CRC ou entradas duplicadas",
     "Somente overlay aplicado, sem arquivos excluídos: BP",
     "Overlay e assinatura conferidos: BP/manifest.json",
-    "Versão 18.11.69 nos manifests: BP",
+    "Versão 18.11.70 nos manifests: BP",
     "UUIDs, APIs, engine, scripts e demais metadados preservados: BP",
     "Somente overlay aplicado, sem arquivos excluídos: RP",
     "Overlay e assinatura conferidos: RP/animation_controllers/swbr_aburame.json",
@@ -234,7 +249,7 @@
     "Overlay e assinatura conferidos: RP/textures/entity/swbr/aburame/particulas_4.png",
     "Overlay e assinatura conferidos: RP/textures/entity/swbr/aburame/particulas_5.png",
     "Overlay e assinatura conferidos: RP/textures/entity/swbr/aburame/particulas_6.png",
-    "Versão 18.11.69 nos manifests: RP",
+    "Versão 18.11.70 nos manifests: RP",
     "UUIDs, APIs, engine, scripts e demais metadados preservados: RP",
     "Entrada externa preservada byte a byte: SWBR_Desmaio_Nativo_BP_v1.0.9.mcpack",
     "Entrada externa preservada byte a byte: LEIA-ME_18.11.64.md",
@@ -580,8 +595,11 @@
     "Verificação ligada ao fonte atual: Validacao_Visual_Estatica.json/textures/entity/swbr/aburame/modo_5.png",
     "Verificação ligada ao fonte atual: Validacao_Visual_Estatica.json/models/entity/nz_insetos_aburame_full_poison.geo.json",
     "Verificação ligada ao fonte atual: Validacao_Visual_Estatica.json/textures/entity/swbr/aburame/modo_6.png",
-    "Entrega sem prévias geradas"
+    "Entrega sem prévias geradas",
+    "Revisão altera somente o primeiro modo e manifests em relação à anterior: BP",
+    "Revisão altera somente o primeiro modo e manifests em relação à anterior: RP",
+    "Malhas derivadas dos modos 2–6 preservadas em relação à anterior"
   ],
-  "quantidade_verificacoes": 402,
+  "quantidade_verificacoes": 405,
   "limites": "Validação de arquivos, geometria, estados e editor. Aparência real, movimento no motor, multiplayer, remoção final dos efeitos e desempenho em celular precisam de confirmação no Minecraft."
 }

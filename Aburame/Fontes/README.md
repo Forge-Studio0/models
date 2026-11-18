@@ -21,6 +21,8 @@ node Fontes/exportar_blockbench.cjs
 
 O script abre os recursos nativos, compara as exportações e salva/reabre os seis `.bbmodel`, com texturas e animações embutidas. Não produz screenshots. A geometria humana de referência não é copiada para dentro dos modelos de insetos.
 
+Para uma revisão restrita ao primeiro modo, `ABURAME_MODES=1` limita a exportação a ele e mantém os projetos/relatórios anteriores dos demais; o validador principal confere suas assinaturas atuais. O argumento opcional `--anterior caminho/Aburame_18.11.69.mcaddon` no validador confere que os recursos específicos dos modos 2–6, o rastreio e os demais sistemas não mudaram nesta revisão.
+
 O teste numérico usa o parser Molang distribuído com essa versão do Blockbench. Defina `ABURAME_MOLANG_MODULE` para o caminho absoluto de `lib/molang.umd.js` no código do Blockbench e execute:
 
 ```sh

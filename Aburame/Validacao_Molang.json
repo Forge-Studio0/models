@@ -2,7 +2,7 @@
   "resultado": "APROVADO",
   "minecraft_executado": false,
   "parser": "Molang do Blockbench 4.12.6",
-  "avaliacoes": 427293,
+  "avaliacoes": 448769,
   "camera": [
     {
       "caso": "terceira_pessoa",
@@ -1186,10 +1186,10 @@
       "mode": 1,
       "amostras": 91,
       "ciclos": 4,
-      "raio_modelo_metros": 1.582172795902682,
+      "raio_modelo_metros": 1.5830960367144256,
       "limite_y_modelo": [
-        12.460896657314912,
-        24.541149856910206
+        12.252109942922896,
+        24.55389206284274
       ],
       "meio_tamanho_max_particula_metros": 0.032,
       "raio_emissores_metros": 1.3394272288975173
@@ -1297,10 +1297,10 @@
     "entity/player.entity.json": "fb57d4f459fa7502a57c09ebc163d8546f184917f1d6ea7795b0d0a6d68ab5df",
     "render_controllers/swbr_aburame.json": "7ef772243bff7c0ae3c060551d582626886bda8b426640b70c2d3a74e55367bf",
     "animation_controllers/swbr_aburame.json": "9315d2b0a6b03ae28149bc6856cb012104846c3e6ade3169565f269fe647dca8",
-    "models/entity/swbr_aburame_draw.geo.json": "e90696847e3f9fb3a3f80ec65bfd449690b1031f64f8519cd41997461bf34d7d",
+    "models/entity/swbr_aburame_draw.geo.json": "49c9c4a688a4e0fa2361cd50fb7dfe283351921dd58c29b7fe10391c4701ffb4",
     "models/entity/swbr39/custom.geo.json": "7475d54119ac416692e30cb5ecfd268a53889dbedb88af864e06a80fc25e0a2b",
-    "models/entity/nz_insetos_aburame_m.json": "a162458d73bcf598dfb2c89abe3ea9e2347c7c46d67b544939ec5e3b5a96af18",
-    "animations/swbr_aburame_1.json": "1567dfcdd2e8bed786207ac89495f6b9cca93dd31c31c8657300b1fcb3914f4f",
+    "models/entity/nz_insetos_aburame_m.json": "a1fa553f518487d8ebc8457a972287c3b3b2491f8410d2bbfa2523b4cc82dbb8",
+    "animations/swbr_aburame_1.json": "3290a9d47555706feb7fb0e289fa39c847cafa105b4cb5592ba438117ecef124",
     "particles/swbr_aburame_1.json": "7e7d3b84355bc8dfd6b3fca130a088f1a24724b9f7109ed30b0ac36278edc39f",
     "models/entity/nz_insetos_aburame_m2.json": "443fe168b0ab26d1dc9c6e983114deb709fc7e72b8ed02d46ba39de3263d7d7e",
     "animations/swbr_aburame_2.json": "5187edd809ee288b0aab8de3449c124489d5ee8493675ee36076ab80f6836de5",
