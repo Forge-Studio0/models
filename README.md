@@ -2,11 +2,12 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Sarutobi — revisão visual 18.11.78
+## Clã Sarutobi — revisão visual 18.11.79
 
 - [Comparação com o anime, modelos editáveis e instruções de instalação](Sarutobi/)
-- [Addon cumulativo com Iburi, Aburame, Kaguya e Hōzuki](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Sarutobi/Sarutobi_Cumulativo.mcaddon)
-- [Projetos Blockbench, texturas e arquivos de integração](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Sarutobi/Sarutobi_Integracao.zip)
+- [Addon cumulativo com Iburi, Aburame, Kaguya e Hōzuki](https://raw.githubusercontent.com/Forge-Studio0/models/main/Sarutobi/Sarutobi_Cumulativo.mcaddon)
+- [Addon para mundos na base original de Hōzuki](https://raw.githubusercontent.com/Forge-Studio0/models/main/Sarutobi/Sarutobi.mcaddon)
+- [Projetos Blockbench, texturas e arquivos de integração](https://raw.githubusercontent.com/Forge-Studio0/models/main/Sarutobi/Sarutobi_Integracao.zip)
 
 ## Clã Hōzuki — revisão visual 18.11.77
 

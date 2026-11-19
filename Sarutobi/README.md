@@ -1,34 +1,32 @@
-# Sarutobi · Shinobi World BR 18.11.78
+# Sarutobi · Shinobi World BR 18.11.79
 
-Revisão visual de Earth Monkey, Earth Monkey V2 e 5 Elementos a partir das capturas do jogo.
+O traje usa como referência Hiruzen no combate contra Orochimaru e durante a Quarta Guerra Ninja. Os três itens da progressão compartilham o uniforme escuro, a couraça cinza, o capacete com a placa de Konoha e as fitas atrás da cabeça. O rosto de Hiruzen aparece enquanto o item estiver equipado. O rosto, os olhos cosméticos e o cabelo do jogador voltam ao retirar o item.
 
-| Modo | Referência do anime | Problema no addon anterior | Revisão |
-| --- | --- | --- | --- |
-| Earth Monkey, nível 5 | O Doton de Hiruzen orienta o aspecto de rocha. Earth Monkey é uma forma criada para o addon. | Os braços tinham volumes laranja com textura de cristal. A cauda clara podia parecer uma peça solta. | Manoplas menores de rocha estratificada, punhos de linho e cauda curta ligada ao cinto. |
-| Earth Monkey V2, nível 12 | Hiruzen invoca Enma. A crina de Enma orienta o acabamento cinza-claro. | O ombro e o antebraço usavam mais placas da mesma aparência. O conjunto tinha variantes incompatíveis com a animação da cauda. | Ombreiras, colete e gola curta de crina. A cauda mantém três segmentos conectados durante o movimento. |
-| 5 Elementos, nível 18 | Hiruzen combina cinco naturezas de chakra com seus clones. | Volumes azuis, vermelhos e brancos orbitavam o personagem. A geometria alternativa usava nomes de ossos diferentes dos da animação. | Cinco símbolos no colete representam fogo, vento, raio, terra e água. O modelo acompanha a pose humana com placas nas pernas, cintura e braços. |
+| Item | Visual |
+| --- | --- |
+| Earth Monkey · nível 5 | Hiruzen vivo com o traje de combate completo. |
+| Earth Monkey V2 · nível 12 | O traje de combate com o Kongō Nyoi na mão direita vazia. A haste negra e as ponteiras douradas seguem a forma de bastão de Enma. Ao empunhar um item, o bastão cosmético fica oculto. |
+| 5 Elementos · nível 18 | Hiruzen reanimado, com as fissuras do Edo Tensei e olhos escuros. A técnica das cinco naturezas é uma ação de combate no anime. |
 
-As referências visuais são o Doton de Hiruzen, o Rei Macaco Enma e a combinação das cinco naturezas. [Enma](https://naruto.fandom.com/wiki/Monkey_King:_Enma), [Doton — Muralha de Terra](https://naruto.fandom.com/wiki/Earth_Release:_Earth-Style_Wall), [Combinação das cinco naturezas](https://naruto.fandom.com/wiki/Five_Release_Great_Combo_Technique).
+A revisão também aplica a pintura do Kongō Nyoi aos dois bastões equipáveis já existentes. O bastão que aparece no V2 quando a mão está vazia faz parte do modelo do modo. A invocação, o dano, os desbloqueios e os jutsus continuam regidos pelo pack de comportamento original.
 
-O pacote anterior usava três definições por identificador nos modelos desses itens. Os três attachables da revisão referenciam geometrias próprias e animações com ossos correspondentes. A peça branca segmentada pertencia à cauda. A geometria anterior de 5 Elementos continha também formas elementais animadas. A origem do azul visível na captura identificada como Earth Monkey fica sem confirmação.
+Referências do personagem e das técnicas. [Hiruzen Sarutobi](https://naruto.fandom.com/wiki/Hiruzen_Sarutobi), [Enma e o Kongō Nyoi](https://naruto.fandom.com/wiki/Adamantine_Staff), [Combinação das cinco naturezas](https://naruto.fandom.com/wiki/Five_Release_Great_Combo_Technique). Os episódios estavam indisponíveis no ambiente de edição.
 
-## Instalar e testar
+## Instalação
 
-- Para mundos com Iburi, Aburame, Kaguya e Hōzuki. [Baixar Sarutobi_Cumulativo.mcaddon](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Sarutobi/Sarutobi_Cumulativo.mcaddon)
-- Para mundos com Hōzuki na base original 18.11.64. [Baixar Sarutobi.mcaddon](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Sarutobi/Sarutobi.mcaddon)
+- Para mundos com Iburi, Aburame, Kaguya e Hōzuki. [Baixar Sarutobi_Cumulativo.mcaddon](https://raw.githubusercontent.com/Forge-Studio0/models/main/Sarutobi/Sarutobi_Cumulativo.mcaddon)
+- Para mundos com Hōzuki na base original 18.11.64. [Baixar Sarutobi.mcaddon](https://raw.githubusercontent.com/Forge-Studio0/models/main/Sarutobi/Sarutobi.mcaddon)
 
-Abra a edição correspondente no Minecraft Bedrock e confira a versão **18.11.78** nos packs de comportamento e recursos. Equipe os itens no slot da cabeça. A armadura é visível em terceira pessoa enquanto o item estiver equipado. Os IDs `nz:modo_sarutobi_v1`, `nz:modo_sarutobi_v2` e `nz:modo_sarutobi_v3` continuam sendo os do menu.
+Abra o arquivo no Minecraft Bedrock e confirme a versão **18.11.79** nos packs de recursos e comportamento. Para testar, equipe `nz:modo_sarutobi_v1`, `nz:modo_sarutobi_v2` ou `nz:modo_sarutobi_v3` na cabeça e use a terceira pessoa.
 
-## Edição e integração
+## Edição e validação
 
-Os projetos usam texturas de 256 × 256 e incluem o ciclo da cauda. [Modelos Blockbench](Modelos_Blockbench/)
+O ZIP de integração inclui os três projetos Blockbench, texturas, animações e geometrias, além dos dois modelos do bastão. Ele aceita os pacotes Sarutobi 18.11.78 e Hōzuki 18.11.77 registrados no manifesto. [Baixar Sarutobi_Integracao.zip](https://raw.githubusercontent.com/Forge-Studio0/models/main/Sarutobi/Sarutobi_Integracao.zip)
 
-O ZIP inclui os três projetos, geometrias, PNGs, animações, attachables e scripts de construção e validação. [Baixar Sarutobi_Integracao.zip](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Sarutobi/Sarutobi_Integracao.zip)
-
-Extraia o ZIP e execute o comando abaixo para aplicar a revisão a uma das edições Hōzuki 18.11.77 registradas no manifesto.
+Para aplicar o ZIP, extraia seu conteúdo e execute o comando abaixo.
 
 ```sh
-python Fontes/aplicar_integracao.py /caminho/Hozuki_Cumulativo.mcaddon Sarutobi_Integrado.mcaddon
+python Fontes/aplicar_integracao.py /caminho/Sarutobi_Cumulativo.mcaddon Sarutobi_Integrado.mcaddon
 ```
 
-A auditoria confere a integridade dos packs, os vínculos de geometria e animação, a escala por idade, o slot e o desequipamento. O pacote de comportamento mudou apenas no manifesto de versão. Os arquivos de jutsus, invocação e bastão de Enma foram preservados. Os projetos reabriram no Blockbench. O teste dentro do Minecraft Bedrock segue pendente.
+A validação inclui reabertura no Blockbench, vínculos dos modelos, encaixe em poses simuladas, retirada do capacete, restauração dos cosméticos e ocultação do bastão quando a mão está ocupada. O teste dentro do Minecraft Bedrock segue pendente.
