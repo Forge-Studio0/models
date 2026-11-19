@@ -2,9 +2,9 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
-## Clã Hōzuki — versão de teste 18.11.74
+## Clã Hōzuki — revisão visual 18.11.75
 
-- [Três modelos animados do Blockbench e opções de instalação](Hozuki/)
+- [Comparação com o anime, três modelos animados e opções de instalação](Hozuki/)
 - [Pacote com addon e integração](https://github.com/Forge-Studio0/models/raw/refs/heads/main/Hozuki/Hozuki.zip)
 
 ## Clã Kaguya — modelos aprovados 18.11.73
