@@ -2,6 +2,12 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
+## Clã Hatake — seis modos na versão 18.11.81
+
+- [Progressão, recursos dos seis modos e relatório de validação](Hatake/)
+- [Addon cumulativo para importar no Minecraft](https://raw.githubusercontent.com/Forge-Studio0/models/main/Hatake/Hatake_Cumulativo.mcaddon)
+- [Projetos Blockbench, texturas e arquivos de integração](https://raw.githubusercontent.com/Forge-Studio0/models/main/Hatake/Hatake_Integracao.zip)
+
 ## Clã Sarutobi — visual original restaurado na 18.11.80
 
 - [Restauração dos modelos do pacote Kaguya e instruções de instalação](Sarutobi/)
