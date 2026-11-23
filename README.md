@@ -2,6 +2,11 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
+## Correção de desmaio — versão cumulativa 18.11.83
+
+- [Causa, scripts corrigidos e resultados de validação](Desmaio/)
+- [Addon cumulativo para importar no Minecraft](https://raw.githubusercontent.com/Forge-Studio0/models/main/Desmaio/SWBR_18.11.83_Cumulativo.mcaddon)
+
 ## Clã Chinoike — cinco modos na versão 18.11.82
 
 - [Progressão, recursos dos cinco modos e relatório de alterações](Chinoike/)
