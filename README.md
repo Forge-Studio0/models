@@ -2,6 +2,12 @@
 
 Modelos editáveis e addons para Minecraft Bedrock.
 
+## Clã Chinoike — cinco modos na versão 18.11.82
+
+- [Progressão, recursos dos cinco modos e relatório de alterações](Chinoike/)
+- [Addon cumulativo para importar no Minecraft](https://raw.githubusercontent.com/Forge-Studio0/models/main/Chinoike/Chinoike_Cumulativo.mcaddon)
+- [Projetos Blockbench, texturas e arquivos de integração](https://raw.githubusercontent.com/Forge-Studio0/models/main/Chinoike/Chinoike_Integracao.zip)
+
 ## Clã Hatake — seis modos na versão 18.11.81
 
 - [Progressão, recursos dos seis modos e relatório de validação](Hatake/)
